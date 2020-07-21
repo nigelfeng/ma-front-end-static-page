@@ -1,0 +1,84 @@
+.p-w-r {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: .875rem;
+}
+
+/* primary button */
+.p-w-r .pr-accessible-btn,
+.p-w-r .pr-review-snapshot .pr-review-snapshot-simple .pr-review-snapshot-snippets .pr-snippet-read-and-write a {
+	border: 1px solid #006bae;
+	border-radius: 4px;
+    background-color: #006bae;
+    color: #fff;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+	line-height: 37px;
+	text-transform: uppercase;
+	padding: 0 1em;
+}
+
+/* default button */
+.p-w-r .pr-accessibly-hidden-file-input + label {
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+    background-color: #fff;
+    color: #007bc7;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+	line-height: 37px;
+	text-transform: uppercase;
+	padding: 0 1em;
+}
+.p-w-r .pr-accessibly-hidden-file-input + label span {
+	font-size: 0.75rem;
+}
+
+/* text inputs */
+.p-w-r .form-control {
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+/* error styles */
+.p-w-r .pr-has-error .form-control {
+	border-color: #e5281e;
+	background-color: #fee;
+}
+
+.p-w-r .pr-has-error .pr-control-label span {
+	color: #333;
+}
+
+/* input labels */
+.p-w-r .pr-has-error .control-label span,
+.p-w-r .pr-has-error .pr-control-label span {
+	color: #333;
+	font-size: .8125rem;
+	font-weight: 600;
+}
+
+/* required asterisk */
+.p-w-r .pr-control-label .pr-required-indicator,
+.p-w-r .pr-required-indicator {
+	color: #e5281e;
+}
+
+/* link color */
+.p-w-r a,
+.p-w-r a:focus,
+.p-w-r .pr-review-display a {
+    color: #b32017;
+	box-shadow: none;
+	outline: none;
+}
+
+.p-w-r .pr-review-snapshot .pr-ratings-histogram .pr-histogram-label {
+	color: #b32017;
+}
+.p-w-r .pr-review-snapshot .pr-ratings-histogram .pr-histogram-stars:hover .pr-ratings-histogram-barValue {
+	color: #b32017;
+}
