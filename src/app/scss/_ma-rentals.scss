@@ -1,0 +1,396 @@
+.affiliate-site-header {
+	background: #7a1213;
+	text-align: center;
+}
+
+.rentals {
+	select[name=StudentGrade] {
+		margin-top:0;
+	}
+
+	.location-list {
+		list-style: none;
+		margin-left: 0;
+		margin-top: rem-calc(10);
+		a {
+			color: $color-black;
+			&:hover, &:active, &:focus {
+				color: $color-primary;
+			}
+		}
+		.count {
+			color: $color-neutral-medium;
+		}
+	}
+	.label {
+		@include form-label;
+	}
+	.terms {
+		@include form-element;
+		background-color: $input-background-disabled;
+		cursor: $input-cursor-disabled;
+		font-size: rem-calc(14);
+		height: rem-calc(200);
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+	.rentals-landing-form {
+		select {
+			margin-top: 0 !important;
+		}
+		@include breakpoint(small only) {
+			#zipCode, select {
+				max-width: 12.5rem;
+			}
+		}
+    }
+}
+
+.rental-store {
+	margin-top: rem-calc(20);
+	padding: 0 rem-calc(15) rem-calc(10);
+	border-bottom: 1px solid $color-neutral-light;
+	.info,
+	.store-links {
+		@include grid-row;
+		@include grid-row-nest;
+	}
+	.store-location,
+	.store-hours,
+	.store-link {
+		@include grid-column;
+		@include breakpoint(large up) {
+			@include grid-column(6);
+		}
+	}
+	.store-hours-table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		font-size: rem-calc(14);
+		line-height: $paragraph-lineheight;
+		margin-bottom: $paragraph-margin-bottom;
+		caption {
+			text-align: left;
+		}
+		.day {
+			padding-right: rem-calc(4);
+		}
+	}
+}
+
+.rental-sizing {
+	margin-bottom: rem-calc(24);
+	margin-top: rem-calc(24);
+	.th {
+		background-color: transparent;
+		margin-bottom: 0;
+	}
+	.td {
+		padding-top: rem-calc(8);
+		padding-bottom: rem-calc(8);
+		border-top: 1px solid $color-neutral-light;
+		margin-bottom: rem-calc(-1);
+		&:nth-of-type(even) {
+			background-color: $color-secondary;
+		}
+		&:last-of-type {
+			border-bottom: 1px solid $color-neutral-light;
+		}
+	}
+	.radio {
+		padding-left: 0 !important;
+		margin-bottom: 0;
+		.radio-control {
+			top: rem-calc(8);
+			left: rem-calc(15)
+		}
+	}
+}
+
+.rental-schools {
+	list-style: none;
+	margin-left: 0;
+	li {
+		padding: 0;
+		&:nth-child(even) {
+			background-color: $color-secondary;
+		}
+	}
+	.school {
+		display: inline-block;
+		padding: rem-calc(15);
+		color: $color-black;
+		&:hover, &:active, &:focus {
+			color: $color-primary;
+			h4 {
+				color: $color-primary;
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.rental-instruments {
+	margin-top: rem-calc(10);
+	input[type="radio"] {
+		position: absolute;
+		visibility: hidden;
+		opacity: 1.0;
+	}
+	label {
+		cursor: pointer;
+	}
+	img {
+		pointer-events: none;
+	}
+	&.selection {
+		input[type="radio"] {
+			~ .instrument-image {
+				backface-visibility: hidden;
+				opacity: 0.5;
+				transition: opacity 0.5s;
+			}
+			&:checked {
+				~ .instrument-image {
+					backface-visibility: hidden;
+					opacity: 1;
+					transition: opacity 0.5s;
+				}
+			}
+		}
+	}
+}
+
+.rental-rates {
+	.header {
+		margin-top: rem-calc(24);
+		.edit-link {
+			display: inline-block;
+			padding-bottom: rem-calc(8);
+		}
+	}
+	.rate-instrument {
+		border-top: 2px solid $color-neutral-medium;
+		border-bottom: 1px solid $color-neutral-light;
+		padding: rem-calc(10);
+		font-size: rem-calc(14);
+	}
+	.option-title {
+		color: $black;
+	}
+	.rate-option {
+        &.not-preference {
+            background-color: #ffe648;
+        }
+		label {
+			@include touch-control;
+		}
+		.radio-control {
+			top: rem-calc(3);
+		}
+		&:not(:last-of-type) {
+			border-bottom: 1px solid $color-neutral-medium;
+		}
+	}
+	.rate-group {
+		@include clearfix();
+		border-bottom: 1px dotted $color-neutral-medium;
+		.key, .val {
+			float: left;
+			padding-bottom: rem-calc(8);
+		}
+		.key {
+			width: 80%;
+		}
+		.val {
+			width: 20%;
+			text-align: right;
+		}
+		&:first-of-type {
+			.key {
+				&:first-of-type {
+					font-weight: $global-weight-bold;
+				}
+			}
+		}
+		&:not(:first-of-type) {
+			border-bottom: none;
+			padding-top: rem-calc(8);
+		}
+	}
+	.ldw {
+		margin-top: rem-calc(24);
+	}
+}
+
+.rental-school-supplies {
+	$supply-font-size: rem-calc(14);
+	$supply-border: 1px solid $color-neutral-light;
+	$supply-option-spacing: rem-calc(8);
+	$supply-table-gutters: rem-calc(12);
+	$supply-padding: rem-calc(12);
+
+	font-size: $supply-font-size;
+	margin-bottom: rem-calc(24);
+
+	.row {
+		margin-left: ($supply-table-gutters/2) * -1 !important;
+		margin-right: ($supply-table-gutters/2) * -1 !important;
+	}
+	.columns {
+		@include grid-column-gutter($supply-table-gutters);
+	}
+
+	.supplies-header {
+		border-bottom: $supply-border;
+		border-bottom-width: 2px;
+		display: none;
+		font-weight: $global-weight-bold;
+		padding-bottom: $supply-padding/2;
+		@include breakpoint(large up) {
+			display: block;
+		}
+	}
+
+	.supply {
+		$supply: &;
+		border-bottom: $supply-border;
+		padding-top: $supply-padding;
+		padding-bottom: $supply-padding;
+
+		&-totals {
+			border-bottom: none;
+			border-top: $supply-border;
+			font-weight: $global-weight-bold;
+
+			.subtotal {
+				text-align: left;
+			}
+			.qty-total {
+				text-align: center;
+			}
+			.total {
+				text-align: right;
+			}
+			@include breakpoint(large up) {
+				.subtotal {
+					text-align: center;
+				}
+			}
+		}
+
+		&-option {
+			padding-top: $supply-padding;
+
+			&-label, &-value {
+				line-height: 2.4375rem;
+				vertical-align: middle;
+
+				input.qty {
+					display: inline-block;
+					margin-bottom: 0;
+				}
+			}
+			&-label {
+				padding-right: $supply-option-spacing;
+				text-align: right;
+			}
+			&-qty {
+				text-align: center;
+			}
+			&-total {
+				text-align: right;
+				.supply-option-value {
+					font-weight: $global-weight-bold;
+				}
+			}
+
+			@include breakpoint(large up) {
+				padding-top: 0;
+				&-price {
+					text-align: center;
+				}
+				&-label {
+					@include element-invisible;
+				}
+			}
+		}
+	}
+}
+
+.rental-books {
+	$rental-books-gutters: rem-calc(8);
+
+	@include disable-mouse-outline;
+	@include no-bullets-list;
+
+	li {
+		&:not(:last-child) {
+			padding-bottom: rem-calc(16);
+		}
+		&.has-focus {
+			color: $primary-color;
+			label {
+				color: $primary-color;
+			}
+		}
+
+		.row {
+			margin-left: ($rental-books-gutters/2) * -1 !important;
+			margin-right: ($rental-books-gutters/2) * -1 !important;
+		}
+		.columns {
+			@include grid-column-gutter($rental-books-gutters);
+		}
+	}
+}
+
+.rental-repair-or-service-modal {
+    .text-intro {
+        font-size: rem-calc(15);
+        line-height: normal;
+        font-weight: 600
+    }
+}
+
+.repairOrService-button-link {
+    font-size: inherit;
+}
+
+.ss-landing {
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.9)
+	  ),
+	  url('/dist/img/school-supplies.jpg') no-repeat center;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 400px;
+	@include breakpoint(small only) {
+		height: 180px;
+	}
+	@include breakpoint(medium only) {
+		height: 500px;
+	}
+
+	&__content {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		padding: 1rem;
+		text-shadow: 0 1px 0 $black;
+	}
+
+	&__heading {
+		color: $white;
+	}
+
+	&__body {
+		color: $white;
+		margin-bottom: 0;
+	}
+}

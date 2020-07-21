@@ -1,0 +1,195 @@
+$ma-theme-class: 'theme';
+
+@function ma-theme-get-background($settings) {
+    $background: $white;
+    @if (map-has-key($settings, background)) {
+        $background: map-get($settings, background);
+    }
+    @return $background;
+}
+
+@function ma-theme-get-color($background, $colors: ($white, rgba(0, 0, 0, .9))) {
+    @return color-pick-contrast($background, $colors);
+}
+
+@mixin ma-theme-section-base($background, $color, $settings) {
+    background: $background;
+    color: $color;
+
+    p, label, ul, ol {
+        color: $color;
+    }
+
+    hr {
+        border-bottom-color: $color;
+    }
+
+    .arrow-bullet {
+        > li:before {
+            color: $color;
+        }
+    }
+
+    // .arrow {
+    //     &:after {
+    //         @include triangle-style($color: $color);
+    //     }
+    // }
+
+    $error-color: $color;
+
+    @if map-has-key($settings, error-color) {
+        $error-color: map-get($settings, error-color);
+    }
+    @else if color-contrast($background, $color-error) >= 4.5 {
+        $error-color: $color-error;
+    }
+
+    @if $error-color != $color-error {
+        .is-invalid-input,
+        .input-validation-error {
+            border-color: $error-color;
+
+            &:focus, &:active, &:hover {
+                border-color: $error-color !important;
+            }
+        }
+
+        .form-error,
+        .field-validation-error {
+            color: $error-color;
+        }
+    }
+}
+
+@mixin ma-theme-accents($background, $color, $settings) {
+    a {
+        $anchor-color: $color;
+        @if map-has-key($settings, anchor-color) {
+            $anchor-color: map-get($settings, anchor-color);
+        }
+        color: $anchor-color;
+        
+        &:not(.button) {
+            text-decoration: map-get-or-default($settings, text-decoration, underline);
+
+            &:hover, &:focus, &:active {
+                $anchor-color-hover: $anchor-color;
+                @if map-has-key($settings, anchor-color-hover) {
+                    $anchor-color-hover: map-get($settings, anchor-color-hover);
+                    @if $anchor-color-hover == auto {
+                        $anchor-color-hover: smart-scale($anchor-color);
+                    }
+                }
+                color: $anchor-color-hover;
+                text-decoration: map-get-or-default($settings, anchor-text-decoration-hover, underline);
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        $radio-background-color: #fafafa;
+        $radio-color: ma-theme-get-color($radio-background-color);
+        @if color-contrast($radio-background-color, $anchor-color) >= 4.5 {
+            $radio-color: $anchor-color;
+        }
+
+        &:checked {
+            &:after {
+                color: $radio-color;
+            }
+        }
+        &:focus {
+            border-color: $radio-color;
+        }
+    }
+}
+
+@mixin ma-theme-headings($background, $default-color, $settings) {
+    $valid-headings: h1, h2, h3, h4, h5, h6;
+    $headings: map-get-or-default($settings, headings, ());
+
+    @each $heading in $valid-headings {
+        #{$heading}, .#{$heading} {
+            @if map-has-key($headings, $heading) {
+                $properties: map-get($headings, $heading);
+                @include apply-properties($properties);
+                @if (map-has-key($properties, color) == false) {
+                    color: $default-color;
+                }
+            }
+            @else {
+                color: $default-color;
+            }
+        }
+    }
+}
+
+@mixin ma-theme-button($default-background, $button-settings) {
+    $expand: map-get-or-default($button-settings, expand, false);
+    $style: map-get-or-default($button-settings, style, solid);
+
+    $default-background-hover: if($style == hollow, $default-background, auto);
+
+    $background: map-get-or-default($button-settings, background, $default-background);
+    $background-hover: map-get-or-default($button-settings, background-hover, $default-background-hover);
+
+    $color: map-get-or-default($button-settings, color, ma-theme-get-color($background));
+
+    @if $style == solid {
+        @include button-style($background, $background-hover, $color);
+    }
+    @else if $style == hollow {
+        @include button-hollow;
+        @include button-hollow-style($background, 0);
+    }
+
+    @if $expand {
+        @include button-expand;
+    }
+}
+
+@mixin ma-theme-section($background, $color, $settings) {
+
+    @include ma-theme-section-base($background, $color, $settings);
+    @include ma-theme-accents($background, $color, $settings);
+    @include ma-theme-headings($background, $color, $settings);
+    
+    @if map-has-key($settings, button) {
+        .button {
+            @include ma-theme-button($color, map-get($settings, button));
+            &.primary {
+                @include ma-theme-button($color, map-get-or-default($settings, primary-button, map-get($settings, button)));
+            }
+        }
+    }
+}
+
+@mixin ma-theme($theme-settings) {
+    $name: map-get($theme-settings, name);
+    $sections: map-get($theme-settings, sections);
+
+    .#{$ma-theme-class}.#{$ma-theme-class}--#{$name} {
+
+        @each $section-name, $section-settings in $sections {
+
+            $background: ma-theme-get-background($section-settings);
+            $color: ma-theme-get-color($background);
+
+            @if ($section-name == body) {
+                @include ma-theme-section($background, $color, $section-settings);
+                @if ($background != $body-background) {
+                    margin-top: -1.5rem;
+                    margin-bottom: -1.5rem;
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
+                }
+            }
+            @else {
+                .#{$ma-theme-class}__#{$section-name} {
+                    @include ma-theme-section($background, $color, $section-settings);
+                }
+            }
+        }
+    }
+}

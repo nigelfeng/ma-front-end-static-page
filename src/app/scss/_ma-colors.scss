@@ -1,0 +1,131 @@
+@mixin color($color) {
+	color:($color);
+}
+@mixin background-color($color) {
+	background-color:($color);
+}
+@mixin icon-color($color) {
+	&:before {
+		color:($color);
+	}
+}
+@mixin icon-after-color($color) {
+	&:after {
+		color:($color);
+	}
+}
+.icon-color-primary {
+	@include icon-color($color-primary)
+}
+.icon-color-primary-dark {
+	@include icon-color($color-primary-dark)
+}
+.icon-color-secondary {
+	@include icon-color($color-secondary)
+}
+.icon-color-black {
+	@include icon-color($color-black)
+}
+.icon-color-nuetral-dark {
+	@include icon-color($color-nuetral-dark)
+}
+.icon-color-nuetral-medium {
+	@include icon-color($color-nuetral-medium)
+}
+.icon-color-nuetral-light {
+	@include icon-color($color-nuetral-light)
+}
+.icon-color-accent {
+	@include icon-color($color-accent)
+}
+.icon-color-error {
+	@include icon-color($color-error)
+}
+.icon-color-price {
+	@include icon-color($color-price)
+}
+.icon-color-count {
+	@include icon-color($color-count)
+}
+.icon-color-white {
+	@include icon-color($color-white)
+}
+.icon-color-success {
+	@include icon-color($color-success);
+}
+
+.color-primary {
+	@include color($color-primary)
+}
+.color-primary-dark {
+	@include color($color-primary-dark)
+}
+.color-secondary {
+	@include color($color-secondary)
+}
+.color-black {
+	@include color($color-black)
+}
+.color-nuetral-dark {
+	@include color($color-nuetral-dark)
+}
+.color-nuetral-medium {
+	@include color($color-nuetral-medium)
+}
+.color-nuetral-light {
+	@include color($color-nuetral-light)
+}
+.color-accent {
+	@include color($color-accent)
+}
+.color-error {
+	@include color($color-error)
+}
+.color-price {
+	@include color($color-price)
+}
+.color-count {
+	@include color($color-count)
+}
+.color-white {
+	@include color($color-white)
+}
+
+
+// Backgrounds
+.background-primary {
+	background:$color-primary;
+}
+.background-primary-dark {
+	background:$color-primary-dark;
+}
+.background-secondary {
+	background:$color-secondary;
+}
+.background-accent {
+	background:$color-accent;
+}
+.background-error {
+	background:$color-error;
+}
+.background-price {
+	background:$color-price;
+}
+.background-count {
+	background:$color-count;
+}
+.background-nuetral-dark {
+	background:$color-nuetral-dark;
+}
+.background-nuetral-medium {
+	background:$color-nuetral-medium;
+}
+.background-nuetral-light {
+	background:$color-nuetral-light;
+}
+.background-black {
+	background:$color-black;
+}
+.background-white {
+	background:$color-white;
+}

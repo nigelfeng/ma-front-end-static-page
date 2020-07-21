@@ -1,0 +1,220 @@
+// Set size of offcanvas menus
+.position-right,
+.position-left {
+	width: rem-calc(320);
+	transform: translateX(320px);
+}
+.off-canvas-content.is-open-right.has-transition-push {
+    transform: translateX(-320px);
+}
+.off-canvas-content .off-canvas.position-left {
+	transform: translateX(-320px);
+}
+.off-canvas.position-left {
+	position: fixed;
+}
+.off-canvas.position-right {
+    border-left: 1px solid #ccc;
+    /* Bug 2619
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	&::-webkit-scrollbar {
+		width: 0 !important;
+	}
+        */
+}
+.off-canvas.is-transition-overlap {
+    z-index: 14;
+}
+.cart-summary {
+	@include grid-row;
+	background:$white;
+	padding:1rem .625rem;
+	position:relative;
+	@include font-size(14);
+	border-bottom:1px solid lighten($color-nuetral-medium,10%);
+	min-height: 50px;
+	.items {
+		padding:0 !important;
+		font-weight: $global-weight-medium;
+		@include grid-column;
+	}
+	.cart-summary-actions {
+		position:absolute;
+		right:2rem;
+		top:.875rem;
+		.button {
+			@include ma-button-small();
+			font-size: rem-calc(11);
+			padding-left: rem-calc(5);
+			padding-right: rem-calc(5);
+		}
+	}
+}
+.close-button {
+	padding:0;
+	height:auto;
+	line-height:normal;
+	border:none;
+	background:none transparent;
+	right: 0.625rem;
+	&:hover, &:active, &:focus {
+		background:none transparent;
+		color:$color-accent;
+	}
+}
+
+aside#off-canvas-left {
+	@include breakpoint (small only) {
+		top:0 !important;
+	}
+	font-size: rem-calc(11);
+	.shop-item {
+		@include breakpoint (medium) {
+			padding-top:0 !important;
+		}
+	}
+	padding-bottom: 3.0rem;
+	.store-promo {
+		@include hide-for(medium);
+		display: block;
+		background: $color-primary;
+		max-width: 188px;
+		margin: 0 auto;
+		color: #fff !important;
+		padding: 5px;
+		font-weight: $global-weight-medium;
+		font-size: rem-calc(16);
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+		right: 0;
+		img {
+			margin-right: 5px;
+			margin-top: -15px;
+		}
+	}
+	.customer-service-promo {
+		@include hide-for(medium);
+		left:0;
+		right:0;
+		bottom:0;
+		position:absolute;
+	}
+	.cart-summary {
+		@include hide-for(medium);
+	}
+	@include breakpoint (medium) {
+		background:none transparent;
+		position:absolute;
+		transform:none !important;
+		background:none transparent;
+		box-shadow:none;
+		overflow:visible;
+		left:auto;
+		z-index:3;
+		height:2rem;
+		margin-left:1rem;
+		&.is-closed {
+			visibility: visible;
+		}
+		nav {
+			> ul.menu {
+				> li {
+					> a {
+						color:$white;
+						text-transform:uppercase;
+						height:3rem;
+						line-height:3rem;
+						padding-top:0;
+						padding-bottom:0;
+						&:after {
+							display:none !important;
+						}
+						.fa-bars {
+							margin-right: rem-calc(6);
+						}
+					}
+					&.brands, &.accessories {
+						> a {
+							padding-left:1.625rem !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	ul {
+		li a {
+			padding: 0.625rem;
+			white-space:normal !important;
+		}
+		li li a {
+			padding: 0.625rem !important;
+		}
+		li.brands,
+		li.accessories {
+			> a {
+				padding-left:1.75rem !important;
+				position:relative;
+				&:before {
+					color:$color-accent !important;
+					position:absolute;
+					left:.625rem;
+					top:.625rem;
+				}
+			}
+		}
+		li.brands >  a {
+			@include icon($icon-star);
+		}
+		li.accessories >  a {
+			@include icon($icon-tag);
+		}
+	}
+	ul.drilldown {
+		li.brands,
+		li.accessories  {
+			> a{
+				background:darken($color-secondary, 3%);
+			}
+		}
+		a {
+			background:$color-secondary;
+		}
+		.is-drilldown-submenu-parent a {
+			padding-right:2rem !important;
+		}
+		a, .is-drilldown-submenu a {
+			padding:.625rem;
+			border-bottom:1px solid lighten($color-nuetral-medium,30%);
+		}
+		.is-drilldown-submenu {
+			background:$color-secondary;
+            &.is-active {
+                z-index:2;
+            }
+		}
+	}
+	ul.dropdown {
+		li li a {
+			&:hover, &:active, &:focus {
+				background:$color-secondary;
+			}
+		}
+	}
+}
+aside#off-canvas-left  {
+	ul.dropdown {
+		li.brands,
+		li.accessories  {
+			> a{
+				background: lighten($color-secondary,3%);
+
+			}
+		}
+		li.brands > a {
+			border-top:1px solid $color-nuetral-light;
+		}
+	}
+}

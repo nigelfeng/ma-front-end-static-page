@@ -1,0 +1,50 @@
+@mixin border-list($direction: bottom, $spacing: 2, $border-width: 1) {
+	>li {
+		padding: 0 0 #{$spacing}px;
+		margin: 0 0 #{$spacing}px;
+		&:not(:last-child) {
+			border-#{$direction}: #{$border-width}px solid $color-nuetral-light;
+		}
+	}
+}
+
+@mixin no-bullets-list() {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 1.5rem 0;
+}
+
+@mixin link-list-anchors($selector: a) {
+    #{$selector} {
+        color: $color-black;
+    
+        &:hover, &:active {
+            color: $color-primary;
+        }
+    }
+}
+
+@mixin arrow-bullets-list() {
+    @include no-bullets-list;
+    > li {
+        position: relative;
+        padding-left: 0.75rem;
+
+        &:before {
+            position: relative;
+            position: absolute;
+            top: 0.25em;
+            left: 0;
+            display: inline-block;
+            color: $color-primary;
+            content: $icon-caret-right;
+            font-family: FontAwesome;
+        }
+    }
+}
+
+@mixin vertical-list-spacing {
+    > li {
+        margin-bottom: .5rem;
+    }
+}

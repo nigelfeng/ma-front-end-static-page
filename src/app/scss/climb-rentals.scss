@@ -1,0 +1,369 @@
+@charset 'utf-8';
+
+@import "~foundation-sites/scss/util/util";
+@import 'settings';
+@import "~foundation-sites/scss/foundation";
+@import "~foundation-sites/scss/util/mixins";
+@import "~motion-ui/src/motion-ui";
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+//@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+// @include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+// @include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+// @include foundation-orbit;
+@include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+// @include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+@include foundation-tooltip;
+// @include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import "~font-awesome/scss/font-awesome";
+@import 'font-awesome-utilities';
+@import 'ma-colors';
+@import 'ma-helpers';
+@import 'ma-general';
+@import 'ma-callouts';
+@import 'ma-spinners';
+@import 'ma-forms';
+@import 'ma-buttons';
+@import 'ma-lists';
+@import 'ma-accordion';
+@import 'ma-modal';
+@import 'ma-scaffolding';
+@import 'ma-rentals';
+
+
+.row {
+	max-width: 958px;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+h1 {
+	color: $color-primary;
+	font-size: 1.875rem;
+    font-weight: $global-weight-normal;
+	line-height: 1.1;
+	letter-spacing: -1px;
+	margin: 0 0 0.25rem 0;
+}
+h2 {
+	color: $color-primary;
+    font-weight: $global-weight-bold;
+	font-size: 0.9375rem;
+	text-transform: uppercase;
+}
+h3 {
+	color: $color-black;
+	text-transform: uppercase;
+    font-weight: $global-weight-bold;
+}
+h4 {
+	color: $color-accent;
+	font-size: 0.875rem;
+	font-weight: $global-weight-medium;
+    line-height: 1.4;
+    margin: 0 0 0.25rem 0;
+}
+
+p {
+	font-size: 0.875rem;
+}
+
+.columns-8-4 {
+	.content-primary {
+		@include grid-column(8);
+	}
+	.content-secondary {
+		@include grid-column(4);
+	}
+}
+
+.sidebar {
+	background-color: #f9f9f9;
+	padding: rem-calc(15);
+	h4 {
+		color: $color-black;
+	}
+	.arrow-bullet {
+		a {
+			color: $color-primary;
+		}
+	}
+	fieldset {
+		margin-bottom: 0;
+	}
+	.text-rule {
+		span {
+			background-color: #f9f9f9;
+		}
+	}
+}
+
+.pagination {
+	font-size: rem-calc(14);
+	margin-top: rem-calc(20);
+	margin-bottom: rem-calc(40);
+	a {
+		&:hover, &:active, &:focus {
+			background:$color-secondary;
+		}
+	}
+	.previous, .next {
+		display: inline-block;
+		font-size: rem-calc(24);
+		background: transparent;
+		position: relative;
+		top: rem-calc(4);
+		padding: 0;
+	}
+	.previous {
+		margin-right: rem-calc(4);
+	}
+	.next {
+		margin-left: rem-calc(8);
+	}
+}
+
+.text-rule {
+	margin-top: rem-calc(24);
+	margin-bottom: rem-calc(24);
+	position: relative;
+	text-align: center;
+	font-size: rem-calc(14);
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #d5d5d5;
+	}
+	span {
+		display: inline-block;
+		padding-left: rem-calc(10);
+		padding-right: rem-calc(10);
+		background-color: #fff;
+		position: relative;
+		z-index: 1;
+	}
+}
+
+
+// modal
+.reveal-overlay {
+	background-color: rgba(26, 26, 26, 0.75);
+	animation: reveal-overlay-fade .5s;
+}
+@keyframes reveal-overlay-fade {
+    from { background-color: rgba(26, 26, 26, 0); }
+    to   { background-color: rgba(26, 26, 26, 0.75); }
+}
+
+.reveal {
+	border-radius: 0;
+	padding: 0;
+	@include breakpoint (small only) {
+		top: 0;
+	}
+}
+.modal-header {
+	background-color: $color-secondary;
+	padding: rem-calc(10) rem-calc(15);
+	h1, h2 {
+		font-size: rem-calc(24);
+		line-height: rem-calc(36);
+		margin-bottom: 0;
+		color: $color-nuetral-dark;
+	}
+	.close-button {
+		color: $color-nuetral-dark;
+		margin-bottom: 0;
+		top: rem-calc(6);
+		right: rem-calc(15);
+		opacity: 0.75;
+		&:hover, &:active {
+			color: $color-primary-dark;
+			opacity: 1.0;
+		}
+	}
+}
+.modal-content {
+	padding: rem-calc(15) 0;
+	.section-divider {
+		position: relative;
+		text-align: center;
+		margin: 1rem 0;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			background-color: $color-secondary;
+			height: .25rem;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+		.section-divider-label {
+			position: relative;
+			z-index: 2;
+			font-weight: $global-weight-bold;
+			color: $color-neutral-medium;
+			font-weight: bold;
+			display: inline-block;
+			background-color: $color-white;
+			padding: 0 rem-calc(4);
+		}
+	}
+}
+
+.accordion-faq {
+	.is-active {
+		.accordion-title {
+			color: $color-primary;
+		}
+	}
+	.accordion-title {
+		font-size: rem-calc(13);
+		font-weight: $global-weight-medium;
+		color: $color-black;
+		padding: rem-calc(8);
+		border-top: 1px solid $color-neutral-light;
+		border-bottom: none;
+		border-left: none;
+		border-right: none;
+		border-radius: 0 !important;
+		&:hover, &:focus {
+			background-color: $color-secondary;
+		}
+	}
+	.accordion-content {
+		font-size: rem-calc(13);
+		border: none;
+		padding: rem-calc(8) rem-calc(8) rem-calc(20) rem-calc(8);
+		p {
+			font-size: rem-calc(13);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.close-button {
+	padding: 0;
+	height: auto;
+	line-height: normal;
+	border: none;
+	background: none transparent;
+	&:hover,
+	&:active,
+	&:focus {
+		background: none transparent;
+		color: $color-accent;
+	}
+	right: 0.625rem;
+}
+
+.right {
+	float: right;
+}
+
+.edit-link {
+	font-size: rem-calc(12);
+	font-weight: $global-weight-normal;
+	text-decoration: underline;
+}
+
+.content-box {
+	@include clearfix();
+	border: 1px solid $color-neutral-light;
+	padding: rem-calc(15);
+	margin-top: rem-calc(16);
+	margin-bottom: rem-calc(24);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	p, ul, ol {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.rental-instruments {
+    $rentable-color: #49ad7f;
+    $unrentable-color: #ffe648;
+
+    label {
+        border: 6px solid $rentable-color;
+
+        &.instrument-unavailable {
+            border-color: $unrentable-color;
+
+            &:after {
+                background: $unrentable-color;
+                content: 'Not a school rental';
+                display: block;
+                font-weight: normal;
+                padding-top: 2px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.starting-price {
+	color: $color-primary;
+	font-weight: $global-weight-bold;
+	font-size: rem-calc(16);
+}
+
+.auto-format {
+	> div, > legend {
+		@include grid-column(12);
+		@include breakpoint(medium) {
+			@include grid-column(6);
+		}
+
+	}
+}

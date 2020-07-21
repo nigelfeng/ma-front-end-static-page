@@ -1,0 +1,44 @@
+$dark-primary: #000;
+$dark-secondary: #d9d9d9;
+$dark-accent: #e0293e;
+
+$dark-theme-settings: (
+    name: dark,
+    sections: (
+        body: (
+            background: $dark-primary,
+            anchor-color: $dark-accent,
+            button: (
+                style: hollow
+            ),
+            primary-button: (
+                background: $dark-accent
+            )
+        ),
+        primary: (
+            background: $dark-primary,
+            color: $dark-accent,
+            button: (
+                background: $dark-accent
+            )
+        ),
+        primary-alternate: (
+            background: $dark-secondary,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            background: $dark-secondary,
+            button: (
+                background: $dark-accent
+            )
+        ),
+        secondary-alternate: (
+            background: $dark-primary,
+            button: (
+                background: $dark-accent
+            )
+        )
+    )
+);

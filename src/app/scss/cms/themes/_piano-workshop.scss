@@ -1,0 +1,41 @@
+$piano-workshop-dark: #002756;
+$piano-workshop-light: #47719c;
+
+$piano-workshop-theme-settings: (
+    name: piano-workshop,
+    sections: (
+        body: (
+            anchor-color: $piano-workshop-dark,
+            headings: (
+                h3: (color: $piano-workshop-dark)
+            ),
+            button: (
+                background: $piano-workshop-dark
+            )
+        ),
+        primary: (
+            background: $piano-workshop-dark,
+            button: (
+                background: $piano-workshop-light
+            )
+        ),
+        primary-alternate: (
+            background: $piano-workshop-light,
+            button: (
+                background: $piano-workshop-dark
+            )
+        ),
+        secondary: (
+            background: $piano-workshop-dark,
+            button: (
+                background: $piano-workshop-light
+            )
+        ),
+        secondary-alternate: (
+            background: $piano-workshop-light,
+            button: (
+                background: $piano-workshop-dark
+            )
+        )
+    )
+);

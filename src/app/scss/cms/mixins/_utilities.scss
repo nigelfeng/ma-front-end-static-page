@@ -1,0 +1,35 @@
+﻿@mixin auto-center ($horizontal: true, $vertical: true) {
+    position: absolute;
+
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@mixin no-bullets-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin apply-properties($properties: ()) {
+    @each $property, $value in $properties {
+        #{$property}: $value;
+    }
+}
+
+@mixin all-headings {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        @content;
+    }
+}

@@ -1,0 +1,58 @@
+$default-triangle-size: 16px;
+$default-triangle-position: right;
+$default-triangle-color: $color-primary;
+
+@mixin triangle(
+    $position: $default-triangle-position,
+    $size: $default-triangle-size,
+    $color: $default-triangle-color,
+    $left: auto
+) {
+    content: '';
+    left: $left;
+    position: absolute;
+    top: 0;
+    width: 1rem;
+    right: -1rem;
+    bottom:0;
+
+    @if $position == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    }
+    @else if $position == left {
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        border-top: $size solid transparent;
+    }
+    @else if $position == right {
+        border-bottom: 17px solid transparent;
+        border-left: $size solid $color;
+        border-top: 20px solid transparent;
+    }
+    @else if $position == up {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+}
+
+@mixin triangle-style(
+    $position: $default-triangle-position,
+    $color: $default-triangle-color,
+    $size: $default-triangle-size
+) {
+    @if $position == down {
+        border-top-color: $color;
+    }
+    @else if $position == left {
+        border-right-color: $color;
+    }
+    @else if $position == right {
+        border-left-color: $color;
+    }
+    @else if $position == up {
+        border-bottom-color: $color;
+    }
+}

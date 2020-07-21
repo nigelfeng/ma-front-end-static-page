@@ -1,0 +1,49 @@
+@mixin ma-link() {
+    padding: 0;
+    border: 0;
+    color: $color-anchor;
+    text-transform: none;
+    // font-size: inherit; AHanlin: TODO - going to have to fix the effects of this later...
+    font-weight: $global-weight-normal;
+    line-height: inherit;
+    vertical-align: inherit;
+    margin-bottom: 0;
+    background: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+        background: transparent;
+        color: $color-primary-dark;
+    }
+    // this seems to only apply to .remove so moving it there...
+    // &:before {
+    //     width: rem-calc(14);
+    // }
+}
+
+@mixin ma-button() {
+    outline: 0;
+    font-size: rem-calc(12);
+    font-weight: $global-weight-medium;
+    line-height: rem-calc(37);
+    border: 1px solid $color-nuetral-light;
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: ease all .25s;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    font-family: inherit;
+    padding: 0 1em 0 1em;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: $color-white;
+    color: $color-accent;
+}
+
+@mixin ma-button-small() {
+    line-height: rem-calc(28);
+    font-size: rem-calc(12);
+}

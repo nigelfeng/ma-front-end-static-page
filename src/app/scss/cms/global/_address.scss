@@ -1,0 +1,17 @@
+﻿.umb-address {
+    @include clearfix;
+    margin-bottom: 1rem;
+
+    &__map-marker {
+        float: left;
+    }
+
+    &__details {
+        float: left;
+    }
+
+    &__line {
+        display: block;
+        font-size: .875rem;
+    }
+}

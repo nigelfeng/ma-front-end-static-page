@@ -1,0 +1,43 @@
+$brand-theme-settings: (
+    name: brand,
+    sections: (
+        body: (
+            anchor-color: $color-primary-dark,
+            headings: (
+                h1: (color: $color-primary),
+                h2: (color: $color-primary)
+            ),
+            button: (
+                background: $color-neutral-dark
+            ),
+            primary-button: (
+                background: $color-primary
+            )
+        ),
+        primary: (
+            background: $color-primary,
+            button: (
+                background: $color-primary-dark
+            )
+        ),
+        primary-alternate: (
+            background: $color-primary-dark,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            anchor-color: $color-primary-dark,
+            background: #d9d9d9,
+            button: (
+                background: $color-primary
+            )
+        ),
+        secondary-alternate: (
+            background: $color-neutral-dark,
+            button: (
+                background: $color-primary
+            )
+        )
+    )
+);

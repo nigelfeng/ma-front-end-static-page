@@ -1,0 +1,55 @@
+.umb-carousel {
+    margin-left: -.9375rem;
+    margin-right: -.9375rem;
+
+    @include breakpoint(medium up) {
+        &--full-mobile {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .slick-arrow {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 60px;
+        height: 100%;
+        transform: none;
+        z-index: 1;
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            background-image: url(../img/carousel-arrows.png);
+            opacity: .75;
+            background-repeat: no-repeat;
+            background-size: 102px 60px;
+            width: 60px;
+            height: 102px;
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+        &:after {
+            background-position: 0;
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        &:after {
+            background-position: -48px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}

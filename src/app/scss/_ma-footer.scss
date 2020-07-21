@@ -1,0 +1,221 @@
+.pre-footer-bar {
+    .social {
+        margin-top: 1rem;
+
+        @include breakpoint (mediumhigh) {
+            margin-top: 0;
+        }
+
+        li a {
+            @include icon-color($color-primary);
+            background: lighten($color-secondary,2%);
+
+            &:hover, &:focus, &:active {
+                background: $color-white;
+            }
+        }
+    }
+
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: $color-primary;
+    color: $color-white;
+    @include font-size(12);
+
+    input, button, ul, p {
+        margin-bottom: 0;
+    }
+
+    .email-newsletter-input,
+    .email-newsletter-promo {
+        text-align: center;
+
+        input {
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+
+            a {
+                @include ma-button();
+                @include border-radius;
+                @include icon-color($color-primary);
+                padding: 0 !important;
+                height: 2rem;
+                width: 2rem;
+                text-align: center;
+
+                &:before {
+                    @include font-size(16);
+                    line-height: 1.75;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .email-newsletter-input .field-validation-error {
+        margin-bottom: 0;
+        margin-top: 0.25rem;
+        color: #fff;
+        text-align: left;
+    }
+
+    .email-newsletter-input {
+        @include grid-column(12);
+        text-align: center;
+
+        @include breakpoint (medium) {
+            @include grid-column(6);
+            text-align: right;
+        }
+
+        @include breakpoint (mediumhigh) {
+            @include grid-column(4);
+        }
+    }
+
+    .email-newsletter-promo {
+        @include grid-column(12);
+        margin-top: .5rem;
+        text-align: center;
+
+        @include breakpoint (medium) {
+            @include grid-column(6);
+            text-align: left;
+            margin-top: 0;
+        }
+
+        @include breakpoint (mediumhigh) {
+            @include grid-column(4);
+        }
+
+        p {
+            margin: 0;
+            line-height: normal;
+        }
+    }
+}
+
+footer {
+	padding-top: 1.5rem;
+	padding-bottom: 0;
+    &:focus{
+        outline:none;
+    }
+	@include font-size(12);
+    .row {
+        background-color:white;
+    }
+	.column {
+		margin-bottom:1rem;
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(3);
+		}
+		@include breakpoint (large) {
+			@include grid-column(1 of 5);
+		}
+		&.contact {
+			@include breakpoint (large) {
+				@include grid-column(2 of 5);
+			}
+			p {
+				@include font-size(12);
+			}
+		}
+	}
+	.accordion-menu .h3 {
+		padding:0;
+	}
+	.h3 {
+		color:$color-black;
+		margin-bottom:.625rem;
+		@include font-size(13);
+	}
+	a {
+		@include font-size(12);
+		padding:0;
+		color: $color-black;
+		&:hover, &:active {
+			color: $color-primary;
+		}
+	}
+	ul.footer-nav {
+		list-style: none;
+		margin-left: 0;
+		ul {
+			list-style: none;
+			margin-left: 0;
+		}
+	}
+	.copyright {
+		$copyright-font-size: 12;
+
+		background: $color-secondary;
+		padding: .5rem 1.5rem;
+		text-align: center;
+		p {
+			@include font-size($copyright-font-size);
+			display: inline-block;
+			margin: 0;
+			padding-right: .5rem;
+		}
+		a {
+			@include font-size($copyright-font-size);
+		}
+		ul {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			li {
+				display: inline-block;
+				&:nth-child(n+2)::before {
+					@include font-size($copyright-font-size);
+					content: '|';
+					padding-left: .25rem;
+					padding-right: .25rem;
+				}
+			}
+		}
+	}
+	a.phone {
+		font-size:1.125rem;
+		padding:0;
+	}
+	.bbb-logo {
+		img {
+			max-width: rem-calc(80);
+		}
+	}
+}
+
+.email-newsletter-input {
+	position:relative;
+	input[type=email] {
+		padding-top:0;
+		padding-bottom:0;
+		padding-right:5.5rem;
+		height:2rem;
+		line-height:2rem;
+		@include no-border;
+	}
+	button {
+		border-radius: 0 rem-calc(4) rem-calc(4) 0;
+		padding:0 1rem;
+		position:absolute;
+		left:auto;
+		top:0;
+		line-height:2rem;
+		right:.625rem;
+		@include button-primary-dark;
+		@include breakpoint (mediumhigh) {
+			right:0;
+		}
+	}
+}
+
+.email-newsletter-description {
+	@include font-size(12);
+}

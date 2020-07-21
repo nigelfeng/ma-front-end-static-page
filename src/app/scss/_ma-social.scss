@@ -1,0 +1,199 @@
+// Social Media
+// ------------
+h2 + .social {
+	margin-top:.5rem;
+}
+.social {
+	text-align:center;
+	li {
+		display:inline-block;
+		a {
+            @include ma-button();
+			@include border-radius;
+			@include icon-color($color-nuetral-dark);
+			padding:0 !important;
+			height:2rem;
+			width:2rem;
+			text-align:center;
+			&:before {
+				@include font-size(16);
+				line-height:1.75;
+				margin:0;
+			}
+			&.fa-facebook-official {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-facebook !important;
+					}
+				}
+			}
+			&.fa-twitter {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-twitter !important;
+					}
+				}
+			}
+			&.fa-google {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-google !important;
+					}
+				}
+			}
+			&.fa-youtube-play {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-youtube !important;
+					}
+				}
+			}
+			&.fa-pinterest-p {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-pinterest !important;
+					}
+				}
+			}
+			&.fa-rss {
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-blog !important;
+					}
+				}
+			}
+		}
+	}
+
+	@include grid-column(12);
+	text-align:center;
+	@include breakpoint (mediumhigh) {
+		margin-top:0;
+		@include grid-column(4);
+		text-align:right;
+	}
+	white-space:nowrap;
+	ul {
+		margin:0;
+		padding:0;
+		li a {
+			margin-bottom:0;
+		}
+	}
+
+	&.two-column {
+		float:none;
+		width:100%;
+		text-align:left;
+		padding:0;
+		li {
+			width:100%;
+			float:none;
+			display:block;
+			@include breakpoint(medium) {
+				width:50%;
+				float:left;
+				&:nth-child(odd) {
+					padding-right:.5rem;
+				}
+				&:nth-child(even) {
+					padding-left:.5rem;
+				}
+			}
+		}
+		a {
+			display:block;
+			width:100%;
+			height:auto;
+			margin:0
+		}
+		margin-bottom:2rem;
+	}
+	&.login {
+		padding-right:1rem;
+	}
+	&.text-links {
+		li {
+			margin-bottom:.75rem;
+		}
+		li a {
+			color:$black;
+			text-transform:none;
+			font-size:.875rem;
+			text-align:left;
+			padding-right:.5rem;
+			max-width: 250px;
+			&:hover, &:active, &:focus {
+				color: $color-accent;
+			}
+			&:before {
+				border-right: 1px solid $color-nuetral-light;
+				font-size:1.25rem;
+				line-height: 2.4375rem;
+				margin-right:.25rem;
+				padding-left: .5rem;
+				padding-right: .5rem;
+			}
+			&.fa-facebook-official {
+				&:before {
+					color:$color-facebook;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-facebook;
+					}
+				}
+			}
+			&.fa-twitter {
+				&:before {
+					color:$color-twitter;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-twitter;
+					}
+				}
+			}
+			&.fa-google {
+				&:before {
+					color:$color-google;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-google;
+					}
+				}
+			}
+			&.fa-youtube-play {
+				&:before {
+					color:$color-youtube;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-youtube;
+					}
+				}
+			}
+			&.fa-pinterest-p {
+				&:before {
+					color:$color-pinterest;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-pinterest;
+					}
+				}
+			}
+			&.fa-rss {
+				&:before {
+					color:$color-blog;
+				}
+				&:hover, &:active, &:focus {
+					&:before {
+						color:$color-blog;
+					}
+				}
+			}
+		}
+	}
+}

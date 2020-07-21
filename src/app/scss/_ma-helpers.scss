@@ -1,0 +1,277 @@
+@mixin no-border {
+	border:none;
+}
+.no-border {
+	@include no-border;
+}
+@mixin no-padding {
+	padding:0;
+}
+.no-padding {
+	@include no-padding;
+}
+@mixin no-margin {
+	margin:0 !important;
+}
+.no-margin {
+	@include no-margin;
+}
+@mixin radius {
+	border-radius:4px;
+}
+.radius {
+	@include radius;
+}
+@mixin border {
+	border:1px solid $color-nuetral-light;
+}
+.border {
+	@include border;
+}
+.inline {
+	display:inline-block;
+	width:auto;
+}
+.block {
+	display: block;
+}
+.hide-for-small {
+	@include breakpoint (small only) {
+		display:none;
+		visibility:hidden;
+	}
+}
+@mixin y-scrollable($max-height: 400) {
+	@include breakpoint(medium up) {
+		overflow-y: scroll;
+		max-height: #{$max-height}px;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+.y-scrollable {
+	@include y-scrollable();
+}
+.m-b-0 {
+	margin-bottom: 0;
+}
+@mixin m-b-half {
+	margin-bottom: $global-margin/2;
+}
+.m-b-half {
+	@include m-b-half;
+}
+@mixin m-b-1 {
+	margin-bottom: $global-margin;
+}
+.m-b-1 {
+	@include m-b-1;
+}
+@mixin m-b-2 {
+	margin-bottom: $global-margin/2 + $global-margin;
+}
+.m-b-2 {
+	@include m-b-2;
+}
+.m-t-1 {
+	margin-top: $global-margin;
+}
+.m-t-2 {
+	margin-top: $global-margin/2 + $global-margin;
+}
+.p-b-1 {
+	padding-bottom: $global-margin;
+}
+.p-t-1 {
+	padding-top: $global-margin;
+}
+.cta-after {
+	@include icon-after($icon-caret-right);
+}
+.cta-before {
+	@include icon($icon-caret-left);
+}
+.back-arrow {
+    position: relative;
+    @include icon($icon-caret-left);
+    @include icon-color($color-black);
+}
+.pos-reference {
+    position: relative;
+}
+.pos-bottom-right {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+@mixin chevron-after {
+	position: relative;
+	@include icon-after($icon-chevron-right);
+	@include icon-after-color($color-primary);
+	&:after {
+		position:absolute;
+		top:50%;
+		margin-top:-.5em;
+		right:1rem;
+	}
+}
+
+.chevron-after {
+	@include chevron-after;
+}
+// adds a pseudo element to a touch control to ensure it is large enough
+@mixin touch-control(
+	$pseudo-element: before,
+	$control-size: 1rem,
+	$touch-size: 2rem
+) {
+	&:#{$pseudo-element} {
+		content: '';
+		display: block;
+		position: absolute;
+		height: $touch-size;
+		width: $touch-size;
+		left: -($touch-size - $control-size)/2;
+		top: -($touch-size - $control-size)/2;
+	}
+}
+.touch-control {
+	@include touch-control;
+}
+
+// List mixins
+@mixin border-bottom-list($spacing: 2, $border-width: 1) {
+	>li {
+		padding: 0 0 #{$spacing}px;
+		margin: 0 0 #{$spacing}px;
+		&:not(:last-child) {
+			border-bottom: #{$border-width}px solid $color-nuetral-light;
+		}
+	}
+}
+@mixin no-bullets-list() {
+	list-style-type:none;
+	padding:0;
+	margin:0 0 1.5rem 0;
+}
+@mixin arrow-bullet-list {
+	@include no-bullets-list;
+	>li {
+		position: relative;
+		padding-left: 0.75rem;
+		&:before {
+			position: relative;
+			position: absolute;
+			top: 0.0625em;
+			left: 0;
+			display: inline-block;
+			color: $color-primary;
+			content: $icon-caret-right;
+			font-family: FontAwesome;
+		}
+	}
+	a {
+		color: $color-black;
+		&:hover, &:active {
+			color: $color-primary;
+		}
+	}
+}
+// Grids
+// --------------
+@mixin show-as-list-products-search-results {
+	.sticker {
+		position:absolute;
+		top:0;
+		left:0;
+		width:7.5rem;
+	}
+
+	figure {
+		padding-top:1.5625rem;
+		@include grid-column(5);
+		@include breakpoint (medium) {
+			@include grid-column(4)
+		}
+		@include breakpoint (large) {
+			@include grid-column(3)
+		}
+	}
+	.add-to-cart-container,
+	.product-info {
+		@include grid-column(7);
+		padding-right:0 !important;
+		@include breakpoint (medium) {
+			@include grid-column(8)
+		}
+		@include breakpoint (large) {
+			@include grid-column(9)
+		}
+		p {
+			text-align:left;
+		}
+		.description, .options {
+			display:block;
+			visibility:visible;
+		}
+		.name {
+			height:auto;
+			overflow:visible;
+		}
+		.product-price {
+			margin-top: 1.5rem;
+			text-align:center;
+		}
+	}
+}
+
+.max {
+	width: 100%;
+}
+
+.display-options {
+    @include grid-row;
+    border-top:1px solid $color-nuetral-light;
+	border-bottom:1px solid $color-nuetral-light;
+	background:$white;
+	padding: .5rem  0;
+	margin-bottom:0;
+    width:100%;
+    @include breakpoint (medium) {
+		display:table;
+    }
+    > li {
+        display:table-cell;
+		vertical-align:middle;
+		white-space:nowrap;
+		padding-right:1rem;
+        width:auto;
+
+        &.left {
+			width:125px;
+			@include breakpoint(mediumhigh) {
+				display:table-cell;
+			}
+		}
+
+		&.right {
+			text-align:right;
+			width:100%;
+			padding-right:0;
+			white-space:normal;
+        }
+
+        button.link {
+            font-size: .875rem;
+        }
+
+        input, .button-group, button, input, select, .pagination {
+			height: auto;
+			line-height: initial;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.inline-block {
+	display: inline-block;
+}

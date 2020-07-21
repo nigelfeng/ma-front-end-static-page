@@ -1,0 +1,48 @@
+$uys-primary-color: #0A4E4F;
+$uys-secondary-color: #12827D;
+
+$upgrade-your-sound-theme-settings: (
+    name: upgrade-your-sound,
+    sections: (
+        body: (
+            anchor-color: $uys-primary-color,
+            error-color: $color-error,
+            headings: (
+                h2: (color: $uys-primary-color)
+            ),
+            button: (
+                background: #d9d9d9,
+                color: $uys-primary-color
+            ),
+            primary-button: (
+                background: $uys-primary-color
+            )
+        ),
+        primary: (
+            background: $uys-secondary-color,
+            button: (
+                background: $uys-primary-color
+            )
+        ),
+        primary-alternate: (
+            background: $uys-primary-color,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            anchor-color: $uys-primary-color,
+            background: #d9d9d9,
+            button: (
+                background: $uys-primary-color
+            )
+        ),
+        secondary-alternate: (
+            anchor-color: #1fdbd1,
+            background: $color-neutral-dark,
+            button: (
+                background: $uys-secondary-color
+            )
+        )
+    )
+);

@@ -1,0 +1,108 @@
+﻿@import '../mixins/mixins';
+
+.event-filter {
+    padding: 1rem;
+
+    &__label {
+        float: left;
+        margin: .6125rem .5rem .6125rem 0;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        float: left;
+        width: auto;
+        margin: 0;
+    }
+}
+
+.event-list {
+    $c: &;
+    list-style-type: none;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+
+    &--with-border {
+        border: 1px solid $color-nuetral-light;
+    }
+
+    @include breakpoint(medium up) {
+        #{$c}--is-scroll {
+            max-height: 36rem;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    &__item {
+        padding-top: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid $color-nuetral-light;
+        }
+    }
+}
+
+.event {
+    $c: &;
+    @include grid-row;
+    @include grid-row-nest;
+
+    &__name {
+        display: block;
+    }
+
+    &__time {
+        display: block;
+    }
+
+    &__details {
+        @include grid-column(12);
+    }
+
+    &__image {
+        text-align: center;
+        @include grid-column;
+
+        @include breakpoint(medium up) {
+            @include grid-column-size(2);
+        }
+    }
+
+    &__description {
+        @include grid-column;
+
+        @include breakpoint(medium up) {
+            @include grid-column-size(6);
+        }
+    }
+    // if the event only has an image
+    &--with-image {
+        &:not(#{$c}--with-description) {
+            #{$c}__details {
+                @include breakpoint(medium up) {
+                    @include grid-column-size(10);
+                }
+            }
+        }
+    }
+
+    &--with-description {
+        // if the event has a description and no image
+        &:not(#{$c}--with-image) {
+            #{$c}__details {
+                @include breakpoint(medium up) {
+                    @include grid-column-size(6);
+                }
+            }
+        }
+        // if the event has both a description and an image
+        &#{$c}--with-image {
+            #{$c}__details {
+                @include breakpoint(medium up) {
+                    @include grid-column-size(4);
+                }
+            }
+        }
+    }
+}

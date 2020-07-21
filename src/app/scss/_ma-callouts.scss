@@ -1,0 +1,120 @@
+@mixin callout-with-icon(
+    $icon-color,
+    $icon
+) {
+    position: relative;
+    font-weight: $global-weight-bold;
+    padding-left: 3.5rem;
+    min-height: 1.5rem;
+
+    p {
+        &:before {
+            @include auto-center(false, true);
+            color: $icon-color;
+            content: $icon;
+            display: inline-block;
+            font-family: FontAwesome;
+            font-size: 1.5rem;
+            font-weight: $global-weight-normal;
+            margin-left: -2.5rem;
+        }
+    }
+}
+
+.callout {
+	clear:both;
+    margin-bottom:1.5rem;
+
+	&.recently-viewed {
+		margin-top: 1rem;
+	}
+
+    &.rebate {
+        border: none;
+		.title {
+			color: $color-black;
+			font-weight: bold;
+		}
+		a {
+			color: $color-primary !important;
+			&:hover, &:active, &:focus {
+				color: $color-primary !important;
+				text-decoration: underline;
+			}
+		}
+	}
+
+    &.secondary, &.border {
+		+ .callout {
+			margin-top: 0rem;
+		}
+    }
+    &.no-padding {
+        padding: 0;
+
+        .h2 {
+            margin: 0;
+        }
+
+        // AH: this needs refactoring
+        .primary.add-to-cart.small {
+            margin-right: 1.875rem;
+        }
+    }
+    &.error {
+        @include callout-with-icon($color-primary, $icon-exclamation-triangle);
+    }
+    &.info {
+        @include callout-with-icon($color-accent, $icon-info-circle);
+    }
+    &.success {
+        &:not(.promo) {
+            @include callout-with-icon($color-success, $icon-check-circle);
+            background-color: $white !important;
+        }
+    }
+
+	.h2, h2 {
+		border-radius: 4px 4px 0 0;
+		margin: -1rem -1rem 1rem -1rem;
+	}
+	> h2:first-child {
+		margin-top: -1rem;
+	}
+	+ .callout {
+		margin-top:-2.5rem;
+	}
+    .border > a {
+		.name {
+			color: $color-black;
+		}
+		&:hover {
+			.name {
+				color: $color-primary;
+			}
+		}
+	}
+    .slick {
+        margin-left:-1rem;
+        margin-right:-1rem;
+    }
+}
+
+.rebate {
+    background-color: $color-secondary;
+	border: 1px solid $color-neutral-light;
+	padding: rem-calc(15);
+	margin-bottom: rem-calc(16);
+	h2, h3 {
+		color: $color-black;
+		font-size: rem-calc(15);
+		text-transform: uppercase;
+	}
+	.expires {
+		font-size: rem-calc(12);
+		font-weight: bold;
+	}
+	.button {
+		margin-bottom: 0;
+	}
+}

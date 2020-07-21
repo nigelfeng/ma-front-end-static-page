@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="no" />
+
+    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
+    <meta name="description"
+        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
+    <base href="/" />
+
+    <link rel="canonical" href="https://www.musicarts.com" />
+
+
+    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
+    <!-- <link href="https://www.musicarts.com/dist/css/app.css" rel="stylesheet" /> -->
+
+    <!-- 
+    <script>
+        window.digitalData = { event: [] };
+    </script>
+
+    <script>
+        if (window.navigator && navigator.serviceWorker) {
+            navigator.serviceWorker.getRegistrations()
+                .then(function (registrations) {
+                    for (let registration of registrations) {
+                        registration.unregister();
+                    }
+                });
+        }
+    </script> -->
+
+
+    <!-- <script src="https://assets.adobedtm.com/launch-ENe92d58eb5f6241c1bdba948c1df1d307.min.js" async></script>
+
+    <script src="dist/polyfill.bundle.js"></script>
+    <script src="dist/jquery.min.js"></script>
+    <script src="dist/what-input.min.js"></script>
+    <script src="dist/foundation.min.js"></script>
+    <script src="dist/vendor.bundle.js"></script> -->
+
+
+    <!-- <script src="dist/home-main.bundle.js"></script> -->
+
+</head>
+
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-content" data-off-canvas-content>
+
+            <div class="skiplinks">
+                <a href="#main" tabindex="0">Skip to main content</a>
+                <a href="#footer" tabindex="0">Skip to footer</a>
+            </div>
+
+            <div class="fixed-header-push"></div>
+            <div class="promo-header" role="region" aria-label="Current Promotions"
+                style="background-color: #000000; color: #ffffff;">
+                <div class="row"> <a href="https://www.musicarts.com/cms/updates/" target="_self"><span
+                            style="color:#ffffff; font-weight: bolder;">COVID 19: The latest on our store openings and
+                            safety plans | Learn More<br>Due to new <u>Safety Measures</u>, a face mask or covering is
+                            required to enter any store for your safety, the safety of other customers and our
+                            staff.</span> </a> </div>
+            </div>
+
+
+            <header id="site-header" class="site-header" role="banner">
+                <div id="masthead" class="masthead">
+                    <button type="button" class="toggle-menu" data-toggle="off-canvas-left">
+                        <span class="fa fa-bars"></span>
+                        <span class="show-for-sr">Toggle Menu</span>
+                    </button>
+                    <nav class="navigation-utilities" role="navigation" aria-label="Utility Navigation">
+
+                        <a ng-href="{{homeLogoCtrl.homeUrl}}" class="logo"
+                            ng-class="{'logo-educator': homeLogoCtrl.isEducator}" aria-label="Logo" target="_self">
+                            <img ng-src="{{homeLogoCtrl.imgUrl}}"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcAAAABGCAMAAABsZbQwAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURQAAACMfICMfICMfICMfICMfICMfICMfICMfICMfICMfIBtP7vMAAAAKdFJOUwC3oNVtSu6LESr5mAqSAAAL0UlEQVR42tWd65brKgiAi4Jo3v+BT9uZNlG5mWT2Wie/9p7monyAiMQ8Hv/8qIQJ8vOAhFTXruT3lZCY2tIzCZ9XJkZ6/P+OhimX7XmUDHzoADLjT+dSf+DU++GEz01Y+uPrid3Z481g6w7AL0NU7vf5ub8yYxQ+pXJ43imGnLsjuWe8D3iq6KBolAPHoYkVcy+v8iuZmtpL0i8Z4DacMrZtEPnGv3/vbn3ATt3ZQ/u36SipCc/hkcJ8ZcEQvvHCfAJhcUQ0C2nu3o8WboFj7xcX4ed3B7im/NRhlu45avYogXQWYNV6ydUBWJN4XfK9rvRIqKtef7xDiwN8NbOeA9iycgK0Bz8AqTxeYuLx51FDt5sAqu351RkdYFV74o0fRbaKRSMkT0Q2wMPzVgAqjX/Lq+IDckkywMEzNU1qiwCrzg9sF2pcadsgqSJYIziJiNcA7s9bAGjwy4+3BWZ+A0yOUOgmgOC1WAWYApJZsL91guBbvgPw43QXAGbzBG7UGhJK4gFH/c4BtJpeTYBkdTYbI1e2vFo9H8NIUYwH8Pd5cYDoaAPj04+y+OjiNC2fAVgNawAzCrWuNE0pmddBnF9TDSoO8LdDYYBWr/Pv/PB3jgJO6/ItANEftBWAvJ0DQdt2kvw0A7Ui/SjAH6mGAQbkpT+azBD6HMDsjw8yQMcApZDef6LjfH1TTusAeQkgxHucbcKz/ygnANaAJGWAGBox1g1wwQRzgL4PsKwArAual231wlsATuIswMxQjpfKAKdECuSQDz2aTSnlwihY9bhrBeBbYaIAJ3llfoacDJLGZhuxMASdAMhi7uWVp9w9ggiwCVPifnpXnMgxtfezGnF2IKwMpmQBzPg8WMpgEexH34vDDzTLC7+50TKNGUUlpKnWCYCgur3GDwsgS3JDfxBskja2PrdIp2OY2QxAcGFou75kDKpJfVrFhw+w2T/XdYB5840G3Iz5p5vV50DyhO+lwd7oqbcr6/5XAjhqX40DzAvxlu0f6nYLwOJkojSAVdas5EYxqP1ceSEXPrT9sC5VIgCHCLqdBZhWAbI5if00ZAVgJHCUAJKsieh2j/Wcy3eBKQbwIIHjsFYDAAdPSHGAJRJo6yYG9gBwGSCFAaKsWORGk2x0/7M4BasxDCa1DzJAsjj8IcBsBqH/EqCiws0dIdhMe+KCBR7uRKwOAzLAZo0cNwFs9iwH9CHyX4yBWW5WdQGi3X/Sm2E0q6Fq9zLAxxaNNM+Pgc1O1pR7AEaiKgmgFry6MS1NKwF1WiqMRaHHvlAs5Z9k8S0AhEDUbgFEMwtxAiAE8pcCwKZxL1736tS4p/vLaa+EIj2LqsmndO1pEYDZGKwtgLyFfShtVhhKNwHkQBZLAEiaJ8mufubRBH9j+m81G5XVaXzu1AL/EiDGVy/JXKOxshBXcqF4BiCPeMrTpLQKUZRM8Oeq3zxerLQ0dUIumsgVgHASYIuXjpCaOVcX404AnArzWgggatShgFPcWzfFBA8IF5ciuPtfXrbAhTFwylDTWqbvG+/BXQBHTcg1ApDVjODiKt5YpRAuDh2cJmiZsbsBTtW6LQIwlxF4EdKAYojvAZxipZmgADCdL0TqmzGY4NYVa0bvMqwStFWAC/PAOXpUCXYA88Cj7qsdFwEGKrvuBUheoVBuizHMi5g6vYzMAxcyMcLgpRHkbrF0uN9XCnAZILkLqgJACBVPRIb22QRj5b3Qd4U0mcsA69lcqDS9y9UFCGkYob8Kl9L8sMt1oenvAM4lvVKtXmAmX/qopWnpiEgutK0AFOJHmWAHkIcw9PsM5ssAhTLb9FcAhUqon6lU3gI5PcUOYPSJ1QXI6jq5D1AqlahOsAY0CAukNO7H962+G4HmupUIMJ8ECNGqsGkgbLon5rFF5ALMZ1fklQmeRLDzjW1o3FeR2w0AJbHynwAUp0aiCXYvKDZKhXX/hKO42ANI5mTcAyh1A2xlTbVv7f7fijcAlGrd8Q8AKqWkrOUtCqSU4GcOZdRc0jTiOACHdtAqQEnjk3kSH2q5+sKSfrZxEqD4tkm7H6CkuYxEWpGn4eamIY+UJOwMsCu/kfKZPkBH4yWA0PUEd127BaDt1m8DOKnJMXNmF/war9aVObpv6vpPKb7t+ABFX9KMWAcPHqJ7ROr6fR6gJL50dxRKdqBimmDTbRlmmyQ7bHKW0AIAJZ+VTYDYPe+QmBFcxxmAknujmwGCHblZJlgMGQvpC14ACI8zACWCaAGkTqyH1OhdAAWC+WaAZSXnaru5PPcwycYAywYYAygQHAbT0tlCPUrwEIT2vv8KQIEgBQHSGQ9KsQU0UbmrQADlznkA8XESoNBcNgDu/4UuCL0R4Jwjyrcms9Fd+4eomZCQd6FACB2av0UBCi8GqYEyPbow9BCE9gDrJYBzZ1sMYKwIyYeum6CV6JeSzBgECPUCwNlnkeYlugWvw795OO8iwGl6w8sLutEYxi94sgI8kGyo+LUTgQFwBeD0hikYbp4OlOAgOWE4OA1wGphzrKQiVsdp5h/tmQQY4VD5bIQl3x5WR8AVgKPGF23ZqR3/T4dM6OBqrwKcnEINAUzrACGc6xY0pLlzu63GAOZrACen35RG1qPWYe3+fivA0QYoVJUG6wBTHGABbpFyIXk0gm3Zhy4AHG9PBsB98t6/I1mm668AlFZW3cLe8icWCESIJG18yT5AVHOh1fX+KwBJdck0CntPn1F383sBthjAqjisa0FMP9XnmCo4o+aczHbbsQKwqr5+ArjPHbATb74VoPS2i/RuRFmfCCbXd1EwtvX57WBmgOg1fQWg/rbLlCL7/iFz9/A5q5QjOlFCDVIBwnoU4wc+wfRAIIZRCmjTfHn6K4A4CnuvJEydFs8AIXBLFWDQAtP6INi88KEF/XJoSxDSF3Sz0/QLAFkpC+1Pzd2zYQKYlGiB/YnY6NO1MXAUYsiHFieCz8HQNkUAsg6QnabfMwaiPZ/euwh2nqtoMd6nBfVMFDpay0gD0Rd8sn/GKzHM3j8BYLuynFSbKy8NoLK7aXJm2U1Wlk/DsBw3Ka/BeeC0ut6FjJRF+yErETntwVyDSu9EMdJ4ku0HOe9GQHPkJZSFyqleVAAqNVdy/hKO239PUmwqQG3H9Ud77+deIqZzKMHGElgmiNRejIorAXQyuSbA1/3yZ8/7abPqZgFschPZcRGfBsrLcfWT7XhtQpVkNRYBTpFEYXrOvFM2pgnC9m5MrTUSNoHXF4k78b/b/Tmk+ZME0MkjWQA/5p+BOWVr1USouC6ik/FPBHxKVvFQGBhIRICeI8PTo5eXnQP1MZLkxZC8mD504Q1do9XJacs3cBAKIgM79OWQSK09syH2gDPez3rrbpB+U6WbDYD2cmZ8kwMr6S68dcRiFCcUaAUmShyaEzcDIMXGoBMzAHuFsenWQ8JPgcrshdL6Fu8zuHMvVAEG4rS24BGULZfzFtZGsyJ2zYGKZia6ddIBVlPXDIBxDyoBbGIYIlT2+ooOIQhkAnRMUN7AoZUAv1yjKVUwvKuVlgJL1wyAIXmphXMPMQwhrz7EeFQLDWPaZwfgjBukco2f+XK0QEsGiJYP1QG2Bb8hARSTeBLA6I7yHPLoGkDHmpQ9VFyCNj/z3Vp26kGUN3QHH6oD5IXASwIoeg/5rY4cElFeXxPlcFCpvevucHe+gGW+W4tOPYhW68RBgDnsQKV12qF90ubVJRQt7KrCIQ+of/zKGNONb9BVOBd/Co80I1QyAKKxmqIDpBzmJwIkqadN7pBO8GgZDQKCND4/p/pDe7MQ1C4Dt0o/mZNNZy0saaMZBYOYqrV83phBur1UUa4BVKU0bIbUkitI6wOQogb031YUjVD/guKl0qi57kZbHDX2jbRXIzDH9LUcjq848uGP3zsez+w3Ep822N8Kz6KtU5pt+BxqOj5hmt7RVN0a+gbr9NSSIouKFY7H5G+x+/k9Sijn92eCehPBpbdBrpJQ7zoafl5RLnn+cOwuFuKf097f813+jubJqw/Xpf/ZZ5A/n31+dlgR6n8zOIAIwwzAkwAAAABJRU5ErkJggg=="
+                                alt="Music &amp; Arts logo" />
+                        </a>
+
+                        <ul class="menu">
+                            <li class="secondary">
+                                <a href="https://www.musicarts.com/cms/faq/shipping/what-qualifies-for-free-shipping"
+                                    target="_self" class="icon fa-truck">
+                                    <span>
+                                        Free<br />
+                                        Shipping
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stores.musicarts.com/" class="icon fa-map-marker">
+                                    <span>
+                                        Find a<br />
+                                        Location
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="has-submenu">
+
+                                <div class="position-container right" ng-init="amCtrl.getUserInfo()">
+
+                                    <div ng-if="amCtrl.userInfo" class="user has-submenu">
+                                        <a class="icon account fa-user-circle-o"
+                                            ng-class="amCtrl.userInfo.isEducator ? 'icon-educator' : 'fa-user-circle-o'"
+                                            data-toggle="account" tabindex="0" role="button">
+                                            <span>Welcome back,<br />
+                                                <!-- {{ amCtrl.userInfo.fName }}
+                                                {{ amCtrl.userInfo.lName }}
+                                             -->
+                                                nigel test
+                                            </span>
+                                        </a>
+                                        <div class="position">
+                                            <div class="dropdown-pane header-dropdown" data-dropdown data-hover="true"
+                                                data-hover-pane="true" id="account">
+                                                <div class="bar secondary">
+                                                    nigel test
+                                                    <!--    {{ amCtrl.userInfo.fName }} {{ amCtrl.userInfo.lName }}  -->
+                                                    <span>(<a href="/account/logout?goToLogin=true" target="_self">Not
+                                                            you?</a>)</span>
+                                                </div>
+                                                <div class="bar secondary shopping-for"
+                                                    ng-if="amCtrl.userInfo.isEducator">
+                                                    <div ng-if="!amCtrl.userInfo.commercialAccountName">Personal Use
+                                                    </div>
+                                                    <div ng-if="amCtrl.userInfo.commercialAccountName">Shopping for
+                                                        <br> test
+                                                        <!-- {{ amCtrl.userInfo.commercialAccountName }} -->
+                                                    </div>
+                                                </div>
+                                                <a class="h2 m-t-1" ng-href='{{amCtrl.getUrl("/account")}}'
+                                                    target="_self">View My Account</a>
+                                                <p class="helper">View or modify account details including personal
+                                                    information, orders, wish list and past correspondence.</p>
+                                                <div class="login-menu-links">
+                                                    <ul>
+                                                        <li><a ng-href='{{amCtrl.getUrl("/account/orders")}}'
+                                                                target="_self">Orders &amp; Tracking</a></li>
+                                                        <li><a ng-href='{{amCtrl.getUrl("/account/shopping-lists")}}'
+                                                                target="_self">Shopping Lists</a></li>
+                                                        <li><a ng-href='{{amCtrl.getUrl("/account/addresses-and-payment")}}'
+                                                                target="_self">Address &amp; Payment</a></li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li><a ng-href='{{amCtrl.getUrl("/account/account-info")}}'
+                                                                target="_self">Account Info</a></li>
+                                                        <li ng-show="amCtrl.userInfo.isEducator"><a
+                                                                ng-href='{{amCtrl.getUrl("/account/commercial-accounts")}}'
+                                                                target="_self">Commercial Accounts</a></li>
+                                                        <li><a ng-href='{{amCtrl.getUrl("/account/support")}}'
+                                                                target="_self">Support</a></li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button"
+                                                    ng-click='amCtrl.clearSessionAndLogout(amCtrl.getUrl("/account/logout"))'
+                                                    class="link action minor">Logout</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <button type="button" class="cart icon toggle-cart fa-shopping-cart"
+                                    data-toggle="{{chCtrl.offCanvasToggleValue}}" ng-click="chCtrl.loadMiniCart()"
+                                    aria-label="Toggle minicart">
+                                    <span class="badge" ng-show="chCtrl.itemsQuantity && chCtrl.itemsQuantity > 0">
+                                        <!--{{chCtrl.itemsQuantity}}-->2</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="navigation-site" class="navigation-site" role="navigation"
+                        aria-label="Main Section Navigation">
+                        <ul class="menu">
+                            <li class="is-submenu-item" role="menuitem">
+                                <a href="https://www.musicarts.com/search?terms=__featured:PriceDrop"
+                                    target="_self">Price Drops</a>
+
+                            </li>
+                            <li class="is-submenu-item" role="menuitem">
+                                <a href="https://www.musicarts.com/cms/lessons" target="_self">Online Lessons</a>
+
+                            </li>
+                            <li class="is-submenu-item" role="menuitem">
+                                <a href="https://www.musicarts.com/cms/the-repair-shop" target="_self">Repair Shop</a>
+
+                            </li>
+                            <li class="is-submenu-item" role="menuitem">
+                                <a href="https://www.musicarts.com/rentals" target="_self">Rentals</a>
+
+                            </li>
+                            <li class="is-submenu-item" role="menuitem">
+                                <a href="https://www.musicarts.com/cms/educator-portal" target="_self">Educators</a>
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+
+
+            <div id="search-bar" class="search-bar">
+                <div class="row">
+                    <aside aria-label="Site Section Navigation" class="off-canvas position-left" id="off-canvas-left"
+                        data-off-canvas>
+                        <!-- Menu -->
+                        <nav id="navigation-main" class="navigation-main" role="navigation">
+                            <ul class="vertical medium-horizontal menu"
+                                data-responsive-menu="drilldown medium-dropdown">
+                                <li class="hide-for-medium"><a href="https://www.musicarts.com/">Home</a></li>
+                                <li aria-haspopup="true" aria-label="Shop By Category" class="opens-right"
+                                    data-is-click="false" role="menuitem">
+                                    <a href="#" class="shop-item" role="button"><span
+                                            class="fa fa-bars hide-for-small"></span>Shop by Category</a>
+                                    <ul class="menu submenu first-sub vertical" role="menu">
+                                        <li aria-haspopup="true" aria-label="Woodwinds"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/woodwinds" target="_self">Woodwinds</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/woodwinds" target="_self">All
+                                                        Woodwinds</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Woodwind Accessories"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/woodwind-accessories"
+                                                        target="_self">Woodwind Accessories</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/reeds"
+                                                                target="_self">Reeds</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/woodwind-mouthpieces"
+                                                                target="_self">Mouthpieces</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/ligatures-caps"
+                                                                target="_self">Ligatures &amp; Caps</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/woodwind-instrument-stands"
+                                                                target="_self">Instrument stands</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/woodwind-straps-supports"
+                                                                target="_self">Straps</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/woodwind-cases-gig-bags"
+                                                                target="_self">Cases &amp; Gig Bags</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/care-cleaning-for-woodwinds"
+                                                                target="_self">Care &amp; Cleaning</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Saxophones"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/saxophones"
+                                                        target="_self">Saxophones</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/saxophones"
+                                                                target="_self">All Saxophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/alto-saxophones"
+                                                                target="_self">Alto Saxophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/tenor-saxophones"
+                                                                target="_self">Tenor Saxophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/soprano-saxophones"
+                                                                target="_self">Soprano Saxophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/baritone-bass-saxophones"
+                                                                target="_self">Baritone &amp; Bass Saxophones</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Clarinets"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/clarinets"
+                                                        target="_self">Clarinets</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/clarinets"
+                                                                target="_self">All Clarinets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bb-clarinets"
+                                                                target="_self">Bb Clarinets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/a-clarinets"
+                                                                target="_self">A Clarinets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/eb-clarinets"
+                                                                target="_self">Eb Clarinets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bass-clarinets"
+                                                                target="_self">Bass Clarinets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/harmony-clarinets"
+                                                                target="_self">Harmony Clarinets</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Flutes &amp; Piccolos"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/flutes-piccolos"
+                                                        target="_self">Flutes &amp; Piccolos</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/flutes-piccolos"
+                                                                target="_self">All Flutes &amp; Piccolos</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/piccolos"
+                                                                target="_self">Piccolos</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/flutes"
+                                                                target="_self">Flutes</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/alto-flutes"
+                                                                target="_self">Alto Flutes</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bass-flutes"
+                                                                target="_self">Bass Flutes</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Double Reeds"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/double-reed-instruments"
+                                                        target="_self">Double Reeds</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/double-reed-instruments"
+                                                                target="_self">All Double Reeds</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/oboes"
+                                                                target="_self">Oboes</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/english-horns"
+                                                                target="_self">English Horns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bassoons"
+                                                                target="_self">Bassoons</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Brass"
+                                            class="opens-right is-submenu-item Brass" data-is-click="false"
+                                            role="menuitem">
+                                            <a href="https://www.musicarts.com/brass-instruments"
+                                                target="_self">Brass</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/brass-instruments"
+                                                        target="_self">All Brass Instruments</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Brass Accessories"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/accessories-for-brass-instruments"
+                                                        target="_self">Brass Accessories</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/brass-mutes"
+                                                                target="_self">Brass Mutes</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/brass-mouthpieces"
+                                                                target="_self">Brass Mouthpieces</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/brass-cases-gig-bags"
+                                                                target="_self">Brass Cases &amp; Gig Bags</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/brass-instrument-stands"
+                                                                target="_self">Brass Instrument Stands</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/brass-care-cleaning"
+                                                                target="_self">Brass Care &amp; Cleaning</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Trumpets"
+                                                    class="opens-right is-submenu-item Trumpets" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/trumpets"
+                                                        target="_self">Trumpets</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/trumpets"
+                                                                target="_self">All Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bb-trumpets"
+                                                                target="_self">Bb Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/c-trumpets"
+                                                                target="_self">C Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/eb-d-trumpets"
+                                                                target="_self">Eb / D Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/piccolo-trumpets"
+                                                                target="_self">Piccolo Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bass-trumpets"
+                                                                target="_self">Bass Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/pocket-trumpets"
+                                                                target="_self">Pocket Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/herald-trumpets"
+                                                                target="_self">Herald Trumpets</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Trombones"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/trombones"
+                                                        target="_self">Trombones</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/trombones"
+                                                                target="_self">All Trombones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/tenor-trombones"
+                                                                target="_self">Tenor Trombones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bass-trombones"
+                                                                target="_self">Bass Trombones</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Flugelhorns"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/flugelhorns"
+                                                        target="_self">Flugelhorns</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/flugelhorns"
+                                                                target="_self">All Flugelhorns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/professional-flugelhorns"
+                                                                target="_self">Professional Flugelhorns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/intermediate-flugelhorns"
+                                                                target="_self">Intermediate Flugelhorns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/student-flugelhorns"
+                                                                target="_self">Student Flugelhorns</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Cornets"
+                                                    class="opens-right is-submenu-item Cornets" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/cornets"
+                                                        target="_self">Cornets</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/cornets"
+                                                                target="_self">All Cornets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/Bb-cornets"
+                                                                target="_self">Bb Cornets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/C-cornets"
+                                                                target="_self">C Cornets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/Eb-cornets"
+                                                                target="_self">Eb Cornets</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="French Horns"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/french-horns"
+                                                        target="_self">French Horns</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/french-horns"
+                                                                target="_self">All French Horns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/double-horns"
+                                                                target="_self">Double Horns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/triple-horns"
+                                                                target="_self">Triple Horns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/descant-french-horns"
+                                                                target="_self">Descant Horns</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Alto, Tenor &amp; Baritone Horns"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/alto-tenor-horns"
+                                                        target="_self">Alto, Tenor &amp; Baritone Horns</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/alto-tenor-horns"
+                                                                target="_self">Alto &amp; Tenor Horns</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/baritone-horns"
+                                                                target="_self">Baritone Horns</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/euphoniums"
+                                                        target="_self">Euphoniums</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Tubas"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/tubas" target="_self">Tubas</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/tubas" target="_self">All
+                                                                Tubas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bb-tubas"
+                                                                target="_self">Bb Tubas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/c-tubas" target="_self">C
+                                                                Tubas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/eb-tubas"
+                                                                target="_self">Eb Tubas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/f-tubas" target="_self">F
+                                                                Tubas</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Marching Brass"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/marching-baritone-horns"
+                                                        target="_self">Marching Brass</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-baritone-horns"
+                                                                target="_self">All Marching Brass</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-bb-trumpets"
+                                                                target="_self">Marching Bb Trumpets</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/mellophones"
+                                                                target="_self">Mellophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-baritone-horns"
+                                                                target="_self">Marching Baritones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-euphoniums"
+                                                                target="_self">Marching Euphoniums</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-tubas"
+                                                                target="_self">Marching Tubas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/sousaphones"
+                                                                target="_self">Sousaphones</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Guitars"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/guitars" target="_self">Guitars</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/guitars" target="_self">All
+                                                        Guitars</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/electric-guitars"
+                                                        target="_self">Electric Guitars</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/acoustic-guitars"
+                                                        target="_self">Acoustic Guitars</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/classical-nylon-guitars"
+                                                        target="_self">Classic &amp; Nylon Guitars</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/guitar-value-packages"
+                                                        target="_self">Guitar Value Packages</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Keyboards &amp; MIDI"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/keyboards-midi" target="_self">Keyboards
+                                                &amp; MIDI</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/keyboards-midi"
+                                                        target="_self">All Keyboards &amp; MIDI</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/midi" target="_self">MIDI</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/synthesizers-sound-modules"
+                                                        target="_self">Synthesizers &amp; Sound Modules</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/pianos" target="_self">Pianos</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/portable-keyboards"
+                                                        target="_self">Portable Keyboards</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/keyboard-midi-packages"
+                                                        target="_self">Keyboard &amp; MIDI Packages</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/yamaha-clavinovas"
+                                                        target="_self">Yamaha Clavinovas</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Pro Audio"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/pro-audio" target="_self">Pro Audio</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/pro-audio" target="_self">All Pro
+                                                        Audio</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/microphones-wireless-systems"
+                                                        target="_self">Microphones &amp; Wireless Systems</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/live-sound" target="_self">Live
+                                                        Sound</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/recording-gear"
+                                                        target="_self">Recording Gear</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/headphones"
+                                                        target="_self">Headphones</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/mixers" target="_self">Mixers</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/music-software"
+                                                        target="_self">Music Software</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Folk &amp; Traditional Instruments"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/folk-traditional-instruments"
+                                                target="_self">Folk &amp; Traditional Instruments</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/folk-traditional-instruments"
+                                                        target="_self">All Folk &amp; Traditional Instruments</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/folk-traditional-stringed-instruments"
+                                                        target="_self">Folk &amp; Traditional Stringed Instruments</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/folk-traditional-wind-keyboard-instruments"
+                                                        target="_self">Folk &amp; Traditional Wind &amp; Keyboard
+                                                        Instruments</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Drum &amp; Percussion"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/drums-percussion" target="_self">Drum
+                                                &amp; Percussion</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/drums-percussion"
+                                                        target="_self">All Drums &amp; Percussion</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/acoustic-drums"
+                                                        target="_self">Acoustic Drums</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/electronic-drums"
+                                                        target="_self">Electronic Drums</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/cymbals"
+                                                        target="_self">Cymbals</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/drum-percussion-accessories"
+                                                        target="_self">Drum Accessories</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/drum-hardware-stands"
+                                                        target="_self">Hardware</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/world-percussion"
+                                                        target="_self">World Percussion</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Concert &amp; Marching Percussion"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/concert-percussion"
+                                                target="_self">Concert &amp; Marching Percussion</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-percussion"
+                                                        target="_self">All Concert Percussion</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-educational-kits"
+                                                        target="_self">Student Percussion</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Marching Percussion"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/marching-percussion"
+                                                        target="_self">Marching Percussion</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-snare-drums"
+                                                                target="_self">Marching Snare Drums</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-tenor-drums"
+                                                                target="_self">Marching Tenors</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-bass-drums"
+                                                                target="_self">Marching Bass Drums</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-cymbals"
+                                                                target="_self">Marching Cymbals</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/marching-drum-sticks"
+                                                                target="_self">Marching Drum Sticks</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Concert Drums"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-drums"
+                                                        target="_self">Concert Drums</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-snare-drums"
+                                                                target="_self">Concert Snare Drums</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-toms"
+                                                                target="_self">Concert Toms</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-bass-drums"
+                                                                target="_self">Concert Bass Drums</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Mallet Percussion"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-mallet-percussion"
+                                                        target="_self">Mallet Percussion</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-marimbas"
+                                                                target="_self">Marimbas</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-xylophones"
+                                                                target="_self">Xylophones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-vibraphones"
+                                                                target="_self">Vibraphones</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/orchestra-bells-glockenspiels"
+                                                                target="_self">Bells &amp; Glockenspiels</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/concert-tubular-chimes"
+                                                                target="_self">Chimes</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-cymbals"
+                                                        target="_self">Concert Cymbals &amp; Gongs</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-hand-mounted-percussion"
+                                                        target="_self">Hand &amp; Mounted Percussion</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/concert-percussion-accessories"
+                                                        target="_self">Concert Percussion Accessories</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Orchestral Strings"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/orchestral-strings"
+                                                target="_self">Orchestral Strings</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/orchestral-strings"
+                                                        target="_self">All Orchestral Strings</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/violins"
+                                                        target="_self">Violins</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/violas" target="_self">Violas</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/cellos" target="_self">Cellos</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/double-basses"
+                                                        target="_self">Basses</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Orchestral String Accessories"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/accessories-for-orchestral-strings"
+                                                        target="_self">Orchestral String Accessories</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/strings-for-orchestral-instruments"
+                                                                target="_self">Strings for Orchestral Instruments</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/orchestral-strings-cases-gig-bags"
+                                                                target="_self">String Cases</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/bows-rosin"
+                                                                target="_self">Bows &amp; Rosin</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/mutes-for-orchestral-strings"
+                                                                target="_self">Mutes</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/care-cleaning-for-orchestral-strings"
+                                                                target="_self">Care &amp; Cleaning</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/replacement-parts-for-orchestral-strings"
+                                                                target="_self">Replacement Parts</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/humidifiers-for-orchestral-strings"
+                                                                target="_self">Humidifiers</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="https://www.musicarts.com/stands-for-orchestral-strings"
+                                                                target="_self">Instrument Stands</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="General Accessories"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/accessories" target="_self">General
+                                                Accessories</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/stands-racks"
+                                                        target="_self">Stands &amp; Racks</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/strings"
+                                                        target="_self">Strings</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/tuners-metronomes"
+                                                        target="_self">Tuners &amp; Metronomes</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/cases-gig-bags-covers"
+                                                        target="_self">Cases, Gig Bags &amp; Covers</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/guitar-pickup-covers-parts"
+                                                        target="_self">Guitar &amp; Bass Parts</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/cables-snakes"
+                                                        target="_self">Cables &amp; Snakes</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/accessories" target="_self">All
+                                                        General Accessories</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Beginner Store"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/cms/beginner-store/"
+                                                target="_self">Beginner Store</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-bb-clarinets"
+                                                        target="_self">Shop Beginner Clarinets</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-alto-saxophones"
+                                                        target="_self">Shop Beginner Saxophones</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-flutes"
+                                                        target="_self">Shop Beginner Flutes</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-bb-trumpets"
+                                                        target="_self">Shop Beginner Trumpets</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/student-tenor-trombones"
+                                                        target="_self">Shop Beginner Trombones</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/beginner-orchestral-strings"
+                                                        target="_self">Shop Beginner Orchestral Strings</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="beginner-drums-percussion" target="_self">Shop Beginner
+                                                        Percussion</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Books, Sheet Music &amp; Media"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/books-sheet-music-media"
+                                                target="_self">Books, Sheet Music &amp; Media</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/books-sheet-music-media"
+                                                        target="_self">All Books, Sheet Music &amp; Media</a>
+
+                                                </li>
+                                                <li aria-haspopup="true" aria-label="Performance Instruction"
+                                                    class="opens-right is-submenu-item" data-is-click="false"
+                                                    role="menuitem">
+                                                    <a href="https://www.musicarts.com/performance-instruction"
+                                                        target="_self">Performance Instruction</a>
+                                                    <ul class="menu submenu vertical" role="menubar">
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="band-methods" target="_self">Band Instrument Method
+                                                                Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="drum-set-instruction" target="_self">Drum Set
+                                                                Method Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="string-methods" target="_self">String Method
+                                                                Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="piano-methods" target="_self">Piano Method
+                                                                Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="guitar-method-books" target="_self">Guitar Method
+                                                                Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="vocal-method-books" target="_self">Vocal Method
+                                                                Books</a>
+
+                                                        </li>
+                                                        <li class="is-submenu-item" role="menuitem">
+                                                            <a href="world-percussion-instruction" target="_self">World
+                                                                Percussion Method Books</a>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/sheet-music-scores"
+                                                        target="_self">Sheet Music &amp; Scores</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/music-education-for-children"
+                                                        target="_self">Music Education for Children</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/tablature"
+                                                        target="_self">Tablature</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/music-theory-history"
+                                                        target="_self">Music Theory &amp; History</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.sheetmusicdirect.com/en-US/?tophat=musicarts"
+                                                        target="_self">Digital Downloads</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Classroom &amp; Kids"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/classroom-kids" target="_self">Classroom
+                                                &amp; Kids</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/classroom-kids"
+                                                        target="_self">All Classroom &amp; Kids</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/orff-instruments"
+                                                        target="_self">Orff Percussion</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/recorders"
+                                                        target="_self">Recorders</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/classroom-furniture"
+                                                        target="_self">Classroom Furniture</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/classroom-rhythm-instruments"
+                                                        target="_self">Classroom Rhythm Instruments</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/world-percussion"
+                                                        target="_self">World Percussion</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Basses" class="opens-right is-submenu-item"
+                                            data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/bass" target="_self">Basses</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/bass" target="_self">All
+                                                        Basses</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/electric-bass"
+                                                        target="_self">Electric Basses</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/acoustic-bass"
+                                                        target="_self">Acoustic Basses</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li aria-haspopup="true" aria-label="Lifestyle"
+                                            class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
+                                            <a href="https://www.musicarts.com/lifestyle" target="_self">Lifestyle</a>
+                                            <ul class="menu submenu vertical" role="menubar">
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/lifestyle" target="_self">All
+                                                        Lifestyle</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/collectibles"
+                                                        target="_self">Collectibles</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/games" target="_self">Games</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/photos-posters-plaques"
+                                                        target="_self">Photos, Posters &amp; Plaques</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/clothing"
+                                                        target="_self">Clothing</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/luggage"
+                                                        target="_self">Luggage</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/lifestyle-accessories"
+                                                        target="_self">Lifestyle Accessories</a>
+
+                                                </li>
+                                                <li class="is-submenu-item" role="menuitem">
+                                                    <a href="https://www.musicarts.com/home-furnishings"
+                                                        target="_self">Home furnishings</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="is-submenu-item" role="menuitem">
+                                    <a href="https://www.musicarts.com/search?terms=__featured:PriceDrop"
+                                        target="_self">Price Drops</a>
+
+                                </li>
+                                <li class="is-submenu-item" role="menuitem">
+                                    <a href="https://www.musicarts.com/cms/lessons" target="_self">Online Lessons</a>
+
+                                </li>
+                                <li class="is-submenu-item" role="menuitem">
+                                    <a href="https://www.musicarts.com/cms/the-repair-shop" target="_self">Repair
+                                        Shop</a>
+
+                                </li>
+                                <li class="is-submenu-item" role="menuitem">
+                                    <a href="https://www.musicarts.com/rentals" target="_self">Rentals</a>
+
+                                </li>
+                                <li class="is-submenu-item" role="menuitem">
+                                    <a href="https://www.musicarts.com/cms/educator-portal" target="_self">Educators</a>
+
+                                </li>
+
+                            </ul>
+                            <a href="https://stores.musicarts.com/" class="store-promo">
+                                <img src="https://www.musicarts.com/dist/img/offcanvas-store-icon.png"
+                                    role="presentation">Locate a Store
+                            </a>
+                        </nav>
+                        <div class="customer-service-promo">
+                            <p>Customer Service <a class="phone" href="tel:888-731-5396">888-731-5396</a></p>
+                        </div>
+                        <!-- /Menu -->
+                    </aside>
+
+                    <div class="search" role="search">
+                        <div class="globalsearch-wrapper">
+                            <form action="{{ gsbCtrl.actionUrl }}" method="get" name="SearchBar" novalidate="novalidate"
+                                ng-submit="gsbCtrl.search(true)" role="search">
+                                <span ng-init="gsbCtrl.setForm(SearchBar)"></span>
+                                <input id="globalsearch-input"
+                                    aria-label="Search for products by keyword, item number or model number"
+                                    autocomplete="off" name="q" placeholder="Keyword, item # or model #"
+                                    required="required" type="search" ng-model="gsbCtrl.keyword"
+                                    ng-change="gsbCtrl.search()" role="combobox" aria-autocomplete="list"
+                                    aria-owns="globalsearch-suggestions"
+                                    ng-attr-aria-expanded="{{ gsbCtrl.searchResult && !gsbCtrl.searchProcessing && gsbCtrl.keyword.length > 2 && !gsbCtrl.searchResult.isEmpty }}" />
+                                <button aria-label="Submit Search" type="submit"><span
+                                        class="fa fa-search"></span></button>
+                                <!-- <div class="globalsearch-spinner" aria-hidden="true" ng-show="gsbCtrl.searchProcessing">
+                                    <spinner src="gsbCtrl.spinnerUrl"></spinner>
+                                    <span>{{gsbCtrl.searchMessage}}</span>
+                                </div> -->
+                                <!-- <div id="globalsearch-suggestions" class="globalsearch-dropdown" role="listbox" ng-show="gsbCtrl.searchResult && !gsbCtrl.searchProcessing && gsbCtrl.keyword.length > 2 && !gsbCtrl.searchResult.isEmpty">
+                                    <div ng-show="gsbCtrl.searchResult.brands && gsbCtrl.searchResult.brands.length">
+                                        <div role="heading" aria-level="4" class="result-heading" tabindex="-1">Brands</div>
+                                        <a class="result-link" ng-href="{{ brand.url }}" ng-bind="brand.name" ng-repeat="brand in gsbCtrl.searchResult.brands" id="sr-brand-{{ $index }}" role="option" target="_self"></a>
+                                    </div>
+                                    <div ng-show="gsbCtrl.searchResult.categories && gsbCtrl.searchResult.categories.length">
+                                        <div role="heading" aria-level="4" class="result-heading" tabindex="-1">Categories</div>
+                                        <a class="result-link" ng-href="{{ category.url }}" ng-bind="category.name" ng-repeat="category in gsbCtrl.searchResult.categories" id="sr-category-{{ $index }}" role="option" target="_self"></a>
+                                    </div>
+                                    <div ng-show="gsbCtrl.searchResult.products && gsbCtrl.searchResult.products.length">
+                                        <div role="heading" aria-level="4" class="result-heading" tabindex="-1">Products</div>
+                                        <a class="result-link" ng-href="{{ product.url }}" ng-repeat="product in gsbCtrl.searchResult.products" id="sr-product-{{ $index }}" role="option" target="_self">
+                                            <div class="result-image">
+                                                <img alt="{{ product.name }}" ng-src="{{ product.imageUrl }}">
+                                            </div>
+                                            <span class="result-text" ng-bind="product.name"></span>
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="main" class="main" role="main" tabindex="0">
+
+
+
+
+
+
+
+                <div class="umb-cms">
+                    <div id="cms-content" class="theme theme--brand">
+
+
+
+
+                        <div class="umb-grid row">
+                            <div class="columns medium-12 umb-grid__section">
+                                <div class="row umb-grid__section__row">
+                                    <div
+                                        class="small-12 medium-7 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
+                                        <div>
+
+
+
+
+                                            <div class="umb-carousel umb-carousel--full-mobile" id="11723_carousel">
+                                                <div class="umb-carousel__slide slick-slide">
+                                                    <a href="https://www.musicarts.com/cms/lessons">
+                                                        <img src="../images/homepage-652x367.jpg"
+                                                            alt="online lessons now available " />
+
+                                                    </a>
+                                                </div>
+                                                <div class="umb-carousel__slide slick-slide">
+                                                    <a href="https://www.musicarts.com/cms/lessons">
+                                                        <img src="../images/homepage-652x367.jpg"
+                                                            alt="online lessons now available " />
+
+                                                    </a>
+                                                </div>
+                                                <div class="umb-carousel__slide slick-slide">
+                                                    <a href="https://www.musicarts.com/cms/lessons">
+                                                        <img src="../images/homepage-652x367.jpg"
+                                                            alt="online lessons now available " />
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- <script>
+                                                if (document.addEventListener) {
+                                                    document.addEventListener("DOMContentLoaded", function () {
+
+
+                                                        var $slider = $('#11723_carousel');
+
+                                                        $slider.slick({
+                                                            autoplay: true,
+                                                            autoplaySpeed: 5000,
+                                                            arrows: true,
+                                                            dots: false,
+                                                            fade: false,
+                                                            infinite: true,
+                                                            vertical: false,
+                                                            verticalSwiping: false
+                                                        });
+
+                                                        var $responsiveImages = $slider.find('img[data-responsive-images]');
+                                                        if ($responsiveImages.length) {
+                                                            $slider.hide();
+                                                            $responsiveImages.each(function () {
+                                                                $(this).attr('data-interchange', $(this).data('responsiveImages'));
+                                                            });
+                                                            $slider.foundation().show().resize();
+                                                        }
+                                                    });
+                                                }
+                                            </script> -->
+
+
+
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="small-6 medium-5 columns medium-4 umb-grid__section__row__cell umb-padding--bottom  ">
+                                        <div>
+
+                                            <div class="umb-pub-content row">
+                                                <div class="umb-pub-content__item columns  end">
+
+                                                    <div class="umb-grid row">
+                                                        <div class="columns medium-12 umb-grid__section">
+                                                            <div class="row umb-grid__section__row">
+                                                                <div
+                                                                    class="columns medium-12 umb-grid__section__row__cell">
+                                                                    <div>
+                                                                        <a
+                                                                            href="https://www.musicarts.com/cms/summer-deals/">
+                                                                            <img src="../images/homepage-457x368-rb.jpg"
+                                                                                alt="Summer Deals Promo">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="small-6 medium-12 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
+                                        <div>
+                                            <div class="umb-pub-content row">
+                                                <div class="umb-pub-content__item columns  end">
+
+                                                    <div class="umb-grid row">
+                                                        <div class="columns medium-12 umb-grid__section">
+                                                            <div class="row umb-grid__section__row">
+                                                                <div
+                                                                    class="columns medium-12 umb-grid__section__row__cell">
+                                                                    <div>
+                                                                        <a
+                                                                            href="https://www.musicarts.com/cms/the-repair-shop">
+                                                                            <img alt="Summer Tune-Ups at the Repair Shop"
+                                                                                src="../images/homepage-1140x124-bb.jpg" />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="newProductRecs" style="">
+                                    <section>
+                                        <div data-strategy="PopularProducts">
+                                            <div class="padding-top-soft padding-bottom-soft">
+                                                <div class="has-arrow"><span class="left-arrow">Best Sellers</span>
+                                                </div>
+                                            </div>
+                                            <div class="row accessories">
+                                                <div class="columns">
+                                                    <div class="slider-container max-slider-h">
+                                                        <div class="product-slider"
+                                                            id="home_pagerecent-products-viewed_bottom_1">
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=1326324&amp;ind=0&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-550-Paris-Series-Professional-Bb-Trumpet-MAIN0294884-i4958992.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/J50830000001000-00-250x250.jpg"
+                                                                            data-alt="Allora ATR-550 Paris Series Professional Bb Trumpet Silver Plated">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Allora ATR-550 Paris
+                                                                                Series Professional Bb Trumpet Silver
+                                                                                Plated</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0228227&amp;ind=1&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-250-Student-Series-Bb-Trumpet-MAIN0278443-i4943058.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/J47537000001001-00-250x250.jpg"
+                                                                            data-alt="Allora ATR-250 Student Series Bb Trumpet Lacquer Lacquer">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Allora ATR-250
+                                                                                Student Series Bb Trumpet Lacquer
+                                                                                Lacquer</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077333&amp;ind=2&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Traditional-Bb-Clarinet-Reeds-MAIN0000595-i4580580.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/462584000775166-00-250x250.jpg"
+                                                                            data-alt="Vandoren Traditional Bb Clarinet Reeds Strength 3 Box of 10">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Vandoren Traditional
+                                                                                Bb Clarinet Reeds Strength 3 Box of
+                                                                                10</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0166828&amp;ind=3&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTS-62III-Professional-Tenor-Saxophone-MAIN0100915-i4753255.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/H93187000001000-00-250x250.jpg"
+                                                                            data-alt="Yamaha YTS-62III Professional Tenor Saxophone Lacquered">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Yamaha YTS-62III
+                                                                                Professional Tenor Saxophone
+                                                                                Lacquered</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0008298&amp;ind=4&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-B45-Series-Bb-Clarinet-Mouthpiece-MAIN0000654-i4624373.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images//483747000308000-00-250x250.jpg"
+                                                                            data-alt="Vandoren B45 Series Bb Clarinet Mouthpiece Traditional B45">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Vandoren B45 Series
+                                                                                Bb Clarinet Mouthpiece Traditional
+                                                                                B45</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0147164&amp;ind=5&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTR-2330-Standard-Bb-Trumpet-MAIN0094696-i4557011.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            data-alt="Yamaha YTR-2330 Standard Bb Trumpet Bb Trumpet">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Yamaha YTR-2330
+                                                                                Standard Bb Trumpet Bb Trumpet</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0163533&amp;ind=6&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YAS-62III-Professional-Alto-Saxophone-MAIN0101413-i4753469.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/H93184000001000-00-250x250.jpg"
+                                                                            data-alt="Yamaha YAS-62III Professional Alto Saxophone Lacquered">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Yamaha YAS-62III
+                                                                                Professional Alto Saxophone
+                                                                                Lacquered</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0007825&amp;ind=7&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YSL-354-Series-Student-Trombone-MAIN0025381-i4615940.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/464515000420930-00-250x250.jpg"
+                                                                            data-alt="Yamaha YSL-354 Series Student Trombone">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Yamaha YSL-354 Series
+                                                                                Student Trombone</b></p>
+                                                                    </div>
+                                                                </a></div>
+                                                            <div><a
+                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077372&amp;ind=8&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Alto-Saxophone-Reeds-MAIN0000596-i4620566.mac">
+                                                                    <div
+                                                                        class="columns small-8 small-centered padding-top padding-bottom">
+                                                                        <img class="rr-lazy rr-lazy-hidden"
+                                                                            src="../images/462970000000023-00-250x250.jpg"
+                                                                            data-alt="Vandoren Alto Saxophone Reeds Strength 2 Box of 10">
+                                                                    </div>
+                                                                    <div class="columns grid-content">
+                                                                        <p class="product-name"><b>Vandoren Alto
+                                                                                Saxophone Reeds Strength 2 Box of 10</b>
+                                                                        </p>
+                                                                    </div>
+                                                                </a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="  row umb-grid__section__row  ">
+                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell  ">
+                                        <div>
+                                            <p>
+                                                <a href="/Musical-Instrument-Rentals">
+                                                    <img 
+                                                        src="../images/column_header_image_1-compressor.png"
+                                                        alt="Children playing instruments"
+                                                        data-udi="umb://media/a144f2f4f0994bd7a0d78f6edcce989c" />
+                                                </a>
+                                            </p>
+
+                                        </div>
+                                        <div class="umb-align--left  umb-text--uppercase">
+                                            <h3>Rentals</h3>
+                                        </div>
+                                        <div>
+
+
+                                            <p>Rent your band or orchestra instrument through our online rental site or
+                                                visit your neighborhood Music &amp; Arts location.</p>
+
+
+                                        </div>
+                                        <div>
+
+                                            <div class="umb-spacer"></div>
+
+                                        </div>
+                                        <div>
+
+
+
+
+                                            <a href="/rentals" class="button alt">get started today</a>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
+                                        <div>
+
+
+                                            <p><a data-udi="umb://document/0e87a747b9a1402ca0a04060876f99bd"
+                                                    href="/cms/lessons/" title="Lessons"><img
+                                                        src="../images/column_header_image_2-compressor.png"
+                                                        alt="Children playing guitars"
+                                                        data-udi="umb://media/99ae026b1ed341d09a4f7ae1ab70ec4d" /></a>
+                                            </p>
+
+
+                                        </div>
+                                        <div class="umb-align--left  umb-text--uppercase">
+
+
+
+                                            <h3>Take Lessons</h3>
+
+
+
+                                        </div>
+                                        <div>
+
+
+                                            <p>Private lessons, in our safe learning environment, are building blocks to
+                                                a life-long relationship with music. Each is customized to students
+                                                interests and abilities.</p>
+
+
+                                        </div>
+                                        <div>
+
+                                            <div class="umb-spacer"></div>
+
+                                        </div>
+                                        <div>
+
+
+
+
+                                            <a href="/cms/lessons/" class="button">get started</a>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
+                                        <div>
+
+
+                                            <p><a rel="noopener" href="https://stores.musicarts.com/"
+                                                    target="_blank"><img
+                                                        src="../images/column_header_image_4a-compressor.png"
+                                                        alt="gps icon"
+                                                        data-udi="umb://media/1d3a637dc0854155841ec4b178655aa9" /></a>
+                                            </p>
+
+
+                                        </div>
+                                        <div class="umb-align--left  umb-text--uppercase">
+
+
+
+                                            <h3>Store Locator</h3>
+
+
+
+                                        </div>
+                                        <div>
+
+
+                                            <p>Visit one of our 200+ neighborhood stores for expert advice on everything
+                                                musical: products, rentals, lessons and repairs.</p>
+
+
+                                        </div>
+                                        <div>
+
+                                            <div class="umb-spacer"></div>
+
+                                        </div>
+                                        <div>
+
+
+
+
+                                            <a href="https://stores.musicarts.com/" class="button alt">find a store near
+                                                you</a>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
+                                        <div>
+
+
+                                            <p><a
+                                                    href="/Account/Login?ReturnUrl=https%3A%2F%2Fwww.musicarts.com%2FAccount%2F"><img
+                                                        src="../images/column_header_image_3-compressor.png"
+                                                        alt="children playing brass instruments"
+                                                        data-udi="umb://media/a9cd6f07019e43debfd9786c0df8424d" /></a>
+                                            </p>
+
+
+                                        </div>
+                                        <div class="umb-align--left  umb-text--uppercase">
+
+
+
+                                            <h3>Educators</h3>
+
+
+
+                                        </div>
+                                        <div>
+
+
+                                            <p>Access the educator portal to easily shop for the right instruments,
+                                                accessories, and music books for your class.</p>
+
+
+                                        </div>
+                                        <div>
+
+                                            <div class="umb-spacer"></div>
+
+                                        </div>
+                                        <div>
+
+
+
+
+                                            <a href="https://www.musicarts.com/Account/Login?ca=1"
+                                                class="button alt">educator login</a>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="pre-footer-bar">
+                <div class="row">
+                    <form name="subscribeEmail" method="post" novalidate accessible-form>
+                        <div class="email-newsletter-input">
+                            <input id="EmailForNewsletter" name="emailForNewsletter" type="email"
+                                aria-labelledby="email-newletter-title"
+                                aria-describedby="email-newsletter-description email_thankyou"
+                                ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/"
+                                ng-class="{'input-validation-error': subscribeEmail.emailForNewsletter.$invalid && (subscribeEmail.$submitted || subscribeEmail.emailForNewsletter.$touched)}"
+                                placeholder="Email address" ng-model="$ctrl.code" required aria-required="true" />
+                            <button type="submit" ng-click="$ctrl.subscribe($ctrl.code)">Subscribe</button>
+                            <!-- <div id="errMsg_EmailForNewsLetter" ng-messages="subscribeEmail.emailForNewsletter.$error" ng-if="subscribeEmail.emailForNewsletter.$invalid && (subscribeEmail.$submitted || subscribeEmail.emailForNewsletter.$touched)" role="alert" ng-messages-multiple>
+                                <div ng-message="pattern" class="field-validation-error">A valid email address is required</div>
+                            </div> -->
+                            <!-- <div id="email_thankyou" ng-show="$ctrl.submitted" >
+                                Thank you for signing up. Your email has been added to our list.
+                            </div> -->
+                        </div>
+                        <div class="email-newsletter-promo">
+                            <p id="email-newletter-title" class="h2 large color-white">Sign Up for Our Newsletter</p>
+                            <p id="email-newsletter-description" class="email-newsletter-description">Sign Up for emails
+                                &amp; receive a 10% off coupon!</p>
+                        </div>
+                    </form>
+
+                    <div class="social" aria-label="Follow Music &amp; Arts on Social Media">
+                        <ul>
+                            <li><a ng-href="{{ $ctrl.socialSharingLinksHelper.footerShareFacebookUrl() }}"
+                                    class="icon fa-facebook-official" target="_blank" rel="noopener"><span
+                                        class="show-for-sr">Facebook</span></a></li>
+                            <li><a ng-href="{{ $ctrl.socialSharingLinksHelper.footerShareTwitterUrl() }}"
+                                    class="icon fa-twitter" target="_blank" rel="noopener"><span
+                                        class="show-for-sr">Twitter</span></a></li>
+                            <li><a ng-href="{{ $ctrl.socialSharingLinksHelper.footerShareYouTubeUrl() }}"
+                                    class="icon fa-youtube-play" target="_blank" rel="noopener"><span
+                                        class="show-for-sr">YouTube</span></a></li>
+                            <li><a ng-href="{{ $ctrl.socialSharingLinksHelper.footerSharePinterestUrl() }}"
+                                    class="icon fa-pinterest-p" target="_blank" rel="noopener"><span
+                                        class="show-for-sr">Pinterest</span></a></li>
+                            <li><a ng-href="{{ $ctrl.socialSharingLinksHelper.footerShareThevaultUrl() }}"
+                                    class="icon fa-rss" target="_blank" rel="noopener"><span
+                                        class="show-for-sr">Blog</span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <footer role="contentinfo" id="footer" tabindex="0">
+                <div class="row">
+
+                    <!-- Contact -->
+                    <div class="contact column">
+                        <span class="h3" role="heading" id="footer-contact-heading">Contact Us</span>
+                        <p>
+                            Customer Service Dept.<br />Music & Arts<br />5295 Westview Dr Suite 300<br />Frederick MD,
+                            21703-8517<br />
+                            <a class="phone" href="tel:888-731-5396">888-731-5396</a>
+                        </p>
+                        <a id="bbblink" class="ruvtbul bbb-logo"
+                            href="https://www.bbb.org/greater-maryland/business-reviews/musical-instruments-rental/music-and-arts-in-frederick-md-17011890#bbbseal"
+                            title="Music & Arts, Musical Instruments  Rental, Frederick, MD"><img id="bbblinkimg"
+                                src="https://seal-greatermd.bbb.org/logo/ruvtbul/music-and-arts-17011890.png"
+                                alt="Music & Arts, Musical Instruments Rental, Frederick, MD" /></a>
+                        <a target="_blank"
+                            title="Click for the Business Review of Guitar Center, located in Westlake Village, CA"
+                            href="https://caru.bbb.org/general.aspx?id=260733281"><img
+                                alt="Click for the BBB Business Review located Westlake Village, CA" style="border: 0;"
+                                src="https://caru.bbb.org/seal/guitarcenter-seal-260733281.png" /></a>
+                    </div>
+
+                    <!-- Customer Service -->
+                    <div class="customer-service column">
+                        <ul class="footer-nav">
+                            <li>
+                                <div class="h3" id="footer-customer-heading">Customer Service</div>
+                                <ul aria-labelledby="footer-customer-heading">
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/faq/" target="_self">FAQ</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/educator-faq/" target="_self">Educator
+                                            FAQ</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/student-resources/"
+                                            target="_self">Student Resources</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/site-map/" target="_self">Site Map</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/CustomerService/ContactUs"
+                                            target="_self">Contact Us</a>
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Policies -->
+                    <div class="policies column">
+                        <ul class="footer-nav">
+                            <li>
+                                <div class="h3" id="footer-policies-heading">Policies &amp; Services</div>
+                                <ul aria-labelledby="footer-policies-heading">
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/financing/" target="_self">Financing</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/school-services/" target="_self">School
+                                            Services</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/institutional-sales/"
+                                            target="_self">Institutional Sales</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/rental-guides/"
+                                            target="_self">Rentals</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/lessons/" target="_self">Lessons</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/30-day-price-match-guarantee/"
+                                            target="_self">Price Match</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/lists/" target="_self">Shopping List</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/gift-certificates/" target="_self">Gift
+                                            Certificates</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/faq/shipping/"
+                                            target="_self">Shipping</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/faq/returns-exchanges/"
+                                            target="_self">Returns</a>
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- About -->
+                    <div class="about column">
+                        <ul class="footer-nav">
+                            <li>
+                                <div class="h3" id="footer-about-heading">About Music &amp; Arts</div>
+                                <ul aria-labelledby="footer-about-heading">
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/about-us/" target="_self">About Us</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/affiliate-programs/"
+                                            target="_self">Affiliates</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/encore-rewards-signup/"
+                                            target="_self">Encore Rewards</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/trade-show-schedule/"
+                                            target="_self">Tradeshows</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/press-room/" target="_self">Press</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://thevault.musicarts.com/" target="_self">The Vault Blog</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://stores.musicarts.com/" target="_self">Find a Store</a>
+
+                                    </li>
+                                    <li class="is-submenu-item" role="menuitem">
+                                        <a href="https://www.musicarts.com/cms/employment/" target="_self">Careers</a>
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2020 Music &amp; Arts. All rights reserved.</p>
+                    <ul>
+                        <li><a href="https://www.musicarts.com/datarequest">Do Not Sell My Info (CA Only)</a></li>
+                        <li><a href="https://www.musicarts.com/cms/terms-and-conditions">Terms &amp; Conditions</a></li>
+                        <li><a href="https://www.musicarts.com/cms/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.musicarts.com/cms/accessibility-statement">Accessibility Statement</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+
+        <aside aria-label="Shopping Cart" class="off-canvas position-right is-transition-overlap is-closed"
+            id="off-canvas-right" data-off-canvas="" aria-hidden="false" data-e="xgi0n8-e" role="presentation">
+            <div class="mini-cart-spinner" style="display: none;">
+                <div class="spinner-content">
+                    <object type="image/svg+xml" class="spinner ae-media" data="/dist/img/spinner.svg"
+                        data-player-url="/dist/img/spinner.svg"><span class="ae-compliance-indent"
+                            style="display:none;"> loading spinner</span></object>
+                    <div class="spinner-message">Loading</div>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <!-- ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+                <div class="items ng-scope" ng-if="mcCtrl.initialized &amp;&amp; mcCtrl.cart.itemsQuantity > 0">
+                    <span class="count ng-binding">2</span> Items
+                </div><!-- end ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+                <!-- ngIf: mcCtrl.cart.itemsQuantity > 0 -->
+                <div class="cart-summary-actions ng-scope" ng-if="mcCtrl.cart.itemsQuantity > 0">
+                    <a ng-href="/cart" target="_self" class="button" href="/cart">View Cart</a>
+                    <a ng-href="/cart/checkout" target="_self" class="button primary" href="/cart/checkout">Checkout</a>
+                </div><!-- end ngIf: mcCtrl.cart.itemsQuantity > 0 -->
+                <button class="close-button ae-button" aria-label="Close menu" type="button" data-close=""
+                    data-ae-blurbtype="button" data-ae-form-field="true">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!-- ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+            <!-- <mini-cart-items items="mcCtrl.cart.items"
+                ng-if="mcCtrl.initialized &amp;&amp; mcCtrl.cart.itemsQuantity > 0" class="ng-scope ng-isolate-scope"> -->
+            <div class="callout secondary no-padding">
+                <ul class="cart-items mini-cart">
+                    <!-- ngRepeat: item in mciCtrl.items -->
+                    <li ng-repeat="item in mciCtrl.items" class="ng-scope">
+                        <div class="product" aria-label="Item Details">
+                            <figure>
+                                <a ng-href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
+                                    ng-hide="item.isRentalItem"
+                                    href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
+                                    aria-hidden="false">
+                                    <img ng-src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
+                                        alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
+                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
+                                        class="ae-img">
+                                </a>
+                                <img ng-show="item.isRentalItem"
+                                    ng-src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
+                                    alt="Standard"
+                                    src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
+                                    aria-hidden="true" class="ng-hide ae-img">
+                            </figure>
+                            <div class="product-info">
+                                <p class="name">
+                                    <a ng-hide="item.isRentalItem"
+                                        ng-href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
+                                        class="ng-binding"
+                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
+                                        aria-hidden="false">Sound Projections VM-2 with Dual 60-Channel Digital
+                                        Handheld Wireless Systems - Standard</a>
+                                    <span ng-show="item.isRentalItem" class="ng-binding ng-hide"
+                                        aria-hidden="true">Standard</span>
+                                </p>
+                                <ul class="product-additional" ng-hide="item.isRentalItem" aria-hidden="false"
+                                    role="presentation">
+                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="total price ng-binding" aria-label="Item Total"
+                            ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
+                        <!-- ngIf: item.isRental -->
+                        <!-- ngIf: item.discounts && item.discounts.length > 0 -->
+                    </li><!-- end ngRepeat: item in mciCtrl.items -->
+                    <li ng-repeat="item in mciCtrl.items" class="ng-scope">
+                        <div class="product" aria-label="Item Details">
+                            <figure>
+                                <a ng-href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
+                                    ng-hide="item.isRentalItem"
+                                    href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
+                                    aria-hidden="false">
+                                    <img ng-src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
+                                        alt="YCL-CSVR Series Professional Bb Clarinet Standard"
+                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
+                                        class="ae-img">
+                                </a>
+                                <img ng-show="item.isRentalItem"
+                                    ng-src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
+                                    alt="Standard"
+                                    src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
+                                    aria-hidden="true" class="ng-hide ae-img">
+                            </figure>
+                            <div class="product-info">
+                                <p class="name">
+                                    <a ng-hide="item.isRentalItem"
+                                        ng-href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
+                                        class="ng-binding"
+                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
+                                        aria-hidden="false">Yamaha YCL-CSVR Series Professional Bb Clarinet -
+                                        Standard</a>
+                                    <span ng-show="item.isRentalItem" class="ng-binding ng-hide"
+                                        aria-hidden="true">Standard</span>
+                                </p>
+                                <ul class="product-additional" ng-hide="item.isRentalItem" aria-hidden="false"
+                                    role="presentation">
+                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="total price ng-binding" aria-label="Item Total"
+                            ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
+                        <!-- ngIf: item.isRental -->
+                        <!-- ngIf: item.discounts && item.discounts.length > 0 -->
+                    </li><!-- end ngRepeat: item in mciCtrl.items -->
+                </ul>
+            </div>
+            <!-- </mini-cart-items> -->
+            <!-- end ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+            <!-- ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity === 0 -->
+            <!-- ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+            <div class="cart-totals ng-scope" ng-if="mcCtrl.initialized &amp;&amp; mcCtrl.cart.itemsQuantity > 0">
+                <!-- ngIf: mcCtrl.cart.discountTotal !== 0 -->
+                <p><span class="ng-binding">2 Item(s) Total</span><strong class="price ng-binding"
+                        ng-bind-html="mcCtrl.cart.total | fancyCurrency">$6,814<sup>.99</sup></strong></p>
+            </div><!-- end ngIf: mcCtrl.initialized && mcCtrl.cart.itemsQuantity > 0 -->
+            <!-- ngIf: mcCtrl.cart.itemsQuantity > 0 -->
+            <div class="mini-cart-actions ng-scope" ng-if="mcCtrl.cart.itemsQuantity > 0">
+                <div class="column"><a ng-href="/cart" target="_self" class="button" href="/cart">View Cart</a></div>
+                <div class="column"><a ng-href="/cart/checkout" target="_self" class="button primary"
+                        href="/cart/checkout">Checkout</a></div>
+            </div><!-- end ngIf: mcCtrl.cart.itemsQuantity > 0 -->
+        </aside>
+    </div>
+
+    <div class="small-visibility-check show-for-small-only"></div>
+
+
+    <!-- <script>
+        var mainModule = angular.module('main-module');
+        //Digital Data Layer
+        var digitalDataModel = { "version": "1.0", "page": { "pageInfo": { "breadcrumbs": null }, "attributes": { "categoryID": null, "productID": null, "categories": null }, "category": { "pageType": "OTHER" } }, "environment": "PRODUCTION", "constants": { "environment": ["ACCEPTANCE", "PRODUCTION"], "event": ["INITIALIZED", "CART_ITEM_ADD", "CART_ITEM_ADD_SUCCESS", "CART_ITEM_ADD_FAIL", "CART_RENTAL_ADD", "CART_RENTAL_ADD_SUCCESS", "CART_RENTAL_ADD_FAIL", "CART_ITEM_QTY_UPDATE", "CART_ITEM_QTY_UPDATE_SUCCESS", "CART_ITEM_QTY_UPDATE_FAIL", "CART_COMPONENT_QTY_UPDATE", "CART_COMPONENT_QTY_UPDATE_SUCCESS", "CART_COMPONENT_QTY_UPDATE_FAIL", "CART_ITEM_REMOVE", "CART_ITEM_REMOVE_SUCCESS", "CART_ITEM_REMOVE_FAIL", "CART_RENTAL_REMOVE", "CART_RENTAL_REMOVE_SUCCESS", "CART_RENTAL_REMOVE_FAIL", "CART_COMPONENT_REMOVE", "CART_COMPONENT_REMOVE_SUCCESS", "CART_COMPONENT_REMOVE_FAIL", "CART_COUPON_APPLY", "CART_COUPON_APPLY_SUCCESS", "CART_COUPON_APPLY_FAIL", "CART_COUPON_REMOVE", "CART_COUPON_REMOVE_SUCCESS", "CART_COUPON_REMOVE_FAIL", "CART_CLEAR", "CART_CLEAR_SUCCESS", "CART_CLEAR_FAIL", "MINICART_LOAD", "MINICART_LOAD_SUCCESS", "MINICART_LOAD_FAIL", "PLP_FILTER_UPDATE", "PLP_CHANGE_PAGE", "PLP_CHANGE_PAGESIZE", "PLP_CHANGE_SORTBY", "PLP_CHANGE_RESULTS", "PROCESS_CART_RESPONSE", "PROCESS_CART_RESPONSE_ERROR", "RENTAL_ROUTE_INSTRUMENT", "RENTAL_ROUTE_INSTRUMENT_SIZE", "RENTAL_ROUTE_RATES", "RENTAL_ROUTE_SUPPLIES", "RENTAL_ROUTE_RENTER", "RENTAL_ROUTE_CREDITCHECK", "ORDER_CHANGE_PAGE", "ORD_CHANGE_RESULTS"], "pageType": ["OTHER", "HOME", "CART", "PRODUCT_DETAIL", "PRODUCT_LISTING_CATEGORY", "PRODUCT_LISTING_SEARCH", "PRODUCT_LISTING_BRAND", "PRODUCT_LISTING_MERCHANDISING", "ERROR", "CHECKOUT", "OLR", "SCHOOL_SUPPLIES"], "shoppingAs": ["Consumer", "Educator"], "rentalComponentType": ["Instrument", "TrialPeriod", "MonthlyCharge", "LdwInitialCharge", "LdwMonthlyCharge", "SecurityDeposit", "Accessory"], "shippingMethod": ["Home", "Store", "School", "Event"] }, "product": [], "transaction": null, "pageIdentifier": null };
+        mainModule.value('digitalData', digitalDataModel);
+        angular.bootstrap(document, [mainModule.name]);
+    </script> -->
+
+</body>
+
+</html>

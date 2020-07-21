@@ -1,0 +1,17 @@
+@import 'back-to-school';
+@import 'brand-accent';
+@import 'brand';
+@import 'dark';
+@import 'holiday';
+@import 'open-house';
+@import 'piano-workshop';
+@import 'upgrade-your-sound';
+
+@include ma-theme($back-to-school-theme-settings);
+@include ma-theme($brand-accent-theme-settings);
+@include ma-theme($brand-theme-settings);
+@include ma-theme($dark-theme-settings);
+@include ma-theme($holiday-theme-settings);
+@include ma-theme($open-house-theme-settings);
+@include ma-theme($piano-workshop-theme-settings);
+@include ma-theme($upgrade-your-sound-theme-settings);

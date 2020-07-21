@@ -1,0 +1,26 @@
+h1, .h1 {
+    font-weight: 700;
+    @include font-size(26);
+    @include breakpoint(medium up) {
+        @include font-size(32);
+    }
+}
+h2, .h2 {
+    @include font-size(20);
+    @include breakpoint(medium up) {
+        @include font-size(24);
+    }
+}
+h3, .h3 {
+    @include font-size(16);
+    @include breakpoint(medium up) {
+        @include font-size(18);
+    }
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    @include font-size(14);
+}
+
+.fine-print {
+    @include font-size(12);
+}

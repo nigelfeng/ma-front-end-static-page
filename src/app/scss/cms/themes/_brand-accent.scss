@@ -1,0 +1,47 @@
+$brand-accent-primary-color: #0e71b2;
+
+$brand-accent-theme-settings: (
+    name: brand-accent,
+    sections: (
+        body: (
+            anchor-color: $brand-accent-primary-color,
+            error-color: $color-error,
+            headings: (
+                h1: (color: $color-primary),
+                h2: (color: $color-primary)
+            ),
+            button: (
+                background: $color-neutral-dark
+            ),
+            primary-button: (
+                background: $brand-accent-primary-color
+            )
+        ),
+        primary: (
+            background: $color-primary,
+            button: (
+                background: $brand-accent-primary-color
+            )
+        ),
+        primary-alternate: (
+            background: $color-primary-dark,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            background: #d9d9d9,
+            anchor-color: $color-primary-dark,
+            button: (
+                background: $color-primary
+            )
+        ),
+        secondary-alternate: (
+            background: $color-neutral-dark,
+            anchor-color: $brand-accent-primary-color,
+            button: (
+                background: $brand-accent-primary-color
+            )
+        )
+    )
+);

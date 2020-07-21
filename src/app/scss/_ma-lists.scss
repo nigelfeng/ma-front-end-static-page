@@ -1,0 +1,212 @@
+ul {
+    &.no-bullets {
+        @include no-bullets-list;
+    }
+
+    &.v-list-spacing {
+        @include vertical-list-spacing;
+    }
+
+    &.link-list {
+        @include no-bullets-list;
+		@include link-list-anchors;
+        @include vertical-list-spacing;
+    }
+
+    &.narrow-by {
+        @include link-list-anchors;
+    }
+
+    &.columns {
+        margin-left: 0;
+
+        > li {
+            width: 50%;
+            float: left;
+            padding-right: 1.5rem;
+
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+
+            @include breakpoint (small only) {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+        }
+
+        + * {
+            clear: both;
+        }
+    }
+
+    &.arrow-bullet {
+        @include arrow-bullets-list;
+    }
+
+    &.arrow-bullet-list {
+        @include no-bullets-list;
+        > li {
+            position: relative;
+            padding-left: 0.75rem;
+        }
+        .fa-caret-right {
+            float: left;
+            color: $color-primary;
+            position: relative;
+            top: rem-calc(2);
+        }
+        .content {
+            display: block;
+            overflow: hidden;
+            margin-left: rem-calc(12);
+        }
+    }
+
+    &.inline-list {
+        @include no-bullets-list;
+
+        > li {
+            display: inline-block;
+            margin-right: $global-margin;
+        }
+    }
+
+    &.shopping-lists {
+        @include no-bullets-list;
+        @include link-list-anchors('.result');
+
+        > li {
+            padding: rem-calc(8) 0;
+            @include chevron-after;
+            &:after {
+                pointer-events: none;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-nuetral-light;
+            }
+        }
+    }
+
+    &.payment-methods {
+        @include no-bullets-list;
+		@include border-list(bottom, 8, 1);
+
+        > li {
+            @include icon-color($color-primary);
+
+            &:before {
+                font-size: 1.5em !important;
+            }
+
+            &.mastercard {
+                @include icon($icon-cc-mastercard);
+            }
+
+            &.visa {
+                @include icon($icon-cc-visa);
+            }
+
+            &.discover {
+                @include icon($icon-cc-discover);
+            }
+
+            &.gift-card {
+                @include icon($icon-credit-card);
+            }
+
+            &.commercial-account {
+                @include icon($icon-university);
+            }
+
+            &.amex {
+                @include icon($icon-cc-amex);
+            }
+        }
+    }
+}
+dl {
+	&.inline-terms {
+		dt {
+			display: inline-block;
+			font-weight: $global-weight-normal;
+			margin: 0 rem-calc(4) 0 0;
+			&:after {
+				content: ':';
+			}
+		}
+		dd {
+			display: inline-block;
+		}
+	}
+}
+
+// .brand-list {
+
+// }
+.brand-list-index,
+.brand-list-content {
+	border-top: 1px solid $color-neutral-light;
+	padding-top: rem-calc(12);
+	padding-bottom: rem-calc(12);
+}
+.brand-list-index {
+	@include grid-column(2);
+	font-size: rem-calc(48);
+	font-weight: $global-weight-normal;
+	text-align: center;
+	@include breakpoint (medium) {
+		@include grid-column(1);
+	}
+}
+.brand-list-content {
+	@include grid-column(10);
+	@include breakpoint (medium) {
+		@include grid-column(11);
+	}
+	.brands {
+		margin-top: rem-calc(12);
+		margin-bottom: rem-calc(12);
+	}
+	.brands-all {
+		display: none;
+	}
+	.brands-toggle {
+		font-size: rem-calc(14);
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
+
+.product-downloads {
+    h2, h3 {
+        margin-bottom: 1rem;
+    }
+}
+.list-icons {
+    list-style: none;
+    margin-left: 0;
+    li {
+        @include clearfix();
+        margin-bottom: 1rem;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        &:hover, &:active, &:focus {
+            text-decoration: underline;
+        }
+    }
+    .item-icon {
+        float: left;
+        font-size: rem-calc(14);
+        margin-right: rem-calc(8)
+    }
+    .item-content {
+        display: block;
+        overflow: hidden;
+    }
+}

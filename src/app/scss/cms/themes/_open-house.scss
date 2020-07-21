@@ -1,0 +1,41 @@
+$open-house-dark: #002756;
+$open-house-light: #398e78;
+
+$open-house-theme-settings: (
+    name: open-house,
+    sections: (
+        body: (
+            anchor-color: $open-house-dark,
+            headings: (
+                h3: (color: #47719c)
+            ),
+            primary-button: (
+                background: $open-house-dark
+            )
+        ),
+        primary: (
+            background: $open-house-dark,
+            button: (
+                background: $open-house-light
+            )
+        ),
+        primary-alternate: (
+            background: $open-house-light,
+            button: (
+                background: $open-house-dark
+            )
+        ),
+        secondary: (
+            background: $open-house-dark,
+            button: (
+                background: $open-house-light
+            )
+        ),
+        secondary-alternate: (
+            background: $color-neutral-dark,
+            button: (
+                style: hollow
+            )
+        )
+    )
+);

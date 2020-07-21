@@ -1,0 +1,51 @@
+.umb {
+    &-align {
+        &--left {
+            text-align: left;
+        }
+        &--center {
+            text-align: center;
+        }
+        &--right {
+            text-align: right;
+        }
+    }
+
+    &-padding {
+        &--top {
+            padding-top: 1rem;
+        }
+        &--bottom {
+            padding-bottom: 1rem;
+        }
+    }
+
+    &-round {
+        border-radius: 50%;
+    }
+
+    &-text {
+        &--normal {
+            text-transform: none !important;
+            @include all-headings {
+                text-transform: none !important;
+            }
+        }
+        &--uppercase {
+            text-transform: uppercase !important;
+            @include all-headings {
+                text-transform: uppercase !important;
+            }
+        }
+        &--inherit {
+            font-size: inherit !important;
+            color: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+    }
+
+    &-spacer {
+        padding-bottom: 1rem;
+    }
+}

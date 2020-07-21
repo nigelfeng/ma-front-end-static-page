@@ -1,0 +1,41 @@
+$holiday-theme-settings: (
+    name: holiday,
+    sections: (
+        body: (
+            anchor-color: $color-primary,
+            headings: (
+                h2: (color: #08421c)
+            ),
+            button: (
+                background: #d9d9d9
+            ),
+            primary-button: (
+                background: $color-primary
+            )
+        ),
+        primary: (
+            background: #3f7343,
+            button: (
+                background: $color-primary
+            )
+        ),
+        primary-alternate: (
+            background: #08421c,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            background: $color-primary,
+            button: (
+                background: #3f7343
+            )
+        ),
+        secondary-alternate: (
+            background: $color-neutral-dark,
+            button: (
+                background: $color-primary
+            )
+        )
+    )
+);

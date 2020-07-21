@@ -1,0 +1,64 @@
+.pick-up-in-store {
+    @include font-size(13);
+    label {
+        font-weight: $global-weight-normal;
+    }
+}
+
+.find-in-stores {
+    $find-in-stores-color: $color-neutral-dark;
+    $find-in-stores-accent-color: #196735;
+    $find-in-stores-focus-color: #0f3e20;
+
+    color: $find-in-stores-color;
+    @include font-size(13);
+    border: 2px solid $color-secondary;
+
+    h3 {
+        color: $find-in-stores-color;
+        margin-bottom: 0;
+    }
+
+    >.row.columns:first-child {
+        position: relative;
+        padding: .5rem !important;
+    }
+
+    &__icon {
+        max-width: 90px;
+        max-height: 52px;
+        padding-right: .5rem;
+    }
+
+    &__availability {
+        color: $find-in-stores-accent-color;
+        font-weight: $global-weight-bold;
+    }
+
+    p, .callout {
+        margin-bottom: 0;
+    }
+
+    button.link {
+        font-size: inherit;
+        color: $find-in-stores-accent-color;
+        &:hover, &:focus {
+            color: $find-in-stores-focus-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.nonReturnable-link {
+    text-decoration: underline;
+}
+
+.description--top {
+    border-top: 1px solid $color-neutral-light;
+    margin-top: .5rem;
+    padding-top: 1rem;
+}
+
+.pdp-cms-content {
+    margin-bottom: $responsive-embed-margin-bottom;
+}

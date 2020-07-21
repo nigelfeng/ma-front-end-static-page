@@ -1,0 +1,8 @@
+@media print {
+    a[href] {
+        // hide URLs from printing out
+        &:after {
+            content: '';
+        }
+    }
+}

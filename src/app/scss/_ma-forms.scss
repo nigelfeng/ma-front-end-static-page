@@ -1,0 +1,440 @@
+#{text-inputs()}, textarea, select {
+	margin: 0.25rem 0 1.3rem 0;
+}
+textarea[readonly] {
+	background-color: #eee;
+}
+
+legend {
+	&.label {
+		display: block;
+	    margin: 0;
+	    font-size: rem-calc(13);
+	    font-weight: $global-weight-medium;
+	    line-height: normal;
+	    color: $color-nuetral-dark;
+	}
+}
+.is-invalid-input,
+.input-validation-error {
+	border: 1px solid $color-error;
+	background-color: $color-error-background;
+	&:focus,
+	&:active,
+	&:hover {
+		border: 1px solid $color-error !important;
+		background-color: $color-error-background !important;
+	}
+}
+
+.form-error,
+.field-validation-error {
+	@include font-size(11);
+	@include icon($icon-caret-up);
+	display: block;
+	margin-top: -1rem;
+	margin-bottom: 0.5rem;
+	color: $color-error;
+	text-transform: uppercase;
+	font-weight: $global-weight-medium;
+	line-height: 1;
+	&.checkbox-error {
+		margin: rem-calc(5) 0 0 0;
+	}
+}
+.form-error {
+    display: none;
+	+ .form-error {
+		margin: 0;
+	}
+}
+
+.field-validation-error + .field-validation-error {
+	display: none;
+}
+
+.field-validation-error-inset {
+	padding-left: 10px;
+	margin-top: -10px;
+}
+
+.form-margin {
+	margin-bottom: rem-calc(15);
+}
+
+.error-list {
+	color: $color-error;
+	margin: rem-calc(10) 0;
+	padding: rem-calc(15);
+	border: 1px solid $color-error;
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+.input-text {
+	line-height: rem-calc(39) !important;
+}
+
+a.change {
+	font-size: rem-calc(12);
+	float: right;
+	text-decoration: underline;
+}
+
+.input-tiny {
+    width: rem-calc(50);
+	max-width: 100%;
+}
+.input-small {
+    width: rem-calc(200);
+	max-width: 100%;
+}
+
+// Checkbox
+.checkbox {
+    position: relative;
+    padding-left: 1.5rem !important;
+	clear: both;
+    input {
+        position: absolute !important;
+        top: 0.125rem;
+        left: 0;
+        margin: 0 !important;
+        height: 1rem !important;
+        line-height: 1rem !important;
+    }
+}
+
+// Radio Button
+.radio {
+	position: relative;
+	padding-left: 1.25rem !important;
+	margin-bottom: 1rem;
+	input[type="radio"] {
+		position: absolute !important;
+		top: rem-calc(4);
+		left: 0;
+		margin: 0 !important;
+	}
+}
+.radio-fancy {
+	padding-left: rem-calc(24) !important;
+	cursor: pointer;
+	input[type="radio"] {
+		position: absolute;
+		opacity: 0;
+		&:checked {
+			~ .radio-control {
+				&:before {
+					display: block;
+				}
+			}
+		}
+		&:focus {
+			~ .radio-control {
+				box-shadow: 0 0 8px $color-accent;
+				border-color: $color-accent
+			}
+		}
+	}
+	.radio-control {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		border: 1px solid #ccc;
+		border-radius: 50%;
+		width: rem-calc(16);
+		height: rem-calc(16);
+		background-color: #fff;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+		&:before {
+			content: '';
+			position: absolute;
+			display: none;
+			top: rem-calc(3);
+			left: rem-calc(3);
+			width: rem-calc(8);
+			height: rem-calc(8);
+			background-color: $color-accent;
+			border: 1px solid $color-accent;
+			border-radius: 50%;
+		}
+	}
+}
+.is-invalid-label {
+	.radio-control {
+		border-color: $color-primary;
+		background-color: #fee;
+	}
+}
+
+.radio-list {
+	list-style: none;
+	margin: 0;
+	label {
+		display: inline-block;
+	}
+}
+
+// Elements that serve as a label but aren't clickable.
+.radio-label {
+	margin-left: rem-calc(32);
+}
+
+.hidden-label {
+	@include element-invisible;
+}
+
+.indent-checkbox {
+	margin-left: rem-calc(24);
+}
+
+input {
+	&[type="radio"], &[type="checkbox"] {
+		outline: none;
+	}
+}
+
+select {
+	padding: 0.3125rem $input-padding;
+	padding-right: 1.5rem !important;
+
+	&.small {
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 2rem;
+		line-height: 2rem;
+	}
+}
+label {
+	.helper {
+		@include font-size(12);
+		display: block;
+		color: $color-nuetral-medium;
+		font-weight: $global-weight-normal;
+		font-style: italic;
+		line-height: normal;
+	}
+	&.margin {
+		margin-bottom: rem-calc(4);
+	}
+}
+// Give element appearance of native label
+.form-label {
+	color: $form-label-color;
+	font-size: $form-label-font-size;
+	font-weight: $form-label-font-weight;
+	line-height: $form-label-line-height;
+}
+
+label, legend, span {
+	&.req {
+		@include icon-after($icon-asterisk);
+		@include icon-after-color($color-error);
+		&:after {
+			position: relative;
+			top: -0.5em;
+			margin-left: 0.25rem;
+			font-size: 0.5em;
+		}
+	}
+}
+
+.label-top {
+	margin-top: rem-calc(4);
+}
+
+.label + .input-button-inline,
+figure + .input-button-inline,
+img + .input-button-inline {
+	margin-top:.5rem;
+}
+.input-button-inline {
+	@include grid-row;
+	input, button {
+		margin-bottom:.5rem;
+	}
+	.input-inline {
+		@include grid-column(6);
+		@include breakpoint(medium) {
+			@include grid-column(7);
+		}
+	}
+	.input-inline,
+	.button-inline {
+		padding:0 !important;
+	}
+	.input-inline {
+		padding-right: $input-padding !important;
+	}
+	.button-inline {
+		@include grid-column(6);
+		@include breakpoint(medium) {
+			@include grid-column(5);
+		}
+		button {
+			@include button-expand;
+			margin-top: 0.25rem;
+		}
+	}
+}
+.off-canvas {
+	hr {
+		margin-top:1rem;
+		margin-bottom:1rem;
+	}
+	.promo-code, .encore-rewards {
+		padding: 0 .625rem;
+	}
+	.input-button-inline {
+		.input-inline {
+			@include grid-column(8);
+			input {
+				height:2rem;
+				line-height:2rem;
+			}
+		}
+		.button-inline {
+			@include grid-column(4);
+		}
+	}
+}
+input[type="checkbox"] {
+	appearance: none; // autoprefixer will take care of this
+	background-color: #fff;
+	border: 1px solid $color-nuetral-light;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 0;
+	height:1rem !important;
+	width:1rem !important;
+	line-height:1rem !important;
+	display: inline-block;
+	margin:0 .25rem 0 0;
+	position: relative;
+	&:checked:active {
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+	}
+	&:checked {
+		background-color: #fafafa;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+		&:after {
+			font-family:FontAwesome;
+			content: "\f00c";
+			position:absolute;
+			top:-1px;
+			left:-1px;
+			color:$color-accent;
+			text-align:center;
+			font-size:.875rem;
+			height:1rem;
+			width:1rem;
+		}
+	}
+	&:focus {
+		border-color: $color-accent;
+	}
+}
+fieldset {
+	margin-bottom: 0;
+	h3 {
+		margin-top:1.5rem;
+	}
+	&.no-margin {
+		margin-bottom: 0;
+	}
+}
+
+.search-field {
+	position: relative;
+	.search-input {
+		padding-right: rem-calc(78);
+	}
+	.search-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: rem-calc(39);
+		border-radius: 0 rem-calc(4) rem-calc(4) 0;
+	}
+}
+
+.input-button-overlay {
+	position: relative;
+	.input-overlay {
+		height: rem-calc(39);
+		padding-right: rem-calc(78);
+	}
+	.button-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		border-radius: 0 rem-calc(4) rem-calc(4) 0;
+	}
+}
+
+// SPECIAL FORMS
+// -------------
+.main .quality-button {
+	margin-bottom:1.5rem;
+	@include clearfix;
+	input, button {
+		float:left;
+	}
+	button, input {
+		height:3rem !important;
+		line-height:3rem !important;
+		padding-top:0;
+		padding-bottom:0;
+		margin-right: 1rem;
+		margin-top: 0;
+	}
+	input {
+		@include font-size(16);
+		width:60px;
+		text-align:center;
+		margin-right:1rem;
+	}
+}
+
+.password-toggle-wrapper {
+	position: relative;
+	input {
+		padding-right: rem-calc(70);
+	}
+	.toggle-button {
+		line-height: 1;
+		position: absolute;
+		top: rem-calc(8);
+		right: rem-calc(5);
+		padding: rem-calc(5) rem-calc(8);
+		margin: 0;
+		min-width: rem-calc(60);
+	}
+}
+
+.form-instructions {
+	color: $color-primary;
+	font-size: rem-calc(12);
+}
+
+.link-underline {
+    text-decoration: underline;
+}
+
+.callout select.auto-edit {
+	width: auto;
+	max-width: 200px;
+	margin-right: rem-calc(5);
+	@include breakpoint(medium) {
+		max-width: 500px;
+	}
+	@include breakpoint(mediumhigh) {
+		max-width: 320px;
+	}
+	@include breakpoint(large) {
+		max-width: 500px;
+	}
+}

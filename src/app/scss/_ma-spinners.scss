@@ -1,0 +1,205 @@
+$ma-spinner-animation: fade_in 1s;
+$ma-spinner-background-color: rgba(255, 255, 255, 0.9);
+$ma-spinner-border-radius: rem-calc(24);
+$ma-spinner-border: 1px solid rgba(204, 204, 204, 0.4);
+$ma-spinner-font-color: $color-black;
+$ma-spinner-font-size: rem-calc(18);
+$ma-spinner-padding: rem-calc(50) rem-calc(100);
+$ma-spinner-size: rem-calc(65);
+
+@mixin ma-spinner-container(
+    $full-screen: false
+) {
+    display: none;
+
+    @if ($full-screen) {
+        background: rgba(255, 255, 255, 0.55);
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	z-index: 1000;
+    }
+    @else {
+        position: relative;
+    }
+}
+
+@mixin ma-spinner-content(
+    $background-color: $ma-spinner-background-color,
+    $border: $ma-spinner-border,
+    $padding: $ma-spinner-padding,
+    $top: 50%,
+    $transform: translate(-50%, -50%)
+) {
+    animation: $ma-spinner-animation;
+    background-color: $background-color;
+    border-radius: $ma-spinner-border-radius;
+    border: $border;
+    left: 50%;
+    opacity: 1;
+    padding: $padding;
+    position: fixed;
+    text-align: center;
+    top: $top;
+    transform: $transform;
+    z-index: 1000;
+}
+
+@mixin ma-spinner-message(
+    $font-size: $ma-spinner-font-size
+) {
+    color: $ma-spinner-font-color;
+    font-size: $font-size;
+    padding: rem-calc(12) 0;
+}
+
+@mixin ma-spinner(
+    $size: $ma-spinner-size
+) {
+    width: $size;
+    height: $size;
+    opacity: 1;
+    animation: $ma-spinner-animation;
+}
+
+// Spinner displays while PLP results are loading
+.page-spinner {
+    @include ma-spinner-container($full-screen: true);
+
+    .spinner-content {
+        @include ma-spinner-content;
+    }
+
+    .spinner-message {
+        @include ma-spinner-message;
+    }
+
+    .spinner {
+        @include ma-spinner;
+    }
+    &.show {
+        display: block;
+    }
+}
+
+.checkout-spinner {
+    @include ma-spinner-container($full-screen: true);
+
+    .spinner-content {
+        @include ma-spinner-content;
+    }
+
+    .spinner-message {
+        @include ma-spinner-message;
+    }
+
+    .spinner {
+        @include ma-spinner;
+    }
+}
+
+.mini-cart-spinner {
+    @include ma-spinner-container;
+    background-color: silver;
+    width:100%;
+
+    .spinner-content {
+        @include ma-spinner-content(
+            $background-color: transparent,
+            $border: none,
+            $top: rem-calc(50),
+            $transform: translateX(-50%)
+        );
+    }
+
+    .spinner-message {
+        @include ma-spinner-message($font-size: rem-calc(14));
+    }
+
+    .spinner {
+        @include ma-spinner($size: rem-calc(48));
+    }
+}
+
+.viewmore-spinner {
+    @include ma-spinner(rem-calc(20));
+    display: inline-block;
+    width: rem-calc(20);
+    vertical-align: rem-calc(-6);
+    margin-left: rem-calc(4);
+}
+
+// Spinner displays while PLP results are loading
+.qas-spinner {
+    .spinner-content {
+    }
+
+    .spinner-message {
+        @include ma-spinner-message;
+        width: 100%;
+        text-align: center;
+    }
+
+    .spinner {
+        @include ma-spinner;
+    }
+}
+
+.spinner-section {
+    $c: &;
+
+    &__spinner {
+        @include auto-center;
+        visibility: hidden;
+        text-align: center;
+        transition: 240ms visibility;
+        z-index: 9999;
+    }
+
+    &__icon {
+        // nothing now...
+    }
+
+    &__message {
+        @include ma-spinner-message($font-size: .875rem);
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        background: $ma-spinner-background-color;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+        transition: 240ms visibility;
+        z-index: 9998;
+    }
+
+    &--active {
+        position: relative;
+        min-height: 130px;
+        cursor: wait;
+
+        #{$c}__spinner {
+            visibility: visible;
+        }
+
+        #{$c}__bg {
+            visibility: visible;
+        }
+    }
+}
+
+@keyframes fade_in {
+    0% {
+		opacity: 0;
+    }
+    100% {
+		opacity: 1
+    }
+}

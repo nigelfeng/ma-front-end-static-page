@@ -1,0 +1,397 @@
+// Scaffolding
+.main {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @include breakpoint (medium) {
+        min-height: 500px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+.content-primary,
+.content-secondary {
+	@include grid-column(12);
+}
+.columns-4-4-4 {
+	.content {
+	@include grid-column(12);
+	@include breakpoint (medium) {
+			@include grid-column(4);
+		}
+	}
+}
+// Primary is 5, Secondary is 7
+.columns-5-7 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(5);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(7);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-7);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(5);
+			}
+		}
+	}
+}
+// Primary is 7, Secondary is 5
+.columns-7-5 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(7);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(5);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-5);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(7);
+			}
+		}
+	}
+}
+
+// Primary is 8, Secondary is 4
+.columns-8-4 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(8);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(4);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-4);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(8);
+			}
+
+		}
+	}
+	&.checkout {
+		.content-primary {
+			@include grid-column(12);
+			@include breakpoint (medium) {
+				@include grid-column(12);
+			}
+			@include breakpoint (mediumhigh) {
+				@include grid-column(7);
+			}
+			@include breakpoint (large) {
+				@include grid-column(8);
+			}
+		}
+		.content-secondary {
+			@include grid-column(12);
+			@include breakpoint (medium) {
+				@include grid-column(12);
+			}
+			@include breakpoint (mediumhigh) {
+				@include grid-column(5);
+			}
+			@include breakpoint (large) {
+				@include grid-column(4);
+			}
+		}
+		&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(0);
+
+			}
+			@include breakpoint (mediumhigh) {
+				@include grid-col-pos(-5);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-4);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (mediumhigh) {
+				@include grid-col-pos(7);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(8);
+			}
+
+		}
+	}
+	}
+}
+// Primary is 7, Secondary is 5
+.columns-7-5 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(7);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(6);
+		}
+		@include breakpoint (large) {
+			@include grid-column(5);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-5);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(6);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(7);
+			}
+		}
+	}
+}
+
+// Primary is 10, Secondary is 2
+.columns-10-2 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(9);
+		}
+		@include breakpoint (large) {
+			@include grid-column(10);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(3);
+		}
+		@include breakpoint (large) {
+			@include grid-column(2);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-3);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-2);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(9);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(10);
+			}
+
+		}
+	}
+}
+
+// Primary is 2, Secondary is 10
+.columns-2-10 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(3);
+		}
+		@include breakpoint (large) {
+			@include grid-column(2);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (medium) {
+			@include grid-column(9);
+		}
+		@include breakpoint (large) {
+			@include grid-column(10);
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(-9);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(-10);
+			}
+		}
+		.content-secondary {
+			@include breakpoint (medium) {
+				@include grid-col-pos(3);
+
+			}
+			@include breakpoint (large) {
+				@include grid-col-pos(2);
+			}
+
+		}
+	}
+}
+
+// Primary is 6, Secondary is 6
+.columns-6-6 {
+	.content-primary {
+		@include grid-column(12);
+		@include breakpoint (large) {
+			@include grid-column(6);
+		}
+	}
+	.content-secondary {
+		@include grid-column(12);
+		@include breakpoint (large) {
+			@include grid-column(6);
+		}
+		&.border-left {
+			@include breakpoint (large) {
+			border-left:1px solid $color-nuetral-light;
+			}
+		}
+	}
+	&.reverse {
+		.content-primary {
+			@include breakpoint (large) {
+				@include grid-col-pos(-6);
+
+			}
+		}
+		.content-secondary {
+			@include breakpoint (large) {
+				@include grid-col-pos(6);
+
+			}
+		}
+	}
+}
+
+// Multicolumn layouts with CSS-columns
+.multicolumn {
+	column-gap: rem-calc(30);
+}
+.multicolumn--1-2-3 {
+	@include breakpoint(medium up) {
+		columns: 2;
+	}
+	@include breakpoint(large up) {
+		columns: 3;
+	}
+}
+.multicolumn--1-3-4 {
+	@include breakpoint(medium up) {
+		columns: 3;
+	}
+	@include breakpoint(large up) {
+		columns: 4;
+	}
+}
+.multicolumn--2-3-4 {
+	columns: 2;
+	@include breakpoint(medium up) {
+		columns: 3;
+	}
+	@include breakpoint(large up) {
+		columns: 4;
+	}
+}
+
+.content-min {
+	min-height: 400px;
+}

@@ -1,0 +1,50 @@
+/*
+<div class="sticker sticker--{{ detail || listing }}">
+    <span class="icon {{sticker-icon-class}}" aria-hidden="true"></span>
+    <span class="sticker__name">{{ sticker.name }}</span>
+</div>
+*/
+
+.sticker {
+    $c: &;
+
+    display: block;
+    text-transform: uppercase;
+    top: 0;
+
+    &--detail {
+        color: $color-sticker--detail;
+        font-size: rem-calc(14);
+        margin: -.75rem 0 0;
+
+        .icon {
+            @include font-size(16);
+        }
+    }
+
+    &--listing {
+        border-radius: 0; //$global-radius;
+        color: color-pick-contrast($color-sticker--listing, ($black, $white));
+        font-size: rem-calc(13);
+        height: rem-calc(23);
+        line-height: 1;
+        margin: -1rem -1rem 0;
+        padding: .3125rem;
+        position: relative;
+        text-align: center;
+
+        .icon {
+            display: inline;
+        }
+
+        #{$c}__name {
+            display: inline-block;
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    &--with-bg {
+        background: $color-sticker--listing;
+    }
+}

@@ -1,0 +1,70 @@
+.accordion-menu {
+	li {
+		a {
+			padding:.625rem 1.25rem .625rem 0;
+		}
+	}
+	ul {
+		margin-bottom:1rem;
+	}
+	&.reverse-arrow {
+		li {
+			padding-left: 1rem;
+			a {
+				font-weight: $global-weight-medium;
+				&:after {
+					right: auto !important;
+				}
+			}
+		}
+		li li {
+			padding-left: 0;
+		}
+	}
+	&.narrow-by  {
+		li li {
+			margin-bottom:.5rem
+		}
+	}
+	&.borders {
+        li {
+            border-top: 1px dashed $color-body;
+        }
+        li li {
+            border-top: none;
+        }
+	}
+}
+
+.accordion-faq {
+	.is-active {
+		.accordion-title {
+			color: $color-primary;
+		}
+	}
+	.accordion-title {
+		font-size: rem-calc(13);
+		font-weight: $global-weight-medium;
+		color: $color-black;
+		padding: rem-calc(8);
+		border-top: 1px solid $color-neutral-light;
+		border-bottom: none;
+		border-left: none;
+		border-right: none;
+		border-radius: 0 !important;
+		&:hover, &:focus {
+			background-color: $color-secondary;
+		}
+	}
+	.accordion-content {
+		font-size: rem-calc(13);
+		border: none;
+		padding: rem-calc(8) rem-calc(8) rem-calc(20) rem-calc(8);
+		p {
+			font-size: rem-calc(13);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

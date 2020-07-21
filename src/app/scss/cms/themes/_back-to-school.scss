@@ -1,0 +1,46 @@
+$back-to-school-primary: #1152a6;
+$back-to-school-secondary: #1b65a6;
+
+$back-to-school-theme-settings: (
+    name: back-to-school,
+    sections: (
+        body: (
+            anchor-color: $back-to-school-primary,
+            headings: (
+                h2: (color: $back-to-school-primary)
+            ),
+            button: (
+                background: $color-neutral-dark
+            ),
+            primary-button: (
+                background: $back-to-school-primary
+            )
+        ),
+        primary: (
+            background: $back-to-school-secondary,
+            button: (
+                background: #d23b04
+            )
+        ),
+        primary-alternate: (
+            background: $back-to-school-primary,
+            button: (
+                style: hollow
+            )
+        ),
+        secondary: (
+            anchor-color: $back-to-school-primary,
+            background: #d9d9d9,
+            button: (
+                background: $back-to-school-primary
+            )
+        ),
+        secondary-alternate: (
+            anchor-color: #fc7240,
+            background: $color-neutral-dark,
+            button: (
+                style: hollow
+            )
+        )
+    )
+);
