@@ -52,7 +52,7 @@
         "font-awesome": "^4.7.0",
         "foundation-sites": "6.4.2",
         "html-withimg-loader": "^0.1.16",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "moment": "^2.24.0",
         "motion-ui": "^1.2.3",
         "slick-carousel": "^1.7.1",
