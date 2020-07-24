@@ -85,31 +85,22 @@
                                                         <br> test
                                                     </div>
                                                 </div>
-                                                <a class="h2 m-t-1" ng-href='{{amCtrl.getUrl("/account")}}'
-                                                    target="_self">View My Account</a>
+                                                <a class="h2 m-t-1" target="_self">View My Account</a>
                                                 <p class="helper">View or modify account details including personal
                                                     information, orders, wish list and past correspondence.</p>
                                                 <div class="login-menu-links">
                                                     <ul>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/orders")}}'
-                                                                target="_self">Orders &amp; Tracking</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/shopping-lists")}}'
-                                                                target="_self">Shopping Lists</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/addresses-and-payment")}}'
-                                                                target="_self">Address &amp; Payment</a></li>
+                                                        <li><a target="_self">Orders &amp; Tracking</a></li>
+                                                        <li><a target="_self">Shopping Lists</a></li>
+                                                        <li><a target="_self">Address &amp; Payment</a></li>
                                                     </ul>
                                                     <ul>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/account-info")}}'
-                                                                target="_self">Account Info</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/commercial-accounts")}}'
-                                                                target="_self">Commercial Accounts</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/support")}}'
-                                                                target="_self">Support</a></li>
+                                                        <li><a target="_self">Account Info</a></li>
+                                                        <li><a target="_self">Commercial Accounts</a></li>
+                                                        <li><a target="_self">Support</a></li>
                                                     </ul>
                                                 </div>
-                                                <button type="button"
-                                                    ng-click='amCtrl.clearSessionAndLogout(amCtrl.getUrl("/account/logout"))'
-                                                    class="link action minor">Logout</button>
+                                                <button type="button" class="link action minor">Logout</button>
                                             </div>
                                         </div>
                                     </div>
@@ -118,8 +109,7 @@
                             <li>
                                 <button type="button" class="cart icon toggle-cart fa-shopping-cart"
                                     data-toggle="{{chCtrl.offCanvasToggleValue}}" aria-label="Toggle minicart">
-                                    <span class="badge">
-                                        2</span>
+                                    <span class="badge">2</span>
                                 </button>
                             </li>
                         </ul>
@@ -151,6 +141,7 @@
                 <div class="row">
                     <aside aria-label="Site Section Navigation" class="off-canvas position-left" id="off-canvas-left"
                         data-off-canvas>
+                        
                         <nav id="navigation-main" class="navigation-main" role="navigation">
                             <ul class="vertical medium-horizontal menu"
                                 data-responsive-menu="drilldown medium-dropdown">
@@ -1139,6 +1130,7 @@
                         <div class="customer-service-promo">
                             <p>Customer Service <a class="phone" href="tel:888-731-5396">888-731-5396</a></p>
                         </div>
+                        
                     </aside>
                     <div class="search" role="search">
                         <div class="globalsearch-wrapper">
@@ -1158,328 +1150,372 @@
                 </div>
             </div>
             <div id="main" class="main" role="main" tabindex="0">
-                <div class="umb-cms">
-                    <div id="cms-content" class="theme theme--brand">
-                        <div class="umb-grid row">
-                            <div class="columns medium-12 umb-grid__section">
-                                <div class="row umb-grid__section__row">
-                                    <div
-                                        class="small-12 medium-7 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-carousel umb-carousel--full-mobile" id="11723_carousel">
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="small-6 medium-5 columns medium-4 umb-grid__section__row__cell umb-padding--bottom  ">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/summer-deals/">
-                                                                            <img src="../images/homepage-457x368-rb.jpg"
-                                                                                alt="Summer Deals Promo">
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="small-6 medium-12 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/the-repair-shop">
-                                                                            <img alt="Summer Tune-Ups at the Repair Shop"
-                                                                                src="../images/homepage-1140x124-bb.jpg" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="newProductRecs" style="">
-                                    <section>
-                                        <div data-strategy="PopularProducts">
-                                            <div class="padding-top-soft padding-bottom-soft">
-                                                <div class="has-arrow"><span class="left-arrow">Best Sellers</span>
-                                                </div>
-                                            </div>
-                                            <div class="row accessories">
-                                                <div class="columns">
-                                                    <div class="slider-container max-slider-h">
-                                                        <div class="product-slider"
-                                                            id="home_pagerecent-products-viewed_bottom_1">
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=1326324&amp;ind=0&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-550-Paris-Series-Professional-Bb-Trumpet-MAIN0294884-i4958992.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J50830000001000-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-550 Paris Series Professional Bb Trumpet Silver Plated">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-550 Paris
-                                                                                Series Professional Bb Trumpet Silver
-                                                                                Plated</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0228227&amp;ind=1&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-250-Student-Series-Bb-Trumpet-MAIN0278443-i4943058.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J47537000001001-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-250 Student Series Bb Trumpet Lacquer Lacquer">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-250
-                                                                                Student Series Bb Trumpet Lacquer
-                                                                                Lacquer</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077333&amp;ind=2&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Traditional-Bb-Clarinet-Reeds-MAIN0000595-i4580580.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462584000775166-00-250x250.jpg"
-                                                                            data-alt="Vandoren Traditional Bb Clarinet Reeds Strength 3 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Traditional
-                                                                                Bb Clarinet Reeds Strength 3 Box of
-                                                                                10</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0166828&amp;ind=3&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTS-62III-Professional-Tenor-Saxophone-MAIN0100915-i4753255.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93187000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YTS-62III Professional Tenor Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTS-62III
-                                                                                Professional Tenor Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0008298&amp;ind=4&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-B45-Series-Bb-Clarinet-Mouthpiece-MAIN0000654-i4624373.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images//483747000308000-00-250x250.jpg"
-                                                                            data-alt="Vandoren B45 Series Bb Clarinet Mouthpiece Traditional B45">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren B45 Series
-                                                                                Bb Clarinet Mouthpiece Traditional
-                                                                                B45</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0147164&amp;ind=5&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTR-2330-Standard-Bb-Trumpet-MAIN0094696-i4557011.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            data-alt="Yamaha YTR-2330 Standard Bb Trumpet Bb Trumpet">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTR-2330
-                                                                                Standard Bb Trumpet Bb Trumpet</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0163533&amp;ind=6&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YAS-62III-Professional-Alto-Saxophone-MAIN0101413-i4753469.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93184000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YAS-62III Professional Alto Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YAS-62III
-                                                                                Professional Alto Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0007825&amp;ind=7&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YSL-354-Series-Student-Trombone-MAIN0025381-i4615940.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/464515000420930-00-250x250.jpg"
-                                                                            data-alt="Yamaha YSL-354 Series Student Trombone">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YSL-354 Series
-                                                                                Student Trombone</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077372&amp;ind=8&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Alto-Saxophone-Reeds-MAIN0000596-i4620566.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462970000000023-00-250x250.jpg"
-                                                                            data-alt="Vandoren Alto Saxophone Reeds Strength 2 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Alto
-                                                                                Saxophone Reeds Strength 2 Box of 10</b>
-                                                                        </p>
-                                                                    </div>
-                                                                </a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="  row umb-grid__section__row  ">
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell  ">
-                                        <div>
-                                            <p>
-                                                <a href="/Musical-Instrument-Rentals">
-                                                    <img src="../images/column_header_image_1-compressor.png"
-                                                        alt="Children playing instruments"
-                                                        data-udi="umb://media/a144f2f4f0994bd7a0d78f6edcce989c" />
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Rentals</h3>
-                                        </div>
-                                        <div>
-                                            <p>Rent your band or orchestra instrument through our online rental site or
-                                                visit your neighborhood Music &amp; Arts location.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/rentals" class="button alt">get started today</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a data-udi="umb://document/0e87a747b9a1402ca0a04060876f99bd"
-                                                    href="/cms/lessons/" title="Lessons"><img
-                                                        src="../images/column_header_image_2-compressor.png"
-                                                        alt="Children playing guitars"
-                                                        data-udi="umb://media/99ae026b1ed341d09a4f7ae1ab70ec4d" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Take Lessons</h3>
-                                        </div>
-                                        <div>
-                                            <p>Private lessons, in our safe learning environment, are building blocks to
-                                                a life-long relationship with music. Each is customized to students
-                                                interests and abilities.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/cms/lessons/" class="button">get started</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a rel="noopener" href="https://stores.musicarts.com/"
-                                                    target="_blank"><img
-                                                        src="../images/column_header_image_4a-compressor.png"
-                                                        alt="gps icon"
-                                                        data-udi="umb://media/1d3a637dc0854155841ec4b178655aa9" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Store Locator</h3>
-                                        </div>
-                                        <div>
-                                            <p>Visit one of our 200+ neighborhood stores for expert advice on everything
-                                                musical: products, rentals, lessons and repairs.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://stores.musicarts.com/" class="button alt">find a store near
-                                                you</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a
-                                                    href="/Account/Login?ReturnUrl=https%3A%2F%2Fwww.musicarts.com%2FAccount%2F"><img
-                                                        src="../images/column_header_image_3-compressor.png"
-                                                        alt="children playing brass instruments"
-                                                        data-udi="umb://media/a9cd6f07019e43debfd9786c0df8424d" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Educators</h3>
-                                        </div>
-                                        <div>
-                                            <p>Access the educator portal to easily shop for the right instruments,
-                                                accessories, and music books for your class.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://www.musicarts.com/Account/Login?ca=1"
-                                                class="button alt">educator login</a>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="rentals">
+                    <div class="row columns">
+                        <h1 role="heading" aria-level="2">Nationwide Instrument Rentals</h1>
+                        <p>We work closely with the local music directors to offer their preferred instruments and
+                            classroom materials. That is why we are trusted by thousands of schools &amp; parents
+                            nationwide.</p>
+                    </div>
+                    <div class="row">
+                        <div class="columns large-8 medium-6">
+                            <div class="flex-video widescreen">
+                                <iframe width="1280" height="720"
+                                    src="https://www.youtube.com/embed/6vgGN46UoL4?wmode=transparent&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1"
+                                    frameborder="0" allowfullscreen="" id="6vgGN46UoL4" title="YouTube Video"></iframe>
                             </div>
+                            <check-rental-in-cart class="ng-isolate-scope"></check-rental-in-cart>
+                            <section class="show-for-medium">
+                                <marketing-collateral class="ng-isolate-scope">
+                                    <div class="callout background-secondary">
+                                        <div class="row">
+                                            <div class="columns large-6">
+                                                <h3 aria-level="2">We Make Renting Easy</h3>
+                                                <ul class="arrow-bullet">
+                                                    <li>
+                                                        3 easy ways to get your instrument
+                                                        <ul class="arrow-bullet">
+                                                            <li>
+                                                                Choose from over 400 locations.<br>
+                                                                <span class="ng-scope"><a role="link" tabindex="0">Find
+                                                                        a
+                                                                        neighborhood
+                                                                        store near you</a></span>
+                                                            </li>
+                                                            <li><span class="allcaps">Free</span> delivery to your
+                                                                child's schools (where available)</li>
+                                                            <li>Convenient shipping right to your home</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><span class="allcaps">Free</span> maintenance &amp; repairs with
+                                                        our Liability and Damage Waiver (LDW) plan</li>
+                                                    <li>No commitment — <span class="allcaps">Free</span> exchange,
+                                                        return, or purchase any time!</li>
+                                                </ul>
+                                            </div>
+                                            <div class="columns large-6">
+                                                <h3 aria-level="2">About Our Rental Program</h3>
+                                                <ul class="arrow-bullet">
+                                                    <li>Check out our <button type="button"
+                                                            class="button-link ae-button" data-ae-blurbtype="button"
+                                                            data-ae-form-field="true">FAQs</button> for commonly asked
+                                                        questions and answers</li>
+                                                    <li>
+                                                        Have an existing rental instrument in need of repair or service?
+                                                        <a target="_self" class="ng-scope"
+                                                            href="https://www.musicarts.com/cms/rental-service-information">
+                                                            Learn more here</a>
+                                                    </li>
+                                                    <li>Still have questions? Our <a target="_self"
+                                                            href="https://www.musicarts.com/customerservice/contactus">customer
+                                                            service team</a> would love to help!</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </marketing-collateral>
+                            </section>
+                        </div>
+                        <div class="columns large-4 medium-6">
+                            <find-school-landing class="ng-isolate-scope">
+                                <div class="rentals-landing-form">
+                                    <div class="h2 color-primary" role="heading" aria-level="2">Get Started</div>
+                                    <div class="row">
+                                        <div class="columns small-6">
+                                            <label class="radio radio-fancy bold ae-label">
+                                                <input type="radio" name="isFindSchoolOrQuickCode" value="School"
+                                                    class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                    aria-invalid="false" data-ae-form-field="true">
+                                                <div class="radio-control" role="presentation"></div>
+                                                Find Your School
+                                            </label>
+                                        </div>
+                                        <div class="columns small-6">
+                                            <label class="radio radio-fancy bold ae-label">
+                                                <input type="radio" name="isFindSchoolOrQuickCode" value="QuickCode"
+                                                    class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                                    aria-invalid="false" data-ae-form-field="true">
+                                                <div class="radio-control" role="presentation"></div>
+                                                Use Quick Code
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <form name="findSchoolForm" method="post" aria-labelledby="findSchoolTitle"
+                                        accessible-form="" novalidate=""
+                                        class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ae-form"
+                                        aria-hidden="false">
+                                        <div id="findYourSchool">
+                                            <fieldset>
+                                                <legend id="id-school-type" class="h3 req ae-label">Type of School
+                                                </legend>
+                                                <ul class="radio-list">
+                                                    <li>
+                                                        <label class="radio radio-fancy ae-label">
+                                                            <input type="radio" name="SchoolType" value="Traditional"
+                                                                required=""
+                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                                                                aria-invalid="false" data-ae-form-field="true"
+                                                                aria-describedby="id-school-type">
+                                                            <div class="radio-control"></div>
+                                                            Public, private, or traditional school
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="radio radio-fancy ae-label">
+                                                            <input type="radio" name="SchoolType" value="HomeSchool"
+                                                                required=""
+                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                                                                aria-invalid="false" data-ae-form-field="true"
+                                                                aria-describedby="id-school-type">
+                                                            <div class="radio-control"></div>
+                                                            Home school
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="radio radio-fancy ae-label">
+                                                            <input type="radio" name="SchoolType" value="NotApplicable"
+                                                                required=""
+                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                                                                aria-invalid="false" data-ae-form-field="true"
+                                                                aria-describedby="id-school-type">
+                                                            <div class="radio-control"></div>
+                                                            Personal (Adult) Use
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                            <div class="row">
+                                                <div class="columns medium-6">
+                                                    <label class="h3 req ae-label" for="zipCode">Zip Code</label>
+                                                    <input id="zipCode" name="ZipCodeOrQuickCode"
+                                                        placeholder="Enter zip code" type="text" maxlength="5"
+                                                        aria-required="true" required=""
+                                                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                                                        aria-invalid="true" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+                                                <div class="columns medium-6">
+                                                    <div aria-hidden="false">
+                                                        <label class="h3 req ae-label"
+                                                            for="findSchoolGrade">Grade</label>
+                                                        <select name="StudentGrade" id="findSchoolGrade"
+                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                                                            required="required" aria-invalid="true"
+                                                            data-ae-blurbtype="select" data-ae-form-field="true">
+                                                            <option value="" class="" selected="selected">Select
+                                                            </option>
+                                                            <option label="K" value="string:K">K</option>
+                                                            <option label="1" value="string:1">1</option>
+                                                            <option label="2" value="string:2">2</option>
+                                                            <option label="3" value="string:3">3</option>
+                                                            <option label="4" value="string:4">4</option>
+                                                            <option label="5" value="string:5">5</option>
+                                                            <option label="6" value="string:6">6</option>
+                                                            <option label="7" value="string:7">7</option>
+                                                            <option label="8" value="string:8">8</option>
+                                                            <option label="9" value="string:9">9</option>
+                                                            <option label="10" value="string:10">10</option>
+                                                            <option label="11" value="string:11">11</option>
+                                                            <option label="12" value="string:12">12</option>
+                                                            <option label="College" value="string:College">College
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div aria-hidden="false">
+                                                    <label for="schoolSearchSchoolName" class="h3 ae-label">School
+                                                        Name</label>
+                                                    <input id="schoolSearchSchoolName" name="schoolName"
+                                                        placeholder="Enter school name" type="text"
+                                                        class="ng-pristine ng-untouched ng-valid ng-empty"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+                                            </div>
+                                            <div class="p-b-1 p-t-1">
+                                                <button type="submit" class="button large primary ae-button"
+                                                    data-ae-blurbtype="button" data-ae-form-field="true">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <form name="findQuickCodeForm" method="post" aria-labelledby="findSchoolTitle"
+                                        accessible-form="" novalidate=""
+                                        class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-hide ae-form"
+                                        aria-hidden="true">
+                                        <div id="useQuickCode">
+                                            <label for="quickCode" class="h3 req ae-label">Quick Code</label>
+                                            <input id="quickCode" name="ZipCodeOrQuickCode" type="text"
+                                                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                                                maxlength="11" aria-required="true" required=""
+                                                placeholder="Enter quick code" aria-invalid="true"
+                                                data-ae-blurbtype="input" data-ae-form-field="true">
+                                            <label for="quickCodeGrade" class="h3 req ae-label">Grade</label>
+                                            <select
+                                                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                                                name="StudentGrade" id="quickCodeGrade" required="" aria-invalid="true"
+                                                data-ae-blurbtype="select" data-ae-form-field="true">
+                                                <option value="" class="" selected="selected">Select</option>
+                                                <option label="K" value="string:K">K</option>
+                                                <option label="1" value="string:1">1</option>
+                                                <option label="2" value="string:2">2</option>
+                                                <option label="3" value="string:3">3</option>
+                                                <option label="4" value="string:4">4</option>
+                                                <option label="5" value="string:5">5</option>
+                                                <option label="6" value="string:6">6</option>
+                                                <option label="7" value="string:7">7</option>
+                                                <option label="8" value="string:8">8</option>
+                                                <option label="9" value="string:9">9</option>
+                                                <option label="10" value="string:10">10</option>
+                                                <option label="11" value="string:11">11</option>
+                                                <option label="12" value="string:12">12</option>
+                                                <option label="College" value="string:College">College</option>
+                                            </select>
+                                            
+                                            <div class="p-b-1 p-t-1">
+                                                <button type="submit" class="button large primary ae-button"
+                                                    data-ae-blurbtype="button" data-ae-form-field="true">Get
+                                                    Started</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p>Need Help? <a href="tel:888-731-5396">Call 888-731-5396</a></p>
+                                </div>
+                            </find-school-landing>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <section class="hide-for-medium">
+                            <marketing-collateral class="ng-isolate-scope">
+                                <div class="callout background-secondary">
+                                    <div class="row">
+                                        <div class="columns large-6">
+                                            <h3 aria-level="2">We Make Renting Easy</h3>
+                                            <ul class="arrow-bullet">
+                                                <li>
+                                                    3 easy ways to get your instrument
+                                                    <ul class="arrow-bullet">
+                                                        <li>
+                                                            Choose from over 400 locations.<br>
+                                                            <span class="ng-scope"><a role="link" tabindex="0">Find a
+                                                                    neighborhood store
+                                                                    near you</a></span>
+                                                        </li>
+                                                        <li><span class="allcaps">Free</span> delivery to your child's
+                                                            schools (where available)</li>
+                                                        <li>Convenient shipping right to your home</li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="allcaps">Free</span> maintenance &amp; repairs with our
+                                                    Liability and Damage Waiver (LDW) plan</li>
+                                                <li>No commitment — <span class="allcaps">Free</span> exchange, return,
+                                                    or purchase any time!</li>
+                                            </ul>
+                                        </div>
+                                        <div class="columns large-6">
+                                            <h3 aria-level="2">About Our Rental Program</h3>
+                                            <ul class="arrow-bullet">
+                                                <li>Check out our <button type="button" class="button-link ae-button"
+                                                        data-ae-blurbtype="button"
+                                                        data-ae-form-field="true">FAQs</button> for commonly asked
+                                                    questions and answers</li>
+                                                <li>
+                                                    Have an existing rental instrument in need of repair or service?
+                                                    <a target="_self" class="ng-scope"
+                                                        href="https://www.musicarts.com/cms/rental-service-information">
+                                                        Learn more here</a>
+                                                </li>
+                                                <li>Still have questions? Our <a target="_self"
+                                                        href="https://www.musicarts.com/customerservice/contactus">customer
+                                                        service team</a> would love to help!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </marketing-collateral>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <div class="columns large-8 medium-6">
+                            <hr>
+                            <rentals-states class="ng-isolate-scope">
+                                <h2 class="h3" id="rental-locations-by-state">Rental Locations by State</h2>
+                                <ul class="multicolumn multicolumn--2-3-4 location-list">
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/al">Alabama</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/az">Arizona</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ca">California</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/co">Colorado</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ct">Connecticut</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/de">Delaware</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/fl">Florida</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ga">Georgia</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/il">Illinois</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ks">Kansas</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ky">Kentucky</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/la">Louisiana</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/me">Maine</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/md">Maryland</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ma">Massachusetts</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ms">Mississippi</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/mo">Missouri</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/nv">Nevada</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/nh">New Hampshire</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/nj">New Jersey</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/nm">New Mexico</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ny">New York</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/nc">North Carolina</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/oh">Ohio</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ok">Oklahoma</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/or">Oregon</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/pa">Pennsylvania</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/sc">South Carolina</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/tn">Tennessee</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/tx">Texas</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/ut">Utah</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/vt">Vermont</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/va">Virginia</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/wa">Washington</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/wv">West Virginia</a></li>
+                                    <li class="ng-scope"><a target="_self" class="ng-binding"
+                                            href="/rentals/locations/wi">Wisconsin</a></li>
+                                </ul>
+                            </rentals-states>
                         </div>
                     </div>
                 </div>
@@ -1518,6 +1554,7 @@
             </div>
             <footer role="contentinfo" id="footer" tabindex="0">
                 <div class="row">
+                    
                     <div class="contact column">
                         <span class="h3" role="heading" id="footer-contact-heading">Contact Us</span>
                         <p>
@@ -1536,6 +1573,7 @@
                                 alt="Click for the BBB Business Review located Westlake Village, CA" style="border: 0;"
                                 src="https://caru.bbb.org/seal/guitarcenter-seal-260733281.png" /></a>
                     </div>
+                    
                     <div class="customer-service column">
                         <ul class="footer-nav">
                             <li>
@@ -1563,6 +1601,7 @@
                             </li>
                         </ul>
                     </div>
+                    
                     <div class="policies column">
                         <ul class="footer-nav">
                             <li>
@@ -1609,6 +1648,7 @@
                             </li>
                         </ul>
                     </div>
+                    
                     <div class="about column">
                         <ul class="footer-nav">
                             <li>
@@ -1658,98 +1698,7 @@
                 </div>
             </footer>
         </div>
-        <aside aria-label="Shopping Cart" class="off-canvas position-right is-transition-overlap is-closed"
-            id="off-canvas-right" data-off-canvas="" aria-hidden="false" data-e="xgi0n8-e" role="presentation">
-            <div class="mini-cart-spinner" style="display: none;">
-                <div class="spinner-content">
-                    <object type="image/svg+xml" class="spinner ae-media" data="/dist/img/spinner.svg"
-                        data-player-url="/dist/img/spinner.svg"><span class="ae-compliance-indent"
-                            style="display:none;"> loading spinner</span></object>
-                    <div class="spinner-message">Loading</div>
-                </div>
-            </div>
-            <div class="cart-summary">
-                <div class="items ng-scope">
-                    <span class="count ng-binding">2</span> Items
-                </div>
-                <div class="cart-summary-actions ng-scope">
-                    <a target="_self" class="button" href="/cart">View Cart</a>
-                    <a target="_self" class="button primary" href="/cart/checkout">Checkout</a>
-                </div>
-                <button class="close-button ae-button" aria-label="Close menu" type="button" data-close=""
-                    data-ae-blurbtype="button" data-ae-form-field="true">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="callout secondary no-padding">
-                <ul class="cart-items mini-cart">
-                    <li class="ng-scope">
-                        <div class="product" aria-label="Item Details">
-                            <figure>
-                                <a href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
-                                    aria-hidden="false">
-                                    <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                        class="ae-img">
-                                </a>
-                                <img alt="Standard"
-                                    src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                    aria-hidden="true" class="ng-hide ae-img">
-                            </figure>
-                            <div class="product-info">
-                                <p class="name">
-                                    <a class="ng-binding"
-                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
-                                        aria-hidden="false">Sound Projections VM-2 with Dual 60-Channel Digital
-                                        Handheld Wireless Systems - Standard</a>
-                                    <span class="ng-binding ng-hide" aria-hidden="true">Standard</span>
-                                </p>
-                                <ul class="product-additional" aria-hidden="false" role="presentation">
-                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p class="total price ng-binding" aria-label="Item Total">$3,629<sup>.00</sup></p>
-                    </li>
-                    <li class="ng-scope">
-                        <div class="product" aria-label="Item Details">
-                            <figure>
-                                <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
-                                    aria-hidden="false">
-                                    <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                        class="ae-img">
-                                </a>
-                                <img alt="Standard"
-                                    src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                    aria-hidden="true" class="ng-hide ae-img">
-                            </figure>
-                            <div class="product-info">
-                                <p class="name">
-                                    <a class="ng-binding"
-                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
-                                        aria-hidden="false">Yamaha YCL-CSVR Series Professional Bb Clarinet -
-                                        Standard</a>
-                                    <span class="ng-binding ng-hide" aria-hidden="true">Standard</span>
-                                </p>
-                                <ul class="product-additional" aria-hidden="false" role="presentation">
-                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p class="total price ng-binding" aria-label="Item Total">$3,185<sup>.99</sup></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="cart-totals ng-scope">
-                <p><span class="ng-binding">2 Item(s) Total</span><strong
-                        class="price ng-binding">$6,814<sup>.99</sup></strong></p>
-            </div>
-            <div class="mini-cart-actions ng-scope">
-                <div class="column"><a target="_self" class="button" href="/cart">View Cart</a></div>
-                <div class="column"><a target="_self" class="button primary" href="/cart/checkout">Checkout</a></div>
-            </div>
-        </aside>
+        <mini-cart></mini-cart>
     </div>
     <div class="small-visibility-check show-for-small-only"></div>
 </body>

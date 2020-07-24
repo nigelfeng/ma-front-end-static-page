@@ -118,8 +118,7 @@
                             <li>
                                 <button type="button" class="cart icon toggle-cart fa-shopping-cart"
                                     data-toggle="{{chCtrl.offCanvasToggleValue}}" aria-label="Toggle minicart">
-                                    <span class="badge">
-                                        2</span>
+                                    <span class="badge">2</span>
                                 </button>
                             </li>
                         </ul>
@@ -1157,331 +1156,412 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .ng-hide {
+                    display: none !important;
+                }
+            </style>
             <div id="main" class="main" role="main" tabindex="0">
-                <div class="umb-cms">
-                    <div id="cms-content" class="theme theme--brand">
-                        <div class="umb-grid row">
-                            <div class="columns medium-12 umb-grid__section">
-                                <div class="row umb-grid__section__row">
-                                    <div
-                                        class="small-12 medium-7 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-carousel umb-carousel--full-mobile" id="11723_carousel">
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="small-6 medium-5 columns medium-4 umb-grid__section__row__cell umb-padding--bottom  ">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/summer-deals/">
-                                                                            <img src="../images/homepage-457x368-rb.jpg"
-                                                                                alt="Summer Deals Promo">
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="small-6 medium-12 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/the-repair-shop">
-                                                                            <img alt="Summer Tune-Ups at the Repair Shop"
-                                                                                src="../images/homepage-1140x124-bb.jpg" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                <div class="row">
+                    <section class="content" aria-labelledby="page-title">
+                        <header role="presentation">
+                            <h1 id="page-title" class="ae-label" role="heading" aria-level="1">Login</h1>
+                        </header>
+                        <div class="copy-block">
+                            <login-component class="ng-isolate-scope">
+                                <div class="page-spinner" aria-busy="true">
+                                    <div class="spinner-content">
+                                        <object data="/dist/img/spinner.svg" type="image/svg+xml"
+                                            class="spinner ae-media" data-player-url="/dist/img/spinner.svg"><span
+                                                class="ae-compliance-indent" style="display:none;"> loading
+                                                spinner</span></object>
+                                        <div class="spinner-message">LOADING</div>
                                     </div>
                                 </div>
-                                <div id="newProductRecs" style="">
-                                    <section>
-                                        <div data-strategy="PopularProducts">
-                                            <div class="padding-top-soft padding-bottom-soft">
-                                                <div class="has-arrow"><span class="left-arrow">Best Sellers</span>
-                                                </div>
-                                            </div>
-                                            <div class="row accessories">
-                                                <div class="columns">
-                                                    <div class="slider-container max-slider-h">
-                                                        <div class="product-slider"
-                                                            id="home_pagerecent-products-viewed_bottom_1">
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=1326324&amp;ind=0&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-550-Paris-Series-Professional-Bb-Trumpet-MAIN0294884-i4958992.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J50830000001000-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-550 Paris Series Professional Bb Trumpet Silver Plated">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-550 Paris
-                                                                                Series Professional Bb Trumpet Silver
-                                                                                Plated</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0228227&amp;ind=1&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-250-Student-Series-Bb-Trumpet-MAIN0278443-i4943058.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J47537000001001-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-250 Student Series Bb Trumpet Lacquer Lacquer">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-250
-                                                                                Student Series Bb Trumpet Lacquer
-                                                                                Lacquer</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077333&amp;ind=2&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Traditional-Bb-Clarinet-Reeds-MAIN0000595-i4580580.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462584000775166-00-250x250.jpg"
-                                                                            data-alt="Vandoren Traditional Bb Clarinet Reeds Strength 3 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Traditional
-                                                                                Bb Clarinet Reeds Strength 3 Box of
-                                                                                10</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0166828&amp;ind=3&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTS-62III-Professional-Tenor-Saxophone-MAIN0100915-i4753255.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93187000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YTS-62III Professional Tenor Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTS-62III
-                                                                                Professional Tenor Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0008298&amp;ind=4&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-B45-Series-Bb-Clarinet-Mouthpiece-MAIN0000654-i4624373.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images//483747000308000-00-250x250.jpg"
-                                                                            data-alt="Vandoren B45 Series Bb Clarinet Mouthpiece Traditional B45">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren B45 Series
-                                                                                Bb Clarinet Mouthpiece Traditional
-                                                                                B45</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0147164&amp;ind=5&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTR-2330-Standard-Bb-Trumpet-MAIN0094696-i4557011.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            data-alt="Yamaha YTR-2330 Standard Bb Trumpet Bb Trumpet">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTR-2330
-                                                                                Standard Bb Trumpet Bb Trumpet</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0163533&amp;ind=6&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YAS-62III-Professional-Alto-Saxophone-MAIN0101413-i4753469.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93184000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YAS-62III Professional Alto Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YAS-62III
-                                                                                Professional Alto Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0007825&amp;ind=7&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YSL-354-Series-Student-Trombone-MAIN0025381-i4615940.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/464515000420930-00-250x250.jpg"
-                                                                            data-alt="Yamaha YSL-354 Series Student Trombone">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YSL-354 Series
-                                                                                Student Trombone</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077372&amp;ind=8&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Alto-Saxophone-Reeds-MAIN0000596-i4620566.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462970000000023-00-250x250.jpg"
-                                                                            data-alt="Vandoren Alto Saxophone Reeds Strength 2 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Alto
-                                                                                Saxophone Reeds Strength 2 Box of 10</b>
-                                                                        </p>
-                                                                    </div>
-                                                                </a></div>
+                                <div class="row columns-6-6 ng-scope">
+                                    <div class="content-primary">
+                                        <returning-login-component on-login-error="$ctrl.displayErrorMessage(errors)"
+                                            on-forgot-password="$ctrl.isForgotPassword = true" class="ng-isolate-scope">
+                                            <form name="returningLoginForm" method="post" novalidate=""
+                                                accessible-form=""
+                                                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form">
+                                                <fieldset class="auto-format">
+                                                    <div class="double">
+                                                        <h2 class="ng-scope">Returning Customer</h2>
+                                                    </div>
+                                                    <div class="double">
+                                                        <p>If you already have an account, login for faster checkout.
+                                                        </p>
+                                                    </div>
+                                                    <div class="double">
+                                                        <label for="EmailForLogin" class="req ae-label">Email</label>
+                                                        <input id="EmailForLogin" name="emailForLogin" type="email"
+                                                            required="" aria-required="true"
+                                                            class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                                                            aria-invalid="true" data-ae-blurbtype="input"
+                                                            data-ae-form-field="true">
+                                                    </div>
+                                                    <div class="double">
+                                                        <label for="PasswordForLogin"
+                                                            class="req ae-label">Password</label>
+                                                        <input id="PasswordForLogin" name="passwordForLogin"
+                                                            type="password" autocomplete="off" required=""
+                                                            aria-required="true"
+                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                                                            aria-invalid="true" data-ae-blurbtype="input"
+                                                            data-ae-form-field="true">
+                                                    </div>
+                                                    <div class="double">
+                                                        <p>
+                                                            <a id="forgotPassword">Forgot
+                                                                your password?</a>
+                                                        </p>
+                                                    </div>
+                                                    <recaptcha-component
+                                                        on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
+                                                        widget-id="returningLoginCtrl.widgetId"
+                                                        class="ng-isolate-scope">
+                                                        <div class="grecaptcha-badge" data-style="bottomright"
+                                                            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+                                                            <div class="grecaptcha-logo"><iframe
+                                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=s0e5ubtxja3o"
+                                                                    width="256" height="60" role="presentation"
+                                                                    name="a-4l39sd1y8j7h" frameborder="0" scrolling="no"
+                                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                                                                    title="Google Recaptcha iframe"></iframe></div>
+                                                            <div class="grecaptcha-error"></div><textarea
+                                                                id="g-recaptcha-response" name="g-recaptcha-response"
+                                                                class="g-recaptcha-response"
+                                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
+                                                                data-ae-blurbtype="textarea" data-ae-form-field="true"
+                                                                aria-label="g recaptcha response"></textarea>
+                                                        </div>
+                                                    </recaptcha-component>
+                                                    <div class="double">
+                                                        <button type="submit" class="primary ae-button"
+                                                            data-ae-blurbtype="button"
+                                                            data-ae-form-field="true">Login</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </returning-login-component>
+                                    </div>
+                                    <div class="content-secondary border-left">
+                                        <new-login-component on-registration-error="$ctrl.displayErrorMessage(errors)"
+                                            class="ng-isolate-scope" aria-hidden="false">
+                                            <form name="newLoginForm" method="post" autocomplete="off" novalidate=""
+                                                accessible-form=""
+                                                class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-email ng-valid-pattern ng-valid-failed-password-complexity ng-valid-minlength ng-valid-confirm-password ae-form">
+                                                <fieldset class="auto-format">
+                                                    <div class="double">
+                                                        <div>
+                                                            <h2>Create Account</h2>
+                                                        </div>
+                                                        <div>
+                                                            <p>Enter your information below.</p>
+                                                        </div>
+                                                        <div>
+                                                            <label for="FirstNameForCreateAccount"
+                                                                class="req ae-label">First Name</label>
+                                                            <input id="FirstNameForCreateAccount"
+                                                                name="firstNameForCreateAccount" type="text"
+                                                                maxlength="25" aria-required="true" required=""
+                                                                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                                                                aria-invalid="true" data-ae-blurbtype="input"
+                                                                data-ae-form-field="true">
+                                                        </div>
+                                                        <div>
+                                                            <label for="LastNameForCreateAccount"
+                                                                class="req ae-label">Last Name</label>
+                                                            <input id="LastNameForCreateAccount"
+                                                                name="lastNameForCreateAccount" type="text"
+                                                                maxlength="25" aria-required="true" required=""
+                                                                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                                                                aria-invalid="true" data-ae-blurbtype="input"
+                                                                data-ae-form-field="true">
+                                                        </div>
+                                                        <div>
+                                                            <label for="EmailForCreateAccount"
+                                                                class="req ae-label">Email</label>
+                                                            <input id="EmailForCreateAccount"
+                                                                name="emailForCreateAccount" type="email"
+                                                                autocomplete="off" aria-required="true" required=""
+                                                                class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                                                                aria-invalid="true" data-ae-blurbtype="input"
+                                                                data-ae-form-field="true">
+                                                            <span role="status" aria-live="polite"
+                                                                class="cip-ui-helper-hidden-accessible"></span>
+                                                        </div>
+                                                        <div>
+                                                            <label for="PasswordForCreateAccount" class="req ae-label">
+                                                                Password
+                                                                <span
+                                                                    class="field-validation-valid errortooltip errortooltip-password"
+                                                                    data-valmsg-for="PasswordForLogin"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </label>
+                                                            <input id="PasswordForCreateAccount"
+                                                                name="passwordForCreateAccount" type="password"
+                                                                autocomplete="new-password" aria-required="true"
+                                                                required="" validate-password-complexity=""
+                                                                class="ng-pristine ng-untouched ng-empty ng-valid-failed-password-complexity ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                                                                aria-describedby="helperText_PasswordForCreateAccount"
+                                                                aria-invalid="true" data-ae-blurbtype="input"
+                                                                data-ae-form-field="true">
+                                                            <p class="help-text"
+                                                                id="helperText_PasswordForCreateAccount">Password is
+                                                                case sensitive, cannot match the email address, and must
+                                                                meet the <password-policy-component popup="true"
+                                                                    class="ng-isolate-scope">
+                                                                    <span data-tooltip="" aria-haspopup="true"
+                                                                        class="has-tip large ng-scope"
+                                                                        data-disable-hover="false"
+                                                                        data-allow-html="true" tabindex="0" title="
+                                                                        <ol class='password-policy'>
+                                                                            <li>Password must be between 8 and 50 characters in length</li>
+                                                                            <li>Password must contain at least 3 of the following 4 character groups:
+                                                                            <ul class='disc'>
+                                                                            <li>Lowercase alphabetic (a through z)</li>
+                                                                            <li>Uppercase alphabetic (A through Z)</li>
+                                                                            <li>Numerals (0 through 9)</li>
+                                                                            <li>Non-alphabetic characters (such as !, @, #, $)</li>
+                                                                            </ul>
+                                                                            </li>
+                                                                        </ol>" aria-describedby="hftfn0-tooltip"
+                                                                        data-yeti-box="hftfn0-tooltip"
+                                                                        data-toggle="hftfn0-tooltip"
+                                                                        data-resize="hftfn0-tooltip"
+                                                                        data-e="l9p05j-e">password complexity
+                                                                        requirements</span>
+                                                                </password-policy-component>.</p>
+                                                        </div>
+                                                        <div>
+                                                            <label for="ConfirmPasswordForCreateAccount"
+                                                                class="req ae-label">Confirm Password</label>
+                                                            <input id="ConfirmPasswordForCreateAccount"
+                                                                name="confirmPasswordForCreateAccount" type="password"
+                                                                confirm-password="newLoginCtrl.newLogin.password"
+                                                                autocomplete="new-password" aria-required="true"
+                                                                required=""
+                                                                class="ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-confirm-password"
+                                                                aria-invalid="true" data-ae-blurbtype="input"
+                                                                data-ae-form-field="true">
+                                                        </div>
+                                                        <recaptcha-component
+                                                            on-recaptcha-callback="newLoginCtrl.registerCallback(token)"
+                                                            widget-id="newLoginCtrl.widgetId" class="ng-isolate-scope">
+                                                            <div class="grecaptcha-badge" data-style="none"
+                                                                style="width: 256px; height: 60px; position: fixed; visibility: hidden;">
+                                                                <div class="grecaptcha-logo"><iframe
+                                                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=kcpkb5ze8s4"
+                                                                        width="256" height="60" role="presentation"
+                                                                        name="a-wrje1hld93f6" frameborder="0"
+                                                                        scrolling="no"
+                                                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                                                                        title="Google Recaptcha iframe"></iframe></div>
+                                                                <div class="grecaptcha-error"></div><textarea
+                                                                    id="g-recaptcha-response-1"
+                                                                    name="g-recaptcha-response"
+                                                                    class="g-recaptcha-response"
+                                                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
+                                                                    data-ae-blurbtype="textarea"
+                                                                    data-ae-form-field="true"
+                                                                    aria-label="g recaptcha response"></textarea>
+                                                            </div><iframe style="display: none;"></iframe>
+                                                        </recaptcha-component>
+                                                        <div>
+                                                            <button type="submit" class="primary ae-button"
+                                                                value="Submit" data-ae-blurbtype="button"
+                                                                data-ae-form-field="true">Create Account</button>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
+                                                </fieldset>
+                                            </form>
+                                        </new-login-component>
+                                    </div>
                                 </div>
-                                <div class="  row umb-grid__section__row  ">
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell  ">
-                                        <div>
-                                            <p>
-                                                <a href="/Musical-Instrument-Rentals">
-                                                    <img src="../images/column_header_image_1-compressor.png"
-                                                        alt="Children playing instruments"
-                                                        data-udi="umb://media/a144f2f4f0994bd7a0d78f6edcce989c" />
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Rentals</h3>
-                                        </div>
-                                        <div>
-                                            <p>Rent your band or orchestra instrument through our online rental site or
-                                                visit your neighborhood Music &amp; Arts location.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/rentals" class="button alt">get started today</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a data-udi="umb://document/0e87a747b9a1402ca0a04060876f99bd"
-                                                    href="/cms/lessons/" title="Lessons"><img
-                                                        src="../images/column_header_image_2-compressor.png"
-                                                        alt="Children playing guitars"
-                                                        data-udi="umb://media/99ae026b1ed341d09a4f7ae1ab70ec4d" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Take Lessons</h3>
-                                        </div>
-                                        <div>
-                                            <p>Private lessons, in our safe learning environment, are building blocks to
-                                                a life-long relationship with music. Each is customized to students
-                                                interests and abilities.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/cms/lessons/" class="button">get started</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a rel="noopener" href="https://stores.musicarts.com/"
-                                                    target="_blank"><img
-                                                        src="../images/column_header_image_4a-compressor.png"
-                                                        alt="gps icon"
-                                                        data-udi="umb://media/1d3a637dc0854155841ec4b178655aa9" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Store Locator</h3>
-                                        </div>
-                                        <div>
-                                            <p>Visit one of our 200+ neighborhood stores for expert advice on everything
-                                                musical: products, rentals, lessons and repairs.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://stores.musicarts.com/" class="button alt">find a store near
-                                                you</a>
-                                        </div>
-                                    </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a
-                                                    href="/Account/Login?ReturnUrl=https%3A%2F%2Fwww.musicarts.com%2FAccount%2F"><img
-                                                        src="../images/column_header_image_3-compressor.png"
-                                                        alt="children playing brass instruments"
-                                                        data-udi="umb://media/a9cd6f07019e43debfd9786c0df8424d" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Educators</h3>
-                                        </div>
-                                        <div>
-                                            <p>Access the educator portal to easily shop for the right instruments,
-                                                accessories, and music books for your class.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://www.musicarts.com/Account/Login?ca=1"
-                                                class="button alt">educator login</a>
-                                        </div>
+                            </login-component>
+                            <div class="row">
+                                <div class="columns">
+                                    <div class="columns text-center">
+                                        <p id="my_account_terms" class="margin-top">I have read Music &amp; Arts' <a
+                                                href="/cms/privacy-policy" target="_blank" rel="noopener"
+                                                aria-describedby="audioeye_new_window_message">Privacy Policy</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <div class="row">
+                    <section class="content" aria-labelledby="page-title">
+                        <header role="presentation">
+                            <h1 id="page-title" class="ae-label" role="heading" aria-level="1">Login</h1>
+                        </header>
+                        <div class="copy-block">
+                            <login-component class="ng-isolate-scope">
+                                <div class="page-spinner" style="display: none;" aria-busy="true">
+                                    <div class="spinner-content">
+                                        <object data="/dist/img/spinner.svg" type="image/svg+xml"
+                                            class="spinner ae-media" data-player-url="/dist/img/spinner.svg"><span
+                                                class="ae-compliance-indent" style="display:none;"> loading
+                                                spinner</span></object>
+                                        <div class="spinner-message">LOADING</div>
+                                    </div>
+                                </div>
+                                <div class="row columns-6-6 ng-scope">
+                                    <div class="content-primary">
+                                        <returning-login-component on-login-error="$ctrl.displayErrorMessage(errors)"
+                                            on-forgot-password="$ctrl.isForgotPassword = true" class="ng-isolate-scope">
+                                            <form name="returningLoginForm" method="post" novalidate=""
+                                                accessible-form=""
+                                                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form">
+                                                <fieldset class="auto-format">
+                                                    <div class="double">
+                                                        <h2 class="ng-scope">Registered Educator Login</h2>
+                                                    </div>
+                                                    <div class="double">
+                                                        <p>If you already have an account, login for faster checkout.
+                                                        </p>
+                                                    </div>
+                                                    <div class="double">
+                                                        <label for="EmailForLogin" class="req ae-label">Email</label>
+                                                        <input id="EmailForLogin" name="emailForLogin" type="email"
+                                                            required="" aria-required="true"
+                                                            class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                                                            aria-invalid="true" data-ae-blurbtype="input"
+                                                            data-ae-form-field="true">
+                                                    </div>
+                                                    <div class="double">
+                                                        <label for="PasswordForLogin"
+                                                            class="req ae-label">Password</label>
+                                                        <input id="PasswordForLogin" name="passwordForLogin"
+                                                            type="password" autocomplete="off" required=""
+                                                            aria-required="true"
+                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                                                            aria-invalid="true" data-ae-blurbtype="input"
+                                                            data-ae-form-field="true">
+                                                    </div>
+                                                    <div class="double">
+                                                        <p>
+                                                            <a id="forgotPassword">Forgot
+                                                                your password?</a>
+                                                        </p>
+                                                    </div>
+                                                    <recaptcha-component
+                                                        on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
+                                                        widget-id="returningLoginCtrl.widgetId"
+                                                        class="ng-isolate-scope">
+                                                        <div class="grecaptcha-badge" data-style="bottomright"
+                                                            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+                                                            <div class="grecaptcha-logo"><iframe
+                                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=r9e97cwbgzjj"
+                                                                    width="256" height="60" role="presentation"
+                                                                    name="a-cspzdxgaipxg" frameborder="0" scrolling="no"
+                                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                                                                    title="Google Recaptcha iframe"></iframe></div>
+                                                            <div class="grecaptcha-error"></div><textarea
+                                                                id="g-recaptcha-response" name="g-recaptcha-response"
+                                                                class="g-recaptcha-response"
+                                                                aria-label="g recaptcha response"
+                                                                data-ae-blurbtype="textarea" data-ae-form-field="true"
+                                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                                        </div>
+                                                    </recaptcha-component>
+                                                    <div class="double">
+                                                        <button type="submit" class="primary ae-button"
+                                                            data-ae-blurbtype="button"
+                                                            data-ae-form-field="true">Login</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </returning-login-component>
+                                    </div>
+                                    <div class="content-secondary border-left">
+                                        <educator-registration-component
+                                            on-registration-error="$ctrl.displayErrorMessage(errors)"
+                                            class="ng-isolate-scope" aria-hidden="false">
+                                            <form name="educatorRegistrationForm" method="post" novalidate=""
+                                                class="ng-pristine ng-valid ae-form">
+                                                <fieldset class="auto-format">
+                                                    <div class="double">
+                                                        <div class="row">
+                                                            <div class="columns padding-left">
+                                                                <h2>New Educators Register Here!</h2>
+                                                            </div>
+                                                            <div class="columns padding-top">
+                                                                <p>To access everything that Music &amp; Arts has to
+                                                                    offer educators, register for your commercial
+                                                                    account today.</p>
+                                                                <ul class="arrow">
+                                                                    <li>Special discounts for educators</li>
+                                                                    <li>More than 50,000 products available online</li>
+                                                                    <li>Orders ship directly to your school</li>
+                                                                    <li>Convenient payment options available</li>
+                                                                </ul>
+                                                                <p>To set up a new school account with Music &amp; Arts
+                                                                    download, complete and return the application
+                                                                    available below. Once your application has been
+                                                                    processed, someone from our Commercial Accounts team
+                                                                    will contact you to finish setting up your account.
+                                                                </p>
+                                                            </div>
+                                                            <div class="columns padding-top">
+                                                                <div class="row">
+                                                                    <div class="columns">
+                                                                        <a href="/Content/MAC/PDF/CommercialApplication-Fillable.pdf"
+                                                                            class="button expanded" target="_blank"
+                                                                            rel="noopener"
+                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Personal
+                                                                            / Organization Application<span
+                                                                                class="ae-compliance-indent ae-reader-visible"
+                                                                                style="display:none;"> pdf</span></a>
+                                                                        <a href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
+                                                                            class="button expanded" target="_blank"
+                                                                            rel="noopener"
+                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Private
+                                                                            School Application<span
+                                                                                class="ae-compliance-indent ae-reader-visible"
+                                                                                style="display:none;"> pdf</span></a>
+                                                                        <a href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
+                                                                            class="button expanded" target="_blank"
+                                                                            rel="noopener"
+                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Public
+                                                                            School Application<span
+                                                                                class="ae-compliance-indent ae-reader-visible"
+                                                                                style="display:none;"> pdf</span></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="columns padding-top">
+                                                                <p>If you have questions or would like immediate
+                                                                    assistance, contact your local Music &amp; Arts
+                                                                    Educational Representative directly or Customer
+                                                                    Service at <a href="tel:8887315396">(888)
+                                                                        731-5396</a>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </educator-registration-component>
+                                    </div>
+                                </div>
+                            </login-component>
+                            <div class="row">
+                                <div class="columns">
+                                    <div class="columns text-center">
+                                        <p id="my_account_terms" class="margin-top">I have read Music &amp; Arts' <a
+                                                href="/cms/privacy-policy" target="_blank" rel="noopener"
+                                                aria-describedby="audioeye_new_window_message">Privacy Policy</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
             <div class="pre-footer-bar">
@@ -1493,6 +1573,8 @@
                                 aria-describedby="email-newsletter-description email_thankyou"
                                 placeholder="Email address" required aria-required="true" />
                             <button type="submit">Subscribe</button>
+                            
+                            
                         </div>
                         <div class="email-newsletter-promo">
                             <p id="email-newletter-title" class="h2 large color-white">Sign Up for Our Newsletter</p>
@@ -1658,98 +1740,7 @@
                 </div>
             </footer>
         </div>
-        <aside aria-label="Shopping Cart" class="off-canvas position-right is-transition-overlap is-closed"
-            id="off-canvas-right" data-off-canvas="" aria-hidden="false" data-e="xgi0n8-e" role="presentation">
-            <div class="mini-cart-spinner" style="display: none;">
-                <div class="spinner-content">
-                    <object type="image/svg+xml" class="spinner ae-media" data="/dist/img/spinner.svg"
-                        data-player-url="/dist/img/spinner.svg"><span class="ae-compliance-indent"
-                            style="display:none;"> loading spinner</span></object>
-                    <div class="spinner-message">Loading</div>
-                </div>
-            </div>
-            <div class="cart-summary">
-                <div class="items ng-scope">
-                    <span class="count ng-binding">2</span> Items
-                </div>
-                <div class="cart-summary-actions ng-scope">
-                    <a target="_self" class="button" href="/cart">View Cart</a>
-                    <a target="_self" class="button primary" href="/cart/checkout">Checkout</a>
-                </div>
-                <button class="close-button ae-button" aria-label="Close menu" type="button" data-close=""
-                    data-ae-blurbtype="button" data-ae-form-field="true">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="callout secondary no-padding">
-                <ul class="cart-items mini-cart">
-                    <li class="ng-scope">
-                        <div class="product" aria-label="Item Details">
-                            <figure>
-                                <a href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
-                                    aria-hidden="false">
-                                    <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                        class="ae-img">
-                                </a>
-                                <img alt="Standard"
-                                    src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                    aria-hidden="true" class="ng-hide ae-img">
-                            </figure>
-                            <div class="product-info">
-                                <p class="name">
-                                    <a class="ng-binding"
-                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438"
-                                        aria-hidden="false">Sound Projections VM-2 with Dual 60-Channel Digital
-                                        Handheld Wireless Systems - Standard</a>
-                                    <span class="ng-binding ng-hide" aria-hidden="true">Standard</span>
-                                </p>
-                                <ul class="product-additional" aria-hidden="false" role="presentation">
-                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p class="total price ng-binding" aria-label="Item Total">$3,629<sup>.00</sup></p>
-                    </li>
-                    <li class="ng-scope">
-                        <div class="product" aria-label="Item Details">
-                            <figure>
-                                <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
-                                    aria-hidden="false">
-                                    <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                        class="ae-img">
-                                </a>
-                                <img alt="Standard"
-                                    src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                    aria-hidden="true" class="ng-hide ae-img">
-                            </figure>
-                            <div class="product-info">
-                                <p class="name">
-                                    <a class="ng-binding"
-                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465"
-                                        aria-hidden="false">Yamaha YCL-CSVR Series Professional Bb Clarinet -
-                                        Standard</a>
-                                    <span class="ng-binding ng-hide" aria-hidden="true">Standard</span>
-                                </p>
-                                <ul class="product-additional" aria-hidden="false" role="presentation">
-                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p class="total price ng-binding" aria-label="Item Total">$3,185<sup>.99</sup></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="cart-totals ng-scope">
-                <p><span class="ng-binding">2 Item(s) Total</span><strong
-                        class="price ng-binding">$6,814<sup>.99</sup></strong></p>
-            </div>
-            <div class="mini-cart-actions ng-scope">
-                <div class="column"><a target="_self" class="button" href="/cart">View Cart</a></div>
-                <div class="column"><a target="_self" class="button primary" href="/cart/checkout">Checkout</a></div>
-            </div>
-        </aside>
+        <mini-cart></mini-cart>
     </div>
     <div class="small-visibility-check show-for-small-only"></div>
 </body>

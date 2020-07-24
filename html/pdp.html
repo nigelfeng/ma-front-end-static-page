@@ -26,11 +26,16 @@
             <div class="fixed-header-push"></div>
             <div class="promo-header" role="region" aria-label="Current Promotions"
                 style="background-color: #000000; color: #ffffff;">
-                <div class="row"> <a href="https://www.musicarts.com/cms/updates/" target="_self"><span
-                            style="color:#ffffff; font-weight: bolder;">COVID 19: The latest on our store openings and
+                <div class="row">
+                    <a href="https://www.musicarts.com/cms/updates/" target="_self">
+                        <span style="color:#ffffff; font-weight: bolder;">
+                            COVID 19: The latest on our store openings and
                             safety plans | Learn More<br>Due to new <u>Safety Measures</u>, a face mask or covering is
                             required to enter any store for your safety, the safety of other customers and our
-                            staff.</span> </a> </div>
+                            staff.
+                        </span>
+                    </a>
+                </div>
             </div>
             <header id="site-header" class="site-header" role="banner">
                 <div id="masthead" class="masthead">
@@ -47,17 +52,12 @@
                             <li class="secondary">
                                 <a href="https://www.musicarts.com/cms/faq/shipping/what-qualifies-for-free-shipping"
                                     target="_self" class="icon fa-truck">
-                                    <span>
-                                        Free<br />
-                                        Shipping
-                                    </span>
+                                    <span>Free<br />Shipping</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://stores.musicarts.com/" class="icon fa-map-marker">
-                                    <span>
-                                        Find a<br />
-                                        Location
+                                    <span>Find a<br />Location
                                     </span>
                                 </a>
                             </li>
@@ -66,50 +66,42 @@
                                     <div class="user has-submenu">
                                         <a class="icon account fa-user-circle-o" data-toggle="account" tabindex="0"
                                             role="button">
-                                            <span>Welcome back,<br />
-                                                nigel test
-                                            </span>
+                                            <span>Welcome back,<br />nigel test</span>
                                         </a>
                                         <div class="position">
                                             <div class="dropdown-pane header-dropdown" data-dropdown data-hover="true"
                                                 data-hover-pane="true" id="account">
                                                 <div class="bar secondary">
                                                     nigel test
-                                                    <span>(<a href="/account/logout?goToLogin=true" target="_self">Not
-                                                            you?</a>)</span>
+                                                    <span>
+                                                        (<a href="/account/logout?goToLogin=true" target="_self">Not
+                                                            you?</a>)
+                                                    </span>
                                                 </div>
                                                 <div class="bar secondary shopping-for">
-                                                    <div>Personal Use
-                                                    </div>
-                                                    <div>Shopping for
-                                                        <br> test
-                                                    </div>
+                                                    <div>Personal Use</div>
+                                                    <div>Shopping for <br> test</div>
                                                 </div>
-                                                <a class="h2 m-t-1" ng-href='{{amCtrl.getUrl("/account")}}'
-                                                    target="_self">View My Account</a>
-                                                <p class="helper">View or modify account details including personal
-                                                    information, orders, wish list and past correspondence.</p>
+                                                <a class="h2 m-t-1" target="_self">View My Account</a>
+                                                <p class="helper">
+                                                    View or modify account details including personal
+                                                    information, orders, wish list and past correspondence.
+                                                </p>
                                                 <div class="login-menu-links">
                                                     <ul>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/orders")}}'
-                                                                target="_self">Orders &amp; Tracking</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/shopping-lists")}}'
-                                                                target="_self">Shopping Lists</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/addresses-and-payment")}}'
-                                                                target="_self">Address &amp; Payment</a></li>
+                                                        <li>
+                                                            <a target="_self">Orders &amp; Tracking</a>
+                                                        </li>
+                                                        <li><a target="_self">Shopping Lists</a></li>
+                                                        <li><a target="_self">Address &amp; Payment</a></li>
                                                     </ul>
                                                     <ul>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/account-info")}}'
-                                                                target="_self">Account Info</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/commercial-accounts")}}'
-                                                                target="_self">Commercial Accounts</a></li>
-                                                        <li><a ng-href='{{amCtrl.getUrl("/account/support")}}'
-                                                                target="_self">Support</a></li>
+                                                        <li><a target="_self">Account Info</a></li>
+                                                        <li><a target="_self">Commercial Accounts</a></li>
+                                                        <li><a target="_self">Support</a></li>
                                                     </ul>
                                                 </div>
-                                                <button type="button"
-                                                    ng-click='amCtrl.clearSessionAndLogout(amCtrl.getUrl("/account/logout"))'
-                                                    class="link action minor">Logout</button>
+                                                <button type="button" class="link action minor">Logout</button>
                                             </div>
                                         </div>
                                     </div>
@@ -118,8 +110,7 @@
                             <li>
                                 <button type="button" class="cart icon toggle-cart fa-shopping-cart"
                                     data-toggle="{{chCtrl.offCanvasToggleValue}}" aria-label="Toggle minicart">
-                                    <span class="badge">
-                                        2</span>
+                                    <span class="badge">2</span>
                                 </button>
                             </li>
                         </ul>
@@ -157,8 +148,10 @@
                                 <li class="hide-for-medium"><a href="https://www.musicarts.com/">Home</a></li>
                                 <li aria-haspopup="true" aria-label="Shop By Category" class="opens-right"
                                     data-is-click="false" role="menuitem">
-                                    <a href="#" class="shop-item" role="button"><span
-                                            class="fa fa-bars hide-for-small"></span>Shop by Category</a>
+                                    <a href="#" class="shop-item" role="button">
+                                        <span class="fa fa-bars hide-for-small"></span>
+                                        Shop by Category
+                                    </a>
                                     <ul class="menu submenu first-sub vertical" role="menu">
                                         <li aria-haspopup="true" aria-label="Woodwinds"
                                             class="opens-right is-submenu-item" data-is-click="false" role="menuitem">
@@ -1158,329 +1151,621 @@
                 </div>
             </div>
             <div id="main" class="main" role="main" tabindex="0">
-                <div class="umb-cms">
-                    <div id="cms-content" class="theme theme--brand">
-                        <div class="umb-grid row">
-                            <div class="columns medium-12 umb-grid__section">
-                                <div class="row umb-grid__section__row">
-                                    <div
-                                        class="small-12 medium-7 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-carousel umb-carousel--full-mobile" id="11723_carousel">
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                                <div class="umb-carousel__slide slick-slide">
-                                                    <a href="https://www.musicarts.com/cms/lessons">
-                                                        <img src="../images/homepage-652x367.jpg"
-                                                            alt="online lessons now available " />
-                                                    </a>
-                                                </div>
-                                            </div>
+                <div class="row columns">
+                    <div class="position-container right">
+                        <button class="button no-margin" type="button" data-toggle="social-sharing"><i
+                                class="fa fa-share-alt"></i><span class="show-for-sr">Share to Social
+                                Media</span></button>
+                        <div class="position">
+                            <div class="dropdown-pane auto" id="social-sharing" data-dropdown data-hover="true"
+                                data-hover-pane="true">
+                                <div class="social" aria-label="Follow Music &amp; Arts on Social Media">
+                                    <ul>
+                                        <li><a class="icon fa-facebook-official"><span
+                                                    class="show-for-sr">Facebook</span></a></li>
+                                        <li><a class="icon fa-twitter"><span class="show-for-sr">Twitter</span></a>
+                                        </li>
+                                        <li><a class="icon fa-pinterest-p"><span
+                                                    class="show-for-sr">Pinterest</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav role="navigation" class="ng-scope" aria-label="Breadcrumbs">
+                        <ul class="breadcrumbs" aria-label="You are here:">
+                            <li class="ng-scope">
+                                <a target="_self" class="ng-binding ng-scope"
+                                    href="https://www.musicarts.com/brass-instruments">Brass Instruments</a>
+                            </li>
+                            <li class="ng-scope">
+                                <a target="_self" class="ng-binding ng-scope"
+                                    href="https://www.musicarts.com/trumpets">Trumpets</a>
+                            </li>
+                            <li class="ng-scope">
+                                <a target="_self" class="ng-binding ng-scope"
+                                    href="https://www.musicarts.com/bb-trumpets">Bb Trumpets</a>
+                            </li>
+                            <li class="ng-scope">
+                                <a target="_self" class="ng-binding ng-scope"
+                                    href="https://www.musicarts.com/student-bb-trumpets">Student Bb Trumpets</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row columns-5-7 reverse">
+                    <aside class="content-secondary" role="complementary">
+                        <div class="product-images">
+                            <div id="s7container" class="s7container"></div>
+                            <script src="https://s7d1.scene7.com/s7viewers/html5/js/MixedMediaViewer.js"></script>
+                            <script>
+                                var mixedMediaViewer = new s7viewers.MixedMediaViewer({
+                                    containerId: "s7container",
+                                    params: {
+                                        asset: "MMGS7/J47537000001001_MEDIA_SET_NS",
+                                        serverurl: "https://media.musicarts.com/is/image",
+                                        videoserverurl: "https://media.musicarts.com/is/content"
+                                    }
+                                }).init();
+                            </script>
+                        </div>
+                    </aside>
+                    <section aria-labelledby="page-title" class="content-primary">
+                        <header role="presentation">
+                            <h1 id="page-title" class="page-title ng-binding ae-label" role="heading" aria-level="1">
+                                Allora ATR-250
+                                Student Series Bb Trumpet Silver Plated</h1>
+                        </header>
+                        <ul class="product-numbers">
+                            <li class="ng-binding">Item # 1326364</li>
+                            <li class="ng-binding">Model # ATR-250S</li>
+                        </ul>
+                        <p class="description description--top ng-scope">
+                            <span class="ng-binding">A used or extraordinarily cheap
+                                instrument can actually lessen your child’s likelihood of continuing in music. With the
+                                Allora Student series, you get a quality instrument that will play in tune,
+                                with...</span>
+                            <a class="minor" target="_self" href="">Learn
+                                More<span class="ae-compliance-indent ae-reader-visible" style="display:none;"> about
+                                    Allora ATR-250 Student Series Bb Trumpet</span></a>
+                        </p>
+                        <div class="ng-scope">
+                            <p class="price large color-primary">
+                                <span class="ng-binding">$399<sup>.00</sup></span>
+                            </p>
+                        </div>
+                        <p class="availability">
+                            <strong>Availability:</strong>
+                            <span class="allcaps ng-binding">In
+                                stock</span>
+                        </p>
+                        <form id="pdpForm" name="pdpForm" novalidate="novalidate" accessible-form=""
+                            class="ae-form ng-dirty ng-valid-parse ng-valid ng-valid-required">
+                            <label class="show-for-sr ae-label" for="ProductOption">Product Option</label>
+                            <select id="ProductOption" name="ProductOption"
+                                class="label-top ng-scope ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched"
+                                required="required" aria-invalid="false" data-ae-blurbtype="select"
+                                data-ae-form-field="true">
+                                <option label="Select an option" value="object:null" selected="selected">Select an
+                                    option</option>
+                                <option label="Lacquer Lacquer" value="string:0228227">Lacquer Lacquer</option>
+                                <option label="Silver Plated" value="string:1326364">Silver Plated</option>
+                            </select>
+                            <div class="quality-button">
+                                <input aria-label="Quantity" type="text" required="required" value="1"
+                                    class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                                    aria-invalid="false" data-ae-blurbtype="input" data-ae-form-field="true">
+                                <button class="primary large ae-button" data-ae-blurbtype="button"
+                                    data-ae-form-field="true">Add to Cart</button>
+                                <button aria-haspopup="true" class="large has-tip bottom ae-button"
+                                    data-click-open="false" data-disable-hover="false" data-tooltip=""
+                                    title="Add to Shopping List" aria-describedby="1dq99k-tooltip"
+                                    data-yeti-box="1dq99k-tooltip" data-toggle="1dq99k-tooltip"
+                                    data-resize="1dq99k-tooltip" data-e="zjnb33-e" data-ae-blurbtype="button"
+                                    data-ae-form-field="true" data-events="resize">
+                                    <span class="icon fa-heart"></span>
+                                    <span class="show-for-sr">Add to Shopping List</span>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="additional-information">
+                            <find-in-store products="pdCtrl.findInStoresProducts" class="ng-isolate-scope">
+                                <section class="find-in-stores">
+                                    <div class="row columns">
+                                        <svg class="find-in-stores__icon ng-hide" role="presentation"
+                                            viewBox="0 0 90 60" aria-hidden="true">
+                                            <path
+                                                d="M56.23 41.3c-2.4 0-4.36 1.95-4.36 4.36 0 2.4 1.95 4.36 4.36 4.36 2.4 0 4.36-1.95 4.36-4.36 0-2.4-1.96-4.36-4.36-4.36zm0 6.85c-1.37 0-2.49-1.12-2.49-2.49s1.12-2.49 2.49-2.49 2.49 1.12 2.49 2.49a2.49 2.49 0 01-2.49 2.49zM29.14 50.02c2.4 0 4.36-1.95 4.36-4.36 0-2.4-1.95-4.36-4.36-4.36-2.4 0-4.36 1.95-4.36 4.36s1.95 4.36 4.36 4.36zm0-6.85c1.37 0 2.49 1.12 2.49 2.49s-1.12 2.49-2.49 2.49-2.49-1.12-2.49-2.49a2.49 2.49 0 012.49-2.49zM48.13 17.91h-12.6c-.97 0-2.38.89-2.79 1.77l-3.84 8.26c-.13.29-.11.63.06.9.17.27.47.43.79.43h36.14c.37 0 .71-.22.86-.56.15-.34.08-.74-.18-1.01l-7.48-7.95c-.89-.94-2.96-1.84-4.25-1.84h-2.96c-.52 0-.93.42-.93.93 0 .52.42.93.93.93h2.96c.77 0 2.37.69 2.89 1.25l6 6.37H49.06v-8.56c0-.5-.42-.92-.93-.92zm-.94 9.49H31.2l3.22-6.93c.13-.24.83-.68 1.1-.69h11.67v7.62z">
+                                            </path>
+                                            <path
+                                                d="M75.36 5h-4.98c-.28 0-.55.1-.77.27l-11.38 9.31c-.08.07-.16.15-.22.23-1.08-.4-2.2-.64-3.19-.64h-19.3c-2.43 0-5.14 1.72-6.17 3.92l-3.84 8.16c-.33.69-1.29 1.55-2.02 1.79 0 0-4.37 1.45-4.37 1.46-3.15 1.05-5.7 4.6-5.7 7.91v4.51c0 2.57 1.88 4.67 4.19 4.67h2.23c.47 4.71 4.46 8.4 9.29 8.4 5.15 0 9.34-4.19 9.34-9.34 0-5.15-4.19-9.34-9.34-9.34-4.83 0-8.82 3.69-9.29 8.4h-2.23c-1.28 0-2.32-1.26-2.32-2.8v-3.65a6.277 6.277 0 005.25-7.28l3.55-1.18c1.23-.41 2.57-1.6 3.12-2.77l3.84-8.16c.73-1.54 2.78-2.84 4.48-2.84h19.3c1.81 0 4.38 1.11 5.61 2.43l8.61 9.15c.54.57 1.03 1.8 1.03 2.59v11.72c0 1.54-1.26 2.8-2.8 2.8h-1.75c-.47-4.71-4.46-8.4-9.29-8.4-4.83 0-8.82 3.69-9.29 8.4h-5.67c-.52 0-.93.42-.93.93 0 .52.42.93.93.93h5.67c.47 4.71 4.46 8.4 9.29 8.4 4.83 0 8.82-3.69 9.29-8.4h1.75c2.57 0 4.67-2.09 4.67-4.67v-11.7c0-1.25-.67-2.95-1.53-3.87l-8.61-9.15c-.4-.43-.9-.83-1.45-1.19l10.46-8.57h4.55c.67 0 1.22-.54 1.22-1.22-.02-.67-.56-1.21-1.23-1.21zM29.14 38.19c4.12 0 7.47 3.35 7.47 7.47 0 4.12-3.35 7.47-7.47 7.47-4.12 0-7.47-3.35-7.47-7.47 0-4.12 3.35-7.47 7.47-7.47zm-13.73-1.84c.38-1.85 1.71-3.69 3.34-4.64.01.12.01.24.01.36.01 2.07-1.43 3.81-3.35 4.28zm40.82 16.78c-4.12 0-7.47-3.35-7.47-7.47 0-4.12 3.35-7.47 7.47-7.47 4.12 0 7.47 3.35 7.47 7.47 0 4.12-3.35 7.47-7.47 7.47z">
+                                            </path>
+                                        </svg>
+                                        <svg class="find-in-stores__icon" role="presentation" viewBox="0 0 90 60"
+                                            aria-hidden="false">
+                                            <path
+                                                d="M20.21 51.67c2.34 0 4.24-1.9 4.24-4.24 0-2.34-1.9-4.24-4.24-4.24s-4.24 1.9-4.24 4.24c0 2.34 1.91 4.24 4.24 4.24zm0-6.58c1.29 0 2.34 1.05 2.34 2.34s-1.05 2.34-2.34 2.34c-1.29 0-2.34-1.05-2.34-2.34s1.05-2.34 2.34-2.34zM65.21 51.67c2.34 0 4.24-1.9 4.24-4.24 0-2.34-1.9-4.24-4.24-4.24s-4.24 1.9-4.24 4.24c0 2.34 1.91 4.24 4.24 4.24zm0-6.58c1.29 0 2.34 1.05 2.34 2.34s-1.05 2.34-2.34 2.34c-1.29 0-2.34-1.05-2.34-2.34s1.05-2.34 2.34-2.34z">
+                                            </path>
+                                            <path
+                                                d="M85.24 7.22A7.52 7.52 0 0079.89 5H37.35c-2.02 0-3.92.79-5.35 2.22a7.52 7.52 0 00-2.22 5.35v4.52H18.33c-1.08 0-2.06.6-2.56 1.56l-4.3 8.3c-.46.89-1.36 1.43-2.36 1.43h-3c-1.97 0-3.57 1.6-3.57 3.57V45.7c0 1.4 1.14 2.54 2.54 2.54h6.14c.08 0 .16-.02.24-.05A8.734 8.734 0 0014 53.64a8.73 8.73 0 006.21 2.57c2.35 0 4.55-.91 6.21-2.57 1.66-1.66 2.57-3.87 2.57-6.21s-.91-4.55-2.57-6.21a8.73 8.73 0 00-6.21-2.57c-2.35 0-4.55.91-6.21 2.57a8.734 8.734 0 00-2.54 5.45c-.08-.02-.15-.05-.24-.05H5.08c-.5 0-.91-.41-.91-.91v-6.7c1.43-1.05 2.57-2.45 3.32-4.07.73-1.57 1.04-3.26.92-4.93h.7c1.61 0 3.07-.89 3.81-2.32l4.3-8.3c.22-.42.64-.68 1.11-.68h11.45v21.96c0 2.02.79 3.92 2.22 5.35a7.52 7.52 0 005.35 2.22h19.11a8.777 8.777 0 002.53 5.4 8.73 8.73 0 006.21 2.57c2.35 0 4.55-.91 6.21-2.57 1.66-1.66 2.57-3.87 2.57-6.21s-.91-4.55-2.57-6.21a8.73 8.73 0 00-6.21-2.57c-2.35 0-4.55.91-6.21 2.57a8.671 8.671 0 00-2.53 5.4H37.35a5.9 5.9 0 01-4.2-1.74 5.9 5.9 0 01-1.74-4.2V12.57a5.9 5.9 0 011.74-4.2 5.9 5.9 0 014.2-1.74h42.54c1.59 0 3.08.62 4.2 1.74s1.74 2.61 1.74 4.2v28.11c0 1.59-.62 3.08-1.74 4.2s-2.61 1.74-4.2 1.74h-3.03c-.45 0-.82.37-.82.82 0 .45.37.82.82.82h3.03c2.02 0 3.92-.79 5.35-2.22s2.22-3.33 2.22-5.35V12.57c0-2.02-.79-3.92-2.22-5.35zm-69.9 35.34c1.3-1.3 3.03-2.02 4.87-2.02 1.84 0 3.57.72 4.87 2.02 1.3 1.3 2.02 3.03 2.02 4.87 0 1.84-.72 3.57-2.02 4.87s-3.03 2.02-4.87 2.02c-1.84 0-3.57-.72-4.87-2.02s-2.02-3.03-2.02-4.87c0-1.84.72-3.57 2.02-4.87zm-9.33-8.3c-.45.98-1.08 1.86-1.84 2.61v-4.92c0-1.07.87-1.94 1.94-1.94h.66c.13 1.43-.13 2.89-.76 4.25zm54.33 8.3c1.3-1.3 3.03-2.02 4.87-2.02 1.84 0 3.57.72 4.87 2.02 1.3 1.3 2.02 3.03 2.02 4.87 0 1.84-.72 3.57-2.02 4.87s-3.03 2.02-4.87 2.02c-1.84 0-3.57-.72-4.87-2.02s-2.02-3.03-2.02-4.87c0-1.84.72-3.57 2.02-4.87z">
+                                            </path>
+                                            <path
+                                                d="M21.33 20.35c-.79 0-1.55.22-2.22.64-.67.42-1.2 1.01-1.54 1.72l-2.25 4.68c-.27.56-.23 1.2.1 1.72s.89.84 1.51.84h7.96c1.68 0 3.04-1.37 3.04-3.04v-4.35c0-1.22-.99-2.21-2.21-2.21h-4.39zm4.97 2.21v4.35c0 .78-.63 1.41-1.41 1.41h-7.96c-.06 0-.1-.02-.13-.07a.16.16 0 01-.01-.15l2.25-4.68c.42-.87 1.32-1.44 2.29-1.44h4.4c.31.01.57.27.57.58z">
+                                            </path>
+                                        </svg>
+                                        <div class="inline auto-center vertical">
+                                            <h3 class="ng-binding">Ship to Store</h3>
+                                            <p class="find-in-stores__availability ng-binding">2-7 business days</p>
                                         </div>
                                     </div>
-                                    <div
-                                        class="small-6 medium-5 columns medium-4 umb-grid__section__row__cell umb-padding--bottom  ">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/summer-deals/">
-                                                                            <img src="../images/homepage-457x368-rb.jpg"
-                                                                                alt="Summer Deals Promo">
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="row columns">
+                                        <div class="callout background-secondary">
+                                            <p><button type="button" class="link ae-button" data-ae-blurbtype="button"
+                                                    data-ae-form-field="true">View More Stores for Availability</button>
+                                            </p>
                                         </div>
                                     </div>
-                                    <div
-                                        class="small-6 medium-12 columns medium-4 umb-grid__section__row__cell umb-padding--bottom">
-                                        <div>
-                                            <div class="umb-pub-content row">
-                                                <div class="umb-pub-content__item columns  end">
-                                                    <div class="umb-grid row">
-                                                        <div class="columns medium-12 umb-grid__section">
-                                                            <div class="row umb-grid__section__row">
-                                                                <div
-                                                                    class="columns medium-12 umb-grid__section__row__cell">
-                                                                    <div>
-                                                                        <a
-                                                                            href="https://www.musicarts.com/cms/the-repair-shop">
-                                                                            <img alt="Summer Tune-Ups at the Repair Shop"
-                                                                                src="../images/homepage-1140x124-bb.jpg" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
+                                </section>
+                            </find-in-store>
+                        </div>
+                    </section>
+                </div>
+                <div class="row columns-7-5">
+                    <div class="content-primary">
+                        <div class="copy-block border ng-scope" id="full-description">
+                            <h2 class="highlight ng-binding ng-scope">Quality build, solid warranty, and set up to play.
+                            </h2>
+                            <p class="ng-binding ng-scope">A used or
+                                extraordinarily cheap instrument can actually lessen your child’s likelihood of
+                                continuing in music. With the Allora Student series, you get a quality instrument that
+                                will play in tune, withstand student treatment, and inspire pride of ownership. Allora
+                                instruments are carefully manufactured according to specifications and development
+                                accumulated over many years by our team of brass and woodwind buyers. The result is a
+                                line of instruments that play well, are durable, and possess a satisfying tone and
+                                dynamics capability, all with a price that makes it much easier to get involved with
+                                music. The Allora ATR-250 has a medium-large .460" bore, a yellow brass leadpipe and a
+                                rose brass bell. It features a first-valve slide thumb saddle, an adjustable 3rd valve
+                                slide stop, two water keys and stainless steel pistons for long life and accurate
+                                travel. Comes with an upgraded nylon polyfoam case and a three-year warranty. </p>
+                            <p class="ng-binding ng-scope">Start your journey in music with the Allora Student series.
+                                Order today.</p>
+                        </div>
+                        <div class="copy-block">
+                            <div class="ng-scope">
+                                <h2>Features</h2>
+                                <div class="ng-binding">
+                                    <ul class="arrow-bullet">
+                                        <li>Great for beginning musicians</li>
+                                        <li>Easy to play</li>
+                                        <li>Durable for student players</li>
+                                        <li>Upgraded nylon polyfoam case with backpack straps</li>
+                                        <li>3-year warranty</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ng-scope">
+                                <h2>Technical Specification</h2>
+                                <p class="ng-binding">Allora ATR-250 Student
+                                    Series Bb Trumpet</p>
+                                <div class="ng-binding">
+                                    <ul class="arrow-bullet">
+                                        <li>Key of Bb</li>
+                                        <li>Medium-large 0.460 in. bore</li>
+                                        <li>Yellow brass leadpipe</li>
+                                        <li>2-piece rose brass bell</li>
+                                        <li>Available in lacquer or silver plated</li>
+                                        <li>Yellow brass body and tuning slides</li>
+                                        <li>1st valve slide thumb saddle</li>
+                                        <li>Adjustable 3rd valve slide stop</li>
+                                        <li>2 water keys</li>
+                                        <li>Stainless steel pistons</li>
+                                        <li>Upgraded nylon polyfoam case with backpack straps</li>
+                                        <li>3-year warranty</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-secondary">
+                        <div class="copy-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ng-scope">
+                    <div class="content">
+                        <div class="copy-block border">
+                            <div>
+                                <h2>California Residents</h2>
+                                <img align="left" src="../src/app/img/warning.png" width="61"
+                                    alt="California PROP 65 Warning" role="presentation" style="margin-right:10px;"
+                                    class="ae-img">
+                                <div class="ng-binding">WARNING:
+                                    This product can expose you to chemicals including Lead, which is known to the State
+                                    of California to cause cancer, and Lead, which is known to cause birth defects or
+                                    other reproductive harm. For more information go to www.P65Warnings.ca.gov.</div>
+                            </div>
+                        </div>
+                        <div id="newProductRecs" style="">
+                            <section>
+                                <div data-strategy="ClickCP">
+                                    <style type="text/css">
+                                        .padding-bottom-soft {
+                                            padding-bottom: .9375rem;
+                                        }
+                                        .padding-top-soft {
+                                            padding-top: .9375rem;
+                                        }
+                                        .has-arrow {
+                                            text-align: center;
+                                            background-color: #b82017;
+                                            height: 40px;
+                                            background: #771b1c;
+                                            color: #fff;
+                                            font-size: .85rem;
+                                            position: relative;
+                                        }
+                                        .has-arrow span.left-arrow {
+                                            position: relative;
+                                            background-color: #b32017;
+                                            text-transform: uppercase;
+                                            padding: 0 6rem;
+                                            height: 40px;
+                                            line-height: 40px;
+                                            font-size: 1.5rem;
+                                            font-weight: 700;
+                                            display: inline-block;
+                                            left: 0;
+                                            width: auto;
+                                        }
+                                        @media screen and (max-width: 600px) {
+                                            .has-arrow span.left-arrow {
+                                                padding: 0 1rem;
+                                            }
+                                        }
+                                        .has-arrow span.left-arrow:after {
+                                            border-bottom: 20px solid transparent;
+                                            border-left: 16px solid #b32017;
+                                            border-top: 20px solid transparent;
+                                            content: "";
+                                            height: 100%;
+                                            left: 100%;
+                                            position: absolute;
+                                            top: 0;
+                                            width: 0;
+                                        }
+                                        .has-arrow span.left-arrow:before {
+                                            border-bottom: 20px solid transparent;
+                                            border-top: 20px solid transparent;
+                                            border-right: 16px solid #b32017;
+                                            content: "";
+                                            height: 100%;
+                                            left: -16px;
+                                            position: absolute;
+                                            top: 0;
+                                            width: 0;
+                                        }
+                                        #newProductRecs .slick-arrow {
+                                            display: none;
+                                            visibility: hidden;
+                                        }
+                                        #newProductRecs .product-name {
+                                            margin-top: 8px;
+                                            text-align: center;
+                                        }
+                                        .rr-lazy-hidden {
+                                            opacity: 0;
+                                            -moz-opacity: 0;
+                                            -khtml-opacity: 0;
+                                            filter: alpha(opacity=0);
+                                            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                                        }
+                                        .rr-lazy-visible {
+                                            -webkit-transition: opacity .5s ease-in;
+                                            -moz-transition: opacity .5s ease-in;
+                                            -o-transition: opacity .5s ease-in;
+                                            -ms-transition: opacity .5s ease-in;
+                                            transition: opacity .5s ease-in;
+                                        }
+                                    </style>
+                                    <div class="padding-top-soft padding-bottom-soft">
+                                        <div class="has-arrow" role="heading" aria-level="2">
+                                            <span class="left-arrow">Others Viewed</span>
+                                        </div>
+                                    </div>
+                                    <div class="row accessories">
+                                        <div class="columns">
+                                            <div class="slider-container max-slider-h">
+                                                <div class="product-slider"
+                                                    id="item_pagerecommended-accessories_bottom_1">
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=1326324&amp;ind=0&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-550-Paris-Series-Professional-Bb-Trumpet-MAIN0294884-i4958992.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ATR-550 Paris Series Professional Bb Trumpet Silver Plated">
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ATR-550 Paris Series
+                                                                        Professional Bb Trumpet Silver Plated</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0212916&amp;ind=1&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FGiardinelli-GTR-300-Student-Bb-Trumpet-MAIN0278447-i4971084.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Giardinelli GTR-300 Student Bb Trumpet">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Giardinelli GTR-300 Student
+                                                                        Bb Trumpet</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=1326359&amp;ind=2&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FEtude-ETR-200-Series-Student-Bb-Trumpet-MAIN0294923-i4959091.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Etude ETR-200 Series Student Bb Trumpet Lacquer">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Etude ETR-200 Series Student
+                                                                        Bb Trumpet Lacquer</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=1326326&amp;ind=3&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-580-Chicago-Series-Professional-Bb-Trumpet-MAIN0294888-i4958999.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ATR-580 Chicago Series Professional Bb Trumpet Silver Plated">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ATR-580 Chicago Series
+                                                                        Professional Bb Trumpet Silver Plated</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0222199&amp;ind=4&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FGiardinelli-GTR-10S-Pro-Series-Bb-Trumpet-by-Eastman-MAIN0139129-i4741240.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Giardinelli GTR-10S Pro Series Bb Trumpet by Eastman">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Giardinelli GTR-10S Pro
+                                                                        Series Bb Trumpet by Eastman</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0221865&amp;ind=5&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-1301M-Aere-Metallic-Series-Plastic-Bb-Trumpet-MAIN0116240-i4731012.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ATR-1301M Aere Metallic Series Plastic Bb Trumpet Metallic Black - Silver Trim">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ATR-1301M Aere
+                                                                        Metallic Series Plastic Bb Trumpet Metallic
+                                                                        Black - Silver Trim</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0228223&amp;ind=6&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-AAS-250-Student-Series-Alto-Saxophone-MAIN0278592-i4914819.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora AAS-250 Student Series Alto Saxophone Lacquer">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora AAS-250 Student Series
+                                                                        Alto Saxophone Lacquer</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0221863&amp;ind=7&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-1301-Aere-Series-Plastic-Bb-Trumpet-MAIN0115684-i4764681.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ATR-1301 Aere Series Plastic Bb Trumpet Blue">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ATR-1301 Aere Series
+                                                                        Plastic Bb Trumpet Blue</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=1327283&amp;ind=8&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ACL-250-Student-Series-Clarinet-MAIN0295724-i4961547.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ACL-250 Student Series Clarinet">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ACL-250 Student Series
+                                                                        Clarinet</b></p>
+                                                            </div>
+                                                        </a></div>
+                                                    <div><a
+                                                            href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=c3c4b3c7-cf2e-4c4a-1f04-bb5cdc2d5216&amp;pti=1&amp;pa=recommended-accessories_bottom_1&amp;hpi=11984&amp;stn=ClickCP&amp;stid=4&amp;rti=2&amp;sgs=&amp;u=024256bd-4df1-4598-b743-1250b6607c58&amp;mvtId=-1&amp;mvtTs=1595325251717&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=3601&amp;p=0228226&amp;ind=9&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATB-250-Student-Series-Trombone-MAIN0278452-i4943057.mac">
+                                                            <div
+                                                                class="columns small-8 small-centered padding-top padding-bottom">
+                                                                <img class="rr-lazy"
+                                                                    src="../images/J50830000001000-00-250x250.jpg"
+                                                                    data-alt="Allora ATB-250 Student Series Trombone Lacquer">
+                                                            </div>
+                                                            <div class="columns grid-content">
+                                                                <p class="product-name"><b>Allora ATB-250 Student Series
+                                                                        Trombone Lacquer</b></p>
+                                                            </div>
+                                                        </a></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="newProductRecs" style="">
-                                    <section>
-                                        <div data-strategy="PopularProducts">
-                                            <div class="padding-top-soft padding-bottom-soft">
-                                                <div class="has-arrow"><span class="left-arrow">Best Sellers</span>
-                                                </div>
-                                            </div>
-                                            <div class="row accessories">
-                                                <div class="columns">
-                                                    <div class="slider-container max-slider-h">
-                                                        <div class="product-slider"
-                                                            id="home_pagerecent-products-viewed_bottom_1">
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=1326324&amp;ind=0&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-550-Paris-Series-Professional-Bb-Trumpet-MAIN0294884-i4958992.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J50830000001000-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-550 Paris Series Professional Bb Trumpet Silver Plated">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-550 Paris
-                                                                                Series Professional Bb Trumpet Silver
-                                                                                Plated</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0228227&amp;ind=1&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FAllora-ATR-250-Student-Series-Bb-Trumpet-MAIN0278443-i4943058.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/J47537000001001-00-250x250.jpg"
-                                                                            data-alt="Allora ATR-250 Student Series Bb Trumpet Lacquer Lacquer">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Allora ATR-250
-                                                                                Student Series Bb Trumpet Lacquer
-                                                                                Lacquer</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077333&amp;ind=2&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Traditional-Bb-Clarinet-Reeds-MAIN0000595-i4580580.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462584000775166-00-250x250.jpg"
-                                                                            data-alt="Vandoren Traditional Bb Clarinet Reeds Strength 3 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Traditional
-                                                                                Bb Clarinet Reeds Strength 3 Box of
-                                                                                10</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0166828&amp;ind=3&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTS-62III-Professional-Tenor-Saxophone-MAIN0100915-i4753255.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93187000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YTS-62III Professional Tenor Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTS-62III
-                                                                                Professional Tenor Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0008298&amp;ind=4&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-B45-Series-Bb-Clarinet-Mouthpiece-MAIN0000654-i4624373.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images//483747000308000-00-250x250.jpg"
-                                                                            data-alt="Vandoren B45 Series Bb Clarinet Mouthpiece Traditional B45">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren B45 Series
-                                                                                Bb Clarinet Mouthpiece Traditional
-                                                                                B45</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0147164&amp;ind=5&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YTR-2330-Standard-Bb-Trumpet-MAIN0094696-i4557011.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            data-alt="Yamaha YTR-2330 Standard Bb Trumpet Bb Trumpet">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YTR-2330
-                                                                                Standard Bb Trumpet Bb Trumpet</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0163533&amp;ind=6&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YAS-62III-Professional-Alto-Saxophone-MAIN0101413-i4753469.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/H93184000001000-00-250x250.jpg"
-                                                                            data-alt="Yamaha YAS-62III Professional Alto Saxophone Lacquered">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YAS-62III
-                                                                                Professional Alto Saxophone
-                                                                                Lacquered</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0007825&amp;ind=7&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FYamaha-YSL-354-Series-Student-Trombone-MAIN0025381-i4615940.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/464515000420930-00-250x250.jpg"
-                                                                            data-alt="Yamaha YSL-354 Series Student Trombone">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Yamaha YSL-354 Series
-                                                                                Student Trombone</b></p>
-                                                                    </div>
-                                                                </a></div>
-                                                            <div><a
-                                                                    href="https://recs.richrelevance.com/rrserver/click?a=dce4fe231afda40a&amp;vg=bbfb75f5-fa98-416a-0d92-a35cd6fdd1ce&amp;pti=9&amp;pa=recent-products-viewed_bottom_1&amp;hpi=11984&amp;stn=PopularProducts&amp;stid=45&amp;rti=2&amp;sgs=&amp;mvtId=-1&amp;mvtTs=1594976628956&amp;uguid=acffa516-a1ae-4d5c-f0f2-825cd441f3e6&amp;channelId=WEB&amp;s=159488422468917ffe&amp;pg=-1&amp;p=0077372&amp;ind=8&amp;ct=https%3A%2F%2Fwww.musicarts.com%2FVandoren-Alto-Saxophone-Reeds-MAIN0000596-i4620566.mac">
-                                                                    <div
-                                                                        class="columns small-8 small-centered padding-top padding-bottom">
-                                                                        <img class="rr-lazy rr-lazy-hidden"
-                                                                            src="../images/462970000000023-00-250x250.jpg"
-                                                                            data-alt="Vandoren Alto Saxophone Reeds Strength 2 Box of 10">
-                                                                    </div>
-                                                                    <div class="columns grid-content">
-                                                                        <p class="product-name"><b>Vandoren Alto
-                                                                                Saxophone Reeds Strength 2 Box of 10</b>
-                                                                        </p>
-                                                                    </div>
-                                                                </a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="  row umb-grid__section__row  ">
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell  ">
-                                        <div>
-                                            <p>
-                                                <a href="/Musical-Instrument-Rentals">
-                                                    <img src="../images/column_header_image_1-compressor.png"
-                                                        alt="Children playing instruments"
-                                                        data-udi="umb://media/a144f2f4f0994bd7a0d78f6edcce989c" />
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Rentals</h3>
-                                        </div>
-                                        <div>
-                                            <p>Rent your band or orchestra instrument through our online rental site or
-                                                visit your neighborhood Music &amp; Arts location.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/rentals" class="button alt">get started today</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content">
+                        <product-reviews show-reviews="true" class="ng-isolate-scope">
+                            <div aria-hidden="false">
+                                <div id="pr-reviewsnippet"></div>
+                                <div id="pr-reviewdisplay"></div>
+                            </div>
+                            <div id="pr-write" aria-hidden="true"></div>
+                        </product-reviews>
+                        <recently-viewed class="ng-isolate-scope">
+                            <div class="callout recently-viewed ng-scope">
+                                <div class="h2" role="heading">Recently Viewed</div>
+                                <div class="slick vertical products" id="recent-slider">
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a data-udi="umb://document/0e87a747b9a1402ca0a04060876f99bd"
-                                                    href="/cms/lessons/" title="Lessons"><img
-                                                        src="../images/column_header_image_2-compressor.png"
-                                                        alt="Children playing guitars"
-                                                        data-udi="umb://media/99ae026b1ed341d09a4f7ae1ab70ec4d" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Take Lessons</h3>
-                                        </div>
-                                        <div>
-                                            <p>Private lessons, in our safe learning environment, are building blocks to
-                                                a life-long relationship with music. Each is customized to students
-                                                interests and abilities.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="/cms/lessons/" class="button">get started</a>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a rel="noopener" href="https://stores.musicarts.com/"
-                                                    target="_blank"><img
-                                                        src="../images/column_header_image_4a-compressor.png"
-                                                        alt="gps icon"
-                                                        data-udi="umb://media/1d3a637dc0854155841ec4b178655aa9" /></a>
-                                            </p>
-                                        </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Store Locator</h3>
-                                        </div>
-                                        <div>
-                                            <p>Visit one of our 200+ neighborhood stores for expert advice on everything
-                                                musical: products, rentals, lessons and repairs.</p>
-                                        </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://stores.musicarts.com/" class="button alt">find a store near
-                                                you</a>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="umb-padding--bottom columns medium-3 umb-grid__section__row__cell">
-                                        <div>
-                                            <p><a
-                                                    href="/Account/Login?ReturnUrl=https%3A%2F%2Fwww.musicarts.com%2FAccount%2F"><img
-                                                        src="../images/column_header_image_3-compressor.png"
-                                                        alt="children playing brass instruments"
-                                                        data-udi="umb://media/a9cd6f07019e43debfd9786c0df8424d" /></a>
-                                            </p>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
-                                        <div class="umb-align--left  umb-text--uppercase">
-                                            <h3>Educators</h3>
+                                    </div>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
-                                        <div>
-                                            <p>Access the educator portal to easily shop for the right instruments,
-                                                accessories, and music books for your class.</p>
+                                    </div>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
-                                        <div>
-                                            <div class="umb-spacer"></div>
-                                        </div>
-                                        <div>
-                                            <a href="https://www.musicarts.com/Account/Login?ca=1"
-                                                class="button alt">educator login</a>
+                                    </div>
+                                    <div class="slick-slide slick-active ng-scope" role="option">
+                                        <div class="border">
+                                            <a tabindex="0"
+                                                href="/bach-180s37-stradivarius-series-bb-trumpet-main0033918">
+                                                <figure>
+                                                    <img alt="" role="presentation"
+                                                        src="../images/483747000308000-00-250x250.jpg" class="ae-img">
+                                                </figure>
+                                                <span class="content">
+                                                    <span class="name ng-binding">Bach 180S37
+                                                        Stradivarius Series Bb Trumpet</span>
+                                                    <span
+                                                        class="price color-primary ng-binding">$2,999<sup>.00</sup></span>
+                                                    <span class="button ng-scope" role="button" tabindex="0">View
+                                                        Options</span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </recently-viewed>
                     </div>
                 </div>
             </div>

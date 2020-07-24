@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const fs = require("fs");
 // const getPlugins = (env) => {
 //     let plugins = [new webpack.DefinePlugin({ "process.env.NODE_ENV": JSON.stringify(env) })];
 
@@ -120,16 +120,22 @@ module.exports = (env) => {
               loader: MiniCssExtractPlugin.loader,
               options: scssBuildOptions(env),
             },
-            { loader: "css-loader" },
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
             {
               loader: "postcss-loader",
-              options: { plugins: [autoprefixer()] },
+              options: { plugins: [autoprefixer()], sourceMap: true },
             },
             {
               loader: "sass-loader",
               options: {
                 implementation: require("node-sass"),
                 sassOptions: scssBuildOptions(env),
+                sourceMap: true,
               },
             },
           ],
@@ -171,6 +177,30 @@ module.exports = (env) => {
         template: "html-withimg-loader!./html/catalog.html",
         title: "static ma",
         filename: "catalog.html",
+        chunks: ["css/app", "app"],
+      }),
+
+      // pdp
+      new HtmlWebpackPlugin({
+        template: "html-withimg-loader!./html/pdp.html",
+        title: "static ma",
+        filename: "pdp.html",
+        chunks: ["css/app", "app"],
+      }),
+
+      // login
+      new HtmlWebpackPlugin({
+        template: "html-withimg-loader!./html/login.html",
+        title: "static ma",
+        filename: "login.html",
+        chunks: ["css/app", "app"],
+      }),
+
+      // rentals
+      new HtmlWebpackPlugin({
+        template: "html-withimg-loader!./html/rentals.html",
+        title: "static ma",
+        filename: "rentals.html",
         chunks: ["css/app", "app"],
       }),
 
