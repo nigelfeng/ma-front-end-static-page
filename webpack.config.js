@@ -257,6 +257,15 @@ module.exports = (env) => {
 
       // account support
       new HtmlWebpackPlugin({
+        template:
+          "html-loader?interpolate=require!./html/account/commercial-accounts.html",
+        title: "static ma",
+        filename: "account/commercial-accounts",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account support
+      new HtmlWebpackPlugin({
         template: "html-loader?interpolate=require!./html/account/support.html",
         title: "static ma",
         filename: "account/support",

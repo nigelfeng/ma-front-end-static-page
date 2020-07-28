@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="no" />
+    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
+    <meta name="description"
+        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
+    <base href="/" />
+    <link rel="canonical" href="https://www.musicarts.com" />
+    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
+</head>
+
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="skiplinks">
+                <a href="#main" tabindex="0">Skip to main content</a>
+                <a href="#footer" tabindex="0">Skip to footer</a>
+            </div>
+            ${require('html-loader!../components/header.html')}
+            <div id="main" class="main" role="main">
+                <div class="row">
+                    <div class="content">
+
+                        <nav role="navigation">
+                            <ul class="breadcrumbs" aria-label="You are here:">
+                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+
+                            </ul>
+                        </nav>
+
+                        <div class="row" aria-labelledby="page-title">
+
+                            <aside class="columns large-3">
+                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
+                                    Account</h1>
+                                <nav role="navigation">
+                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
+                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
+                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
+                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
+                                            id="97cr12-acc-menu-link">
+                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
+                                                id="account-menu">Account</a>
+                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
+                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
+                                                id="r5f68c-acc-menu" style="display: none;">
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
+                                                        Tracking</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
+                                                        Lists</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="addressesAndPayment"
+                                                        href="/account/addresses-and-payment">Address &amp;
+                                                        Payment</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
+                                                        Info</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                                                    aria-hidden="true">
+                                                    <a ui-sref="commercialAccounts" href="/account/commercial-accounts">
+                                                        Commercial Accounts
+                                                    </a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="support" href="/account/support">Support</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+
+                            <section class="columns large-9" aria-labelledby="view-title">
+                                <header class="m-b-1">
+                                    <h2 class="highlight" id="view-title">Commercial Accounts</h2>
+                                    <p>Your online account is associated with the following commercial accounts.</p>
+                                </header>
+                                <section>
+                                    <ul class="commercial-accounts">
+                                        <li ng-repeat="(accountId, addresses) in $ctrl.accountsById">
+                                            <h4>Commercial Account #{{ accountId }}</h4>
+                                            <p class="helper" ng-show="$ctrl.customer.isTaxExempt">(Tax Exempt)</p>
+                                            <ul class="ca-addresses">
+                                                <li ng-repeat="address in addresses">
+                                                    <!-- user-address-template -->
+                                                    <div ng-show="$ctrl.address">
+                                                        <p class="address">
+                                                            <span>{{ $ctrl.address.firstName }}
+                                                                {{ $ctrl.address.lastName }}</span>
+                                                            <span>{{ $ctrl.address.companyName }}</span>
+                                                            <span>{{ $ctrl.address.line1 || $ctrl.address.addressLine1 || $ctrl.address.address1 }}</span>
+                                                            <span>{{ $ctrl.address.line2 || $ctrl.address.addressLine2 || $ctrl.address.address2 }}</span>
+                                                            <span>{{ $ctrl.address.city }},
+                                                                {{ $ctrl.address.state || $ctrl.address.stateOrProvince || $ctrl.address.regionId}}
+                                                                {{ $ctrl.address.zipCode || $ctrl.address.postalCode }}</span>
+                                                            <span>{{ $ctrl.address.country }}</span>
+                                                            <span>{{ $ctrl.address.phone | tel }}</span>
+                                                            <span
+                                                                class="truncate">{{ $ctrl.address.email || $ctrl.address.emailAddress }}</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- /user-address-template -->
+
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ${require('html-loader!../components/footer.html')}
+        </div>
+        ${require('html-loader!../components/mini-cart.html')}
+    </div>
+    <div class="small-visibility-check show-for-small-only"></div>
+</body>
+
+</html>
