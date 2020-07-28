@@ -156,51 +156,110 @@ module.exports = (env) => {
       ],
     },
     plugins: [
-      // home
+      // index
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/index.html",
+        template: "./html/index.html",
         title: "static ma",
         filename: "index.html",
+        chunks: [],
+      }),
+
+      // home
+      new HtmlWebpackPlugin({
+        template: "html-loader?interpolate=require!./html/home.html",
+        title: "static ma",
+        filename: "home",
         chunks: ["css/app", "app"],
       }),
 
       // cart
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/cart.html",
+        template: "html-loader?interpolate=require!./html/cart.html",
         title: "static ma",
-        filename: "cart.html",
+        filename: "cart",
         chunks: ["css/app", "app"],
       }),
 
       // catalog
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/catalog.html",
+        template: "html-loader?interpolate=require!./html/catalog.html",
         title: "static ma",
-        filename: "catalog.html",
+        filename: "catalog",
         chunks: ["css/app", "app"],
       }),
 
       // pdp
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/pdp.html",
+        template: "html-loader?interpolate=require!./html/pdp.html",
         title: "static ma",
-        filename: "pdp.html",
+        filename: "pdp",
         chunks: ["css/app", "app"],
       }),
 
       // login
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/login.html",
+        template: "html-loader?interpolate=require!./html/login.html",
         title: "static ma",
-        filename: "login.html",
+        filename: "login",
         chunks: ["css/app", "app"],
       }),
 
       // rentals
       new HtmlWebpackPlugin({
-        template: "html-withimg-loader!./html/rentals.html",
+        template: "html-loader?interpolate=require!./html/rentals.html",
         title: "static ma",
-        filename: "rentals.html",
+        filename: "rentals",
+        chunks: ["css/app", "app"],
+      }),
+
+      // checkout
+      new HtmlWebpackPlugin({
+        template: "html-loader?interpolate=require!./html/checkout.html",
+        title: "static ma",
+        filename: "checkout",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account account info
+      new HtmlWebpackPlugin({
+        template:
+          "html-loader?interpolate=require!./html/account/account-info.html",
+        title: "static ma",
+        filename: "account/account-info",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account address and payment
+      new HtmlWebpackPlugin({
+        template:
+          "html-loader?interpolate=require!./html/account/address-and-payment.html",
+        title: "static ma",
+        filename: "account/addresses-and-payment",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account orders
+      new HtmlWebpackPlugin({
+        template: "html-loader?interpolate=require!./html/account/orders.html",
+        title: "static ma",
+        filename: "account/orders",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account shopping list
+      new HtmlWebpackPlugin({
+        template:
+          "html-loader?interpolate=require!./html/account/shopping-list.html",
+        title: "static ma",
+        filename: "account/shopping-lists",
+        chunks: ["css/app", "app"],
+      }),
+
+      // account support
+      new HtmlWebpackPlugin({
+        template: "html-loader?interpolate=require!./html/account/support.html",
+        title: "static ma",
+        filename: "account/support",
         chunks: ["css/app", "app"],
       }),
 
@@ -210,8 +269,8 @@ module.exports = (env) => {
     devServer: {
       host: "0.0.0.0",
       contentBase: path.join(__dirname, "dist"),
-      compress: true,
       port: 9000,
+      hot: true,
     },
   };
 };

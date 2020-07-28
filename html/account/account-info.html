@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="no" />
+    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
+    <meta name="description"
+        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
+    <base href="/" />
+    <link rel="canonical" href="https://www.musicarts.com" />
+    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
+</head>
+
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="skiplinks">
+                <a href="#main" tabindex="0">Skip to main content</a>
+                <a href="#footer" tabindex="0">Skip to footer</a>
+            </div>
+            ${require('html-loader!../components/header.html')}
+            <div id="main" class="main" role="main">
+                <div class="row">
+                    <div class="content">
+                        <nav role="navigation">
+                            <ul class="breadcrumbs" aria-label="You are here:">
+                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+                            </ul>
+                        </nav>
+                        <div class="row" aria-labelledby="page-title">
+
+                            <aside class="columns large-3">
+                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
+                                    Account
+                                </h1>
+                                <nav role="navigation">
+                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
+                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
+                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
+                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
+                                            id="97cr12-acc-menu-link">
+                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
+                                                id="account-menu">Account</a>
+                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
+                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
+                                                id="r5f68c-acc-menu" style="display: none;">
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
+                                                        Tracking</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
+                                                        Lists</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="addressesAndPayment"
+                                                        href="/account/addresses-and-payment">Address &amp;
+                                                        Payment</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
+                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
+                                                        Info</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                                                    aria-hidden="true">
+                                                    <a ui-sref="commercialAccounts" href="/account/commercial-accounts">
+                                                        Commercial Accounts
+                                                    </a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="support" href="/account/support">Support</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+
+                            <section class="columns large-9" aria-labelledby="view-title">
+                                <div id="accountMessagingContainer" class="callout border error"
+                                    ng-show="$ctrl.messages.length > 0" role="alert" aria-hidden="false"
+                                    style="display: block;">
+                                    <p ng-repeat="msg in $ctrl.messages track by $index" class="ng-binding ng-scope">
+                                        Your account has been updated!</p>
+                                </div>
+                                <ui-view on-display-messaging="$ctrl.displayMessages(messages)" class="ng-scope">
+                                    <account-info-component on-display-messaging="$ctrl.displayMessages(messages)"
+                                        get-customer-results="::$resolve.getCustomerResults"
+                                        class="ng-scope ng-isolate-scope">
+
+                                        <header class="m-b-1" role="presentation">
+                                            <h2 class="highlight" id="view-title">Account Info</h2>
+                                        </header>
+                                        <form name="accountInfoForm" novalidate="" accessible-form=""
+                                            class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength ng-valid-pattern ng-valid-email ng-valid-failed-password-complexity ng-valid-minlength ng-valid-confirm-password ae-form">
+                                            <fieldset class="auto-format">
+                                                <legend class="double h2">Name &amp; Phone Number</legend>
+                                                <div class="end">
+                                                    <label for="firstName" class="req ae-label">First
+                                                        Name</label>
+                                                    <input id="firstName" type="text" name="firstName" maxlength="25"
+                                                        aria-required="true" required="" value="nigel"
+                                                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+
+                                                </div>
+                                                <div class="end">
+                                                    <label for="lastName" class="req ae-label">Last Name</label>
+                                                    <input id="lastName" type="text" name="lastName" maxlength="25"
+                                                        aria-required="true" required="" value="feng"
+                                                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+                                                <div class="end">
+                                                    <label for="phoneNumber" class="ae-label">Phone
+                                                        Number</label>
+                                                    <input id="phoneNumber" phone-input="" type="text"
+                                                        name="phoneNumber" maxlength="14"
+                                                        class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern ng-valid-maxlength"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+                                            </fieldset>
+                                            <hr>
+                                            <fieldset class="auto-format">
+                                                <legend class="double h2">Manage Account Email Address</legend>
+                                                <div class="input-button-inline end">
+                                                    <label for="currentEmail" class="req ae-label">Email
+                                                        Address</label>
+                                                    <div class="input-inline">
+                                                        <input id="currentEmail" type="email" name="emailAddress"
+                                                            value="nigelfeng@aaxischina.com"
+                                                            focus-when="accountInfoCtrl.isEditingEmail" required=""
+                                                            class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-email ng-valid-required ng-valid-pattern"
+                                                            disabled="disabled" aria-invalid="false"
+                                                            data-ae-blurbtype="input" data-ae-form-field="true">
+                                                    </div>
+                                                    <div class="button-inline" aria-hidden="false">
+                                                        <button type="button" aria-controls="currentEmail"
+                                                            aria-pressed="false"
+                                                            aria-label="Toggle editing of email address"
+                                                            class="ng-binding ae-button" aria-hidden="false"
+                                                            data-ae-blurbtype="button"
+                                                            data-ae-form-field="true">Edit</button>
+                                                    </div>
+                                                </div>
+                                                <div class="end">
+                                                    <p class="helper info">This is your email address you use to
+                                                        log in.</p>
+                                                </div>
+
+                                            </fieldset>
+                                            <hr>
+                                            <fieldset class="auto-format">
+                                                <legend class="double h2">Manage Password</legend>
+                                                <div class="end">
+                                                    <label for="currentPassword" class="ae-label">Current
+                                                        Password</label>
+                                                    <input id="currentPassword" type="password" name="currentPassword"
+                                                        class="label-top ng-pristine ng-untouched ng-valid ng-empty"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+
+                                                <div class="end">
+                                                    <label for="newPassword" class="ae-label">
+                                                        New Password
+                                                        <password-policy-component class="ng-isolate-scope">
+                                                            <span data-tooltip="" aria-haspopup="true"
+                                                                class="has-tip large ng-scope"
+                                                                data-disable-hover="false" data-allow-html="true"
+                                                                tabindex="0" title="" aria-describedby="rqd6zl-tooltip"
+                                                                data-yeti-box="rqd6zl-tooltip"
+                                                                data-toggle="rqd6zl-tooltip"
+                                                                data-resize="rqd6zl-tooltip" data-e="g2f2fa-e">
+                                                            </span>
+                                                        </password-policy-component>
+                                                        <span
+                                                            class="field-validation-valid errortooltip errortooltip-password"
+                                                            data-valmsg-for="PasswordForLogin"
+                                                            data-valmsg-replace="true"></span>
+                                                    </label>
+                                                    <input id="newPassword" type="password" name="newPassword"
+                                                        autocomplete="new-password" aria-required="false"
+                                                        validate-password-complexity=""
+                                                        class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-failed-password-complexity ng-valid-minlength ng-valid-maxlength"
+                                                        aria-describedby="helperText_NewPassword" aria-invalid="false"
+                                                        data-ae-blurbtype="input" data-ae-form-field="true">
+                                                </div>
+
+                                                <div class="end">
+                                                    <p class="help-text" id="helperText_NewPassword">Password is
+                                                        case sensitive, cannot match the email address, and must
+                                                        meet the
+                                                        <span data-tooltip="" aria-haspopup="true"
+                                                            class="has-tip large ng-scope" data-disable-hover="false"
+                                                            data-allow-html="true" tabindex="0"
+                                                            aria-describedby="rtr5s6-tooltip"
+                                                            data-yeti-box="rtr5s6-tooltip" data-toggle="rtr5s6-tooltip"
+                                                            title="<ol class='password-policy'><li>Password must be between 8 and 50 characters in length</li><li>Password must contain at least 3 of the following 4 character groups:<ul class='disc'><li>Lowercase alphabetic (a through z)</li><li>Uppercase alphabetic (A through Z)</li><li>Numerals (0 through 9)</li><li>Non-alphabetic characters (such as !, @, #, $)</li></ul></li></ol>"
+                                                            data-resize="rtr5s6-tooltip" data-e="u8ljpl-e">
+                                                            password complexity requirements
+                                                        </span>
+                                                        .</p>
+                                                </div>
+                                                <div class="end">
+                                                    <label for="reenterPassword" class="ae-label">Re-enter New
+                                                        Password</label>
+                                                    <input id="reenterPassword" name="reenterPassword"
+                                                        autocomplete="new-password" type="password"
+                                                        class="label-top ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-confirm-password ng-valid-required"
+                                                        confirm-password="accountInfoCtrl.accountInfo.newPassword"
+                                                        aria-invalid="false" data-ae-blurbtype="input"
+                                                        data-ae-form-field="true">
+                                                </div>
+
+                                            </fieldset>
+                                            <hr>
+                                            <button type="submit" class="primary large ae-button" disabled="disabled"
+                                                data-ae-blurbtype="button" data-ae-form-field="true">Save
+                                                Changes</button>
+                                        </form>
+                                    </account-info-component>
+                                </ui-view>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            ${require('html-loader!../components/footer.html')}
+        </div>
+        ${require('html-loader!../components/mini-cart.html')}
+    </div>
+    <div class="small-visibility-check show-for-small-only"></div>
+</body>
+
+</html>

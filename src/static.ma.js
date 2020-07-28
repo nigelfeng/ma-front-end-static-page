@@ -95,4 +95,14 @@ $(function () {
     });
     $slider.foundation().show().resize();
   }
+
+  //checkout
+
+  $(document).on("change", "input[name=shippingOption][value=Store]", function () {
+    $(".reveal-overlay").show();
+  });
+
+  $(document).on("click", ".reveal-overlay .close-button", function () {
+    $(".reveal-overlay").hide();
+  });
 });

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="no" />
+    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
+    <meta name="description"
+        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
+    <base href="/" />
+    <link rel="canonical" href="https://www.musicarts.com" />
+    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
+</head>
+
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="skiplinks">
+                <a href="#main" tabindex="0">Skip to main content</a>
+                <a href="#footer" tabindex="0">Skip to footer</a>
+            </div>
+            ${require('html-loader!../components/header.html')}
+            <div id="main" class="main" role="main">
+                <div class="row">
+                    <div class="content">
+
+                        <nav role="navigation">
+                            <ul class="breadcrumbs" aria-label="You are here:">
+                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+
+                            </ul>
+                        </nav>
+
+                        <div class="row" aria-labelledby="page-title">
+
+                            <aside class="columns large-3">
+                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
+                                    Account</h1>
+                                <nav role="navigation">
+                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
+                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
+                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
+                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
+                                            id="97cr12-acc-menu-link">
+                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
+                                                id="account-menu">Account</a>
+                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
+                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
+                                                id="r5f68c-acc-menu" style="display: none;">
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
+                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
+                                                        Tracking</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
+                                                        Lists</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="addressesAndPayment"
+                                                        href="/account/addresses-and-payment">Address &amp;
+                                                        Payment</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
+                                                        Info</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                                                    aria-hidden="true">
+                                                    <a ui-sref="commercialAccounts"
+                                                        href="/account/commercial-accounts">Commercial
+                                                        Accounts</a>
+                                                </li>
+                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                                                    <a ui-sref="support" href="/account/support">Support</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+
+                            <section class="columns large-9" aria-labelledby="view-title">
+                                <ui-view on-display-messaging="$ctrl.displayMessages(messages)" class="ng-scope">
+                                    <order-component on-display-messaging="$ctrl.displayMessages(messages)"
+                                        get-order-search-results="::$resolve.getOrderSearchResults"
+                                        customer-service-info="::$resolve.customerServiceInfo"
+                                        class="ng-scope ng-isolate-scope">
+                                        <header role="presentation">
+                                            <h2 class="highlight" id="view-title">Orders &amp; Tracking</h2>
+                                            <p>Click on an order you wish to track or review. If you do not see
+                                                your order, call <a class="phone ng-binding"
+                                                    href="tel:888-731-5396">888-731-5396</a>.</p>
+                                        </header>
+                                        <div class="page-spinner" aria-busy="true">
+                                            <div class="spinner-content">
+                                                <object data="/dist/img/spinner.svg" type="image/svg+xml"
+                                                    class="spinner ae-media"
+                                                    data-player-url="/dist/img/spinner.svg"><span
+                                                        class="ae-compliance-indent" style="display:none;">
+                                                        loading spinner</span></object>
+                                                <div class="spinner-message allcaps">Loading</div>
+                                            </div>
+                                        </div>
+
+                                        <order-display-options options="$ctrl.displayOptions"
+                                            page-count="$ctrl.orderResults.metadata.pageCount"
+                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
+                                            <ul class="search-display-options" aria-label="Viewing Options"
+                                                role="presentation">
+                                                <li class="pagination-container" role="presentation">
+                                                    <order-pagination page-count="$ctrl.options.pageCount"
+                                                        page-size="$ctrl.options.pageSize"
+                                                        page-num="$ctrl.options.pageNumber"
+                                                        on-page-change="$ctrl.changePage(page)"
+                                                        class="ng-isolate-scope">
+                                                        <ul class="pagination" aria-label="Pagination">
+                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
+                                                                <button type="button" aria-label="Previous page"
+                                                                    class="ae-button" data-ae-blurbtype="button"
+                                                                    data-ae-form-field="true"><span
+                                                                        class="show-for-sr">Previous
+                                                                        page</span></button>
+                                                            </li>
+
+                                                            <li class="ng-scope current">
+                                                                <span class="ng-binding ng-scope"><span
+                                                                        class="show-for-sr">You're on
+                                                                        page</span> 1</span>
+
+                                                            </li>
+                                                            <li class="ng-scope ellipsis" aria-hidden="true">
+
+
+                                                            </li>
+                                                            <li class="pagination-next ng-hide" aria-hidden="true">
+                                                                <button type="button" aria-label="Next page"
+                                                                    class="ae-button" data-ae-blurbtype="button"
+                                                                    data-ae-form-field="true"><span
+                                                                        class="show-for-sr">Next
+                                                                        page</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </order-pagination>
+                                                </li>
+                                            </ul>
+
+                                        </order-display-options>
+
+                                        <div class="faux-table" role="table" aria-labelled="Your orders">
+
+                                            <div class="table-row table-header" role="row">
+                                                <div role="columnheader" id="order-date">Order Date</div>
+                                                <div role="columnheader" id="order-number">Order Number</div>
+
+                                                <div role="columnheader" id="order-total">Total</div>
+                                                <div role="columnheader" id="order-status">Status</div>
+                                                <div role="columnheader" id="view-order">View Order</div>
+                                            </div>
+                                            <div class="table-row" aria-hidden="false">
+                                                <p>You have no order history. <a href="/" target="_self">Start
+                                                        shopping!</a></p>
+                                            </div>
+
+                                        </div>
+
+                                        <order-display-options options="$ctrl.displayOptions"
+                                            page-count="$ctrl.orderResults.metadata.pageCount"
+                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
+                                            <ul class="search-display-options" aria-label="Viewing Options"
+                                                role="presentation">
+                                                <li class="pagination-container" role="presentation">
+                                                    <order-pagination page-count="$ctrl.options.pageCount"
+                                                        page-size="$ctrl.options.pageSize"
+                                                        page-num="$ctrl.options.pageNumber"
+                                                        on-page-change="$ctrl.changePage(page)"
+                                                        class="ng-isolate-scope">
+                                                        <ul class="pagination" aria-label="Pagination">
+                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
+                                                                <button type="button" aria-label="Previous page"
+                                                                    class="ae-button" data-ae-blurbtype="button"
+                                                                    data-ae-form-field="true"><span
+                                                                        class="show-for-sr">Previous
+                                                                        page</span></button>
+                                                            </li>
+
+                                                            <li class="ng-scope current">
+                                                                <span class="ng-binding ng-scope"><span
+                                                                        class="show-for-sr">You're on
+                                                                        page</span> 1</span>
+
+                                                            </li>
+                                                            <li class="ng-scope ellipsis" aria-hidden="true">
+
+
+                                                            </li>
+                                                            <li class="pagination-next ng-hide" aria-hidden="true">
+                                                                <button type="button" aria-label="Next page"
+                                                                    class="ae-button" data-ae-blurbtype="button"
+                                                                    data-ae-form-field="true"><span
+                                                                        class="show-for-sr">Next
+                                                                        page</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </order-pagination>
+                                                </li>
+                                            </ul>
+
+                                        </order-display-options>
+
+
+                                    </order-component>
+                                </ui-view>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            ${require('html-loader!../components/footer.html')}
+        </div>
+        ${require('html-loader!../components/mini-cart.html')}
+    </div>
+    <div class="small-visibility-check show-for-small-only"></div>
+</body>
+
+</html>
