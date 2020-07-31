@@ -98,7 +98,7 @@ $(function () {
 
   //checkout
 
-  $(document).on("change", "input[name=shippingOption][value=Store]", function () {
+  $(document).on("change", "input[name^=shippingOption][value=Store]", function () {
     $(".reveal-overlay").show();
   });
 

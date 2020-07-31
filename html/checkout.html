@@ -9,32 +9,12 @@
     <link id="Favicon" rel="SHORTCUT ICON" href="/dist/img/favicon.ico" />
     <base href="/" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700">
-    <link href="/dist/css/app.css" rel="stylesheet" />
-    <script src="dist/polyfill.bundle.js"></script>
-    <script src="dist/jquery.min.js"></script>
-    <script src="dist/what-input.min.js"></script>
-    <script src="dist/foundation.min.js"></script>
-    <script src="dist/vendor.bundle.js"></script>
-    <script>
-        window.digitalData = { event: [] };
-    </script>
-    <script src="//assets.adobedtm.com/launch-ENe92d58eb5f6241c1bdba948c1df1d307.min.js" async></script>
 </head>
 
 <body>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" />
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh" data-toggle="off-canvas-right">Order
-                        Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
             <div id="main" class="main" role="main" tabindex="0">
                 <div class="row columns-8-4 checkout reverse">
                     <aside class="content-secondary show-for-mediumhigh">
@@ -42,92 +22,9 @@
                             Order Summary
                             <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                         </h2>
-                        <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                            <div class="callout secondary no-padding">
-                                <ul class="cart-items mini-cart">
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a
-                                                    href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                    <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                        Projections VM-2 with Dual 60-Channel Digital Handheld Wireless
-                                                        Systems</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                    </li>
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                    <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                        YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cart-totals">
-                                <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="ng-scope">
-                                    <span>Shipping</span><strong>TBD</strong></p>
-                                <p class="ng-scope"><span>Tax</span><strong>TBD*</strong></p>
-                                <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.total | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="helper ng-scope">*Tax will be based on shipping
-                                    information</p>
-                            </div>
-                        </checkout-cart>
+                        ${require('html-loader!./components/checkout-cart.html')}
                         <hr>
-                        <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                            <div class="promo-code">
-                                <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                <div class="input-button-inline label-top">
-                                    <div class="input-inline">
-                                        <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                            class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                            data-ae-blurbtype="input" data-ae-form-field="true">
-                                    </div>
-                                    <div class="button-inline">
-                                        <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                            data-ae-form-field="true">Apply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </add-promo-component>
+                        ${require('html-loader!./components/checkout-add-promo.html')}
                     </aside>
                     <section class="content-primary">
                         <header role="presentation">
@@ -153,7 +50,7 @@
                                         </div>
                                         <div class="double ng-scope">
                                             <label class="radio ae-label">
-                                                <input type="radio" name="shippingOption" value="Store"
+                                                <input type="radio" name="shippingOption1" value="Store"
                                                     class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                     aria-invalid="false" data-ae-form-field="true">
                                                 Pick Up at Store
@@ -172,7 +69,7 @@
                                             <fieldset id="SelectedAddressList" class="auto-format">
                                                 <div class="double indent ng-scope">
                                                     <label class="radio ae-label" bg-if="coaCtrl.canEdit">
-                                                        <input type="radio" name="savedOrNewAddress" id="savedAddress"
+                                                        <input type="radio" name="savedOrNewAddress1" id="savedAddress"
                                                             value="E" checked
                                                             class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                             aria-invalid="false" aria-describedby="ShippingOptions"
@@ -193,7 +90,7 @@
                                                             data-ae-form-field="true">Edit</button>
                                                     </div>
                                                     <label class="radio ng-scope ae-label">
-                                                        <input type="radio" name="savedOrNewAddress" id="newAddress"
+                                                        <input type="radio" name="savedOrNewAddress1" id="newAddress"
                                                             value="N"
                                                             class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                             aria-invalid="false" aria-describedby="ShippingOptions"
@@ -252,28 +149,12 @@
                 </div>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right" id="off-canvas-right" data-off-canvas
-            data-transition="overlap">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart></checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true"></add-promo-component>
-        </aside>
     </div>
     <hr>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" />
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh" data-toggle="off-canvas-right">Order
-                        Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
+
             <div id="main" class="main" role="main" tabindex="0">
                 <div class="row columns-8-4 checkout reverse">
                     <aside class="content-secondary show-for-mediumhigh">
@@ -281,92 +162,9 @@
                             Order Summary
                             <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                         </h2>
-                        <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                            <div class="callout secondary no-padding">
-                                <ul class="cart-items mini-cart">
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a
-                                                    href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                    <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                        Projections VM-2 with Dual 60-Channel Digital Handheld Wireless
-                                                        Systems</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                    </li>
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                    <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                        YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cart-totals">
-                                <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="ng-scope">
-                                    <span>Shipping</span><strong>TBD</strong></p>
-                                <p class="ng-scope"><span>Tax</span><strong>TBD*</strong></p>
-                                <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.total | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="helper ng-scope">*Tax will be based on shipping
-                                    information</p>
-                            </div>
-                        </checkout-cart>
+                        ${require('html-loader!./components/checkout-cart.html')}
                         <hr>
-                        <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                            <div class="promo-code">
-                                <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                <div class="input-button-inline label-top">
-                                    <div class="input-inline">
-                                        <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                            class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                            data-ae-blurbtype="input" data-ae-form-field="true">
-                                    </div>
-                                    <div class="button-inline">
-                                        <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                            data-ae-form-field="true">Apply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </add-promo-component>
+                        ${require('html-loader!./components/checkout-add-promo.html')}
                     </aside>
                     <section class="content-primary">
                         <header role="presentation">
@@ -392,7 +190,7 @@
                                         </div>
                                         <div class="double ng-scope">
                                             <label class="radio ae-label">
-                                                <input type="radio" name="shippingOption" value="Store"
+                                                <input type="radio" name="shippingOption2" value="Store"
                                                     class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                     aria-invalid="false" data-ae-form-field="true">
                                                 Pick Up at Store
@@ -411,7 +209,7 @@
                                             <fieldset id="SelectedAddressList" class="auto-format">
                                                 <div class="double indent ng-scope">
                                                     <label class="radio ae-label" bg-if="coaCtrl.canEdit">
-                                                        <input type="radio" name="savedOrNewAddress" id="savedAddress"
+                                                        <input type="radio" name="savedOrNewAddress2" id="savedAddress"
                                                             value="E"
                                                             class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                             aria-invalid="false" aria-describedby="ShippingOptions"
@@ -432,7 +230,7 @@
                                                             data-ae-form-field="true">Edit</button>
                                                     </div>
                                                     <label class="radio ng-scope ae-label">
-                                                        <input type="radio" name="savedOrNewAddress1" id="newAddress"
+                                                        <input type="radio" name="savedOrNewAddress2" id="newAddress"
                                                             value="N" checked
                                                             class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                             aria-invalid="false" aria-describedby="ShippingOptions"
@@ -664,28 +462,12 @@
                 </div>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right" id="off-canvas-right" data-off-canvas
-            data-transition="overlap">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart></checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true"></add-promo-component>
-        </aside>
     </div>
     <hr>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" />
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh" data-toggle="off-canvas-right">Order
-                        Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
+
             <div id="main" class="main" role="main" tabindex="0">
                 <div class="row columns-8-4 checkout reverse">
                     <aside class="content-secondary show-for-mediumhigh">
@@ -693,92 +475,10 @@
                             Order Summary
                             <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                         </h2>
-                        <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                            <div class="callout secondary no-padding">
-                                <ul class="cart-items mini-cart">
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a
-                                                    href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                    <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                        Projections VM-2 with Dual 60-Channel Digital Handheld Wireless
-                                                        Systems</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                    </li>
-                                    <li class="ng-scope">
-                                        <div class="product" aria-label="Item Details">
-                                            <figure>
-                                                <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                    <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                        src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                        class="ae-img">
-                                                </a>
-                                            </figure>
-                                            <div class="product-info">
-                                                <p class="name"><a class="ng-binding"
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                        YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                <ul class="product-additional">
-                                                    <li class="ng-binding ng-scope">Option: Standard
-                                                    </li>
-                                                    <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                </ul>
-                                                <p class="availability ng-binding"></p>
-                                            </div>
-                                        </div>
-                                        <p class="total price ng-binding" aria-label="Item Total"
-                                            ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cart-totals">
-                                <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="ng-scope">
-                                    <span>Shipping</span><strong>TBD</strong></p>
-                                <p class="ng-scope"><span>Tax</span><strong>TBD*</strong></p>
-                                <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                        ng-bind-html="cocCtrl.cart.total | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                </p>
-                                <p class="helper ng-scope">*Tax will be based on shipping
-                                    information</p>
-                            </div>
-                        </checkout-cart>
+                        ${require('html-loader!./components/checkout-cart.html')}
+
                         <hr>
-                        <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                            <div class="promo-code">
-                                <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                <div class="input-button-inline label-top">
-                                    <div class="input-inline">
-                                        <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                            class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                            data-ae-blurbtype="input" data-ae-form-field="true">
-                                    </div>
-                                    <div class="button-inline">
-                                        <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                            data-ae-form-field="true">Apply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </add-promo-component>
+                        ${require('html-loader!./components/checkout-add-promo.html')}
                     </aside>
                     <section class="content-primary">
                         <header role="presentation">
@@ -796,7 +496,7 @@
                                         <legend class="sr-only" id="ShippingOptions">Shipping Options</legend>
                                         <div class="double ng-scope">
                                             <label class="radio ae-label">
-                                                <input type="radio" name="shippingOption" value="Home"
+                                                <input type="radio" name="shippingOption3" value="Home"
                                                     class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                     aria-invalid="false" data-ae-form-field="true">
                                                 Ship to Home
@@ -804,7 +504,7 @@
                                         </div>
                                         <div class="double ng-scope">
                                             <label class="radio ae-label">
-                                                <input type="radio" checked name="shippingOption" value="Store"
+                                                <input type="radio" checked name="shippingOption3" value="Store"
                                                     class="ng-pristine ng-untouched ng-valid ng-not-empty"
                                                     aria-invalid="false" data-ae-form-field="true">
                                                 Pick Up at Store
@@ -941,30 +641,13 @@
                 </div>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right" id="off-canvas-right" data-off-canvas
-            data-transition="overlap">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart></checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true"></add-promo-component>
-        </aside>
     </div>
     <hr>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content="">
             <dynamic-content name="CHECKOUT_HEADER" class="ng-isolate-scope"></dynamic-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" class="ae-img">
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh ae-button" data-toggle="off-canvas-right"
-                        aria-expanded="false" aria-controls="off-canvas-right" data-ae-blurbtype="button"
-                        data-ae-form-field="true">Order Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
+
             <div id="main" class="main" role="main">
                 <checkout class="ng-isolate-scope">
                     <div class="checkout-spinner" style="display: none;">
@@ -981,96 +664,10 @@
                                 Order Summary
                                 <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                             </h2>
-                            <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                                <div class="callout secondary no-padding">
-                                    <ul class="cart-items mini-cart">
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                            Projections VM-2 with Dual 60-Channel Digital Handheld
-                                                            Wireless Systems</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                        </li>
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cart-totals">
-                                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong
-                                            class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                    </p>
-                                    <p class="ng-scope">
-                                        <span>Shipping</span>
-                                        <strong class="allcaps promo ng-scope">Free</strong>
-                                    </p>
-                                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong>
-                                    </p>
-                                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong>
-                                    </p>
-                                </div>
-                            </checkout-cart>
+                            ${require('html-loader!./components/checkout-cart.html')}
+
                             <hr>
-                            <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                                <div class="promo-code">
-                                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                    <div class="input-button-inline label-top">
-                                        <div class="input-inline">
-                                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                                data-ae-blurbtype="input" data-ae-form-field="true">
-                                        </div>
-                                        <div class="button-inline">
-                                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                                data-ae-form-field="true">Apply</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </add-promo-component>
+                            ${require('html-loader!./components/checkout-add-promo.html')}
                         </aside>
                         <section class="content-primary">
                             <header role="presentation">
@@ -1301,7 +898,7 @@
                                                 <fieldset id="SelectedAddressList" class="auto-format">
                                                     <div class="double indent ng-scope">
                                                         <label class="radio ae-label" bg-if="coaCtrl.canEdit">
-                                                            <input type="radio" name="savedOrNewAddress"
+                                                            <input type="radio" name="savedOrNewAddress3"
                                                                 id="savedAddress" value="E" checked
                                                                 class="ng-pristine ng-valid ng-not-empty ng-touched"
                                                                 aria-invalid="false" data-ae-form-field="true"> Saved
@@ -1322,7 +919,7 @@
                                                                 data-ae-form-field="true">Edit</button>
                                                         </div>
                                                         <label class="radio ng-scope ae-label">
-                                                            <input type="radio" name="savedOrNewAddress" id="newAddress"
+                                                            <input type="radio" name="savedOrNewAddress3" id="newAddress"
                                                                 value="N"
                                                                 class="ng-valid ng-not-empty ng-dirty ng-touched"
                                                                 aria-invalid="false" data-ae-form-field="true">
@@ -1351,112 +948,15 @@
                 </checkout>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right is-transition-overlap is-closed"
-            id="off-canvas-right" data-off-canvas="" data-transition="overlap" aria-hidden="false" data-e="byj1zn-e"
-            role="presentation">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart class="ng-isolate-scope">
-                <div class="callout secondary no-padding">
-                    <ul class="cart-items mini-cart">
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a
-                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                            Projections VM-2 with Dual 60-Channel Digital Handheld Wireless Systems</a>
-                                    </p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                        </li>
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cart-totals">
-                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong></p>
-                    <p class="ng-scope">
-                        <span>Shipping</span>
-                        <strong class="allcaps promo ng-scope">Free</strong>
-                    </p>
-                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong></p>
-                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong></p>
-                </div>
-            </checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true" class="ng-isolate-scope">
-                <div class="promo-code">
-                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                    <div class="input-button-inline label-top">
-                        <div class="input-inline">
-                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                data-ae-blurbtype="input" data-ae-form-field="true">
-                        </div>
-                        <div class="button-inline">
-                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                data-ae-form-field="true">Apply</button>
-                        </div>
-                    </div>
-                </div>
-            </add-promo-component>
-        </aside>
+
         <div class="js-off-canvas-overlay is-overlay-fixed"></div>
     </div>
     <hr>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content="">
             <dynamic-content name="CHECKOUT_HEADER" class="ng-isolate-scope"></dynamic-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" class="ae-img">
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh ae-button" data-toggle="off-canvas-right"
-                        aria-expanded="false" aria-controls="off-canvas-right" data-ae-blurbtype="button"
-                        data-ae-form-field="true">Order Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
+
             <div id="main" class="main" role="main">
                 <checkout class="ng-isolate-scope">
                     <div class="checkout-spinner" style="display: none;">
@@ -1473,96 +973,10 @@
                                 Order Summary
                                 <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                             </h2>
-                            <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                                <div class="callout secondary no-padding">
-                                    <ul class="cart-items mini-cart">
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                            Projections VM-2 with Dual 60-Channel Digital Handheld
-                                                            Wireless Systems</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                        </li>
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cart-totals">
-                                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong
-                                            class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                    </p>
-                                    <p class="ng-scope">
-                                        <span>Shipping</span>
-                                        <strong class="allcaps promo ng-scope">Free</strong>
-                                    </p>
-                                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong>
-                                    </p>
-                                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong>
-                                    </p>
-                                </div>
-                            </checkout-cart>
+                            ${require('html-loader!./components/checkout-cart.html')}
+
                             <hr>
-                            <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                                <div class="promo-code">
-                                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                    <div class="input-button-inline label-top">
-                                        <div class="input-inline">
-                                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                                data-ae-blurbtype="input" data-ae-form-field="true">
-                                        </div>
-                                        <div class="button-inline">
-                                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                                data-ae-form-field="true">Apply</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </add-promo-component>
+                            ${require('html-loader!./components/checkout-add-promo.html')}
                         </aside>
                         <section class="content-primary">
                             <header role="presentation">
@@ -1794,7 +1208,7 @@
                                                 <fieldset id="SelectedAddressList" class="auto-format">
                                                     <div class="double indent ng-scope">
                                                         <label class="radio ae-label" bg-if="coaCtrl.canEdit">
-                                                            <input type="radio" name="savedOrNewAddress"
+                                                            <input type="radio" name="savedOrNewAddress4"
                                                                 id="savedAddress" value="E"
                                                                 class="ng-pristine ng-valid ng-not-empty ng-touched"
                                                                 aria-invalid="false" data-ae-form-field="true"> Saved
@@ -1812,7 +1226,7 @@
                                                             </select>
                                                         </div>
                                                         <label class="radio ng-scope ae-label">
-                                                            <input type="radio" name="savedOrNewAddress2"
+                                                            <input type="radio" name="savedOrNewAddress4"
                                                                 id="newAddress" value="N" checked
                                                                 class="ng-valid ng-not-empty ng-dirty ng-touched ng-valid-parse"
                                                                 aria-invalid="false" data-ae-form-field="true">
@@ -2070,112 +1484,14 @@
                 </checkout>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right is-transition-overlap is-closed"
-            id="off-canvas-right" data-off-canvas="" data-transition="overlap" aria-hidden="false" data-e="byj1zn-e"
-            role="presentation">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart class="ng-isolate-scope">
-                <div class="callout secondary no-padding">
-                    <ul class="cart-items mini-cart">
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a
-                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                            Projections VM-2 with Dual 60-Channel Digital Handheld Wireless Systems</a>
-                                    </p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                        </li>
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cart-totals">
-                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong></p>
-                    <p class="ng-scope">
-                        <span>Shipping</span>
-                        <strong class="allcaps promo ng-scope">Free</strong>
-                    </p>
-                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong></p>
-                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong></p>
-                </div>
-            </checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true" class="ng-isolate-scope">
-                <div class="promo-code">
-                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                    <div class="input-button-inline label-top">
-                        <div class="input-inline">
-                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                data-ae-blurbtype="input" data-ae-form-field="true">
-                        </div>
-                        <div class="button-inline">
-                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                data-ae-form-field="true">Apply</button>
-                        </div>
-                    </div>
-                </div>
-            </add-promo-component>
-        </aside>
+
         <div class="js-off-canvas-overlay is-overlay-fixed"></div>
     </div>
     <hr>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-content" data-off-canvas-content="">
             <dynamic-content name="CHECKOUT_HEADER" class="ng-isolate-scope"></dynamic-content>
-            <header id="site-header" class="site-header simple" role="banner">
-                <div id="masthead" class="masthead">
-                    <nav id="navigation-utilities" role="navigation" aria-label="Utility Navigation">
-                        <a href="/" class="logo" aria-label="Logo">
-                            <img src="../src/img/logo.png" alt="Music &amp; Arts logo" class="ae-img">
-                        </a>
-                    </nav>
-                    <button class="button-right hide-for-mediumhigh ae-button" data-toggle="off-canvas-right"
-                        aria-expanded="false" aria-controls="off-canvas-right" data-ae-blurbtype="button"
-                        data-ae-form-field="true">Order Summary</button>
-                </div>
-            </header>
+            ${require('html-loader!./components/checkout-header.html')}
             <div id="main" class="main" role="main">
                 <checkout class="ng-isolate-scope">
                     <div class="checkout-spinner" style="display: none;">
@@ -2192,96 +1508,9 @@
                                 Order Summary
                                 <a href="/cart" class="button" aria-hidden="false">Edit Cart</a>
                             </h2>
-                            <checkout-cart on-remove-coupon="coCtrl.removeCoupon(coupon)" class="ng-isolate-scope">
-                                <div class="callout secondary no-padding">
-                                    <ul class="cart-items mini-cart">
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                                            Projections VM-2 with Dual 60-Channel Digital Handheld
-                                                            Wireless Systems</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                                        </li>
-                                        <li class="ng-scope">
-                                            <div class="product" aria-label="Item Details">
-                                                <figure>
-                                                    <a
-                                                        href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                                            class="ae-img">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-info">
-                                                    <p class="name"><a class="ng-binding"
-                                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                                    <ul class="product-additional">
-                                                        <li class="ng-binding ng-scope">Option:
-                                                            Standard</li>
-                                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                                    </ul>
-                                                    <p class="availability ng-binding"></p>
-                                                </div>
-                                            </div>
-                                            <p class="total price ng-binding" aria-label="Item Total"
-                                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cart-totals">
-                                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong
-                                            class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong>
-                                    </p>
-                                    <p class="ng-scope">
-                                        <span>Shipping</span>
-                                        <strong class="allcaps promo ng-scope">Free</strong>
-                                    </p>
-                                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong>
-                                    </p>
-                                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong>
-                                    </p>
-                                </div>
-                            </checkout-cart>
+                            ${require('html-loader!./components/checkout-cart.html')}
                             <hr>
-                            <add-promo-component on-coupon-add="coCtrl.onCouponAdd(cart)" class="ng-isolate-scope">
-                                <div class="promo-code">
-                                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                                    <div class="input-button-inline label-top">
-                                        <div class="input-inline">
-                                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                                data-ae-blurbtype="input" data-ae-form-field="true">
-                                        </div>
-                                        <div class="button-inline">
-                                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                                data-ae-form-field="true">Apply</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </add-promo-component>
+                            ${require('html-loader!./components/checkout-add-promo.html')}
                         </aside>
                         <section class="content-primary">
                             <header role="presentation">
@@ -2384,96 +1613,9 @@
                 </checkout>
             </div>
         </div>
-        <aside aria-label="Order Summary" class="off-canvas position-right is-transition-overlap is-closed"
-            id="off-canvas-right" data-off-canvas="" data-transition="overlap" aria-hidden="false" data-e="e9rcgp-e"
-            role="presentation">
-            <h2 class="has-button">Order Summary <a href="/cart" class="button">Edit Cart</a></h2>
-            <checkout-cart class="ng-isolate-scope">
-                <div class="callout secondary no-padding">
-                    <ul class="cart-items mini-cart">
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a
-                                        href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">
-                                        <img alt="VM-2 with Dual 60-Channel Digital Handheld Wireless Systems Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Sound-Projections-Standard/L50591000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/sound-projections-vm-2-with-dual-60-channel-digital-handheld-wireless-systems-main0438438">Sound
-                                            Projections VM-2 with Dual 60-Channel Digital Handheld Wireless Systems</a>
-                                    </p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,629<sup>.00</sup></p>
-                        </li>
-                        <li class="ng-scope">
-                            <div class="product" aria-label="Item Details">
-                                <figure>
-                                    <a href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">
-                                        <img alt="YCL-CSVR Series Professional Bb Clarinet Standard"
-                                            src="//media.musicarts.com/is/image/MMGS7/Yamaha-Standard/J19128000000000-00-250x250.jpg"
-                                            class="ae-img">
-                                    </a>
-                                </figure>
-                                <div class="product-info">
-                                    <p class="name"><a class="ng-binding"
-                                            href="/yamaha-ycl-csvr-series-professional-bb-clarinet-main0122465">Yamaha
-                                            YCL-CSVR Series Professional Bb Clarinet</a></p>
-                                    <ul class="product-additional">
-                                        <li class="ng-binding ng-scope">Option: Standard</li>
-                                        <li class="ng-binding"><strong>Quantity:</strong> 1</li>
-                                    </ul>
-                                    <p class="availability ng-binding"></p>
-                                </div>
-                            </div>
-                            <p class="total price ng-binding" aria-label="Item Total"
-                                ng-bind-html="item.subTotal | fancyCurrency">$3,185<sup>.99</sup></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cart-totals">
-                    <p><span class="ng-binding">2 Item(s) Subtotal</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.subTotal | fancyCurrency">$6,814<sup>.99</sup></strong></p>
-                    <p class="ng-scope">
-                        <span>Shipping</span>
-                        <strong class="allcaps promo ng-scope">Free</strong>
-                    </p>
-                    <p class="ng-scope"><span>Tax</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.taxTotal | fancyCurrency">$477<sup>.05</sup></strong></p>
-                    <p class="total"><span>Order Total</span><strong class="price ng-binding"
-                            ng-bind-html="cocCtrl.cart.total | fancyCurrency">$7,292<sup>.04</sup></strong></p>
-                </div>
-            </checkout-cart>
-            <hr>
-            <add-promo-component is-checkout="true" class="ng-isolate-scope">
-                <div class="promo-code">
-                    <label for="PromoCode" class="ae-label">Have a Promo Code?</label>
-                    <div class="input-button-inline label-top">
-                        <div class="input-inline">
-                            <input id="PromoCode" type="text" placeholder="Enter Promo Code"
-                                class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"
-                                data-ae-blurbtype="input" data-ae-form-field="true">
-                        </div>
-                        <div class="button-inline">
-                            <button disabled="disabled" class="ae-button" data-ae-blurbtype="button"
-                                data-ae-form-field="true">Apply</button>
-                        </div>
-                    </div>
-                </div>
-            </add-promo-component>
-        </aside>
         <div class="js-off-canvas-overlay is-overlay-fixed"></div>
     </div>
+
     <div ng-animate-children="true" class="reveal-overlay ng-animate" modal-backdrop="" role="button" tabindex="0"
         style="display: none;">
         <div tabindex="-1" class="reveal modal-find-in-stores medium" modal-window=""
