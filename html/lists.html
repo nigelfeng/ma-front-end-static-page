@@ -1,0 +1,480 @@
+<div class="row">
+  <section id="shoppingLists" class="content" aria-labelledby="page-title">
+    <!--
+        <shopping-lists-public-component></shopping-lists-public-component>
+    </section>
+    <section>-->
+    <h3 role="heading" aria-level="2">Find Shopping Lists</h3>
+    <p>View a Shopping List created by someone else.</p>
+    <div>
+      <shopping-list-search-component list-id="" class="ng-isolate-scope">
+        <div class="page-spinner" style="display: none;" aria-busy="false">
+          <div class="spinner-content">
+            <object
+              data="/dist/img/spinner.svg"
+              type="image/svg+xml"
+              class="spinner ae-media"
+              data-player-url="/dist/img/spinner.svg"
+              title="Loading"
+              aria-label="Loading"
+              ><span class="ae-compliance-indent" style="display: none;">
+                loading spinner</span
+              ></object
+            >
+            <div class="spinner-message">LOADING</div>
+          </div>
+        </div>
+
+        <div
+          id="accountMessagingContainer"
+          class="callout border error ng-hide"
+          ng-show="$ctrl.messages.length > 0"
+          role="alert"
+          aria-hidden="true"
+          style="display: none;"
+        >
+          <!-- ngRepeat: msg in $ctrl.messages track by $index -->
+        </div>
+
+        <!-- shopping-list-search-template -->
+        <form
+          id="shoppingListSearchForm"
+          name="shoppingListSearch"
+          aria-label="Search for public shopping lists"
+          novalidate=""
+          accessible-form=""
+          class="ng-pristine ng-invalid ng-invalid-required ae-form"
+        >
+          <div class="auto-format">
+            <div class="end">
+              <label for="shoppingListlastNameOrEmail" class="req ae-label"
+                >Last Name or Email</label
+              >
+              <input
+                id="shoppingListlastNameOrEmail"
+                type="text"
+                name="lastNameOrEmail"
+                ng-model="$ctrl.searchCriteria.lastNameOrEmail"
+                class="label-top ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                ng-class="{'input-validation-error': shoppingListSearch.lastNameOrEmail.$invalid &amp;&amp; (shoppingListSearch.$submitted || shoppingListSearch.lastNameOrEmail.$touched)}"
+                aria-required="true"
+                ng-attr-aria-describedby="{{ shoppingListSearch.lastNameOrEmail.$invalid &amp;&amp; (shoppingListSearch.$submitted || shoppingListSearch.lastNameOrEmail.$touched) ? 'errMsg_LastNameOrEmail' :undefined }}"
+                required=""
+                aria-invalid="true"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+              <!-- ngIf: shoppingListSearch.lastNameOrEmail.$invalid && (shoppingListSearch.$submitted || shoppingListSearch.lastNameOrEmail.$touched) -->
+            </div>
+            <div class="end">
+              <label for="shoppingListCity" class="ae-label">City</label>
+              <input
+                id="shoppingListCity"
+                class="label-top ng-pristine ng-untouched ng-valid ng-empty"
+                type="text"
+                name="city"
+                ng-model="$ctrl.searchCriteria.city"
+                aria-invalid="false"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+            </div>
+            <div class="end">
+              <label for="shoppingListState" class="ae-label">State</label>
+              <select
+                name="state"
+                id="shoppingListState"
+                class="label-top ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="$ctrl.searchCriteria.state"
+                aria-invalid="false"
+                data-ae-blurbtype="select"
+                data-ae-form-field="true"
+              >
+                <option value="" selected="selected">Select</option>
+                <!-- ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="AK"
+                  class="ng-binding ng-scope"
+                  >AK
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="AL"
+                  class="ng-binding ng-scope"
+                  >AL
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="AR"
+                  class="ng-binding ng-scope"
+                  >AR
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="AZ"
+                  class="ng-binding ng-scope"
+                  >AZ
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="CA"
+                  class="ng-binding ng-scope"
+                  >CA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="CO"
+                  class="ng-binding ng-scope"
+                  >CO
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="CT"
+                  class="ng-binding ng-scope"
+                  >CT
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="DC"
+                  class="ng-binding ng-scope"
+                  >DC
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="DE"
+                  class="ng-binding ng-scope"
+                  >DE
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="FL"
+                  class="ng-binding ng-scope"
+                  >FL
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="GA"
+                  class="ng-binding ng-scope"
+                  >GA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="HI"
+                  class="ng-binding ng-scope"
+                  >HI
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="IA"
+                  class="ng-binding ng-scope"
+                  >IA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="ID"
+                  class="ng-binding ng-scope"
+                  >ID
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="IL"
+                  class="ng-binding ng-scope"
+                  >IL
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="IN"
+                  class="ng-binding ng-scope"
+                  >IN
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="KS"
+                  class="ng-binding ng-scope"
+                  >KS
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="KY"
+                  class="ng-binding ng-scope"
+                  >KY
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="LA"
+                  class="ng-binding ng-scope"
+                  >LA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MA"
+                  class="ng-binding ng-scope"
+                  >MA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MD"
+                  class="ng-binding ng-scope"
+                  >MD
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="ME"
+                  class="ng-binding ng-scope"
+                  >ME
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MI"
+                  class="ng-binding ng-scope"
+                  >MI
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MN"
+                  class="ng-binding ng-scope"
+                  >MN
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MO"
+                  class="ng-binding ng-scope"
+                  >MO
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MS"
+                  class="ng-binding ng-scope"
+                  >MS
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="MT"
+                  class="ng-binding ng-scope"
+                  >MT
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NC"
+                  class="ng-binding ng-scope"
+                  >NC
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="ND"
+                  class="ng-binding ng-scope"
+                  >ND
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NE"
+                  class="ng-binding ng-scope"
+                  >NE
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NH"
+                  class="ng-binding ng-scope"
+                  >NH
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NJ"
+                  class="ng-binding ng-scope"
+                  >NJ
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NM"
+                  class="ng-binding ng-scope"
+                  >NM
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NV"
+                  class="ng-binding ng-scope"
+                  >NV
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="NY"
+                  class="ng-binding ng-scope"
+                  >NY
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="OH"
+                  class="ng-binding ng-scope"
+                  >OH
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="OK"
+                  class="ng-binding ng-scope"
+                  >OK
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="OR"
+                  class="ng-binding ng-scope"
+                  >OR
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="PA"
+                  class="ng-binding ng-scope"
+                  >PA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="RI"
+                  class="ng-binding ng-scope"
+                  >RI
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="SC"
+                  class="ng-binding ng-scope"
+                  >SC
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="SD"
+                  class="ng-binding ng-scope"
+                  >SD
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="TN"
+                  class="ng-binding ng-scope"
+                  >TN
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="TX"
+                  class="ng-binding ng-scope"
+                  >TX
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="UT"
+                  class="ng-binding ng-scope"
+                  >UT
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="VA"
+                  class="ng-binding ng-scope"
+                  >VA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="VI"
+                  class="ng-binding ng-scope"
+                  >VI
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="VT"
+                  class="ng-binding ng-scope"
+                  >VT
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="WA"
+                  class="ng-binding ng-scope"
+                  >WA
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="WI"
+                  class="ng-binding ng-scope"
+                  >WI
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="WV"
+                  class="ng-binding ng-scope"
+                  >WV
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+                <option
+                  ng-repeat="state in $ctrl.states"
+                  value="WY"
+                  class="ng-binding ng-scope"
+                  >WY
+                </option>
+                <!-- end ngRepeat: state in $ctrl.states -->
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns medium-6 end">
+              <button
+                class="primary expanded ae-button"
+                ng-click="$ctrl.search(shoppingListSearch)"
+                data-ae-blurbtype="button"
+                data-ae-form-field="true"
+              >
+                Search for Shopping List
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- /shopping-list-search-template -->
+        <!-- ngIf: $ctrl.hasSearched -->
+      </shopping-list-search-component>
+    </div>
+  </section>
+</div>

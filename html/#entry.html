@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <%- include("./components/head.html") %>
+  </head>
+
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-content" data-off-canvas-content>
+        <%- include("./components/header.html") %>
+        <div id="main" class="main" role="main" tabindex="0">
+          <%- include(view) %>
+        </div>
+        <%- include("./components/footer.html") %>
+      </div>
+      <%- include("./components/mini-cart.html") %>
+    </div>
+    <div class="small-visibility-check show-for-small-only"></div>
+  </body>
+</html>

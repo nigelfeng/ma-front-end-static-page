@@ -1,292 +1,376 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<div class="row">
+  <div class="content">
+    <nav role="navigation">
+      <ul class="breadcrumbs" aria-label="You are here:">
+        <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+        <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+      </ul>
+    </nav>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-touch-fullscreen" content="no" />
-    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
-    <meta name="description"
-        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
-    <base href="/" />
-    <link rel="canonical" href="https://www.musicarts.com" />
-    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
-</head>
+    <div class="row" aria-labelledby="page-title">
+      <aside class="columns large-3">
+        <h1
+          id="page-title"
+          class="show-for-medium ae-label"
+          role="heading"
+          aria-level="2"
+        >
+          Account
+        </h1>
+        <nav role="navigation">
+          <ul
+            class="vertical menu accordion-menu account-menu"
+            data-accordion-menu=""
+            aria-multiselectable="true"
+            data-e="57g4iz-e"
+            role="presentation"
+          >
+            <li
+              class="is-accordion-submenu-parent ae-label"
+              role="presentation"
+              aria-controls="r5f68c-acc-menu"
+              aria-expanded="false"
+              id="97cr12-acc-menu-link"
+            >
+              <a
+                role="button"
+                tabindex="0"
+                class="show-for-small-only bar arrow"
+                id="account-menu"
+                >Account</a
+              >
+              <ul
+                class="menu vertical is-accordion-submenu submenu"
+                data-submenu=""
+                aria-labelledby="97cr12-acc-menu-link"
+                aria-hidden="false"
+                id="r5f68c-acc-menu"
+                style="display: none;"
+              >
+                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                  <a ui-sref="orders" href="/account/orders"
+                    >Orders &amp; Tracking</a
+                  >
+                </li>
+                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                  <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                    >Shopping Lists</a
+                  >
+                </li>
+                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                  <a
+                    ui-sref="addressesAndPayment"
+                    href="/account/addresses-and-payment"
+                    >Address &amp; Payment</a
+                  >
+                </li>
+                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
+                  <a ui-sref="accountInfo" href="/account/account-info"
+                    >Account Info</a
+                  >
+                </li>
+                <li
+                  class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                  aria-hidden="true"
+                >
+                  <a
+                    ui-sref="commercialAccounts"
+                    href="/account/commercial-accounts"
+                  >
+                    Commercial Accounts
+                  </a>
+                </li>
+                <li
+                  class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                >
+                  <a ui-sref="support" href="/account/support">Support</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-<body>
-    <div class="off-canvas-wrapper">
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="skiplinks">
-                <a href="#main" tabindex="0">Skip to main content</a>
-                <a href="#footer" tabindex="0">Skip to footer</a>
-            </div>
-            ${require('html-loader!../components/header.html')}
-            <div id="main" class="main" role="main">
-                <div class="row">
-                    <div class="content">
+      <section class="columns large-9" aria-labelledby="view-title">
+        <ui-view
+          on-display-messaging="$ctrl.displayMessages(messages)"
+          class="ng-scope"
+        >
+          <support-component
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            customer-service-info="::$resolve.customerServiceInfo"
+            class="ng-scope ng-isolate-scope"
+          >
+            <header class="m-b-1" role="presentation">
+              <h2 class="highlight" id="view-title">Support</h2>
+            </header>
+            <section>
+              <h3 class="color-primary">Get Help Online</h3>
+              <ul class="no-bullets">
+                <li><a href="/cms/faq">Frequently Asked Questions</a></li>
+                <li>
+                  <a href="#email-us">Email Sales &amp; Customer Service</a>
+                </li>
 
-                        <nav role="navigation">
-                            <ul class="breadcrumbs" aria-label="You are here:">
-                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
-                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
-
-                            </ul>
-                        </nav>
-
-                        <div class="row" aria-labelledby="page-title">
-
-                            <aside class="columns large-3">
-                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
-                                    Account</h1>
-                                <nav role="navigation">
-                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
-                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
-                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
-                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
-                                            id="97cr12-acc-menu-link">
-                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
-                                                id="account-menu">Account</a>
-                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
-                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
-                                                id="r5f68c-acc-menu" style="display: none;">
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
-                                                        Tracking</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
-                                                        Lists</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="addressesAndPayment"
-                                                        href="/account/addresses-and-payment">Address &amp;
-                                                        Payment</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
-                                                        Info</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
-                                                    aria-hidden="true">
-                                                    <a ui-sref="commercialAccounts" href="/account/commercial-accounts">
-                                                        Commercial Accounts
-                                                    </a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
-                                                    <a ui-sref="support" href="/account/support">Support</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
-
-                            <section class="columns large-9" aria-labelledby="view-title">
-                                <ui-view on-display-messaging="$ctrl.displayMessages(messages)" class="ng-scope">
-                                    <support-component on-display-messaging="$ctrl.displayMessages(messages)"
-                                        customer-service-info="::$resolve.customerServiceInfo"
-                                        class="ng-scope ng-isolate-scope">
-
-                                        <header class="m-b-1" role="presentation">
-                                            <h2 class="highlight" id="view-title">Support</h2>
-                                        </header>
-                                        <section>
-                                            <h3 class="color-primary">Get Help Online</h3>
-                                            <ul class="no-bullets">
-                                                <li><a href="/cms/faq">Frequently Asked Questions</a></li>
-                                                <li><a href="#email-us">Email Sales &amp; Customer Service</a>
-                                                </li>
-
-                                                <li><a href="https://stores.musicarts.com">Find a store near
-                                                        you</a></li>
-                                            </ul>
-                                        </section>
-                                        <hr>
-                                        <section id="email-us">
-                                            <contact-us is-logged-in="true" class="ng-isolate-scope">
-                                                <div class="page-spinner" style="display: none;" aria-busy="true">
-                                                    <div class="spinner-content">
-                                                        <object data="/dist/img/spinner.svg" type="image/svg+xml"
-                                                            class="spinner ae-media"
-                                                            data-player-url="/dist/img/spinner.svg"><span
-                                                                class="ae-compliance-indent" style="display:none;">
-                                                                loading
-                                                                spinner</span></object>
-                                                        <div class="spinner-message">LOADING</div>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="ng-scope">
-                                                    <section id="email-us">
-                                                        <h3 class="color-primary ae-label" id="contactFormHeader">Email
-                                                            Customer Service</h3>
-
-                                                        <form name="contactUsForm" aria-labelledby="contactFormHeader"
-                                                            novalidate="novalidate" accessible-form=""
-                                                            class="ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ae-form">
-                                                            <div class="auto-format">
-                                                                <div class="end">
-                                                                    <label for="orderNumber" class="ae-label">Order #
-                                                                        (if
-                                                                        applicable)</label>
-                                                                    <input type="text" name="orderNumber"
-                                                                        id="orderNumber" maxlength="100"
-                                                                        class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                                                        aria-invalid="false" data-ae-blurbtype="input"
-                                                                        data-ae-form-field="true">
-                                                                </div>
-                                                                <div class="end">
-                                                                    <label for="department"
-                                                                        class="req ae-label">Department</label>
-                                                                    <select name="department" id="department"
-                                                                        required="required"
-                                                                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                                        aria-describedby="{contactUsForm.department.$invalid &amp;&amp; (contactUsForm.department.$submitted || contactUsForm.department.$touched) ? 'errMsg_department' :undefined }}"
-                                                                        aria-invalid="true" data-ae-blurbtype="select"
-                                                                        data-ae-form-field="true">
-                                                                        <option value="" class="" selected="selected">
-                                                                            Select
-                                                                            Department</option>
-                                                                        <option label="Commercial Account"
-                                                                            value="number:16">Commercial Account
-                                                                        </option>
-                                                                        <option label="Customer Service"
-                                                                            value="number:12">Customer Service
-                                                                        </option>
-                                                                        <option label="Feedback" value="number:18">
-                                                                            Feedback</option>
-                                                                        <option label="Marketing" value="number:27">
-                                                                            Marketing</option>
-                                                                        <option label="Music Lessons" value="number:19">
-                                                                            Music Lessons
-                                                                        </option>
-                                                                        <option label="Privacy Policy"
-                                                                            value="number:32">Privacy Policy
-                                                                        </option>
-                                                                        <option label="Rentals" value="number:20">
-                                                                            Rentals</option>
-                                                                        <option label="Repair" value="number:34">Repair
-                                                                        </option>
-                                                                        <option label="Sales" value="number:15">
-                                                                            Sales</option>
-                                                                        <option label="Technical Support"
-                                                                            value="number:13">Technical Support
-                                                                        </option>
-                                                                    </select>
-
-                                                                </div>
-
-                                                                <div class="end">
-                                                                    <label for="comments" class="req ae-label">How can
-                                                                        we help
-                                                                        you?</label>
-                                                                    <textarea name="comments" id="comments" rows="4"
-                                                                        required="required"
-                                                                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                                        aria-describedby="{contactUsForm.comments.$invalid &amp;&amp; (contactUsForm.comments.$submitted || contactUsForm.comments.$touched) ? 'errMsg_comments' :undefined }}"
-                                                                        aria-invalid="true" data-ae-blurbtype="textarea"
-                                                                        data-ae-form-field="true"></textarea>
-
-                                                                </div>
-                                                                <div class="end ng-scope">
-                                                                    <label for="contactUsFileUpload" class="ae-label">
-                                                                        <input type="file" id="contactUsFileUpload"
-                                                                            class="hide"
-                                                                            onchange="angular.element(this).scope().fileNameChanged(this)"
-                                                                            accept="doc,pdf,zip,png,xls,txt,bmp,gif,jpg"
-                                                                            data-ae-blurbtype="file"
-                                                                            data-ae-form-field="true">
-                                                                        <div class="button"><span class="icon fa-plus"
-                                                                                aria-hidden="true"></span> Add
-                                                                            file attachment</div>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="end">
-                                                                    <recaptcha-component
-                                                                        on-recaptcha-callback="$ctrl.registerCallback(token)"
-                                                                        widget-id="$ctrl.widgetId"
-                                                                        class="ng-isolate-scope">
-                                                                        <div class="grecaptcha-badge"
-                                                                            data-style="bottomright"
-                                                                            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
-                                                                            <div class="grecaptcha-logo"><iframe
-                                                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=r8WWNwsCvXtk22_oRSVCCZx9&amp;size=invisible&amp;cb=8g5i1dhtpksw"
-                                                                                    width="256" height="60"
-                                                                                    role="presentation"
-                                                                                    name="a-g351pg8u6kmr"
-                                                                                    frameborder="0" scrolling="no"
-                                                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                                                                                    title="Google Recaptcha iframe"></iframe>
-                                                                            </div>
-                                                                            <div class="grecaptcha-error"></div>
-                                                                            <textarea id="g-recaptcha-response"
-                                                                                name="g-recaptcha-response"
-                                                                                class="g-recaptcha-response"
-                                                                                aria-label="g recaptcha response"
-                                                                                data-ae-blurbtype="textarea"
-                                                                                data-ae-form-field="true"
-                                                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                                                        </div><iframe style="display: none;"></iframe>
-                                                                    </recaptcha-component>
-                                                                    <button type="submit"
-                                                                        class="primary large ae-button"
-                                                                        data-ae-blurbtype="button"
-                                                                        data-ae-form-field="true">Send</button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </section>
-                                                </div>
-                                            </contact-us>
-                                        </section>
-                                        <hr>
-                                        <section>
-                                            <h3 class="color-primary">Call Customer Service</h3>
-                                            <p>Call Sales &amp; Customer Service toll-free at <a
-                                                    class="phone ng-binding" href="tel:888-731-5396">888-731-5396</a>
-                                            </p>
-                                            <div class="row">
-                                                <div class="columns medium-6">
-                                                    <div class="h3">Opening Hours</div>
-                                                    <ul class="no-bullets v-list-spacing">
-                                                        <li class="ng-binding"><strong>Mon–Fri</strong> 8:30am –
-                                                            9:00pm EST</li>
-                                                        <li class="ng-binding"><strong>Sat</strong> 10:00am –
-                                                            8:00pm EST</li>
-                                                        <li class="ng-binding"><strong>Sun</strong> 11:00am –
-                                                            5:00pm EST</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="columns medium-6">
-                                                    <div class="h3">Mailing Address</div>
-                                                    <p style="margin-bottom:0px;" class="ng-binding">Customer
-                                                        Service Dept.<br>Music &amp; Arts<br>5295 Westview Dr
-                                                        Suite 300<br>Frederick MD, 21703-8517</p>
-                                                    <p><a class="phone ng-binding"
-                                                            href="tel:888-731-5396">888-731-5396</a></p>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                    </support-component>
-                                </ui-view>
-                            </section>
-                        </div>
-                    </div>
+                <li>
+                  <a href="https://stores.musicarts.com"
+                    >Find a store near you</a
+                  >
+                </li>
+              </ul>
+            </section>
+            <hr />
+            <section id="email-us">
+              <contact-us is-logged-in="true" class="ng-isolate-scope">
+                <div
+                  class="page-spinner"
+                  style="display: none;"
+                  aria-busy="true"
+                >
+                  <div class="spinner-content">
+                    <object
+                      data="/dist/img/spinner.svg"
+                      type="image/svg+xml"
+                      class="spinner ae-media"
+                      data-player-url="/dist/img/spinner.svg"
+                      ><span
+                        class="ae-compliance-indent"
+                        style="display: none;"
+                      >
+                        loading spinner</span
+                      ></object
+                    >
+                    <div class="spinner-message">LOADING</div>
+                  </div>
                 </div>
-            </div>
-            ${require('html-loader!../components/footer.html')}
-        </div>
-        ${require('html-loader!../components/mini-cart.html')}
-    </div>
-    <div class="small-visibility-check show-for-small-only"></div>
-</body>
 
-</html>
+                <div class="ng-scope">
+                  <section id="email-us">
+                    <h3 class="color-primary ae-label" id="contactFormHeader">
+                      Email Customer Service
+                    </h3>
+
+                    <form
+                      name="contactUsForm"
+                      aria-labelledby="contactFormHeader"
+                      novalidate="novalidate"
+                      accessible-form=""
+                      class="ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ae-form"
+                    >
+                      <div class="auto-format">
+                        <div class="end">
+                          <label for="orderNumber" class="ae-label"
+                            >Order # (if applicable)</label
+                          >
+                          <input
+                            type="text"
+                            name="orderNumber"
+                            id="orderNumber"
+                            maxlength="100"
+                            class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                            aria-invalid="false"
+                            data-ae-blurbtype="input"
+                            data-ae-form-field="true"
+                          />
+                        </div>
+                        <div class="end">
+                          <label for="department" class="req ae-label"
+                            >Department</label
+                          >
+                          <select
+                            name="department"
+                            id="department"
+                            required="required"
+                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                            aria-describedby="{contactUsForm.department.$invalid &amp;&amp; (contactUsForm.department.$submitted || contactUsForm.department.$touched) ? 'errMsg_department' :undefined }}"
+                            aria-invalid="true"
+                            data-ae-blurbtype="select"
+                            data-ae-form-field="true"
+                          >
+                            <option value="" class="" selected="selected">
+                              Select Department</option
+                            >
+                            <option label="Commercial Account" value="number:16"
+                              >Commercial Account
+                            </option>
+                            <option label="Customer Service" value="number:12"
+                              >Customer Service
+                            </option>
+                            <option label="Feedback" value="number:18">
+                              Feedback</option
+                            >
+                            <option label="Marketing" value="number:27">
+                              Marketing</option
+                            >
+                            <option label="Music Lessons" value="number:19">
+                              Music Lessons
+                            </option>
+                            <option label="Privacy Policy" value="number:32"
+                              >Privacy Policy
+                            </option>
+                            <option label="Rentals" value="number:20">
+                              Rentals</option
+                            >
+                            <option label="Repair" value="number:34"
+                              >Repair
+                            </option>
+                            <option label="Sales" value="number:15">
+                              Sales</option
+                            >
+                            <option label="Technical Support" value="number:13"
+                              >Technical Support
+                            </option>
+                          </select>
+                        </div>
+
+                        <div class="end">
+                          <label for="comments" class="req ae-label"
+                            >How can we help you?</label
+                          >
+                          <textarea
+                            name="comments"
+                            id="comments"
+                            rows="4"
+                            required="required"
+                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                            aria-describedby="{contactUsForm.comments.$invalid &amp;&amp; (contactUsForm.comments.$submitted || contactUsForm.comments.$touched) ? 'errMsg_comments' :undefined }}"
+                            aria-invalid="true"
+                            data-ae-blurbtype="textarea"
+                            data-ae-form-field="true"
+                          ></textarea>
+                        </div>
+                        <div class="end ng-scope">
+                          <label for="contactUsFileUpload" class="ae-label">
+                            <input
+                              type="file"
+                              id="contactUsFileUpload"
+                              class="hide"
+                              onchange="angular.element(this).scope().fileNameChanged(this)"
+                              accept="doc,pdf,zip,png,xls,txt,bmp,gif,jpg"
+                              data-ae-blurbtype="file"
+                              data-ae-form-field="true"
+                            />
+                            <div class="button">
+                              <span
+                                class="icon fa-plus"
+                                aria-hidden="true"
+                              ></span>
+                              Add file attachment
+                            </div>
+                          </label>
+                        </div>
+                        <div class="end">
+                          <recaptcha-component
+                            on-recaptcha-callback="$ctrl.registerCallback(token)"
+                            widget-id="$ctrl.widgetId"
+                            class="ng-isolate-scope"
+                          >
+                            <div
+                              class="grecaptcha-badge"
+                              data-style="bottomright"
+                              style="
+                                width: 256px;
+                                height: 60px;
+                                display: block;
+                                transition: right 0.3s ease 0s;
+                                position: fixed;
+                                bottom: 14px;
+                                right: -186px;
+                                box-shadow: gray 0px 0px 5px;
+                                border-radius: 2px;
+                                overflow: hidden;
+                              "
+                            >
+                              <div class="grecaptcha-logo">
+                                <iframe
+                                  src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=r8WWNwsCvXtk22_oRSVCCZx9&amp;size=invisible&amp;cb=8g5i1dhtpksw"
+                                  width="256"
+                                  height="60"
+                                  role="presentation"
+                                  name="a-g351pg8u6kmr"
+                                  frameborder="0"
+                                  scrolling="no"
+                                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                                  title="Google Recaptcha iframe"
+                                ></iframe>
+                              </div>
+                              <div class="grecaptcha-error"></div>
+                              <textarea
+                                id="g-recaptcha-response"
+                                name="g-recaptcha-response"
+                                class="g-recaptcha-response"
+                                aria-label="g recaptcha response"
+                                data-ae-blurbtype="textarea"
+                                data-ae-form-field="true"
+                                style="
+                                  width: 250px;
+                                  height: 40px;
+                                  border: 1px solid rgb(193, 193, 193);
+                                  margin: 10px 25px;
+                                  padding: 0px;
+                                  resize: none;
+                                  display: none;
+                                "
+                              ></textarea>
+                            </div>
+                            <iframe style="display: none;"></iframe>
+                          </recaptcha-component>
+                          <button
+                            type="submit"
+                            class="primary large ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            Send
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </section>
+                </div>
+              </contact-us>
+            </section>
+            <hr />
+            <section>
+              <h3 class="color-primary">Call Customer Service</h3>
+              <p>
+                Call Sales &amp; Customer Service toll-free at
+                <a class="phone ng-binding" href="tel:888-731-5396"
+                  >888-731-5396</a
+                >
+              </p>
+              <div class="row">
+                <div class="columns medium-6">
+                  <div class="h3">Opening Hours</div>
+                  <ul class="no-bullets v-list-spacing">
+                    <li class="ng-binding">
+                      <strong>Mon–Fri</strong> 8:30am – 9:00pm EST
+                    </li>
+                    <li class="ng-binding">
+                      <strong>Sat</strong> 10:00am – 8:00pm EST
+                    </li>
+                    <li class="ng-binding">
+                      <strong>Sun</strong> 11:00am – 5:00pm EST
+                    </li>
+                  </ul>
+                </div>
+                <div class="columns medium-6">
+                  <div class="h3">Mailing Address</div>
+                  <p style="margin-bottom: 0px;" class="ng-binding">
+                    Customer Service Dept.<br />Music &amp; Arts<br />5295
+                    Westview Dr Suite 300<br />Frederick MD, 21703-8517
+                  </p>
+                  <p>
+                    <a class="phone ng-binding" href="tel:888-731-5396"
+                      >888-731-5396</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </support-component>
+        </ui-view>
+      </section>
+    </div>
+  </div>
+</div>

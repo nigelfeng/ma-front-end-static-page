@@ -1,404 +1,2589 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-touch-fullscreen" content="no" />
-    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
-    <meta name="description"
-        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
-    <base href="/" />
-    <link rel="canonical" href="https://www.musicarts.com" />
-    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
-</head>
-<body>
-    <div class="off-canvas-wrapper">
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="skiplinks">
-                <a href="#main" tabindex="0">Skip to main content</a>
-                <a href="#footer" tabindex="0">Skip to footer</a>
-            </div>
-            ${require('html-loader!./components/header.html')}
-            <div id="main" class="main" role="main" tabindex="0">
-                <div class="rentals">
-                    <div class="row columns">
-                        <h1 role="heading" aria-level="2">Nationwide Instrument Rentals</h1>
-                        <p>We work closely with the local music directors to offer their preferred instruments and
-                            classroom materials. That is why we are trusted by thousands of schools &amp; parents
-                            nationwide.</p>
-                    </div>
-                    <div class="row">
-                        <div class="columns large-8 medium-6">
-                            <div class="flex-video widescreen">
-                                <iframe width="1280" height="720"
-                                    src="https://www.youtube.com/embed/6vgGN46UoL4?wmode=transparent&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1"
-                                    frameborder="0" allowfullscreen="" id="6vgGN46UoL4" title="YouTube Video"></iframe>
-                            </div>
-                            <check-rental-in-cart class="ng-isolate-scope"></check-rental-in-cart>
-                            <section class="show-for-medium">
-                                <marketing-collateral class="ng-isolate-scope">
-                                    <div class="callout background-secondary">
-                                        <div class="row">
-                                            <div class="columns large-6">
-                                                <h3 aria-level="2">We Make Renting Easy</h3>
-                                                <ul class="arrow-bullet">
-                                                    <li>
-                                                        3 easy ways to get your instrument
-                                                        <ul class="arrow-bullet">
-                                                            <li>
-                                                                Choose from over 400 locations.<br>
-                                                                <span class="ng-scope"><a role="link" tabindex="0">Find
-                                                                        a
-                                                                        neighborhood
-                                                                        store near you</a></span>
-                                                            </li>
-                                                            <li><span class="allcaps">Free</span> delivery to your
-                                                                child's schools (where available)</li>
-                                                            <li>Convenient shipping right to your home</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><span class="allcaps">Free</span> maintenance &amp; repairs with
-                                                        our Liability and Damage Waiver (LDW) plan</li>
-                                                    <li>No commitment — <span class="allcaps">Free</span> exchange,
-                                                        return, or purchase any time!</li>
-                                                </ul>
-                                            </div>
-                                            <div class="columns large-6">
-                                                <h3 aria-level="2">About Our Rental Program</h3>
-                                                <ul class="arrow-bullet">
-                                                    <li>Check out our <button type="button"
-                                                            class="button-link ae-button" data-ae-blurbtype="button"
-                                                            data-ae-form-field="true">FAQs</button> for commonly asked
-                                                        questions and answers</li>
-                                                    <li>
-                                                        Have an existing rental instrument in need of repair or service?
-                                                        <a target="_self" class="ng-scope"
-                                                            href="https://www.musicarts.com/cms/rental-service-information">
-                                                            Learn more here</a>
-                                                    </li>
-                                                    <li>Still have questions? Our <a target="_self"
-                                                            href="https://www.musicarts.com/customerservice/contactus">customer
-                                                            service team</a> would love to help!</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </marketing-collateral>
-                            </section>
-                        </div>
-                        <div class="columns large-4 medium-6">
-                            <find-school-landing class="ng-isolate-scope">
-                                <div class="rentals-landing-form">
-                                    <div class="h2 color-primary" role="heading" aria-level="2">Get Started</div>
-                                    <div class="row">
-                                        <div class="columns small-6">
-                                            <label class="radio radio-fancy bold ae-label">
-                                                <input type="radio" name="isFindSchoolOrQuickCode" value="School"
-                                                    class="ng-pristine ng-untouched ng-valid ng-not-empty"
-                                                    aria-invalid="false" data-ae-form-field="true">
-                                                <div class="radio-control" role="presentation"></div>
-                                                Find Your School
-                                            </label>
-                                        </div>
-                                        <div class="columns small-6">
-                                            <label class="radio radio-fancy bold ae-label">
-                                                <input type="radio" name="isFindSchoolOrQuickCode" value="QuickCode"
-                                                    class="ng-pristine ng-untouched ng-valid ng-not-empty"
-                                                    aria-invalid="false" data-ae-form-field="true">
-                                                <div class="radio-control" role="presentation"></div>
-                                                Use Quick Code
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <form name="findSchoolForm" method="post" aria-labelledby="findSchoolTitle"
-                                        accessible-form="" novalidate=""
-                                        class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ae-form"
-                                        aria-hidden="false">
-                                        <div id="findYourSchool">
-                                            <fieldset>
-                                                <legend id="id-school-type" class="h3 req ae-label">Type of School
-                                                </legend>
-                                                <ul class="radio-list">
-                                                    <li>
-                                                        <label class="radio radio-fancy ae-label">
-                                                            <input type="radio" name="SchoolType" value="Traditional"
-                                                                required=""
-                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
-                                                                aria-invalid="false" data-ae-form-field="true"
-                                                                aria-describedby="id-school-type">
-                                                            <div class="radio-control"></div>
-                                                            Public, private, or traditional school
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="radio radio-fancy ae-label">
-                                                            <input type="radio" name="SchoolType" value="HomeSchool"
-                                                                required=""
-                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
-                                                                aria-invalid="false" data-ae-form-field="true"
-                                                                aria-describedby="id-school-type">
-                                                            <div class="radio-control"></div>
-                                                            Home school
-                                                        </label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="radio radio-fancy ae-label">
-                                                            <input type="radio" name="SchoolType" value="NotApplicable"
-                                                                required=""
-                                                                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
-                                                                aria-invalid="false" data-ae-form-field="true"
-                                                                aria-describedby="id-school-type">
-                                                            <div class="radio-control"></div>
-                                                            Personal (Adult) Use
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </fieldset>
-                                            <div class="row">
-                                                <div class="columns medium-6">
-                                                    <label class="h3 req ae-label" for="zipCode">Zip Code</label>
-                                                    <input id="zipCode" name="ZipCodeOrQuickCode"
-                                                        placeholder="Enter zip code" type="text" maxlength="5"
-                                                        aria-required="true" required=""
-                                                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
-                                                        aria-invalid="true" data-ae-blurbtype="input"
-                                                        data-ae-form-field="true">
-                                                </div>
-                                                <div class="columns medium-6">
-                                                    <div aria-hidden="false">
-                                                        <label class="h3 req ae-label"
-                                                            for="findSchoolGrade">Grade</label>
-                                                        <select name="StudentGrade" id="findSchoolGrade"
-                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                            required="required" aria-invalid="true"
-                                                            data-ae-blurbtype="select" data-ae-form-field="true">
-                                                            <option value="" class="" selected="selected">Select
-                                                            </option>
-                                                            <option label="K" value="string:K">K</option>
-                                                            <option label="1" value="string:1">1</option>
-                                                            <option label="2" value="string:2">2</option>
-                                                            <option label="3" value="string:3">3</option>
-                                                            <option label="4" value="string:4">4</option>
-                                                            <option label="5" value="string:5">5</option>
-                                                            <option label="6" value="string:6">6</option>
-                                                            <option label="7" value="string:7">7</option>
-                                                            <option label="8" value="string:8">8</option>
-                                                            <option label="9" value="string:9">9</option>
-                                                            <option label="10" value="string:10">10</option>
-                                                            <option label="11" value="string:11">11</option>
-                                                            <option label="12" value="string:12">12</option>
-                                                            <option label="College" value="string:College">College
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div aria-hidden="false">
-                                                    <label for="schoolSearchSchoolName" class="h3 ae-label">School
-                                                        Name</label>
-                                                    <input id="schoolSearchSchoolName" name="schoolName"
-                                                        placeholder="Enter school name" type="text"
-                                                        class="ng-pristine ng-untouched ng-valid ng-empty"
-                                                        aria-invalid="false" data-ae-blurbtype="input"
-                                                        data-ae-form-field="true">
-                                                </div>
-                                            </div>
-                                            <div class="p-b-1 p-t-1">
-                                                <button type="submit" class="button large primary ae-button"
-                                                    data-ae-blurbtype="button" data-ae-form-field="true">Search</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <form name="findQuickCodeForm" method="post" aria-labelledby="findSchoolTitle"
-                                        accessible-form="" novalidate=""
-                                        class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-hide ae-form"
-                                        aria-hidden="true">
-                                        <div id="useQuickCode">
-                                            <label for="quickCode" class="h3 req ae-label">Quick Code</label>
-                                            <input id="quickCode" name="ZipCodeOrQuickCode" type="text"
-                                                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
-                                                maxlength="11" aria-required="true" required=""
-                                                placeholder="Enter quick code" aria-invalid="true"
-                                                data-ae-blurbtype="input" data-ae-form-field="true">
-                                            <label for="quickCodeGrade" class="h3 req ae-label">Grade</label>
-                                            <select
-                                                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                name="StudentGrade" id="quickCodeGrade" required="" aria-invalid="true"
-                                                data-ae-blurbtype="select" data-ae-form-field="true">
-                                                <option value="" class="" selected="selected">Select</option>
-                                                <option label="K" value="string:K">K</option>
-                                                <option label="1" value="string:1">1</option>
-                                                <option label="2" value="string:2">2</option>
-                                                <option label="3" value="string:3">3</option>
-                                                <option label="4" value="string:4">4</option>
-                                                <option label="5" value="string:5">5</option>
-                                                <option label="6" value="string:6">6</option>
-                                                <option label="7" value="string:7">7</option>
-                                                <option label="8" value="string:8">8</option>
-                                                <option label="9" value="string:9">9</option>
-                                                <option label="10" value="string:10">10</option>
-                                                <option label="11" value="string:11">11</option>
-                                                <option label="12" value="string:12">12</option>
-                                                <option label="College" value="string:College">College</option>
-                                            </select>
-                                            
-                                            <div class="p-b-1 p-t-1">
-                                                <button type="submit" class="button large primary ae-button"
-                                                    data-ae-blurbtype="button" data-ae-form-field="true">Get
-                                                    Started</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <p>Need Help? <a href="tel:888-731-5396">Call 888-731-5396</a></p>
-                                </div>
-                            </find-school-landing>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <section class="hide-for-medium">
-                            <marketing-collateral class="ng-isolate-scope">
-                                <div class="callout background-secondary">
-                                    <div class="row">
-                                        <div class="columns large-6">
-                                            <h3 aria-level="2">We Make Renting Easy</h3>
-                                            <ul class="arrow-bullet">
-                                                <li>
-                                                    3 easy ways to get your instrument
-                                                    <ul class="arrow-bullet">
-                                                        <li>
-                                                            Choose from over 400 locations.<br>
-                                                            <span class="ng-scope"><a role="link" tabindex="0">Find a
-                                                                    neighborhood store
-                                                                    near you</a></span>
-                                                        </li>
-                                                        <li><span class="allcaps">Free</span> delivery to your child's
-                                                            schools (where available)</li>
-                                                        <li>Convenient shipping right to your home</li>
-                                                    </ul>
-                                                </li>
-                                                <li><span class="allcaps">Free</span> maintenance &amp; repairs with our
-                                                    Liability and Damage Waiver (LDW) plan</li>
-                                                <li>No commitment — <span class="allcaps">Free</span> exchange, return,
-                                                    or purchase any time!</li>
-                                            </ul>
-                                        </div>
-                                        <div class="columns large-6">
-                                            <h3 aria-level="2">About Our Rental Program</h3>
-                                            <ul class="arrow-bullet">
-                                                <li>Check out our <button type="button" class="button-link ae-button"
-                                                        data-ae-blurbtype="button"
-                                                        data-ae-form-field="true">FAQs</button> for commonly asked
-                                                    questions and answers</li>
-                                                <li>
-                                                    Have an existing rental instrument in need of repair or service?
-                                                    <a target="_self" class="ng-scope"
-                                                        href="https://www.musicarts.com/cms/rental-service-information">
-                                                        Learn more here</a>
-                                                </li>
-                                                <li>Still have questions? Our <a target="_self"
-                                                        href="https://www.musicarts.com/customerservice/contactus">customer
-                                                        service team</a> would love to help!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </marketing-collateral>
-                        </section>
-                    </div>
-                    <div class="row">
-                        <div class="columns large-8 medium-6">
-                            <hr>
-                            <rentals-states class="ng-isolate-scope">
-                                <h2 class="h3" id="rental-locations-by-state">Rental Locations by State</h2>
-                                <ul class="multicolumn multicolumn--2-3-4 location-list">
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/al">Alabama</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/az">Arizona</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ca">California</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/co">Colorado</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ct">Connecticut</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/de">Delaware</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/fl">Florida</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ga">Georgia</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/il">Illinois</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ks">Kansas</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ky">Kentucky</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/la">Louisiana</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/me">Maine</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/md">Maryland</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ma">Massachusetts</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ms">Mississippi</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/mo">Missouri</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/nv">Nevada</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/nh">New Hampshire</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/nj">New Jersey</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/nm">New Mexico</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ny">New York</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/nc">North Carolina</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/oh">Ohio</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ok">Oklahoma</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/or">Oregon</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/pa">Pennsylvania</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/sc">South Carolina</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/tn">Tennessee</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/tx">Texas</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/ut">Utah</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/vt">Vermont</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/va">Virginia</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/wa">Washington</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/wv">West Virginia</a></li>
-                                    <li class="ng-scope"><a target="_self" class="ng-binding"
-                                            href="/rentals/locations/wi">Wisconsin</a></li>
-                                </ul>
-                            </rentals-states>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            ${require('html-loader!./components/footer.html')}
-        </div>
-        ${require('html-loader!./components/mini-cart.html')}
+<div id="main" class="main" role="main" tabindex="0">
+  <div class="rentals">
+    <div class="row columns">
+      <h1 role="heading" aria-level="2">Nationwide Instrument Rentals</h1>
+      <p>
+        We work closely with the local music directors to offer their preferred
+        instruments and classroom materials. That is why we are trusted by
+        thousands of schools &amp; parents nationwide.
+      </p>
     </div>
-    <div class="small-visibility-check show-for-small-only"></div>
-</body>
-</html>
+    <div class="row">
+      <div class="columns large-8 medium-6">
+        <div class="flex-video widescreen">
+          <iframe
+            width="1280"
+            height="720"
+            src="https://www.youtube.com/embed/6vgGN46UoL4?wmode=transparent&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1"
+            frameborder="0"
+            allowfullscreen=""
+            id="6vgGN46UoL4"
+            title="YouTube Video"
+          ></iframe>
+        </div>
+
+        <section class="show-for-medium">
+          <div class="callout background-secondary">
+            <div class="row">
+              <div class="columns large-6">
+                <h3 aria-level="2">We Make Renting Easy</h3>
+                <ul class="arrow-bullet">
+                  <li>
+                    3 easy ways to get your instrument
+                    <ul class="arrow-bullet">
+                      <li>
+                        Choose from over 400 locations.<br />
+                        <span class="ng-scope"
+                          ><a role="link" tabindex="0"
+                            >Find a neighborhood store near you</a
+                          ></span
+                        >
+                      </li>
+                      <li>
+                        <span class="allcaps">Free</span> delivery to your
+                        child's schools (where available)
+                      </li>
+                      <li>Convenient shipping right to your home</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="allcaps">Free</span> maintenance &amp; repairs
+                    with our Liability and Damage Waiver (LDW) plan
+                  </li>
+                  <li>
+                    No commitment — <span class="allcaps">Free</span> exchange,
+                    return, or purchase any time!
+                  </li>
+                </ul>
+              </div>
+              <div class="columns large-6">
+                <h3 aria-level="2">About Our Rental Program</h3>
+                <ul class="arrow-bullet">
+                  <li>
+                    Check out our
+                    <button
+                      type="button"
+                      class="button-link ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      FAQs
+                    </button>
+                    for commonly asked questions and answers
+                  </li>
+                  <li>
+                    Have an existing rental instrument in need of repair or
+                    service?
+                    <a
+                      target="_self"
+                      class="ng-scope"
+                      href="https://www.musicarts.com/cms/rental-service-information"
+                    >
+                      Learn more here</a
+                    >
+                  </li>
+                  <li>
+                    Still have questions? Our
+                    <a
+                      target="_self"
+                      href="https://www.musicarts.com/customerservice/contactus"
+                      >customer service team</a
+                    >
+                    would love to help!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="columns large-4 medium-6">
+        <div class="rentals-landing-form">
+          <div class="h2 color-primary" role="heading" aria-level="2">
+            Get Started
+          </div>
+          <div class="row">
+            <div class="columns small-6">
+              <label class="radio radio-fancy bold ae-label">
+                <input
+                  type="radio"
+                  name="isFindSchoolOrQuickCode"
+                  value="School"
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                <div class="radio-control" role="presentation"></div>
+                Find Your School
+              </label>
+            </div>
+            <div class="columns small-6">
+              <label class="radio radio-fancy bold ae-label">
+                <input
+                  type="radio"
+                  name="isFindSchoolOrQuickCode"
+                  value="QuickCode"
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                <div class="radio-control" role="presentation"></div>
+                Use Quick Code
+              </label>
+            </div>
+          </div>
+          <form
+            name="findSchoolForm"
+            method="post"
+            aria-labelledby="findSchoolTitle"
+            accessible-form=""
+            novalidate=""
+            class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ae-form"
+            aria-hidden="false"
+          >
+            <div id="findYourSchool">
+              <fieldset>
+                <legend id="id-school-type" class="h3 req ae-label">
+                  Type of School
+                </legend>
+                <ul class="radio-list">
+                  <li>
+                    <label class="radio radio-fancy ae-label">
+                      <input
+                        type="radio"
+                        name="SchoolType"
+                        value="Traditional"
+                        required=""
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                        aria-describedby="id-school-type"
+                      />
+                      <div class="radio-control"></div>
+                      Public, private, or traditional school
+                    </label>
+                  </li>
+                  <li>
+                    <label class="radio radio-fancy ae-label">
+                      <input
+                        type="radio"
+                        name="SchoolType"
+                        value="HomeSchool"
+                        required=""
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                        aria-describedby="id-school-type"
+                      />
+                      <div class="radio-control"></div>
+                      Home school
+                    </label>
+                  </li>
+                  <li>
+                    <label class="radio radio-fancy ae-label">
+                      <input
+                        type="radio"
+                        name="SchoolType"
+                        value="NotApplicable"
+                        required=""
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                        aria-describedby="id-school-type"
+                      />
+                      <div class="radio-control"></div>
+                      Personal (Adult) Use
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="row">
+                <div class="columns medium-6">
+                  <label class="h3 req ae-label" for="zipCode">Zip Code</label>
+                  <input
+                    id="zipCode"
+                    name="ZipCodeOrQuickCode"
+                    placeholder="Enter zip code"
+                    type="text"
+                    maxlength="5"
+                    aria-required="true"
+                    required=""
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                    aria-invalid="true"
+                    data-ae-blurbtype="input"
+                    data-ae-form-field="true"
+                  />
+                </div>
+                <div class="columns medium-6">
+                  <div aria-hidden="false">
+                    <label class="h3 req ae-label" for="findSchoolGrade"
+                      >Grade</label
+                    >
+                    <select
+                      name="StudentGrade"
+                      id="findSchoolGrade"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      required="required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="" class="" selected="selected"
+                        >Select
+                      </option>
+                      <option label="K" value="string:K">K</option>
+                      <option label="1" value="string:1">1</option>
+                      <option label="2" value="string:2">2</option>
+                      <option label="3" value="string:3">3</option>
+                      <option label="4" value="string:4">4</option>
+                      <option label="5" value="string:5">5</option>
+                      <option label="6" value="string:6">6</option>
+                      <option label="7" value="string:7">7</option>
+                      <option label="8" value="string:8">8</option>
+                      <option label="9" value="string:9">9</option>
+                      <option label="10" value="string:10">10</option>
+                      <option label="11" value="string:11">11</option>
+                      <option label="12" value="string:12">12</option>
+                      <option label="College" value="string:College"
+                        >College
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div aria-hidden="false">
+                  <label for="schoolSearchSchoolName" class="h3 ae-label"
+                    >School Name</label
+                  >
+                  <input
+                    id="schoolSearchSchoolName"
+                    name="schoolName"
+                    placeholder="Enter school name"
+                    type="text"
+                    class="ng-pristine ng-untouched ng-valid ng-empty"
+                    aria-invalid="false"
+                    data-ae-blurbtype="input"
+                    data-ae-form-field="true"
+                  />
+                </div>
+              </div>
+              <div class="p-b-1 p-t-1">
+                <button
+                  type="submit"
+                  class="button large primary ae-button"
+                  data-ae-blurbtype="button"
+                  data-ae-form-field="true"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+          <form
+            name="findQuickCodeForm"
+            method="post"
+            aria-labelledby="findSchoolTitle"
+            accessible-form=""
+            novalidate=""
+            class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-hide ae-form"
+            aria-hidden="true"
+          >
+            <div id="useQuickCode">
+              <label for="quickCode" class="h3 req ae-label">Quick Code</label>
+              <input
+                id="quickCode"
+                name="ZipCodeOrQuickCode"
+                type="text"
+                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                maxlength="11"
+                aria-required="true"
+                required=""
+                placeholder="Enter quick code"
+                aria-invalid="true"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+              <label for="quickCodeGrade" class="h3 req ae-label">Grade</label>
+              <select
+                class="input-small ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                name="StudentGrade"
+                id="quickCodeGrade"
+                required=""
+                aria-invalid="true"
+                data-ae-blurbtype="select"
+                data-ae-form-field="true"
+              >
+                <option value="" class="" selected="selected">Select</option>
+                <option label="K" value="string:K">K</option>
+                <option label="1" value="string:1">1</option>
+                <option label="2" value="string:2">2</option>
+                <option label="3" value="string:3">3</option>
+                <option label="4" value="string:4">4</option>
+                <option label="5" value="string:5">5</option>
+                <option label="6" value="string:6">6</option>
+                <option label="7" value="string:7">7</option>
+                <option label="8" value="string:8">8</option>
+                <option label="9" value="string:9">9</option>
+                <option label="10" value="string:10">10</option>
+                <option label="11" value="string:11">11</option>
+                <option label="12" value="string:12">12</option>
+                <option label="College" value="string:College">College</option>
+              </select>
+
+              <div class="p-b-1 p-t-1">
+                <button
+                  type="submit"
+                  class="button large primary ae-button"
+                  data-ae-blurbtype="button"
+                  data-ae-form-field="true"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </form>
+          <p>Need Help? <a href="tel:888-731-5396">Call 888-731-5396</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <section class="hide-for-medium">
+        <div class="callout background-secondary">
+          <div class="row">
+            <div class="columns large-6">
+              <h3 aria-level="2">We Make Renting Easy</h3>
+              <ul class="arrow-bullet">
+                <li>
+                  3 easy ways to get your instrument
+                  <ul class="arrow-bullet">
+                    <li>
+                      Choose from over 400 locations.<br />
+                      <span class="ng-scope"
+                        ><a role="link" tabindex="0"
+                          >Find a neighborhood store near you</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <span class="allcaps">Free</span> delivery to your child's
+                      schools (where available)
+                    </li>
+                    <li>Convenient shipping right to your home</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="allcaps">Free</span> maintenance &amp; repairs
+                  with our Liability and Damage Waiver (LDW) plan
+                </li>
+                <li>
+                  No commitment — <span class="allcaps">Free</span> exchange,
+                  return, or purchase any time!
+                </li>
+              </ul>
+            </div>
+            <div class="columns large-6">
+              <h3 aria-level="2">About Our Rental Program</h3>
+              <ul class="arrow-bullet">
+                <li>
+                  Check out our
+                  <button
+                    type="button"
+                    class="button-link ae-button"
+                    data-ae-blurbtype="button"
+                    data-ae-form-field="true"
+                  >
+                    FAQs
+                  </button>
+                  for commonly asked questions and answers
+                </li>
+                <li>
+                  Have an existing rental instrument in need of repair or
+                  service?
+                  <a
+                    target="_self"
+                    class="ng-scope"
+                    href="https://www.musicarts.com/cms/rental-service-information"
+                  >
+                    Learn more here</a
+                  >
+                </li>
+                <li>
+                  Still have questions? Our
+                  <a
+                    target="_self"
+                    href="https://www.musicarts.com/customerservice/contactus"
+                    >customer service team</a
+                  >
+                  would love to help!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <div class="columns large-8 medium-6">
+        <hr />
+        <h2 class="h3" id="rental-locations-by-state">
+          Rental Locations by State
+        </h2>
+        <ul class="multicolumn multicolumn--2-3-4 location-list">
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/al"
+              >Alabama</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/az"
+              >Arizona</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ca"
+              >California</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/co"
+              >Colorado</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ct"
+              >Connecticut</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/de"
+              >Delaware</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/fl"
+              >Florida</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ga"
+              >Georgia</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/il"
+              >Illinois</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ks"
+              >Kansas</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ky"
+              >Kentucky</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/la"
+              >Louisiana</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/me"
+              >Maine</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/md"
+              >Maryland</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ma"
+              >Massachusetts</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ms"
+              >Mississippi</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/mo"
+              >Missouri</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/nv"
+              >Nevada</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/nh"
+              >New Hampshire</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/nj"
+              >New Jersey</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/nm"
+              >New Mexico</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ny"
+              >New York</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/nc"
+              >North Carolina</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/oh"
+              >Ohio</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ok"
+              >Oklahoma</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/or"
+              >Oregon</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/pa"
+              >Pennsylvania</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/sc"
+              >South Carolina</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/tn"
+              >Tennessee</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/tx"
+              >Texas</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/ut"
+              >Utah</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/vt"
+              >Vermont</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/va"
+              >Virginia</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/wa"
+              >Washington</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/wv"
+              >West Virginia</a
+            >
+          </li>
+          <li class="ng-scope">
+            <a target="_self" class="ng-binding" href="/rentals/locations/wi"
+              >Wisconsin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row columns-8-4">
+    <div class="content-primary rentals">
+      <h1 class="ng-binding" role="heading" aria-level="2">
+        Instrument Rentals in Beverly Hills, CA
+      </h1>
+
+      <h2>Schools</h2>
+      <p>
+        Select your school to help us retrieve rental instrument availability
+        and recommended supplies.
+      </p>
+
+      <ul class="rental-schools">
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/beverly-vista-elementary-school-20906/?radius=10&amp;schoolid=20906&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Beverly Vista Elementary School</h4>
+            <p class="ng-binding">200 S Elm Dr, Beverly Hills, CA 90212-4011</p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/good-shepherd-catholic-school-20902/?radius=10&amp;schoolid=20902&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Good Shepherd Catholic School</h4>
+            <p class="ng-binding">
+              148 S Linden Dr, Beverly Hills, CA 90212-2209
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/harkham-hillel-hebrew-academy-20903/?radius=10&amp;schoolid=20903&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Harkham Hillel Hebrew Academy</h4>
+            <p class="ng-binding">
+              9120 W Olympic Blvd, Beverly Hills, CA 90212-3508
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/bais-chayma-mushka-chabad-11719/?radius=10&amp;schoolid=11719&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Bais Chayma Mushka Chabad</h4>
+            <p class="ng-binding">
+              9051 W Pico Blvd, Los Angeles, CA 90035-1324
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/el-rodeo-elementary-school-20897/?radius=10&amp;schoolid=20897&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">El Rodeo Elementary School</h4>
+            <p class="ng-binding">
+              605 N Whittier Dr, Beverly Hills, CA 90210-3112
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/canfield-avenue-elementary-school-11723/?radius=10&amp;schoolid=11723&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Canfield Avenue Elementary School</h4>
+            <p class="ng-binding">
+              9233 Airdrome St, Los Angeles, CA 90035-3201
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/page-private-school-beverly-hills-20901/?radius=10&amp;schoolid=20901&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Page Private School-Beverly Hills</h4>
+            <p class="ng-binding">
+              419 S Robertson Blvd, Beverly Hills, CA 90211-3603
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/hawthorne-elementary-school-20898/?radius=10&amp;schoolid=20898&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Hawthorne Elementary School</h4>
+            <p class="ng-binding">
+              624 N Rexford Dr, Beverly Hills, CA 90210-3312
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/horace-mann-elementary-school-20900/?radius=10&amp;schoolid=20900&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Horace Mann Elementary School</h4>
+            <p class="ng-binding">
+              8701 Charleville Blvd, Beverly Hills, CA 90211-2805
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/beverly-hills--ca/temple-emanuel-academy-day-school-20899/?radius=10&amp;schoolid=20899&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Temple Emanuel Academy Day School</h4>
+            <p class="ng-binding">
+              8844 Burton Way, Beverly Hills, CA 90211-1724
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/rabbi-jacob-pressman-academy-11721/?radius=10&amp;schoolid=11721&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Rabbi Jacob Pressman Academy</h4>
+            <p class="ng-binding">
+              1055 S La Cienega Blvd, Los Angeles, CA 90035-2507
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/st-timothy-catholic-school-20824/?radius=10&amp;schoolid=20824&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">St Timothy Catholic School</h4>
+            <p class="ng-binding">
+              10479 W Pico Blvd, Los Angeles, CA 90064-2307
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/torat-hayim-hebrew-academy-11722/?radius=10&amp;schoolid=11722&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Torat-Hayim Hebrew Academy</h4>
+            <p class="ng-binding">
+              1210 S La Cienega Blvd, Los Angeles, CA 90035-2521
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/castle-heights-elementary-school-11700/?radius=10&amp;schoolid=11700&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Castle Heights Elementary School</h4>
+            <p class="ng-binding">
+              9755 Cattaraugus Ave, Los Angeles, CA 90034-2352
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/sinai-akiba-academy-11600/?radius=10&amp;schoolid=11600&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Sinai Akiba Academy</h4>
+            <p class="ng-binding">
+              10400 Wilshire Blvd, Los Angeles, CA 90024-4602
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/montessori-learning-center-school-11604/?radius=10&amp;schoolid=11604&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Montessori Learning Center School</h4>
+            <p class="ng-binding">
+              10551 Holman Ave, Los Angeles, CA 90024-6043
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/cheder-menachem-school-19717/?radius=10&amp;schoolid=19717&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Cheder Menachem School</h4>
+            <p class="ng-binding">
+              1606 S La Cienega Blvd, Los Angeles, CA 90038-4109
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/west-hollywood--ca/maimonides-academy-los-angeles-campus-20751/?radius=10&amp;schoolid=20751&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Maimonides Academy Los Angeles Campus</h4>
+            <p class="ng-binding">
+              310 Huntley Dr, West Hollywood, CA 90048-1919
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/fairburn-avenue-elementary-school-11603/?radius=10&amp;schoolid=11603&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Fairburn Avenue Elementary School</h4>
+            <p class="ng-binding">
+              1403 Fairburn Ave, Los Angeles, CA 90024-6014
+            </p>
+          </a>
+        </li>
+        <li class="ng-scope">
+          <a
+            class="school"
+            target="_self"
+            href="/rentals/los-angeles--ca/shenandoah-elementary-school-11699/?radius=10&amp;schoolid=11699&amp;studentgrade=2&amp;zipcode=90212"
+          >
+            <h4 class="ng-binding">Shenandoah Elementary School</h4>
+            <p class="ng-binding">
+              2450 S Shenandoah St, Los Angeles, CA 90034-2026
+            </p>
+          </a>
+        </li>
+      </ul>
+
+      <p aria-hidden="true" class="ng-hide">No schools found.</p>
+
+      <nav class="pagination pagination--simple" aria-label="Pagination">
+        <a class="previous ng-hide" aria-hidden="true">
+          <span class="icon fa-chevron-left" aria-hidden="true"></span>
+          <span class="show-for-sr">Previous page</span>
+        </a>
+        <span class="show-for-sr">You're on</span> Page
+        <strong class="ng-binding">1</strong> of
+        <strong class="ng-binding">23</strong>
+        <a class="next" aria-hidden="false">
+          <span class="icon fa-chevron-right" aria-hidden="true"></span>
+          <span class="show-for-sr">Next page</span>
+        </a>
+      </nav>
+    </div>
+
+    <aside class="content-secondary">
+      <div class="sidebar">
+        <h3>I Don't See My School</h3>
+
+        <p>Refine your search.</p>
+
+        <form
+          method="post"
+          name="findSchoolForm"
+          accessible-form=""
+          novalidate=""
+          class="ng-pristine ng-valid ng-valid-required ng-valid-pattern ng-valid-maxlength ae-form"
+        >
+          <div class="row">
+            <div class="columns small-6 end halfpad-right">
+              <label for="id-zip" class="req nowrap ae-label">Zip Code</label>
+              <input
+                id="id-zip"
+                name="ZipCodeOrQuickCode"
+                type="text"
+                class="input-small ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-pattern ng-valid-maxlength"
+                required=""
+                maxlength="5"
+                aria-invalid="false"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns small-6 halfpad-right">
+              <label class="ae-label">
+                <span class="req">Mile Radius</span>
+                <select
+                  id="id-radius"
+                  name="MileRadius"
+                  required=""
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                  aria-invalid="false"
+                  data-ae-blurbtype="select"
+                  data-ae-form-field="true"
+                >
+                  <option label="1" value="number:1">1</option>
+                  <option label="2" value="number:2">2</option>
+                  <option label="3" value="number:3">3</option>
+                  <option label="4" value="number:4">4</option>
+                  <option label="5" value="number:5">5</option>
+                  <option label="10" value="number:10" selected="selected"
+                    >10</option
+                  >
+                  <option label="15" value="number:15">15</option>
+                  <option label="20" value="number:20">20</option>
+                  <option label="25" value="number:25">25</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="columns small-6 halfpad-left">
+              <label class="ae-label">
+                <span class="req">Grade</span>
+                <select
+                  class="input-small ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                  name="StudentGrade"
+                  required=""
+                  aria-invalid="false"
+                  data-ae-blurbtype="select"
+                  data-ae-form-field="true"
+                >
+                  <option value="" class="">Select</option>
+                  <option label="K" value="string:K">K</option>
+                  <option label="1" value="string:1">1</option>
+                  <option label="2" value="string:2" selected="selected"
+                    >2</option
+                  >
+                  <option label="3" value="string:3">3</option>
+                  <option label="4" value="string:4">4</option>
+                  <option label="5" value="string:5">5</option>
+                  <option label="6" value="string:6">6</option>
+                  <option label="7" value="string:7">7</option>
+                  <option label="8" value="string:8">8</option>
+                  <option label="9" value="string:9">9</option>
+                  <option label="10" value="string:10">10</option>
+                  <option label="11" value="string:11">11</option>
+                  <option label="12" value="string:12">12</option>
+                  <option label="College" value="string:College"
+                    >College</option
+                  >
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <label for="id-school-name" class="ae-label">School Name</label>
+          <input
+            id="id-school-name"
+            type="text"
+            class="ng-pristine ng-untouched ng-valid ng-empty"
+            aria-invalid="false"
+            data-ae-blurbtype="input"
+            data-ae-form-field="true"
+          />
+
+          <div class="buttons">
+            <button
+              class="button primary expanded ae-button"
+              type="submit"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Find School
+            </button>
+          </div>
+        </form>
+
+        <div class="text-rule"><span>OR</span></div>
+
+        <form
+          method="post"
+          name="findSchoolAltForm"
+          accessible-form=""
+          novalidate=""
+          class="ng-pristine ng-invalid ng-invalid-required ae-form"
+        >
+          <fieldset>
+            <legend id="id-school-type" class="sr-only ae-label">
+              School Type
+            </legend>
+            <ul class="radio-list">
+              <li>
+                <label class="radio radio-fancy ae-label">
+                  <input
+                    type="radio"
+                    name="SchoolType"
+                    value="HomeSchool"
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                    required="required"
+                    aria-invalid="true"
+                    data-ae-form-field="true"
+                    aria-describedby="id-school-type"
+                  />
+                  <div class="radio-control"></div>
+                  Student is home schooled
+                </label>
+              </li>
+              <li>
+                <label class="radio radio-fancy ae-label">
+                  <input
+                    type="radio"
+                    name="SchoolType"
+                    value="NotApplicable"
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                    required="required"
+                    aria-invalid="true"
+                    data-ae-form-field="true"
+                    aria-describedby="id-school-type"
+                  />
+                  <div class="radio-control"></div>
+                  This rental is for a non-student
+                </label>
+              </li>
+              <li>
+                <label class="radio radio-fancy ae-label">
+                  <input
+                    type="radio"
+                    name="SchoolType"
+                    value="NotListed"
+                    class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                    required="required"
+                    aria-invalid="true"
+                    data-ae-form-field="true"
+                    aria-describedby="id-school-type"
+                  />
+                  <div class="radio-control"></div>
+                  Continue without a school
+                </label>
+              </li>
+            </ul>
+            <div
+              class="field-validation-error ng-hide"
+              role="alert"
+              aria-hidden="true"
+            >
+              Select an option to continue
+            </div>
+          </fieldset>
+
+          <div class="buttons">
+            <button
+              id="findSchoolAltSubmit"
+              class="button-primary button-expanded ae-button"
+              type="submit"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Continue
+            </button>
+          </div>
+        </form>
+
+        <hr />
+
+        <h3>About Our Rental Program</h3>
+        <p>
+          Read the
+          <button
+            type="button"
+            class="button-link ae-button"
+            data-ae-blurbtype="button"
+            data-ae-form-field="true"
+          >
+            FAQs</button
+          >.
+        </p>
+
+        <p>
+          For Assistance Call
+          <a href="tel:888-731-5396" class="ng-binding">888-731-5396</a>&nbsp;
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row columns-8-4" id="rentals-root">
+    <div class="content-primary rentals">
+      <h1 class="ng-binding" role="heading" aria-level="2">
+        Beverly Vista Elementary School Instrument Rental
+      </h1>
+
+      <form
+        name="instrumentClassForm"
+        accessible-form=""
+        novalidate=""
+        class="ng-pristine ng-invalid ng-invalid-required ae-form"
+      >
+        <h2>Instruments</h2>
+        <p>Select your instrument below.</p>
+
+        <div class="row small-up-3 large-up-5 rental-instruments">
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-155" class="hidden-label ng-binding ae-label"
+                >Piccolo</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-155"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-148" class="hidden-label ng-binding ae-label"
+                >Flute</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-148"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-150" class="hidden-label ng-binding ae-label"
+                >Oboe</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-150"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-154" class="hidden-label ng-binding ae-label"
+                >Clarinet</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-154"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-159" class="hidden-label ng-binding ae-label"
+                >Bass Clarinet</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-159"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-167" class="hidden-label ng-binding ae-label"
+                >Alto Sax</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-167"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-149" class="hidden-label ng-binding ae-label"
+                >Tenor Sax</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-149"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-23" class="hidden-label ng-binding ae-label"
+                >Trumpet &amp; Cornet</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-23"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-152" class="hidden-label ng-binding ae-label"
+                >French Horn</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-152"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-162" class="hidden-label ng-binding ae-label"
+                >Trombone</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-162"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-13" class="hidden-label ng-binding ae-label"
+                >Baritone &amp; Euphonium</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-13"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-7" class="hidden-label ng-binding ae-label"
+                >Bell Kit</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-7"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-151" class="hidden-label ng-binding ae-label"
+                >PLK</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-151"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-9" class="hidden-label ng-binding ae-label"
+                >Drum Kit</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-9"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-5" class="hidden-label ng-binding ae-label"
+                >Violin</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-5"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-4" class="hidden-label ng-binding ae-label"
+                >Viola</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-4"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+          <div class="columns column-block ng-scope">
+            <label class="ae-label">
+              <span id="id-inst-11" class="hidden-label ng-binding ae-label"
+                >Cello</span
+              >
+              <input
+                type="radio"
+                name="instrument"
+                aria-labelledby="id-inst-11"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                value="[object Object]"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              <img src="/images/Trumpet & Cornet.jpg" />
+            </label>
+          </div>
+        </div>
+
+        <div class="row ng-hide" id="id-delivery-time" aria-hidden="true">
+          <div class="columns">
+            <p>You selected <strong class="ng-binding"></strong>.</p>
+            <p aria-hidden="false" class="">
+              Based on when your child's school program begins, please select a
+              delivery time.
+            </p>
+            <fieldset class="radio-list" aria-hidden="false">
+              <legend id="id-delivery" class="sr-only ae-label">
+                Instrument Delivery Time
+              </legend>
+              <label class="radio radio-fancy ae-label">
+                <input
+                  type="radio"
+                  name="delivery-time"
+                  value="Immediate"
+                  aria-labelledby="id-delivery"
+                  required=""
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                <div class="radio-control"></div>
+                <strong>ASAP</strong> – I need this instrument as soon as
+                possible.
+              </label>
+              <label
+                class="radio radio-fancy ng-hide ae-label"
+                aria-hidden="true"
+              >
+                <input
+                  type="radio"
+                  name="delivery-time"
+                  value="Summer"
+                  aria-labelledby="id-delivery"
+                  required=""
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                <div class="radio-control"></div>
+                <strong>Summer Delivery</strong> – I need this instrument for a
+                summer music program.
+              </label>
+              <label class="radio radio-fancy ae-label" aria-hidden="false">
+                <input
+                  type="radio"
+                  name="delivery-time"
+                  value="Fall"
+                  aria-labelledby="id-delivery"
+                  required=""
+                  class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                <div class="radio-control"></div>
+                <strong>Fall Delivery</strong> – I need this instrument for a
+                fall music program, e.g., the start of the school year.
+              </label>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="row buttons">
+          <div class="columns small-6 medium-5 large-4">
+            <a class="button button-expanded" tabindex="0"
+              ><span class="icon fa-chevron-left"></span> Back</a
+            >
+          </div>
+          <div class="columns small-6 medium-5 large-4">
+            <button
+              class="button-expanded button-primary ae-button"
+              type="submit"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <aside class="content-secondary">
+      <div class="sidebar">
+        <h2 aria-hidden="false">Rental Progress</h2>
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>School</h3>
+          <h4 class="ng-binding">Beverly Vista Elementary School</h4>
+          <p class="ng-binding">
+            200 S Elm Dr
+            <br aria-hidden="false" />
+            Beverly Hills, CA 90212-4011
+            <span class="block ng-binding" aria-hidden="false">Grade: 2</span>
+          </p>
+        </div>
+        <hr aria-hidden="false" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>Instrument</h3>
+          <h4
+            class="ng-binding"
+            role="presentation"
+            aria-hidden="true"
+            tabindex="-1"
+          ></h4>
+          <p class="ng-binding">
+            <strong>Delivery:</strong>
+          </p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3 class="ng-binding">Size</h3>
+          <p class="ng-binding">Instrument Size:</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>Rental Rate</h3>
+          <p class="ng-binding">Month Trial Period</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>School Supplies</h3>
+          <p class="ng-binding">Supplies</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <h3>About Our Rental Program</h3>
+        <p>
+          Read the
+          <button
+            type="button"
+            class="button-link ae-button"
+            data-ae-blurbtype="button"
+            data-ae-form-field="true"
+          >
+            FAQs</button
+          >.
+        </p>
+
+        <p>
+          For Assistance Call
+          <a href="tel:888-731-5396" class="ng-binding">888-731-5396</a>&nbsp;
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row columns-8-4" id="rentals-root">
+    <div class="content-primary rentals">
+      <h1 class="ng-binding" role="heading" aria-level="2">
+        Trumpet &amp; Cornet Instrument Rental
+      </h1>
+
+      <h3>What is a trial period?</h3>
+      <ul class="arrow-bullet">
+        <li>
+          The trial period option(s) have been discounted from the monthly rate
+          to serve as a one-time introduction, so that the student can obtain an
+          excellent quality instrument for a minimal fee
+        </li>
+        <li>
+          100% of your rental payments apply toward the purchase of an
+          instrument, or you may return it any time without any further
+          obligation
+        </li>
+        <li>
+          Our optional LDW (Liability Damage Waiver) plan provides worry-free
+          coverage of essential maintenance while you are renting
+        </li>
+      </ul>
+
+      <div class="rental-rates">
+        <div class="row header">
+          <div class="columns small-6">
+            <h3 id="rentalRateFormTitle" role="alert" class="ae-label">
+              Select a trial period
+            </h3>
+          </div>
+          <div class="columns small-6 text-right">
+            <a class="edit-link">Change Instrument</a>
+          </div>
+        </div>
+
+        <form
+          id="selectTpForm"
+          name="selectTpForm"
+          data-abide=""
+          novalidate=""
+          angular-validator=""
+          aria-labelledby="rentalRateFormTitle"
+          data-e="c8kavb-e"
+          class="ng-pristine ng-valid ng-valid-required ae-form"
+        >
+          <fieldset>
+            <legend class="sr-only">Trial Period and instrument</legend>
+
+            <div class="rate-instrument ng-scope">
+              <h4 class="option-title ng-binding">Trumpet</h4>
+
+              <div class="rate-option ng-scope">
+                <label class="radio radio-fancy ae-label">
+                  <input
+                    type="radio"
+                    name="rate"
+                    set-focus="$first &amp;&amp; $parent.$index === 0"
+                    class="ng-pristine ng-valid ng-isolate-scope ng-not-empty ng-valid-required ng-touched"
+                    value="[object Object]"
+                    aria-invalid="false"
+                    aria-labelledby="rental-instrument-type-0 tp-0-0-1"
+                    aria-describedby="radio-label-0-0"
+                    data-ae-form-field="true"
+                  />
+                  <div class="radio-control" role="presentation"></div>
+                </label>
+                <div class="radio-label">
+                  <div class="rate-group">
+                    <div class="key ng-binding">
+                      1 Month Trial Period
+                    </div>
+                    <div class="val ng-binding" aria-describedby="tp-0-0-1">
+                      $22.00
+                    </div>
+                    <div class="key">
+                      Liability Damage Waiver (LDW)
+                    </div>
+                    <div class="val ng-binding" aria-describedby="ldw-0-0-1">
+                      $6.00
+                    </div>
+                  </div>
+                  <div class="rate-group">
+                    <div class="key">
+                      Monthly Thereafter
+                    </div>
+                    <div class="val ng-binding" aria-describedby="tp-0-0-2">
+                      $22.00
+                    </div>
+                    <div class="key">
+                      Monthly LDW
+                    </div>
+                    <div class="val ng-binding" aria-describedby="ldw-0-0-2">
+                      $6.00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <div class="columns"></div>
+          </div>
+
+          <div class="row ldw">
+            <div class="columns small-7">
+              <label class="checkbox inline-block ae-label">
+                <input
+                  id="ldw"
+                  type="checkbox"
+                  name="liability-damage-waiver"
+                  value=""
+                  aria-describedby="whyLDW"
+                  class="ng-pristine ng-untouched ng-valid ng-empty"
+                  checked="checked"
+                  aria-invalid="false"
+                  data-ae-form-field="true"
+                />
+                Include Liabilty Damage Waiver
+              </label>
+              <button
+                id="whyLDW"
+                type="button"
+                class="button-link button-link-small indent-checkbox ae-button"
+                data-ae-blurbtype="button"
+                data-ae-form-field="true"
+              >
+                Why do I need this?
+              </button>
+            </div>
+          </div>
+
+          <div class="row buttons">
+            <div class="columns small-6 medium-5 large-4">
+              <a class="button button-expanded"
+                ><span class="icon fa-chevron-left" aria-hidden="true"></span>
+                Back</a
+              >
+            </div>
+            <div class="columns small-6 medium-5 large-4">
+              <button
+                type="submit"
+                class="button-primary button-expanded ae-button"
+                data-ae-blurbtype="button"
+                data-ae-form-field="true"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <aside class="content-secondary">
+      <div class="sidebar">
+        <h2 aria-hidden="false">Rental Progress</h2>
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>School</h3>
+          <h4 class="ng-binding">Beverly Vista Elementary School</h4>
+          <p class="ng-binding">
+            200 S Elm Dr
+            <br aria-hidden="false" />
+            Beverly Hills, CA 90212-4011
+            <span class="block ng-binding" aria-hidden="false">Grade: 2</span>
+          </p>
+        </div>
+        <hr aria-hidden="false" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>Instrument</h3>
+          <h4
+            class="ng-binding"
+            role="presentation"
+            aria-hidden="true"
+            tabindex="-1"
+          >
+            Trumpet &amp; Cornet
+          </h4>
+          <p class="ng-binding"><strong>Delivery:</strong> Immediate</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3 class="ng-binding">Trumpet &amp; Cornet Size</h3>
+          <p class="ng-binding">Instrument Size: Trumpet &amp; Cornet</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>Rental Rate</h3>
+          <p class="ng-binding">Month Trial Period</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>School Supplies</h3>
+          <p class="ng-binding">Supplies</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <h3>About Our Rental Program</h3>
+        <p>
+          Read the
+          <button
+            type="button"
+            class="button-link ae-button"
+            data-ae-blurbtype="button"
+            data-ae-form-field="true"
+          >
+            FAQs</button
+          >.
+        </p>
+
+        <p>
+          For Assistance Call
+          <a href="tel:888-731-5396" class="ng-binding">888-731-5396</a>&nbsp;
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row columns-8-4" id="rentals-root">
+    <div class="content-primary rentals">
+      <h1 role="heading" aria-level="2">Instrument Rental</h1>
+
+      <h2 id="selectSuppliesLabel" class="ae-label">Select School Supplies</h2>
+      <p id="selectSuppliesDescription" aria-hidden="false">
+        Music educators strongly recommend these supplies for class.
+      </p>
+
+      <div class="rental-school-supplies">
+        <div
+          role="table"
+          aria-labelledby="selectSuppliesLabel"
+          aria-describedby="selectSuppliesDescription"
+          aria-hidden="false"
+        >
+          <div class="supplies-header" role="rowgroup">
+            <div class="row" role="rowheader">
+              <div class="columns large-6" role="columnheader">Supply</div>
+              <div
+                class="columns small-4 large-2 text-center"
+                role="columnheader"
+              >
+                Price
+              </div>
+              <div
+                class="columns small-4 large-2 text-center"
+                role="columnheader"
+              >
+                Quantity
+              </div>
+              <div
+                class="columns small-4 large-2 text-right"
+                role="columnheader"
+              >
+                Total
+              </div>
+            </div>
+          </div>
+          <div role="rowgroup" id="schoolSuppliesItems">
+            <div class="supply ng-scope supply--is-starter-pack" role="row">
+              <div class="row">
+                <div class="columns large-6" role="cell">
+                  <label class="checkbox inline-block ng-binding ae-label">
+                    <input
+                      type="checkbox"
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                      aria-invalid="false"
+                      data-ae-form-field="true"
+                    />
+                    Giardinelli Trumpet Starter Pack
+                    <a aria-hidden="false">What's this?</a>
+                    <span class="ng-binding ng-hide" aria-hidden="true"
+                      ><br />Standard</span
+                    >
+                  </label>
+                </div>
+                <div class="columns small-4 large-2" role="cell">
+                  <div class="supply-option supply-option-price">
+                    <span
+                      class="supply-option-label"
+                      role="presentation"
+                      hidden="hidden"
+                      aria-hidden="true"
+                      >Price</span
+                    >
+                    <span class="supply-option-value ng-binding">$35.49</span>
+                  </div>
+                </div>
+                <div class="columns small-4 large-2" role="cell">
+                  <div class="supply-option supply-option-qty">
+                    <span
+                      class="supply-option-label"
+                      role="presentation"
+                      hidden="hidden"
+                      aria-hidden="true"
+                      >Qty</span
+                    >
+                    <span class="supply-option-value">
+                      <input
+                        type="number"
+                        class="input-tiny qty ng-pristine ng-untouched ng-valid ng-not-empty"
+                        aria-label="Quantity of supply"
+                        aria-hidden="false"
+                        value="1"
+                        aria-invalid="false"
+                        data-ae-blurbtype="number"
+                        data-ae-form-field="true"
+                      />
+                      <span
+                        class="input-tiny qty ng-binding ng-hide"
+                        aria-label="Quantity of supply"
+                        aria-hidden="true"
+                        >1</span
+                      >
+                    </span>
+                  </div>
+                </div>
+                <div class="columns small-4 large-2" role="cell">
+                  <div class="supply-option supply-option-total">
+                    <span
+                      class="supply-option-label"
+                      role="presentation"
+                      hidden="hidden"
+                      aria-hidden="true"
+                      >Total</span
+                    >
+                    <span class="supply-option-value ng-binding">$35.49</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="rowgroup" aria-label="Totals">
+              <div class="supply supply-totals" role="row">
+                <div class="row">
+                  <div
+                    class="columns small-4 large-2 large-offset-6 subtotal"
+                    role="cell"
+                    aria-colspan="2"
+                    aria-label="Subtotal"
+                  >
+                    &nbsp;
+                  </div>
+                  <div
+                    class="columns small-4 large-2 qty-total ng-binding"
+                    role="cell"
+                    aria-label="Total Quantity"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="columns small-4 large-2 total ng-binding"
+                    role="cell"
+                    aria-label="Total Price"
+                  >
+                    $35.49
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row buttons">
+          <div class="columns small-6 medium-5 large-4">
+            <a class="button button-expanded"
+              ><span class="icon fa-chevron-left"></span> Back</a
+            >
+          </div>
+          <div class="columns small-6 medium-5 large-4">
+            <button
+              type="button"
+              class="button-primary button-expanded ae-button"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="content-secondary">
+      <div class="sidebar">
+        <h2 aria-hidden="false">Rental Progress</h2>
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>School</h3>
+          <h4 class="ng-binding">Beverly Vista Elementary School</h4>
+          <p class="ng-binding">
+            200 S Elm Dr
+            <br aria-hidden="false" />
+            Beverly Hills, CA 90212-4011
+            <span class="block ng-binding" aria-hidden="false">Grade: 2</span>
+          </p>
+        </div>
+        <hr aria-hidden="false" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>Instrument</h3>
+          <h4
+            class="ng-binding"
+            role="presentation"
+            aria-hidden="true"
+            tabindex="-1"
+          >
+            Trumpet &amp; Cornet
+          </h4>
+          <p class="ng-binding"><strong>Delivery:</strong> Immediate</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3 class="ng-binding">Trumpet &amp; Cornet Size</h3>
+          <p class="ng-binding">Instrument Size: Trumpet &amp; Cornet</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>Rental Rate</h3>
+          <p class="ng-binding">1 Month Trial Period with LDW</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3>School Supplies</h3>
+          <p class="ng-binding">Supplies</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <h3>About Our Rental Program</h3>
+        <p>
+          Read the
+          <button
+            type="button"
+            class="button-link ae-button"
+            data-ae-blurbtype="button"
+            data-ae-form-field="true"
+          >
+            FAQs</button
+          >.
+        </p>
+
+        <p>
+          For Assistance Call
+          <a href="tel:888-731-5396" class="ng-binding">888-731-5396</a>&nbsp;
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row columns-8-4" id="rentals-root">
+    <div class="content-primary rentals">
+      <h1 role="heading" aria-level="2">Agree to Rental Contract</h1>
+
+      <form
+        name="renterDetailsForm"
+        accessible-form=""
+        novalidate=""
+        class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ae-form"
+      >
+        <section class="row ng-scope">
+          <div class="columns">
+            <h2>Student Information</h2>
+            <p>
+              Please provide the name of the person for which this instrument is
+              being rented to ensure this person receives their instrument.
+            </p>
+          </div>
+          <div class="columns large-6">
+            <label for="id-student-firstname" class="req ae-label"
+              >Student First Name</label
+            >
+            <input
+              type="text"
+              name="studentFirstName"
+              id="id-student-firstname"
+              required=""
+              class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+              aria-invalid="true"
+              data-ae-blurbtype="input"
+              data-ae-form-field="true"
+            />
+          </div>
+
+          <div class="columns large-6">
+            <label for="id-student-lastname" class="req ae-label"
+              >Student Last Name</label
+            >
+            <input
+              type="text"
+              name="studentLastName"
+              id="id-student-lastname"
+              required=""
+              class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+              aria-invalid="true"
+              data-ae-blurbtype="input"
+              data-ae-form-field="true"
+            />
+          </div>
+        </section>
+
+        <section>
+          <div class="row">
+            <div class="columns">
+              <h2>Renter Information</h2>
+              <p>
+                Please provide the name of the person who is financially
+                responsible for renting this instrument. This name must match
+                the credit card billing information you will provide in
+                checkout.
+              </p>
+            </div>
+            <div class="columns large-6">
+              <label for="id-firstname" class="req ae-label"
+                >Renter First Name</label
+              >
+              <input
+                type="text"
+                name="renterFirstName"
+                value=""
+                id="id-firstname"
+                required="required"
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                aria-invalid="true"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+            </div>
+            <div class="columns large-6">
+              <label for="id-lastname" class="req ae-label"
+                >Renter Last Name</label
+              >
+              <input
+                type="text"
+                name="renterLastName"
+                value=""
+                id="id-lastname"
+                required="required"
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                aria-invalid="true"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns large-6 end">
+              <label for="id-renters-license" class="ae-label"
+                >Renter Government Issued ID</label
+              >
+              <input
+                type="text"
+                name="license"
+                id="id-renters-license"
+                maxlength="20"
+                class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                aria-invalid="false"
+                data-ae-blurbtype="input"
+                data-ae-form-field="true"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="row">
+          <div class="columns">
+            <div
+              class="label ae-label"
+              id="id-terms-and-conditions"
+              role="heading"
+            >
+              Rental Terms &amp; Conditions
+            </div>
+            <div
+              class="terms ng-binding"
+              aria-labelledby="id-terms-and-conditions"
+            >
+              <center>
+                <strong>ADDITIONAL TERMS AND CONDITIONS YOU AGREE TO</strong>
+              </center>
+              <br />
+              <b
+                >1. LEASE TERM AND OPTIONS. At the end of your Initial Trial
+                Period, you have four options: (1) continue renting the
+                instrument by making another monthly rental payment on or before
+                the end of the Initial Trial Period; (2) exercise your exchange
+                option (see Items 2 and 3 below) for another instrument; (3)
+                terminate this Agreement by returning the instrument to us in
+                good condition, fair wear and tear excepted. Note: Rental
+                payments are not contingent on practice or lesson schedules; (4)
+                see Item 4 for instrument purchase opportunity.</b
+              >
+              The Initial Trial Period and monthly payments will not be prorated
+              or refunded. The Initial Trial Period cannot be extended or
+              renewed. You cannot purchase the instrument you are renting (see
+              Item 4 below). If you are uncertain as to how to return your
+              instrument, please call 888-731-5396 for instructions. The initial
+              trial period may or may not coincide with the school year.
+              <br />
+              2. RENTAL INSTRUMENT EXCHANGE POLICY. You may exchange to a
+              student-level instrument of the same type, or from one
+              student-level instrument to another of equal or greater value, and
+              pay any additional rental charges which become due during this
+              Agreement. This policy is only available if your account remains
+              current throughout its term. See item 3 for fractional size string
+              policy. Rental rates in effect at the time of exchange will apply.
+              If you are already renting a new instrument and wish to exchange
+              to another rental instrument, Music &amp; Arts will exchange the
+              instrument requested to a brand and condition of Music &amp; Arts'
+              choice.
+              <br />
+              3. FRACTIONAL SIZE STRING POLICY. You may exchange a student-level
+              Violin, Viola, or Cello for a larger size student-level Violin,
+              Viola, or Cello as the child grows. We will apply 100% of your
+              rental payments (not including taxes, fees or Liability Damage
+              Waiver) toward a larger instrument. If you exchange instruments
+              without signing a new Agreement, you agree that the terms of this
+              Agreement will apply to each instrument and exchange. Rental rates
+              in effect at the time of exchange will apply.
+              <br />
+              4. INSTRUMENT PURCHASE. You cannot purchase the instrument you are
+              renting. You can purchase <b>another</b> new or used student-level
+              band or orchestra instrument, <b>of equal or greater value</b>, at
+              any time after the original rental date. If purchasing a string or
+              used band instrument, 100% of your rental payments made (not
+              including taxes, fees or Liability Damage Waiver) will apply
+              toward the current Music &amp; Arts MSRP. If purchasing a new band
+              instrument, 100% of your rental payments made in the first 24
+              months (not including taxes, fees or Liability Damage Waiver) will
+              apply towards the current Music &amp; Arts MSRP. After the rental
+              credit has been applied, we may also offer a 30% discount on the
+              remaining balance which is payable at time of purchase. &nbsp;With
+              approved credit you may finance the purchase through us. This
+              option terminates upon return of the instrument. Once you have
+              purchased the instrument, you have no further return or exchange
+              options. Rental credits cannot be applied to On-Line Purchases
+              through www.musicarts.com. Please direct instrument exchanges and
+              purchases to your local store or school representative. <br />
+              5. OFFICIAL AND OTHER FEES. Late Fee: $5.00 on payments not
+              received within 10 days after the due date. Returned Check Fee:
+              $25.00. Official Fees: None. These fees are subject to change if
+              state law changes.
+              <br />
+              6. LIABILITY FOR LOSS OR DAMAGE. You are fully responsible for
+              loss, theft, damage to or destruction of the instrument from all
+              causes in excess of normal wear and tear, up to a maximum of the
+              fair market value of the instrument. You can choose the optional
+              Liability Damage Waiver (LDW) (Item 7 below) to cover some of your
+              liability.
+              <br />
+              7. LIABILITY DAMAGE WAIVER (LDW) (optional but recommended). If
+              you choose this option by paying the LDW fee and are not in
+              default of this Agreement, you will not be liable for loss or
+              damage to the instrument due to theft or fire. For theft, you must
+              furnish us with a Police Report showing forced entry within 72
+              hours of the loss.
+              <b>The LDW does not cover mysterious disappearance</b> from the
+              school band or orchestra room or lockers. The LDW does not cover
+              theft without proof of breaking and entering. We will not replace
+              the instrument, and payments made prior to the date of loss or
+              damage are not refundable or transferable. If you claim a loss
+              under the LDW you agree that we are subrogated to all of your
+              rights, claims, and remedies due to the loss of the instrument
+              including but in no way limited to your rights or any recoveries
+              under any insurance policies.
+              <br />
+              LDW covers certain repairs at no charge to you unless the damage
+              is due to your willful act or negligence, in which case our
+              standard repair rates apply. The LDW does not include damage to
+              finishes, cosmetic damage to cases, case feet, string breakage
+              (after the first 14 days of rental), reeds, drum sticks and
+              mallets, heads, bow hair, rosin, brass and woodwind mouthpiece
+              loss, neck straps, ligature loss and caps. Mouthpiece and
+              ligature, included with instrument at time of rental, are covered
+              upon presentation of the broken part. ALL REPAIRS MUST BE DONE BY
+              A MUSIC &amp; ARTS APPROVED TECHNICIAN.
+              <br />
+              You can choose the LDW when this Agreement is initiated. You
+              cannot add it later. The LDW may not be available on all types of
+              instruments.
+              <br />
+              8. DEFAULT. If you fail to make a rental payment within 10 days of
+              the due date, or fail to observe any other term in this Agreement,
+              you are in default and this Agreement terminates. If you default,
+              and after we give you any notice required by law, we are entitled
+              to all legal remedies, including repossession and our damages. If
+              you default, you must pay us for all of our reasonable costs of
+              collection which may include some or all of the following: a $50
+              repossession fee, a 30% third party debt collection fee, late
+              invoice fees and a $15 third party administrative collection fee
+              plus any other court costs and/or legal fees, as permitted by law.
+              These amounts are in addition to the underlying balance due. Upon
+              default, any rental credit earned will be void, and you are liable
+              for amounts due us and immediate return of the instrument. If you
+              are in default, Music &amp; Arts, a Division of Guitar Center
+              Stores, Inc., reserves the right to report your credit and payment
+              history to any of the credit reporting agencies at our option.
+              <br />
+              9. MAINTENANCE AND REPAIR. If you do not choose the LDW option,
+              you are responsible for maintaining the instrument in good working
+              condition during this Agreement. Our standard repair rates apply
+              if the instrument is returned in a damaged condition or otherwise
+              needs repairs up to a maximum charge equal to the fair market
+              value of the instrument.
+              <br />
+              10. TERMINATION. You can terminate this Agreement at any time,
+              without penalty, by returning the instrument to us in good
+              condition, fair wear and tear excepted. All original issue
+              accessories such as strings, mouthpieces, drum pads, sticks,
+              instrument parts, or bows must be returned with the instrument, or
+              you must pay for them at the time of return.
+              <b
+                >DO NOT LEAVE THE INSTRUMENT AT SCHOOL WITHOUT PROPER ADVANCE
+                AUTHORIZATION FROM US.</b
+              >
+              <br />
+              11. BILLING AND CHANGE OF ADDRESS OR CREDIT CARD. You will receive
+              billing statements from us (unless you choose the EZ PAY option)
+              at the address listed. You must inform us in writing of any
+              address changes. All rental payments are due in advance. There are
+              no refunds on rental payments. Note: You are responsible for your
+              monthly payments even if you do not receive a bill. Errors in the
+              billing process and with the postal service may occur. You
+              authorize us to receive updated credit card information including
+              a new number or expiration date from the credit card issuer. You
+              can cancel this authorization at any time by notifying us. You
+              authorize us to charge any active card on file for any past due
+              payments.
+              <br />
+              12. INSTRUMENT LOCATION. You must not move the instrument from the
+              address shown in this Agreement without our written consent. You
+              must not sell, pawn, dispose of or pledge the instrument as
+              security while this Agreement is in effect. You remain liable
+              under this Agreement unless you have received a return receipt
+              from us. Your school is not a party to this transaction.
+              <br />
+              13. CREDIT AND COLLECTIONS. You agree to allow us to obtain a
+              personal credit report at any time during this Agreement. You
+              agree to allow us or our agents and assigns, including debt
+              collectors, to contact you via telephone, text message or e-mail,
+              directly or by using a dialer, automatic telephone dialing system,
+              interactive voice recognition system, or artificial or prerecorded
+              voice or message, at any number or e-mail you have given us or
+              that we have on file (whether home, cell, or mobile service), even
+              if you are charged for the call or e-mail service. You expressly
+              agree to be contacted via such automated calls.
+              <br />
+              14. TAXES. Applicable state and local taxes are in addition to our
+              prices and rates.
+              <br />
+              15. SECURITY DEPOSIT. If you pay a security deposit, we can use it
+              on any outstanding balance under this Agreement when this
+              Agreement terminates. You are still required to make monthly
+              rental payments for as long as this Agreement is in effect. Upon
+              satisfactory return of the instrument, we will refund the deposit
+              to you within 4 weeks of the actual return date, less any amounts
+              you owe us. Unless required by law, we do not keep your security
+              deposit in a separate account, and it does not bear interest. Past
+              due payments will not be offset against the security deposit.
+              <br />
+              16. TITLE TO THE INSTRUMENT. We own the instrument. If you declare
+              bankruptcy, we retain title, and the instrument must be returned
+              to us immediately. You cannot purchase or obtain any ownership
+              rights to the instrument you are renting. By signing this
+              Agreement, you accept all liability for making timely rental
+              payments under this Agreement as well as for the condition of the
+              instrument until it has been returned to us. If you want to
+              transfer billing responsibility to another party, you must get
+              such a change cleared in writing through Music &amp; Arts.
+              <br />
+              17. MANDATORY ARBITRATION. You and we agree that any claim or
+              dispute between us or by either of us arising from or related to
+              this Agreement must be resolved by binding arbitration applying
+              the applicable code of procedures of the national arbitration
+              organization to which the claim is referred. Claims must be
+              referred either to JAMS or the American Arbitration Association
+              ("AAA"), as selected by the party electing to use arbitration. If
+              we select an organization that is unacceptable to you, you have
+              the right to select the other organization if you notify us of
+              your decision within 30 days after you receive notice of our
+              arbitration choice. For a copy of the procedures, to file a claim,
+              or for other information about these organizations, contact them
+              as follows: JAMS at 1920 Main Street, Ste. 300, Los Angeles, CA
+              92614; www.jamsadr.com. AAA at 335 Madison Ave., New York, NY
+              10017; www.adr.org. We will pay the initial filing fee if you want
+              to file a claim against us. This arbitration agreement is made
+              pursuant to a transaction involving interstate commerce and shall
+              be governed by the Federal Arbitration Act, 9 U.S.C. Sections
+              1-16. You and we agree that any arbitration will be conducted in
+              the county where you live. Nothing in this agreement is intended
+              to prevent either of us from filing a lawsuit in small claims
+              court for an amount that does not exceed that court's
+              jurisdictional limits. All other disputes must be arbitrated. This
+              arbitration agreement will survive termination of the Agreement
+              and will continue to be in efect to resolve any disputes that
+              arise.
+              <br />
+              <b
+                >BY AGREEING TO ARBITRATE DISPUTES, YOU ARE WAIVING YOUR RIGHT
+                TO A TRIAL BY JURY. YOU ARE WAIVING YOUR RIGHT TO HAVE A COURT
+                RESOLVE YOUR DISPUTE. YOU ARE WAIVING YOUR RIGHT TO PARTICIPATE
+                IN A CLASS ACTION LAWSUIT. YOU ARE WAIVING YOUR RIGHT TO CERTAIN
+                DISCOVERY RULES THAT APPLY IN A LAWSUIT. YOU AND WE AGREE THAT
+                THE ARBITRATOR HAS NO AUTHORITY TO CONDUCT CLASS-WIDE
+                ARBITRATION AND CAN ONLY DECIDE THE DISPUTE BETWEEN YOU AND US.
+                IF ANY PART OF THE ARBITRATION AGREEMENT IS RULED TO BE INVALID,
+                THEN THE UNDERLYING DISPUTE MUST BE RESOLVED BY A JUDGE, SITTING
+                WITHOUT A JURY, IN A COURT OF COMPETENT JURISDICTION, AND NOT AS
+                A CLASS ACTION LAWSUIT.</b
+              >
+              <br />
+              Your Right to Opt Out: If you decide that you do not want to
+              arbitrate any dispute(s) with us, you must notify us in writing at
+              our address in the Agreement no later than 30 days after the date
+              you sign the Agreement. Your decision to opt out of this
+              arbitration agreement will not affect your Agreement with us.
+              <br />
+              18. E-MAIL OPT-IN: By supplying us with your e-mail address, you
+              have agreed to receive promotional messages, helpful instrumental
+              tips and valuable coupons via e-mail. Your information is always
+              kept confidential. We do not sell or share this information. This
+              opt-in permits Music &amp; Arts to enroll you in the Encore
+              Rewards customer loyalty program.<br />
+              19. We reserve the right to make corrections which might be
+              necessary due to mathematical errors caused by our systems or
+              staff. You are entitled to a full accounting at any time and upon
+              request.
+              <br />
+              20.
+              <b
+                ><u>INSURANCE</u>. The following types and amounts of insurance
+                will be required in connection with the Agreement: None. But see
+                Item 7 for your Liability Damage Waiver option.</b
+              >
+              <br />
+              21.
+              <b
+                >No instrument will be issued unless payment is included, the
+                form is signed and all requested information is supplied.</b
+              >
+              <br />
+              If you are mailing this Agreement to us, we will either send you
+              an Instrument Rental Agreement supplement with additional terms or
+              include those additional terms in the instrument case upon
+              delivery of the instrument to you, if applicable.
+              <br />
+              22. IF YOU SIGN THIS AGREEMENT AWAY FROM OUR STORE, YOU MAY CANCEL
+              THIS AGREEMENT AND GET A FULL REFUND AT ANY TIME BEFORE MIDNIGHT
+              OF THE SEVENTH DAY AFTER YOU SIGN. SEE OUR NOTICE OF CANCELLATION
+              FORM FOR AN EXPLANATION OF YOUR RIGHTS.
+            </div>
+          </div>
+          <div class="columns">
+            <label class="checkbox req inline-block ae-label">
+              <input
+                type="checkbox"
+                name="termsAndConditions"
+                value="1"
+                required=""
+                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                aria-invalid="true"
+                data-ae-form-field="true"
+              />
+              I accept the Rental Terms and Conditions
+            </label>
+          </div>
+        </div>
+
+        <div class="row buttons">
+          <div class="columns small-6 medium-5 large-4">
+            <a class="button button-expanded"
+              ><span class="icon fa-chevron-left"></span> Back</a
+            >
+          </div>
+          <div class="columns small-6 medium-5 large-4">
+            <button
+              class="button-primary button-expanded ae-button"
+              type="submit"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <aside class="content-secondary">
+      <div class="sidebar">
+        <h2 aria-hidden="false">Rental Progress</h2>
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>School</h3>
+          <h4 class="ng-binding">Beverly Vista Elementary School</h4>
+          <p class="ng-binding">
+            200 S Elm Dr
+            <br aria-hidden="false" />
+            Beverly Hills, CA 90212-4011
+            <span class="block ng-binding" aria-hidden="false">Grade: 2</span>
+          </p>
+        </div>
+        <hr aria-hidden="false" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>Instrument</h3>
+          <h4
+            class="ng-binding"
+            role="presentation"
+            aria-hidden="true"
+            tabindex="-1"
+          >
+            Trumpet &amp; Cornet
+          </h4>
+          <p class="ng-binding"><strong>Delivery:</strong> Immediate</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <div class="rental-step ng-hide" aria-hidden="true">
+          <a class="edit-link right">Change</a>
+          <h3 class="ng-binding">Trumpet &amp; Cornet Size</h3>
+          <p class="ng-binding">Instrument Size: Trumpet &amp; Cornet</p>
+        </div>
+        <hr aria-hidden="true" class="ng-hide" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>Rental Rate</h3>
+          <p class="ng-binding">1 Month Trial Period with LDW</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <div class="rental-step" aria-hidden="false">
+          <a class="edit-link right">Change</a>
+          <h3>School Supplies</h3>
+          <p class="ng-binding">1 Supplies</p>
+        </div>
+        <hr aria-hidden="false" class="" />
+
+        <h3>About Our Rental Program</h3>
+        <p>
+          Read the
+          <button
+            type="button"
+            class="button-link ae-button"
+            data-ae-blurbtype="button"
+            data-ae-form-field="true"
+          >
+            FAQs</button
+          >.
+        </p>
+
+        <p>
+          For Assistance Call
+          <a href="tel:888-731-5396" class="ng-binding">888-731-5396</a>&nbsp;
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>

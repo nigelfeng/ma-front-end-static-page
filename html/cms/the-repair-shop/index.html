@@ -1,0 +1,982 @@
+<div class="umb-cms">
+  <div id="cms-content" class="theme theme--brand">
+    <div class="umb-grid row">
+      <div class="columns medium-12 umb-grid__section">
+        <div class="umb-padding--top row umb-grid__section__row theme__primary">
+          <div class="columns medium-12 umb-grid__section__row__cell">
+            <div>
+              <p class="text-center">
+                <img
+                  style="
+                    width: 688px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                  src="/images/repair-tagline-dsktp.png"
+                  alt="The Repair Shop Logo"
+                  class="ae-img"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="umb-padding--top row umb-grid__section__row">
+          <div class="columns medium-6 umb-grid__section__row__cell">
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <p>
+                Fill out the form below to request an instrument repair at a
+                location near you.<br /><span style="font-size: 10px;"
+                  >Fields marked with asterisks * are required</span
+                >
+              </p>
+            </div>
+            <div>
+              <div
+                id="umbraco_form_0c864df7da5544e98cb8d701cd3f33c6"
+                class="umbraco-forms-form repairrequest umbraco-forms-"
+              >
+                <form
+                  action="/cms/the-repair-shop"
+                  enctype="multipart/form-data"
+                  method="post"
+                  class="ng-pristine ng-valid ae-form"
+                  novalidate="novalidate"
+                >
+                  <input
+                    name="__RequestVerificationToken"
+                    type="hidden"
+                    value="zyHd-B5QCNDihPmi8fxZo9ieiSFaGVnKteeZgj2fdDR1PEUIFrTsZRvcxvqdAPDpSySiqBe589C1uaT0CDLr0kGR0U01"
+                    autocomplete="off"
+                  /><input
+                    data-val="true"
+                    data-val-required="The FormId field is required."
+                    name="FormId"
+                    type="hidden"
+                    value="0c864df7-da55-44e9-8cb8-d701cd3f33c6"
+                    autocomplete="off"
+                  /><input
+                    name="FormName"
+                    type="hidden"
+                    value="Repair Request"
+                    autocomplete="off"
+                  /><input
+                    data-val="true"
+                    data-val-required="The RecordId field is required."
+                    name="RecordId"
+                    type="hidden"
+                    value="00000000-0000-0000-0000-000000000000"
+                    autocomplete="off"
+                  /><input
+                    name="PreviousClicked"
+                    type="hidden"
+                    value=""
+                    autocomplete="off"
+                  /><input
+                    name="Theme"
+                    type="hidden"
+                    value=""
+                    autocomplete="off"
+                  />
+                  <input
+                    type="hidden"
+                    name="FormStep"
+                    value="0"
+                    autocomplete="off"
+                  />
+                  <input
+                    type="hidden"
+                    name="RecordState"
+                    value="QjlEODFBOUJCMUJFMDM0N0ZDREUzQkE2MjJBNjYzNEMzQjU0Nzg4RDJDQkI2MDk4OTA3QzI4MEFGODMwM0IxRjhDRTNEN0YwMjkxM0QwN0Q2RDc1MjIxRjA5MTgxNTlDMEM0Mjc0RjdGNkMwOUIyNjlBMzU0OTg0QUVCMEZGNEM3QzU5MzkwQURCRTJEN0E0MTk1ODU3MDI5M0M2ODk0NjkzNDg1QjE4MkE1MkRFQjg5NDM1NDhCRUY0RkE2OEFFMzNERjYyNjAyNkRBM0YzQzJBRjUyQUE0RTE4NUJDNDI4NTY1QzkwRTg0OTMwQTU3MDI2NThFNzE1QzYyOUE2MUVGRjI3RUM2Mzc3RUI5QkJDNzEzMkQ4NUYyQjhCRjg2NjM3NzI1NUZBRjFFNUI5RkNGNjVCRDU0OEVCRDE1RERGQjI4MTA2RkZFNzQwQUNBRUI2RThCQTAxQkMxMjE4RDFCRjk1OTczQTUyQzYxOUI1OTE5QzRGRDM2ODNCNUY5QTYyQzNGMjM5NDg5MUE0ODc4Mzc5Qjg2NDMwNUI0ODAyNUI1M0FDNkM0NTc4QjEyOEIyNDlBNjAzODFCNENDQkJDQkZDRjhCRkFBMDMyNTAwQzcyRjg3QzdEMTlGNUI0OTMwNUJBODZENjkwODMwMjc3QjFBMDJGNEMyQjA0OTc5OENEQkI1NDUyRTZGOTY4MjU0ODEyMTExMTc3OTFFQjY3MDdFRDU5Q0FBODE4MDc2RTk2NjBCRDJGNjMyRDM4QjRBQzFFMDUxQTc3NDE1RTk4NkQ3NEQ5RjQ0QTM2OTU0RkZCQTA1MjA0MUIwMTZGMDUyRUJCRkJCNjg1MTJGNEFEQUNCMjg2MTczM0M5M0E3NzUxODhFMkI5RTI5MUZEMzQzRDRENEM1RkFCQUFBMzlGQzRFNjY3RTVCNTc4MjQ5NzAzNzZGOTg2NjAwMjM5RDY3NTlCMjVGNzgyMzcyNUZERTI4MDYzQjlCQjY1RUFERkYxM0M0MjczNUJFQjY1QjhFQUI5RDJDNTY0NkMyMkMzRERDQUQ2Q0FFNjBERUMwQ0FGMDVEMDAxQUNDNEFGRDE2MjBFNTZDQUI4OUI0N0VFQkY2QTU1QjU5QUUxODA1NDY0NjgyODg5NjNGRTQyMDhENEFBRUVGNTYyQzlCMDY0RjkyNDY5MTlCNTc1NUU1Q0QzQjFERTc2RkVGQzcyNjI4QThEMzI0MjE4QTkzRTM0RDZEMTY4NUQ4NzAxMTk1QzgxNjg0OEFBRTczNTExRUYwMENGRjA1Q0MxM0Y2MzhBQTkzQzI5MTYwMjZBMzVCNEExRjU3MzZGMDNDQjE3MjI3RjRENjIwNEI4NTI0QzFDRkZEMUZDRDBDNDQwMjJGMDREODE3ODIwRTNBNEQxMjBGQjkxQzE3Q0U5NjZFNjRGNEMzOTY1OUYxQzcyNEMzNEY2NkEyMDZGOEVDOTYzMUE2RkI3RUEzOTNCMzg4MUU0N0E5QzUzMkJDNDQ2MkREOEUyQ0FERUJBRUFERjYyNzY1OUY4Mzg4QzcxNDY1Nzc2ODdFNjI0MjdDMTJCNDdDNUJDQ0FCQzRGNDYzMEU2NTc5NTA5QjUxQzM5MUQ4NjcxNEIyRDExMEU0MUQ1MDZFRkFCQzdBRTc1QzVFRDdENzIyMzU0NDIwNkVEQkQ2MTJGMDgwM0VENTcwOERDMDFFQkNBQ0ZCQTZGODQxNkQxQzU5QTczREFEOUNGNjlENEVGNkMxMzBCM0EyREQxREI1M0VFMzc2RTRGQjQyNkRBOEVCQUE5RjdCRDc0NEZFRjRDMzBBRDEwNzlDMTI3QTNEMTQ5QTU4Q0NGNTU0ODA0RUU0NzIzQzM3QUJCMEQyQTQ4MzEzQkI4RTlENDAyMkM5Nzg5QTE2QzE1QjIwNjA3QzVGMEU5ODZDN0IwMTBBNEVFOERDNzY5RTFDREIxMThFNDRGMDJCMDcyNTQwODFDODI2QTJBM0VBODJCQUNGOEYzRjY0OEM0RURDODk3MTVFQTI1QkM5MUNBMzY3Q0U2RjlEQ0ZDNkFGOEVBOEI5NzJBRDA3M0Q4MjlBMkU4QTc2MkJFOUJDRTM0MjcxMjFBODhEQzE2QkZEMDQ0MTU1MDAwRTZDNzYxNzNEOUI3NUMwRDREQTQwRDk5MUU0RkFERkRBMkRFMDE5QTkzRTkxMURFM0Y0MkZDREFGNjg5MkY3NzRFMkFCNA=="
+                    autocomplete="off"
+                  />
+                  <div class="umbraco-forms-page">
+                    <fieldset
+                      class="umbraco-forms-fieldset"
+                      id="2269813a-9d54-4b51-c9ed-a6bae2d5c9d8"
+                    >
+                      <div class="row">
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field firstname shortanswer mandatory"
+                          >
+                            <label
+                              for="7bc1e763-e78f-4957-c616-c4d8a2c4740f"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              First Name
+                              <span class="umbraco-forms-indicator">*</span>
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="7bc1e763-e78f-4957-c616-c4d8a2c4740f"
+                                id="7bc1e763-e78f-4957-c616-c4d8a2c4740f"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-val="true"
+                                data-val-required="Please provide a value for First Name"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                                aria-required="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="7bc1e763-e78f-4957-c616-c4d8a2c4740f"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field lastname shortanswer mandatory alternating"
+                          >
+                            <label
+                              for="a962f17d-33c3-493d-de8c-e0193db00e60"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              Last Name
+                              <span class="umbraco-forms-indicator">*</span>
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="a962f17d-33c3-493d-de8c-e0193db00e60"
+                                id="a962f17d-33c3-493d-de8c-e0193db00e60"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-val="true"
+                                data-val-required="Please provide a value for Last Name"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                                aria-required="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="a962f17d-33c3-493d-de8c-e0193db00e60"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="umbraco-forms-fieldset"
+                      id="061ed4a9-4e06-452c-cbcd-202e5cff6052"
+                    >
+                      <div class="row">
+                        <div class="umbraco-forms-container columns medium-12">
+                          <div
+                            class="umbraco-forms-field emailaddress shortanswer mandatory"
+                          >
+                            <label
+                              for="0aab0af2-d30c-4414-b2c7-7e4001a63c68"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              Email Address
+                              <span class="umbraco-forms-indicator">*</span>
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="0aab0af2-d30c-4414-b2c7-7e4001a63c68"
+                                id="0aab0af2-d30c-4414-b2c7-7e4001a63c68"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-val="true"
+                                data-val-required="Please provide a value for Email Address"
+                                data-val-regex="Please provide a valid value for Email Address"
+                                data-regex="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                                aria-required="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="0aab0af2-d30c-4414-b2c7-7e4001a63c68"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="umbraco-forms-fieldset"
+                      id="fa283a76-37ef-4269-cb93-9ed5c03a53a3"
+                    >
+                      <div class="row">
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field phonenumber shortanswer alternating"
+                          >
+                            <label
+                              for="a31f97a2-1560-4db5-8666-c994571bbdc5"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              Phone Number
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="a31f97a2-1560-4db5-8666-c994571bbdc5"
+                                id="a31f97a2-1560-4db5-8666-c994571bbdc5"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="a31f97a2-1560-4db5-8666-c994571bbdc5"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field zipcode shortanswer mandatory"
+                          >
+                            <label
+                              for="68d3e8c3-46bf-44a0-9855-4aa7ef8e9ee7"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              Zip Code
+                              <span class="umbraco-forms-indicator">*</span>
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="68d3e8c3-46bf-44a0-9855-4aa7ef8e9ee7"
+                                id="68d3e8c3-46bf-44a0-9855-4aa7ef8e9ee7"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-val="true"
+                                data-val-required="Please provide a value for Zip Code"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                                aria-required="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="68d3e8c3-46bf-44a0-9855-4aa7ef8e9ee7"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="umbraco-forms-fieldset"
+                      id="4e77cb4e-be13-469a-c93f-fa8b76561330"
+                    >
+                      <div class="row">
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field instrumenttype shortanswer alternating"
+                          >
+                            <label
+                              for="83675170-f037-4e98-ea1c-9b9c8f525672"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              Instrument Type
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="83675170-f037-4e98-ea1c-9b9c8f525672"
+                                id="83675170-f037-4e98-ea1c-9b9c8f525672"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="83675170-f037-4e98-ea1c-9b9c8f525672"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field whatkindofrepaircanwehelpyouwith shortanswer"
+                          >
+                            <label
+                              for="dc044a36-bf84-409a-91a9-8ca2e55ea1d9"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              What kind of repair can we help you with?
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="text"
+                                name="dc044a36-bf84-409a-91a9-8ca2e55ea1d9"
+                                id="dc044a36-bf84-409a-91a9-8ca2e55ea1d9"
+                                class="text"
+                                value=""
+                                maxlength="500"
+                                data-ae-blurbtype="input"
+                                data-ae-form-field="true"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="dc044a36-bf84-409a-91a9-8ca2e55ea1d9"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="umbraco-forms-fieldset"
+                      id="089c202e-8a02-42cc-c2e2-3ed0a6d434ea"
+                    >
+                      <div class="row">
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div
+                            class="umbraco-forms-field recaptcha recaptcha2 mandatory alternating"
+                          >
+                            <label
+                              for="8883408e-58a3-48eb-c8d6-f422d2c201f9"
+                              class="umbraco-forms-label ae-label"
+                            >
+                              reCAPTCHA
+                              <span class="umbraco-forms-indicator">*</span>
+                            </label>
+                            <div class="umbraco-forms-field-wrapper">
+                              <script
+                                src="https://www.google.com/recaptcha/api.js"
+                                async=""
+                                defer=""
+                              ></script>
+                              <div
+                                class="g-recaptcha"
+                                data-sitekey="6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1"
+                                data-theme="light"
+                                data-size="normal"
+                              >
+                                <div style="width: 304px; height: 78px;">
+                                  <div>
+                                    <iframe
+                                      src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=AFBwIe6h0oOL7MOVu88LHld-&amp;theme=light&amp;size=normal&amp;cb=a9w4e6xwnw62"
+                                      width="304"
+                                      height="78"
+                                      role="presentation"
+                                      name="a-wv69tk7tbcq"
+                                      frameborder="0"
+                                      scrolling="no"
+                                      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                                    ></iframe>
+                                  </div>
+                                  <textarea
+                                    id="g-recaptcha-response"
+                                    name="g-recaptcha-response"
+                                    class="g-recaptcha-response"
+                                    style="
+                                      width: 250px;
+                                      height: 40px;
+                                      border: 1px solid rgb(193, 193, 193);
+                                      margin: 10px 25px;
+                                      padding: 0px;
+                                      resize: none;
+                                      display: none;
+                                    "
+                                    data-ae-blurbtype="textarea"
+                                    data-ae-form-field="true"
+                                    aria-label="g recaptcha response"
+                                  ></textarea>
+                                </div>
+                                <iframe style="display: none;"></iframe>
+                              </div>
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="8883408e-58a3-48eb-c8d6-f422d2c201f9"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="umbraco-forms-container columns medium-6">
+                          <div class="umbraco-forms-field cookie cookie">
+                            <div class="umbraco-forms-field-wrapper">
+                              <input
+                                type="hidden"
+                                name="06a7f335-bb07-4933-905f-9cf4152acd01"
+                                id="06a7f335-bb07-4933-905f-9cf4152acd01"
+                                class="hidden"
+                                value=""
+                                autocomplete="off"
+                              />
+                              <span
+                                class="field-validation-valid"
+                                data-valmsg-for="06a7f335-bb07-4933-905f-9cf4152acd01"
+                                data-valmsg-replace="true"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div style="display: none;">
+                      <input
+                        type="text"
+                        name="0c864df7da5544e98cb8d701cd3f33c6"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                        aria-label="0c864df7da5544e98cb8d701cd3f33c6"
+                      />
+                    </div>
+                    <div class="umbraco-forms-navigation row">
+                      <div class="columns">
+                        <input
+                          type="submit"
+                          class="button primary ae-button"
+                          value="Request a Repair"
+                          name="__next"
+                          data-ae-blurbtype="button"
+                          data-ae-form-field="true"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    name="ufprt"
+                    type="hidden"
+                    value="BE8BEDAD1B7AC52A94F4FD6D986009B010200CD6B0373917414E7601F83BF3397DD374C7B3FF2C26033219C8198412BCBD77727C0AFB5DD277A6746E42B05ACD57AF1D685CCCB0D7F36D8E11110713A72638DDABBB4FD3EA344CFE172CE1570F51C7B8C79AE4E1064F909E5161B84979EC41A81C60C5638021EFCEB1BD114DA8420666A2"
+                    autocomplete="off"
+                  />
+                </form>
+              </div>
+            </div>
+            <div>
+              <h6 role="presentation">
+                By submitting my information, I agree to be contacted by phone
+                or email by Music &amp; Arts. I also agree to receive emails
+                with news and deals from Music &amp; Arts. View the Music &amp;
+                Arts&nbsp;<a
+                  href="https://www.musicarts.com/cms/privacy-policy/"
+                  >Privacy Policy</a
+                >.
+              </h6>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+          </div>
+          <div class="columns medium-6 umb-grid__section__row__cell">
+            <div>
+              <img
+                src="/images/repairpricelist-750x300.jpg"
+                alt="2020 repair price list"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <ul class="arrow-bullet link-list">
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/trumpet-repair/"
+                    >Trumpet Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/trombone-repair/"
+                    >Trombone Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/french-horn-repair/"
+                    >French Horn Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/saxophone-repair/"
+                    >Saxophone Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/piccolo-repair/"
+                    >Piccolo Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/flute-repair/"
+                    >Flute Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/bass-clarinet-repair/"
+                    >Bass Clarinet Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/clarinet-repair/"
+                    >Clarinet Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/string-repair/"
+                    >String Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/fretted-instrument-repair/"
+                    >Fretted Instrument Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/oboe-repair/"
+                    >Oboe Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/bassoon-repair/"
+                    >Bassoon Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/baritoneeuphonium-repair/"
+                    >Baritone/Euphonium Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/tuba-repair/"
+                    >Tuba Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cms/the-repair-shop/2020-repair-price-list/bow-repair/"
+                    >Bow Repair</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--left umb-text--normal">
+              <h2>The Largest Instrument Repair Network</h2>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <ul>
+                <li style="text-align: left;">
+                  Music &amp; Arts has over&nbsp;<strong
+                    >40 instrument repair facilities</strong
+                  >&nbsp;placed nationwide to service all 200+ store locations
+                </li>
+                <li style="text-align: left;">
+                  Instrument repairs by the leading professional technicians in
+                  the industry
+                </li>
+                <li style="text-align: left;">
+                  Service that is affordable, timely, and unconditionally
+                  guaranteed
+                </li>
+                <li style="text-align: left;">
+                  Locality that is supported by the largest full-service network
+                  in the country
+                </li>
+                <li style="text-align: left;">
+                  Music &amp; Arts is an&nbsp;<strong
+                    >authorized service center</strong
+                  >&nbsp;for the most widely respected band and orchestra
+                  instrument brands
+                </li>
+              </ul>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+        <div class="row umb-grid__section__row theme__secondary-alternate">
+          <div
+            class="text-center columns medium-6 umb-grid__section__row__cell theme__secondary-alternate"
+          >
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <div class="responsive-embed widescreen">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/_s_XXIv0JNE?rel=0&amp;enablejsapi=1"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen=""
+                  id="_s_XXIv0JNE"
+                  data-dayt="true"
+                  title="YouTube Video"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div
+            class="umb-padding--top umb-padding--bottom columns medium-6 umb-grid__section__row__cell theme__primary"
+          >
+            <div>
+              <h3
+                class="umb-text--normal"
+                style="text-align: center; font-size: 1.5rem;"
+                role="heading"
+                aria-level="2"
+              >
+                Best-In-Class Technicians
+              </h3>
+              <hr style="width: 70%; border-bottom-color: #f2f2f2;" />
+              <p style="text-align: center;">
+                We have a&nbsp;<strong>deep bench of experts</strong>&nbsp;who
+                have trained with the best apprentice programs and technical
+                colleges
+              </p>
+              <p style="text-align: center;">
+                Carrying an incredible depth of knowledge our technicians
+                continue to&nbsp;<strong>mold industry standards</strong>
+              </p>
+              <p style="text-align: center;">
+                The Music &amp; Arts Repair Center in Frederick, MD is also
+                a&nbsp;<strong>training center&nbsp;</strong>for the next
+                generation of technicians
+              </p>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <p style="text-align: center;">
+                <a style="color: #fff;" href="/cms/the-repair-shop/services/"
+                  >Learn more about our serviceable instrument types here</a
+                >&nbsp;
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row umb-grid__section__row">
+          <div class="columns medium-12 umb-grid__section__row__cell">
+            <div>
+              <hr style="width: 70%; border-bottom-color: #f2f2f2;" />
+            </div>
+          </div>
+        </div>
+        <div class="umb-padding--bottom row umb-grid__section__row">
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_faq.jpg"
+                alt="Repair FAQ"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">Repair FAQ</h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a href="/cms/the-repair-shop/repair-faq/" class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about Repair FAQ
+                </span></a
+              >
+            </div>
+          </div>
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_ima.jpg"
+                alt="Instrument Maintenance Agreements"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">
+                Instrument Maintenance Agreements
+              </h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a href="/cms/the-repair-shop/ima/" class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about Instrument Maintenance Agreements
+                </span></a
+              >
+            </div>
+          </div>
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_water.jpg"
+                alt="Water Damage Care"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">Water Damage Care</h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a href="/cms/the-repair-shop/water-damage-care/" class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about Water Damage Care
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="umb-padding--bottom row umb-grid__section__row">
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_woodwind.jpg"
+                alt="Woodwind Instrument Care"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">Woodwind Instrument Care</h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a
+                href="/cms/the-repair-shop/woodwind-instrument-care/"
+                class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about Woodwind Instrument Care
+                </span></a
+              >
+            </div>
+          </div>
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_brass.jpg"
+                alt="Brass Instrument Care"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">Brass Instrument Care</h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a
+                href="/cms/the-repair-shop/brass-instrument-care/"
+                class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about Brass Instrument Care
+                </span></a
+              >
+            </div>
+          </div>
+          <div
+            class="text-center columns medium-4 umb-grid__section__row__cell"
+          >
+            <div>
+              <img
+                src="/images/repair-360x100_string.jpg"
+                alt="String Instrument Care"
+                class="ae-img"
+              />
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div class="umb-align--center umb-text--normal">
+              <h3 role="heading" aria-level="2">String Instrument Care</h3>
+            </div>
+            <div>
+              <div class="umb-spacer"></div>
+            </div>
+            <div>
+              <a
+                href="/cms/the-repair-shop/string-instrument-care/"
+                class="button"
+                >learn more<span
+                  style="display: none;"
+                  class="ae-compliance-indent"
+                >
+                  about String Instrument Care
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row umb-grid__section__row">
+          <div class="columns medium-12 umb-grid__section__row__cell">
+            <div>
+              <hr style="width: 70%; border-bottom-color: #f2f2f2;" />
+            </div>
+          </div>
+        </div>
+        <div class="row umb-grid__section__row">
+          <div class="columns medium-12 umb-grid__section__row__cell">
+            <div>
+              <p>
+                When you need musical instrument repairs, come to Music &amp;
+                Arts. Whether it’s a minor adjustment or a major instrument
+                repair, the Repair Shop at Music &amp; Arts can help. Music
+                &amp; Arts offers high quality, affordable repairs on
+                <span
+                  ><a href="https://www.musicarts.com/woodwinds"
+                    >woodwinds,</a
+                  ></span
+                >
+                <span
+                  ><a href="https://www.musicarts.com/orchestral-strings"
+                    >strings</a
+                  ></span
+                >,
+                <span
+                  ><a href="https://www.musicarts.com/brass-instruments"
+                    >brass</a
+                  ></span
+                >,
+                <span
+                  ><a href="https://www.musicarts.com/drums-percussion"
+                    >percussion</a
+                  ></span
+                >,
+                <span
+                  ><a href="https://www.musicarts.com/drums-percussion"
+                    >electronic instruments</a
+                  ></span
+                >, and more.
+              </p>
+              <p>
+                Music &amp; Arts has one of the largest musical instrument
+                repair networks in the nation. We have 40 repair facilities that
+                service
+                <span
+                  ><a href="https://stores.musicarts.com/"
+                    >each of our 200+ retail locations</a
+                  ></span
+                >. Music &amp; Arts is also an authorized service center for
+                many of the world’s top instrument manufacturers.
+              </p>
+              <p>
+                Music &amp; Arts Repair Shop services for musical instruments
+                include dent removal, re-stringing, re-corking, structural
+                repair, cleaning and polishing, readjustments, valve repair,
+                replacing broken parts, and more. We also offer
+                <span
+                  ><a href="https://thevault.musicarts.com/?s=maintenance"
+                    >general instrument maintenance
+                  </a></span
+                >and water damage repair.
+              </p>
+              <p>
+                Not sure what kind of musical instrument repair you need? Don’t
+                worry. At the Music &amp; Arts Repair Shop, instrument repair
+                estimates are always free. We’ll also show you the best way to
+                take care of your instrument. Our friendly Repair Shop employees
+                can share their expert knowledge for cleaning, storing and
+                maintaining your instrument.
+              </p>
+              <p>
+                At the Music &amp; Arts Repair Shop, we guarantee the highest
+                quality service for musical instrument repairs. Our musical
+                instrument repair technicians are seasoned professionals who
+                have apprenticed with master instrument makers and trained at
+                the best technical colleges. The Music &amp; Arts Repair Center
+                in Frederick, MD is also a training center for the next
+                generation of musical instrument technicians.
+              </p>
+              <p>
+                If you need musical instrument repairs,
+                <span
+                  ><a href="https://stores.musicarts.com/"
+                    >visit a Music &amp; Arts near you</a
+                  > </span
+                >or call 888-731-5396 to learn more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

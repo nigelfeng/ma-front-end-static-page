@@ -105,4 +105,21 @@ $(function () {
   $(document).on("click", ".reveal-overlay .close-button", function () {
     $(".reveal-overlay").hide();
   });
+
+  $(document).on("click", ".large.has-tip.bottom.ae-button", function(e) {
+    $(".reveal-overlay").show();
+    e.preventDefault();
+  })
+
+  $(document).on("change", "input[name=action][type=radio]",function(e){
+    if(e.target.checked && e.target.value === "C" ) {
+      $("#savelist-existing").hide();
+      $("#savelist-new").show();
+    }else {
+      $("#savelist-existing").show();
+      $("#savelist-new").hide();
+    }
+  })
+
+
 });

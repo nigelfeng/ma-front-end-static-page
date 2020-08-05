@@ -1,803 +1,1114 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-touch-fullscreen" content="no" />
-    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
-    <meta name="description"
-        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
-    <base href="/" />
-    <link rel="canonical" href="https://www.musicarts.com" />
-    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
-</head>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                      >Commercial Accounts</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
 
-<body>
-    <div class="off-canvas-wrapper">
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="skiplinks">
-                <a href="#main" tabindex="0">Skip to main content</a>
-                <a href="#footer" tabindex="0">Skip to footer</a>
-            </div>
-            ${require('html-loader!../components/header.html')}
-            <div id="main" class="main" role="main">
-                <div class="row">
-                    <div class="content">
-
-                        <nav role="navigation">
-                            <ul class="breadcrumbs" aria-label="You are here:">
-                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
-                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
-
-                            </ul>
-                        </nav>
-
-                        <div class="row" aria-labelledby="page-title">
-
-                            <aside class="columns large-3">
-                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
-                                    Account</h1>
-                                <nav role="navigation">
-                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
-                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
-                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
-                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
-                                            id="97cr12-acc-menu-link">
-                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
-                                                id="account-menu">Account</a>
-                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
-                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
-                                                id="r5f68c-acc-menu" style="display: none;">
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
-                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
-                                                        Tracking</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
-                                                        Lists</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="addressesAndPayment"
-                                                        href="/account/addresses-and-payment">Address &amp;
-                                                        Payment</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
-                                                        Info</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
-                                                    aria-hidden="true">
-                                                    <a ui-sref="commercialAccounts"
-                                                        href="/account/commercial-accounts">Commercial
-                                                        Accounts</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="support" href="/account/support">Support</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
-
-                            <section class="columns large-9" aria-labelledby="view-title">
-                                <ui-view on-display-messaging="$ctrl.displayMessages(messages)" class="ng-scope">
-                                    <order-component on-display-messaging="$ctrl.displayMessages(messages)"
-                                        get-order-search-results="::$resolve.getOrderSearchResults"
-                                        customer-service-info="::$resolve.customerServiceInfo"
-                                        class="ng-scope ng-isolate-scope">
-                                        <header role="presentation">
-                                            <h2 class="highlight" id="view-title">Orders &amp; Tracking</h2>
-                                            <p>Click on an order you wish to track or review. If you do not see
-                                                your order, call <a class="phone ng-binding"
-                                                    href="tel:888-731-5396">888-731-5396</a>.</p>
-                                        </header>
-                                        <div class="page-spinner" aria-busy="true">
-                                            <div class="spinner-content">
-                                                <object data="/dist/img/spinner.svg" type="image/svg+xml"
-                                                    class="spinner ae-media"
-                                                    data-player-url="/dist/img/spinner.svg"><span
-                                                        class="ae-compliance-indent" style="display:none;">
-                                                        loading spinner</span></object>
-                                                <div class="spinner-message allcaps">Loading</div>
-                                            </div>
-                                        </div>
-
-                                        <order-display-options options="$ctrl.displayOptions"
-                                            page-count="$ctrl.orderResults.metadata.pageCount"
-                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
-                                            <ul class="search-display-options" aria-label="Viewing Options"
-                                                role="presentation">
-                                                <li class="pagination-container" role="presentation">
-                                                    <order-pagination page-count="$ctrl.options.pageCount"
-                                                        page-size="$ctrl.options.pageSize"
-                                                        page-num="$ctrl.options.pageNumber"
-                                                        on-page-change="$ctrl.changePage(page)"
-                                                        class="ng-isolate-scope">
-                                                        <ul class="pagination" aria-label="Pagination">
-                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Previous page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Previous
-                                                                        page</span></button>
-                                                            </li>
-
-                                                            <li class="ng-scope current">
-                                                                <span class="ng-binding ng-scope"><span
-                                                                        class="show-for-sr">You're on
-                                                                        page</span> 1</span>
-
-                                                            </li>
-                                                            <li class="ng-scope ellipsis" aria-hidden="true">
-
-
-                                                            </li>
-                                                            <li class="pagination-next ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Next page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Next
-                                                                        page</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </order-pagination>
-                                                </li>
-                                            </ul>
-
-                                        </order-display-options>
-
-                                        <div class="faux-table" role="table" aria-labelled="Your orders">
-
-                                            <div class="table-row table-header" role="row">
-                                                <div role="columnheader" id="order-date">Order Date</div>
-                                                <div role="columnheader" id="order-number">Order Number</div>
-
-                                                <div role="columnheader" id="order-total">Total</div>
-                                                <div role="columnheader" id="order-status">Status</div>
-                                                <div role="columnheader" id="view-order">View Order</div>
-                                            </div>
-                                            <div class="table-row" aria-hidden="false">
-                                                <p>You have no order history. <a href="/" target="_self">Start
-                                                        shopping!</a></p>
-                                            </div>
-
-                                        </div>
-
-                                        <order-display-options options="$ctrl.displayOptions"
-                                            page-count="$ctrl.orderResults.metadata.pageCount"
-                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
-                                            <ul class="search-display-options" aria-label="Viewing Options"
-                                                role="presentation">
-                                                <li class="pagination-container" role="presentation">
-                                                    <order-pagination page-count="$ctrl.options.pageCount"
-                                                        page-size="$ctrl.options.pageSize"
-                                                        page-num="$ctrl.options.pageNumber"
-                                                        on-page-change="$ctrl.changePage(page)"
-                                                        class="ng-isolate-scope">
-                                                        <ul class="pagination" aria-label="Pagination">
-                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Previous page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Previous
-                                                                        page</span></button>
-                                                            </li>
-
-                                                            <li class="ng-scope current">
-                                                                <span class="ng-binding ng-scope"><span
-                                                                        class="show-for-sr">You're on
-                                                                        page</span> 1</span>
-
-                                                            </li>
-                                                            <li class="ng-scope ellipsis" aria-hidden="true">
-
-
-                                                            </li>
-                                                            <li class="pagination-next ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Next page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Next
-                                                                        page</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </order-pagination>
-                                                </li>
-                                            </ul>
-
-                                        </order-display-options>
-
-
-                                    </order-component>
-                                </ui-view>
-                            </section>
-                        </div>
-                    </div>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <order-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-order-search-results="::$resolve.getOrderSearchResults"
+              customer-service-info="::$resolve.customerServiceInfo"
+              class="ng-scope ng-isolate-scope"
+            >
+              <header role="presentation">
+                <h2 class="highlight" id="view-title">Orders &amp; Tracking</h2>
+                <p>
+                  Click on an order you wish to track or review. If you do not
+                  see your order, call
+                  <a class="phone ng-binding" href="tel:888-731-5396"
+                    >888-731-5396</a
+                  >.
+                </p>
+              </header>
+              <div class="page-spinner" aria-busy="true">
+                <div class="spinner-content">
+                  <object
+                    data="/dist/img/spinner.svg"
+                    type="image/svg+xml"
+                    class="spinner ae-media"
+                    data-player-url="/dist/img/spinner.svg"
+                    ><span class="ae-compliance-indent" style="display: none;">
+                      loading spinner</span
+                    ></object
+                  >
+                  <div class="spinner-message allcaps">Loading</div>
                 </div>
-            </div>
+              </div>
 
-            <hr>
+              <order-display-options
+                options="$ctrl.displayOptions"
+                page-count="$ctrl.orderResults.metadata.pageCount"
+                on-options-change="$ctrl.changeOptions(options)"
+                class="ng-isolate-scope"
+              >
+                <ul
+                  class="search-display-options"
+                  aria-label="Viewing Options"
+                  role="presentation"
+                >
+                  <li class="pagination-container" role="presentation">
+                    <order-pagination
+                      page-count="$ctrl.options.pageCount"
+                      page-size="$ctrl.options.pageSize"
+                      page-num="$ctrl.options.pageNumber"
+                      on-page-change="$ctrl.changePage(page)"
+                      class="ng-isolate-scope"
+                    >
+                      <ul class="pagination" aria-label="Pagination">
+                        <li
+                          class="pagination-previous ng-hide"
+                          aria-hidden="true"
+                        >
+                          <button
+                            type="button"
+                            aria-label="Previous page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Previous page</span>
+                          </button>
+                        </li>
 
-            <div id="main" class="main" role="main">
-                <div class="row">
-                    <div class="content">
+                        <li class="ng-scope current">
+                          <span class="ng-binding ng-scope"
+                            ><span class="show-for-sr">You're on page</span>
+                            1</span
+                          >
+                        </li>
+                        <li class="ng-scope ellipsis" aria-hidden="true"></li>
+                        <li class="pagination-next ng-hide" aria-hidden="true">
+                          <button
+                            type="button"
+                            aria-label="Next page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Next page</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </order-pagination>
+                  </li>
+                </ul>
+              </order-display-options>
 
-                        <nav role="navigation">
-                            <ul class="breadcrumbs" aria-label="You are here:">
-                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
-                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+              <div class="faux-table" role="table" aria-labelled="Your orders">
+                <div class="table-row table-header" role="row">
+                  <div role="columnheader" id="order-date">Order Date</div>
+                  <div role="columnheader" id="order-number">Order Number</div>
 
-                            </ul>
-                        </nav>
-
-                        <div class="row" aria-labelledby="page-title">
-
-                            <aside class="columns large-3">
-                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
-                                    Account</h1>
-                                <nav role="navigation">
-                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
-                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
-                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
-                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
-                                            id="97cr12-acc-menu-link">
-                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
-                                                id="account-menu">Account</a>
-                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
-                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
-                                                id="r5f68c-acc-menu" style="display: none;">
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
-                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
-                                                        Tracking</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
-                                                        Lists</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="addressesAndPayment"
-                                                        href="/account/addresses-and-payment">Address &amp;
-                                                        Payment</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
-                                                        Info</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
-                                                    aria-hidden="true">
-                                                    <a ui-sref="commercialAccounts"
-                                                        href="/account/commercial-accounts">Commercial
-                                                        Accounts</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="support" href="/account/support">Support</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
-
-                            <section class="columns large-9" aria-labelledby="view-title">
-                                <ui-view on-display-messaging="$ctrl.displayMessages(messages)" class="ng-scope">
-                                    <order-component on-display-messaging="$ctrl.displayMessages(messages)"
-                                        get-order-search-results="::$resolve.getOrderSearchResults"
-                                        customer-service-info="::$resolve.customerServiceInfo"
-                                        class="ng-scope ng-isolate-scope">
-                                        <header role="presentation">
-                                            <h2 class="highlight" id="view-title">Orders &amp; Tracking</h2>
-                                            <p>Click on an order you wish to track or review. If you do not see
-                                                your order, call <a class="phone ng-binding"
-                                                    href="tel:888-731-5396">888-731-5396</a>.</p>
-                                        </header>
-
-                                        <order-display-options options="$ctrl.displayOptions"
-                                            page-count="$ctrl.orderResults.metadata.pageCount"
-                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
-                                            <ul class="search-display-options" aria-label="Viewing Options"
-                                                role="presentation">
-                                                <li class="pagination-container" role="presentation">
-                                                    <order-pagination page-count="$ctrl.options.pageCount"
-                                                        page-size="$ctrl.options.pageSize"
-                                                        page-num="$ctrl.options.pageNumber"
-                                                        on-page-change="$ctrl.changePage(page)"
-                                                        class="ng-isolate-scope">
-                                                        <ul class="pagination" aria-label="Pagination">
-                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Previous page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Previous
-                                                                        page</span></button>
-                                                            </li>
-
-                                                            <li class="ng-scope current">
-                                                                <span class="ng-binding ng-scope"><span
-                                                                        class="show-for-sr">You're on
-                                                                        page</span> 1</span>
-
-                                                            </li>
-                                                            <li class="ng-scope ellipsis" aria-hidden="true">
-
-
-                                                            </li>
-                                                            <li class="pagination-next ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Next page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Next
-                                                                        page</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </order-pagination>
-                                                </li>
-                                            </ul>
-
-                                        </order-display-options>
-
-                                        <div class="faux-table" role="table" aria-labelled="Your orders">
-
-                                            <div class="table-row table-header" role="row">
-                                                <div role="columnheader" id="order-date">Order Date</div>
-                                                <div role="columnheader" id="order-number">Order Number</div>
-
-                                                <div role="columnheader" id="order-total">Total</div>
-                                                <div role="columnheader" id="order-status">Status</div>
-                                                <div role="columnheader" id="view-order">View Order</div>
-                                            </div>
-                                            <div class="table-row" ng-show="$ctrl.orders.length"
-                                                ng-repeat="order in $ctrl.orders | orderBy:'-orderDate'" role="row">
-                                                <div class="header-for-small" role="cell" aria-labelledby="order-date">
-                                                    <strong class="show-for-small-only">Order Date:</strong> 7/28/2020
-                                                    <span class="float-right show-for-small-only">
-                                                        <a ui-sref="orderDetails({id: order.number})">View Order <span
-                                                                class="icon icon-color-primary fa-caret-right"
-                                                                aria-hidden="true"></span></a>
-                                                    </span>
-                                                </div>
-                                                <div class="with-label" role="cell" aria-labelledby="order-number">
-                                                    <div class="table-cell-label" role="presentation">Order #:</div>
-                                                    <div class="table-cell-content"> #132123</div>
-                                                </div>
-
-                                                <div class="with-label" role="cell" aria-labelledby="order-total">
-                                                    <div class="table-cell-label" role="presentation">Total:</div>
-                                                    <div class="table-cell-content">$123</div>
-                                                </div>
-                                                <div class="with-label" role="cell" aria-labelledby="order-status">
-                                                    <div class="table-cell-label" role="presentation">Status:</div>
-                                                    <div class="table-cell-content"> status </div>
-                                                </div>
-                                                <div class="show-for-medium" role="cell" aria-labelledby="view-order">
-                                                    <a ui-sref="orderDetails({id: order.number})">View Order <span
-                                                            class="icon icon-color-primary fa-caret-right"
-                                                            aria-hidden="true"></span></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <order-display-options options="$ctrl.displayOptions"
-                                            page-count="$ctrl.orderResults.metadata.pageCount"
-                                            on-options-change="$ctrl.changeOptions(options)" class="ng-isolate-scope">
-                                            <ul class="search-display-options" aria-label="Viewing Options"
-                                                role="presentation">
-                                                <li class="pagination-container" role="presentation">
-                                                    <order-pagination page-count="$ctrl.options.pageCount"
-                                                        page-size="$ctrl.options.pageSize"
-                                                        page-num="$ctrl.options.pageNumber"
-                                                        on-page-change="$ctrl.changePage(page)"
-                                                        class="ng-isolate-scope">
-                                                        <ul class="pagination" aria-label="Pagination">
-                                                            <li class="pagination-previous ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Previous page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Previous
-                                                                        page</span></button>
-                                                            </li>
-
-                                                            <li class="ng-scope current">
-                                                                <span class="ng-binding ng-scope"><span
-                                                                        class="show-for-sr">You're on
-                                                                        page</span> 1</span>
-
-                                                            </li>
-                                                            <li class="ng-scope ellipsis" aria-hidden="true">
-
-
-                                                            </li>
-                                                            <li class="pagination-next ng-hide" aria-hidden="true">
-                                                                <button type="button" aria-label="Next page"
-                                                                    class="ae-button" data-ae-blurbtype="button"
-                                                                    data-ae-form-field="true"><span
-                                                                        class="show-for-sr">Next
-                                                                        page</span></button>
-                                                            </li>
-                                                        </ul>
-                                                    </order-pagination>
-                                                </li>
-                                            </ul>
-                                        </order-display-options>
-                                    </order-component>
-                                </ui-view>
-                            </section>
-                        </div>
-                    </div>
+                  <div role="columnheader" id="order-total">Total</div>
+                  <div role="columnheader" id="order-status">Status</div>
+                  <div role="columnheader" id="view-order">View Order</div>
                 </div>
+                <div class="table-row" aria-hidden="false">
+                  <p>
+                    You have no order history.
+                    <a href="/" target="_self">Start shopping!</a>
+                  </p>
+                </div>
+              </div>
+
+              <order-display-options
+                options="$ctrl.displayOptions"
+                page-count="$ctrl.orderResults.metadata.pageCount"
+                on-options-change="$ctrl.changeOptions(options)"
+                class="ng-isolate-scope"
+              >
+                <ul
+                  class="search-display-options"
+                  aria-label="Viewing Options"
+                  role="presentation"
+                >
+                  <li class="pagination-container" role="presentation">
+                    <order-pagination
+                      page-count="$ctrl.options.pageCount"
+                      page-size="$ctrl.options.pageSize"
+                      page-num="$ctrl.options.pageNumber"
+                      on-page-change="$ctrl.changePage(page)"
+                      class="ng-isolate-scope"
+                    >
+                      <ul class="pagination" aria-label="Pagination">
+                        <li
+                          class="pagination-previous ng-hide"
+                          aria-hidden="true"
+                        >
+                          <button
+                            type="button"
+                            aria-label="Previous page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Previous page</span>
+                          </button>
+                        </li>
+
+                        <li class="ng-scope current">
+                          <span class="ng-binding ng-scope"
+                            ><span class="show-for-sr">You're on page</span>
+                            1</span
+                          >
+                        </li>
+                        <li class="ng-scope ellipsis" aria-hidden="true"></li>
+                        <li class="pagination-next ng-hide" aria-hidden="true">
+                          <button
+                            type="button"
+                            aria-label="Next page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Next page</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </order-pagination>
+                  </li>
+                </ul>
+              </order-display-options>
+            </order-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                      >Commercial Accounts</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <order-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-order-search-results="::$resolve.getOrderSearchResults"
+              customer-service-info="::$resolve.customerServiceInfo"
+              class="ng-scope ng-isolate-scope"
+            >
+              <header role="presentation">
+                <h2 class="highlight" id="view-title">Orders &amp; Tracking</h2>
+                <p>
+                  Click on an order you wish to track or review. If you do not
+                  see your order, call
+                  <a class="phone ng-binding" href="tel:888-731-5396"
+                    >888-731-5396</a
+                  >.
+                </p>
+              </header>
+
+              <order-display-options
+                options="$ctrl.displayOptions"
+                page-count="$ctrl.orderResults.metadata.pageCount"
+                on-options-change="$ctrl.changeOptions(options)"
+                class="ng-isolate-scope"
+              >
+                <ul
+                  class="search-display-options"
+                  aria-label="Viewing Options"
+                  role="presentation"
+                >
+                  <li class="pagination-container" role="presentation">
+                    <order-pagination
+                      page-count="$ctrl.options.pageCount"
+                      page-size="$ctrl.options.pageSize"
+                      page-num="$ctrl.options.pageNumber"
+                      on-page-change="$ctrl.changePage(page)"
+                      class="ng-isolate-scope"
+                    >
+                      <ul class="pagination" aria-label="Pagination">
+                        <li
+                          class="pagination-previous ng-hide"
+                          aria-hidden="true"
+                        >
+                          <button
+                            type="button"
+                            aria-label="Previous page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Previous page</span>
+                          </button>
+                        </li>
+
+                        <li class="ng-scope current">
+                          <span class="ng-binding ng-scope"
+                            ><span class="show-for-sr">You're on page</span>
+                            1</span
+                          >
+                        </li>
+                        <li class="ng-scope ellipsis" aria-hidden="true"></li>
+                        <li class="pagination-next ng-hide" aria-hidden="true">
+                          <button
+                            type="button"
+                            aria-label="Next page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Next page</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </order-pagination>
+                  </li>
+                </ul>
+              </order-display-options>
+
+              <div class="faux-table" role="table" aria-labelled="Your orders">
+                <div class="table-row table-header" role="row">
+                  <div role="columnheader" id="order-date">Order Date</div>
+                  <div role="columnheader" id="order-number">Order Number</div>
+
+                  <div role="columnheader" id="order-total">Total</div>
+                  <div role="columnheader" id="order-status">Status</div>
+                  <div role="columnheader" id="view-order">View Order</div>
+                </div>
+                <div
+                  class="table-row"
+                  ng-show="$ctrl.orders.length"
+                  ng-repeat="order in $ctrl.orders | orderBy:'-orderDate'"
+                  role="row"
+                >
+                  <div
+                    class="header-for-small"
+                    role="cell"
+                    aria-labelledby="order-date"
+                  >
+                    <strong class="show-for-small-only">Order Date:</strong>
+                    7/28/2020
+                    <span class="float-right show-for-small-only">
+                      <a ui-sref="orderDetails({id: order.number})"
+                        >View Order
+                        <span
+                          class="icon icon-color-primary fa-caret-right"
+                          aria-hidden="true"
+                        ></span
+                      ></a>
+                    </span>
+                  </div>
+                  <div
+                    class="with-label"
+                    role="cell"
+                    aria-labelledby="order-number"
+                  >
+                    <div class="table-cell-label" role="presentation">
+                      Order #:
+                    </div>
+                    <div class="table-cell-content">#132123</div>
+                  </div>
+
+                  <div
+                    class="with-label"
+                    role="cell"
+                    aria-labelledby="order-total"
+                  >
+                    <div class="table-cell-label" role="presentation">
+                      Total:
+                    </div>
+                    <div class="table-cell-content">$123</div>
+                  </div>
+                  <div
+                    class="with-label"
+                    role="cell"
+                    aria-labelledby="order-status"
+                  >
+                    <div class="table-cell-label" role="presentation">
+                      Status:
+                    </div>
+                    <div class="table-cell-content">status</div>
+                  </div>
+                  <div
+                    class="show-for-medium"
+                    role="cell"
+                    aria-labelledby="view-order"
+                  >
+                    <a ui-sref="orderDetails({id: order.number})"
+                      >View Order
+                      <span
+                        class="icon icon-color-primary fa-caret-right"
+                        aria-hidden="true"
+                      ></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <order-display-options
+                options="$ctrl.displayOptions"
+                page-count="$ctrl.orderResults.metadata.pageCount"
+                on-options-change="$ctrl.changeOptions(options)"
+                class="ng-isolate-scope"
+              >
+                <ul
+                  class="search-display-options"
+                  aria-label="Viewing Options"
+                  role="presentation"
+                >
+                  <li class="pagination-container" role="presentation">
+                    <order-pagination
+                      page-count="$ctrl.options.pageCount"
+                      page-size="$ctrl.options.pageSize"
+                      page-num="$ctrl.options.pageNumber"
+                      on-page-change="$ctrl.changePage(page)"
+                      class="ng-isolate-scope"
+                    >
+                      <ul class="pagination" aria-label="Pagination">
+                        <li
+                          class="pagination-previous ng-hide"
+                          aria-hidden="true"
+                        >
+                          <button
+                            type="button"
+                            aria-label="Previous page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Previous page</span>
+                          </button>
+                        </li>
+
+                        <li class="ng-scope current">
+                          <span class="ng-binding ng-scope"
+                            ><span class="show-for-sr">You're on page</span>
+                            1</span
+                          >
+                        </li>
+                        <li class="ng-scope ellipsis" aria-hidden="true"></li>
+                        <li class="pagination-next ng-hide" aria-hidden="true">
+                          <button
+                            type="button"
+                            aria-label="Next page"
+                            class="ae-button"
+                            data-ae-blurbtype="button"
+                            data-ae-form-field="true"
+                          >
+                            <span class="show-for-sr">Next page</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </order-pagination>
+                  </li>
+                </ul>
+              </order-display-options>
+            </order-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                      >Commercial Accounts</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="columns large-9" aria-labelledby="view-title">
+          <!-- order-details-template -->
+          <div class="row">
+            <div class="columns">
+              <div class="h3">
+                <a ui-sref="orders" class="back-arrow">Back to Orders</a>
+              </div>
             </div>
-
-            <div id="main" class="main" role="main">
-                <div class="row">
-                    <div class="content">
-
-                        <nav role="navigation">
-                            <ul class="breadcrumbs" aria-label="You are here:">
-                                <li><a ui-sref="orders" href="/account/orders">Account</a></li>
-                                <li class="ng-scope"><span class="current">Shopping Lists</span></li>
-
-                            </ul>
-                        </nav>
-
-                        <div class="row" aria-labelledby="page-title">
-
-                            <aside class="columns large-3">
-                                <h1 id="page-title" class="show-for-medium ae-label" role="heading" aria-level="2">
-                                    Account</h1>
-                                <nav role="navigation">
-                                    <ul class="vertical menu accordion-menu account-menu" data-accordion-menu=""
-                                        aria-multiselectable="true" data-e="57g4iz-e" role="presentation">
-                                        <li class="is-accordion-submenu-parent ae-label" role="presentation"
-                                            aria-controls="r5f68c-acc-menu" aria-expanded="false"
-                                            id="97cr12-acc-menu-link">
-                                            <a role="button" tabindex="0" class="show-for-small-only bar arrow"
-                                                id="account-menu">Account</a>
-                                            <ul class="menu vertical is-accordion-submenu submenu" data-submenu=""
-                                                aria-labelledby="97cr12-acc-menu-link" aria-hidden="false"
-                                                id="r5f68c-acc-menu" style="display: none;">
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope active">
-                                                    <a ui-sref="orders" href="/account/orders">Orders &amp;
-                                                        Tracking</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="shoppingLists" href="/account/shopping-lists">Shopping
-                                                        Lists</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="addressesAndPayment"
-                                                        href="/account/addresses-and-payment">Address &amp;
-                                                        Payment</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="accountInfo" href="/account/account-info">Account
-                                                        Info</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
-                                                    aria-hidden="true">
-                                                    <a ui-sref="commercialAccounts"
-                                                        href="/account/commercial-accounts">Commercial
-                                                        Accounts</a>
-                                                </li>
-                                                <li class="is-submenu-item is-accordion-submenu-item ng-scope">
-                                                    <a ui-sref="support" href="/account/support">Support</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
-
-                            <section class="columns large-9" aria-labelledby="view-title">
-                                <!-- order-details-template -->
-                                <div class="row">
-                                    <div class="columns">
-                                        <div class="h3">
-                                            <a ui-sref="orders" class="back-arrow">Back to Orders</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--<div class="row columns" ng-hide="$ctrl.order">
+          </div>
+          <!--<div class="row columns" ng-hide="$ctrl.order">
     <p class="large color-primary">Oops! There is no order with the specified order number!</p>
 </div>-->
-                                <div class="row" ng-show="$ctrl.order">
-                                    <div class="content">
-                                        <header>
-                                            <h2 class="highlight" id="view-title">Order Details</h2>
-                                            <div class="button-group float-right">
-                                                <button type="button" ng-click="$ctrl.addAllToCart($ctrl.order.items)"
-                                                    class="primary" hidden>Buy Again</button>
-                                                <a class="button"
-                                                    ui-sref="supportWithId({id: $ctrl.order.number})">Questions?</a>
-                                                <button class="button" type="button" onclick="window.print()"><span
-                                                        class="icon fa-print"></span> Print</button>
-                                            </div>
-                                            <dl class="inline-terms">
-                                                <div>
-                                                    <dt>Order Date</dt>
-                                                    <dd> January 28, 2020  
-                                                    </dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Order #</dt>
-                                                    <dd>#123123</dd>
-                                                </div>
-                                                <div ng-if="$ctrl.poNumber">
-                                                    <dt>PO #</dt>
-                                                    <dd>55555</dd>
-                                                </div>
-                                            </dl>
-                                        </header>
-                                        <section class="cart">
-                                            <div class="cart-items-header m-b-1">
-                                                <div class="items-header" class="items-header">
-                                                    <div class="item-names-header">Your Items</div>
-                                                </div>
-                                                <div class="cost-info">
-                                                    <div class="unit-price-header" class="unit-price-header">Unit Price
-                                                    </div>
-                                                    <div class="quantity-header" class="quantity-header">Quantity</div>
-                                                    <div class="total-header" class="total-header">Total Price</div>
-                                                </div>
-                                            </div>
-                                            <div class="callout no-padding border">
-                                                <ul class="cart-items with-sidebar">
-                                                    <li class="pos-reference" ng-repeat="item in $ctrl.order.items">
-                                                        <div class="h2 bar secondary"
-                                                            ng-repeat="package in item.packages">
-                                                            <ul class="inline-list no-margin" ng-show="package.status">
-                                                                <li>Shipped:  January 28, 2020  
-                                                                </li>
-                                                                <li>Tracking #: #123321</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="product">
-                                                            <figure>
-                                                                <a ng-href="{{item.productUrl}}"
-                                                                    ng-show="item.productUrl">
-                                                                    <img src="../../images/462970000000023-00-250x250.jpg"
-                                                                        alt="{{ item.brandName }} {{ item.productName }}">
-                                                                </a>
-                                                              
-                                                            </figure>
-                                                            <div class="product-info">
-                                                                <p class="name">
-                                                                    <a ng-show="item.productUrl"
-                                                                        ng-href="{{ item.productUrl }}"> brandName  
-                                                                         productName  </a>
-                                                             
-                                                                </p>
-                                                                <ul class="product-numbers" ng-hide="item.isRental">
-                                                                    <li>Item #  sku </li>
-                                                                    <li>Model # modelNumber </li>
-                                                                </ul>
-                                                                <ul class="product-additional" ng-hide="item.isRental">
-                                                                    <li><strong>Condition:</strong> <span
-                                                                            ng-if="item.condition"> condition  </span>
-                                                                            <!-- <span
+          <div class="row" ng-show="$ctrl.order">
+            <div class="content">
+              <header>
+                <h2 class="highlight" id="view-title">Order Details</h2>
+                <div class="button-group float-right">
+                  <button
+                    type="button"
+                    ng-click="$ctrl.addAllToCart($ctrl.order.items)"
+                    class="primary"
+                    hidden
+                  >
+                    Buy Again
+                  </button>
+                  <a
+                    class="button"
+                    ui-sref="supportWithId({id: $ctrl.order.number})"
+                    >Questions?</a
+                  >
+                  <button class="button" type="button" onclick="window.print()">
+                    <span class="icon fa-print"></span> Print
+                  </button>
+                </div>
+                <dl class="inline-terms">
+                  <div>
+                    <dt>Order Date</dt>
+                    <dd>January 28, 2020</dd>
+                  </div>
+                  <div>
+                    <dt>Order #</dt>
+                    <dd>#123123</dd>
+                  </div>
+                  <div ng-if="$ctrl.poNumber">
+                    <dt>PO #</dt>
+                    <dd>55555</dd>
+                  </div>
+                </dl>
+              </header>
+              <section class="cart">
+                <div class="cart-items-header m-b-1">
+                  <div class="items-header" class="items-header">
+                    <div class="item-names-header">Your Items</div>
+                  </div>
+                  <div class="cost-info">
+                    <div class="unit-price-header" class="unit-price-header">
+                      Unit Price
+                    </div>
+                    <div class="quantity-header" class="quantity-header">
+                      Quantity
+                    </div>
+                    <div class="total-header" class="total-header">
+                      Total Price
+                    </div>
+                  </div>
+                </div>
+                <div class="callout no-padding border">
+                  <ul class="cart-items with-sidebar">
+                    <li
+                      class="pos-reference"
+                      ng-repeat="item in $ctrl.order.items"
+                    >
+                      <div
+                        class="h2 bar secondary"
+                        ng-repeat="package in item.packages"
+                      >
+                        <ul
+                          class="inline-list no-margin"
+                          ng-show="package.status"
+                        >
+                          <li>Shipped: January 28, 2020</li>
+                          <li>Tracking #: #123321</li>
+                        </ul>
+                      </div>
+                      <div class="product">
+                        <figure>
+                          <a
+                            ng-href="{{item.productUrl}}"
+                            ng-show="item.productUrl"
+                          >
+                            <img
+                              src="/images/462970000000023-00-250x250.jpg"
+                              alt="{{ item.brandName }} {{ item.productName }}"
+                            />
+                          </a>
+                        </figure>
+                        <div class="product-info">
+                          <p class="name">
+                            <a
+                              ng-show="item.productUrl"
+                              ng-href="{{ item.productUrl }}"
+                            >
+                              brandName productName
+                            </a>
+                          </p>
+                          <ul class="product-numbers" ng-hide="item.isRental">
+                            <li>Item # sku</li>
+                            <li>Model # modelNumber</li>
+                          </ul>
+                          <ul
+                            class="product-additional"
+                            ng-hide="item.isRental"
+                          >
+                            <li>
+                              <strong>Condition:</strong>
+                              <span ng-if="item.condition"> condition </span>
+                              <!-- <span
                                                                             ng-if="!item.condition">New</span> -->
-                                                                        </li>
-                                                                    <li><strong>Option:</strong>  name  </li>
-                                                                </ul>
-                                                                <div ng-if="item.discounts && item.discounts.length > 0"
-                                                                    class="success promo callout">
-                                                                    <div ng-repeat="discount in item.discounts">
-                                                                        <div>
-                                                                            <span
-                                                                                ng-bind-html="discount.amount | fancyCurrency"></span>
-                                                                            Promo Code
-                                                                            <strong>{{discount.coupon || discount.description}}</strong>
-                                                                            applied to this item
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cost-info">
-                                                            <div class="unit-price" aria-labelledby="unit-price-header">
-                                                                <div class="cost-info-label">Unit Price</div>
-                                                                <p class="price"
-                                                                    ng-bind-html="item.listPrice | fancyCurrency"></p>
-                                                                <p class="list" ng-if="item.msrp > item.listPrice">List
-                                                                    <span class="price strikethrough"
-                                                                        ng-bind-html="item.msrp | fancyCurrency"></span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="quantity" aria-labelledby="quantity-header">
-                                                                <div class="cost-info-label text-center">Quantity</div>
-                                                                <p><b> quantity </b></p>
-                                                            </div>
-                                                            <div class="total price" aria-labelledby="total-header">
-                                                                <div class="cost-info-label text-right">Total Price
-                                                                </div>
-                                                                <div ng-bind-html="item.subTotal | fancyCurrency">item.subTotal</div>
-                                                            </div>
-                                                            <button class="primary add-to-cart small" type="button"
-                                                                ng-click="$ctrl.addToCart(item)"
-                                                                ng-show="item.canBuyAgain">Buy Again</button>
-                                                        </div>
-                                                        <div class="product-components-container"
-                                                            ng-show="item.isRental">
-                                                            <div class="product-components">
-                                                                <div class="h2 bar secondary" role="header">Items
-                                                                    included:</div>
-                                                                <ul class="cart-items">
-                                                                    <li ng-repeat="component in item.rentalComponents">
-                                                                        <div class="product">
-                                                                            <div class="product-info">
-                                                                                <p class="name"
-                                                                                    ng-switch="component.rentalType">
-                                                                                    {{component.name}}
-                                                                                </p>
-                                                                            </div>
-                                                                            <div ng-if="component.discounts && component.discounts.length > 0"
-                                                                                class="success promo callout">
-                                                                                <div
-                                                                                    ng-repeat="discount in component.discounts">
-                                                                                    <p><span
-                                                                                            ng-bind-html="discount.amount | fancyCurrency">discount.amount</span>
-                                                                                        Promo Code
-                                                                                        <strong>{{discount.coupon || discount.description}}</strong>
-                                                                                        applied to this item</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="cost-info"
-                                                                            ng-hide="component.componentType === 'instrument'">
-                                                                            <div class="unit-price">
-                                                                                <p class="price"
-                                                                                    ng-bind-html="component.unitPrice | fancyCurrency">
-                                                                                    unitPrice
-                                                                                </p>
-                                                                            </div>
-                                                                            <div class="quantity"
-                                                                                aria-labelledby="quantity-header">
-                                                                                <strong> qty </strong>
-                                                                            </div>
-                                                                            <div class="total price"
-                                                                                aria-labelledby="total-header">
-                                                                                <!-- <div ng-show="!component.unitPrice"
+                            </li>
+                            <li><strong>Option:</strong> name</li>
+                          </ul>
+                          <div
+                            ng-if="item.discounts && item.discounts.length > 0"
+                            class="success promo callout"
+                          >
+                            <div ng-repeat="discount in item.discounts">
+                              <div>
+                                <span
+                                  ng-bind-html="discount.amount | fancyCurrency"
+                                ></span>
+                                Promo Code
+                                <strong
+                                  >{{discount.coupon ||
+                                  discount.description}}</strong
+                                >
+                                applied to this item
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cost-info">
+                        <div
+                          class="unit-price"
+                          aria-labelledby="unit-price-header"
+                        >
+                          <div class="cost-info-label">Unit Price</div>
+                          <p
+                            class="price"
+                            ng-bind-html="item.listPrice | fancyCurrency"
+                          ></p>
+                          <p class="list" ng-if="item.msrp > item.listPrice">
+                            List
+                            <span
+                              class="price strikethrough"
+                              ng-bind-html="item.msrp | fancyCurrency"
+                            ></span>
+                          </p>
+                        </div>
+                        <div class="quantity" aria-labelledby="quantity-header">
+                          <div class="cost-info-label text-center">
+                            Quantity
+                          </div>
+                          <p><b> quantity </b></p>
+                        </div>
+                        <div class="total price" aria-labelledby="total-header">
+                          <div class="cost-info-label text-right">
+                            Total Price
+                          </div>
+                          <div ng-bind-html="item.subTotal | fancyCurrency">
+                            item.subTotal
+                          </div>
+                        </div>
+                        <button
+                          class="primary add-to-cart small"
+                          type="button"
+                          ng-click="$ctrl.addToCart(item)"
+                          ng-show="item.canBuyAgain"
+                        >
+                          Buy Again
+                        </button>
+                      </div>
+                      <div
+                        class="product-components-container"
+                        ng-show="item.isRental"
+                      >
+                        <div class="product-components">
+                          <div class="h2 bar secondary" role="header">
+                            Items included:
+                          </div>
+                          <ul class="cart-items">
+                            <li ng-repeat="component in item.rentalComponents">
+                              <div class="product">
+                                <div class="product-info">
+                                  <p
+                                    class="name"
+                                    ng-switch="component.rentalType"
+                                  >
+                                    {{component.name}}
+                                  </p>
+                                </div>
+                                <div
+                                  ng-if="component.discounts && component.discounts.length > 0"
+                                  class="success promo callout"
+                                >
+                                  <div
+                                    ng-repeat="discount in component.discounts"
+                                  >
+                                    <p>
+                                      <span
+                                        ng-bind-html="discount.amount | fancyCurrency"
+                                        >discount.amount</span
+                                      >
+                                      Promo Code
+                                      <strong
+                                        >{{discount.coupon ||
+                                        discount.description}}</strong
+                                      >
+                                      applied to this item
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="cost-info"
+                                ng-hide="component.componentType === 'instrument'"
+                              >
+                                <div class="unit-price">
+                                  <p
+                                    class="price"
+                                    ng-bind-html="component.unitPrice | fancyCurrency"
+                                  >
+                                    unitPrice
+                                  </p>
+                                </div>
+                                <div
+                                  class="quantity"
+                                  aria-labelledby="quantity-header"
+                                >
+                                  <strong> qty </strong>
+                                </div>
+                                <div
+                                  class="total price"
+                                  aria-labelledby="total-header"
+                                >
+                                  <!-- <div ng-show="!component.unitPrice"
                                                                                     class="allcaps">Free</div> -->
-                                                                                <div ng-show="component.unitPrice"
-                                                                                    ng-bind-html="component.subTotal | fancyCurrency">
-                                                                                    subTotal
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="row cart-extras">
-                                                <div class="columns medium-6 medium-push-6 end">
-                                                    <div class="cart-totals">
-                                                        <p><span>1 Item(s)
-                                                                Subtotal</span><strong
-                                                                class="price"> subTotal.amount  </strong>
-                                                        </p>
-                                                        <div ng-repeat="discount in $ctrl.order.combinedDiscounts">
-                                                            <p class="promo">
-                                                                <span>
-                                                                    {{discount.name}}
-                                                                </span>
-                                                                <strong class="price"
-                                                                    ng-bind-html="-discount.amount| fancyCurrency">-discount.amount</strong>
-                                                            </p>
-                                                        </div>
-                                                        <p><span>Shipping</span><strong
-                                                                class="price"> shippingTotal.amount</strong>
-                                                        </p>
-                                                        <p><span>Tax</span><strong
-                                                                class="price">taxTotal.amount</strong>
-                                                        </p>
-                                                        <p class="total"><span>Order Total</span><strong
-                                                                class="price">total.amount</strong>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <hr class="tight">
-                                        <section>
-                                            <div class="row">
-                                                <div class="columns medium-3">
-                                                    <h3 class="color-primary-dark">Billing Address</h3>
-                                                    <div ng-show="$ctrl.address">
-                                                        <p class="address">
-                                                            <span> firstName lastName </span>
-                                                            <span>companyName</span>
-                                                            <span> address1  </span>
-                                                            <span> address2  </span>
-                                                            <span> city, state zipCode </span>
-                                                            <span> country  </span>
-                                                            <span> phone </span>
-                                                            <span class="truncate"> emailAddress  </span>
-                                                        </p>
-                                                    </div>
-                                                    <hr class="show-for-small-only">
-                                                </div>
-                                                <div class="columns medium-3">
-                                                    <h3 class="color-primary-dark">Shipping Address</h3>
-                                                    <div ng-show="$ctrl.address">
-                                                        <p class="address">
-                                                            <span> firstName lastName </span>
-                                                            <span>companyName</span>
-                                                            <span> address1  </span>
-                                                            <span> address2  </span>
-                                                            <span> city, state zipCode </span>
-                                                            <span> country  </span>
-                                                            <span> phone </span>
-                                                            <span class="truncate"> emailAddress  </span>
-                                                        </p>
-                                                    </div>
-                                                    <hr class="show-for-small-only">
-                                                </div>
-                                                <div class="columns medium-3">
-                                                    <h3 class="color-primary-dark">Payment Method</h3>
-                                                    <ul class="payment-methods">
-                                                        <li ng-class="p.style" ng-repeat="p in $ctrl.order.inPayments">
-                                                            <span ng-switch="p.gatewayCode">
-                                                                <span
-                                                                    ng-switch-when="CreditCard">****1111
-                                                                    (12/2020)</span>
-                                                                <span ng-switch-when="BillToAccount">Bill to
-                                                                    Account</span>
-                                                                <span ng-switch-when="GiftCard">Gift Card</span>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <hr class="show-for-small-only">
-                                                </div>
-                                                <div class="columns medium-3">
-                                                    <h3 class="color-primary-dark">Shipping Info</h3>
-                                                    <p> shipmentMethodOption   - <span
-                                                            ng-show="$ctrl.order.shipments[0].price.amount > 0"> price.amount </span>
-                                                            <!-- <span
+                                  <div
+                                    ng-show="component.unitPrice"
+                                    ng-bind-html="component.subTotal | fancyCurrency"
+                                  >
+                                    subTotal
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row cart-extras">
+                  <div class="columns medium-6 medium-push-6 end">
+                    <div class="cart-totals">
+                      <p>
+                        <span>1 Item(s) Subtotal</span
+                        ><strong class="price"> subTotal.amount </strong>
+                      </p>
+                      <div
+                        ng-repeat="discount in $ctrl.order.combinedDiscounts"
+                      >
+                        <p class="promo">
+                          <span>
+                            {{discount.name}}
+                          </span>
+                          <strong
+                            class="price"
+                            ng-bind-html="-discount.amount| fancyCurrency"
+                            >-discount.amount</strong
+                          >
+                        </p>
+                      </div>
+                      <p>
+                        <span>Shipping</span
+                        ><strong class="price"> shippingTotal.amount</strong>
+                      </p>
+                      <p>
+                        <span>Tax</span
+                        ><strong class="price">taxTotal.amount</strong>
+                      </p>
+                      <p class="total">
+                        <span>Order Total</span
+                        ><strong class="price">total.amount</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <hr class="tight" />
+              <section>
+                <div class="row">
+                  <div class="columns medium-3">
+                    <h3 class="color-primary-dark">Billing Address</h3>
+                    <div ng-show="$ctrl.address">
+                      <p class="address">
+                        <span> firstName lastName </span>
+                        <span>companyName</span>
+                        <span> address1 </span>
+                        <span> address2 </span>
+                        <span> city, state zipCode </span>
+                        <span> country </span>
+                        <span> phone </span>
+                        <span class="truncate"> emailAddress </span>
+                      </p>
+                    </div>
+                    <hr class="show-for-small-only" />
+                  </div>
+                  <div class="columns medium-3">
+                    <h3 class="color-primary-dark">Shipping Address</h3>
+                    <div ng-show="$ctrl.address">
+                      <p class="address">
+                        <span> firstName lastName </span>
+                        <span>companyName</span>
+                        <span> address1 </span>
+                        <span> address2 </span>
+                        <span> city, state zipCode </span>
+                        <span> country </span>
+                        <span> phone </span>
+                        <span class="truncate"> emailAddress </span>
+                      </p>
+                    </div>
+                    <hr class="show-for-small-only" />
+                  </div>
+                  <div class="columns medium-3">
+                    <h3 class="color-primary-dark">Payment Method</h3>
+                    <ul class="payment-methods">
+                      <li
+                        ng-class="p.style"
+                        ng-repeat="p in $ctrl.order.inPayments"
+                      >
+                        <span ng-switch="p.gatewayCode">
+                          <span ng-switch-when="CreditCard"
+                            >****1111 (12/2020)</span
+                          >
+                          <span ng-switch-when="BillToAccount"
+                            >Bill to Account</span
+                          >
+                          <span ng-switch-when="GiftCard">Gift Card</span>
+                        </span>
+                      </li>
+                    </ul>
+                    <hr class="show-for-small-only" />
+                  </div>
+                  <div class="columns medium-3">
+                    <h3 class="color-primary-dark">Shipping Info</h3>
+                    <p>
+                      shipmentMethodOption -
+                      <span ng-show="$ctrl.order.shipments[0].price.amount > 0">
+                        price.amount
+                      </span>
+                      <!-- <span
                                                             class="allcaps"
                                                             ng-show="$ctrl.order.shipments[0].price.amount == 0">Free</span> -->
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <hr>
-                                        <section>
-                                            <h4 class="color-primary-dark">Thanks for placing your order with Music
-                                                &amp; Arts.</h4>
-                                            <ul>
-                                                <li>If your order was sent via the United States Postal Service, please
-                                                    allow 3 to 7 business days.</li>
-                                                <li>Please keep in mind that tracking information may not be available
-                                                    for approximately 24 hours from the time of shipment.</li>
-                                                <li>If you have any questions or concerns, please feel free to contact
-                                                    us by phone at <a
-                                                        ng-href="tel:{{ $ctrl.customerServiceInfo.phone }}"
-                                                        class="phone">{{ $ctrl.customerServiceInfo.phone }}</a>.</li>
-                                                <li>You can also visit our customer support center where you can view
-                                                    our knowledge base or submit a question.</li>
-                                            </ul>
-                                        </section>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+                    </p>
+                  </div>
                 </div>
+              </section>
+              <hr />
+              <section>
+                <h4 class="color-primary-dark">
+                  Thanks for placing your order with Music &amp; Arts.
+                </h4>
+                <ul>
+                  <li>
+                    If your order was sent via the United States Postal Service,
+                    please allow 3 to 7 business days.
+                  </li>
+                  <li>
+                    Please keep in mind that tracking information may not be
+                    available for approximately 24 hours from the time of
+                    shipment.
+                  </li>
+                  <li>
+                    If you have any questions or concerns, please feel free to
+                    contact us by phone at
+                    <a
+                      ng-href="tel:{{ $ctrl.customerServiceInfo.phone }}"
+                      class="phone"
+                      >{{ $ctrl.customerServiceInfo.phone }}</a
+                    >.
+                  </li>
+                  <li>
+                    You can also visit our customer support center where you can
+                    view our knowledge base or submit a question.
+                  </li>
+                </ul>
+              </section>
             </div>
-
-            ${require('html-loader!../components/footer.html')}
-        </div>
-        ${require('html-loader!../components/mini-cart.html')}
+          </div>
+        </section>
+      </div>
     </div>
-    <div class="small-visibility-check show-for-small-only"></div>
-</body>
-
-</html>
+  </div>
+</div>

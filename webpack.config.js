@@ -1,11 +1,7 @@
 const path = require("path");
-const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const fs = require("fs");
 // const getPlugins = (env) => {
 //     let plugins = [new webpack.DefinePlugin({ "process.env.NODE_ENV": JSON.stringify(env) })];
 
@@ -49,24 +45,10 @@ module.exports = (env) => {
 
   return {
     entry: {
-      // "polyfill": "@babel/polyfill",
-      // "main": "./src/app/main.js",
-      // "home-main": "./src/app/home/home-main.js",
-      // "catalog-main": "./src/app/catalog/catalog-main.js",
-      // "login-main": "./src/app/login/login-main.js",
-      // "account-main": "./src/app/account/account-main.js",
-      // "cart-main": "./src/app/cart/cart-main.js",
-      // "checkout-main": "./src/app/checkout/checkout-main.js",
-      // "sl-main": "./src/app/shoppingLists/sl-main.js",
-      // "product-main": "./src/app/product/product-main.js",
-      // "rentals-main": "./src/app/rentals/rentals-main.js",
-      // "correspondence/correspondence-main": "./src/app/correspondence/correspondence-main.js",
-      // "track-order-main": "./src/app/trackorder/track-order-main.js",
       "css/app": "./src/app/scss/app.scss",
       "css/climb-rentals": "./src/app/scss/climb-rentals.scss",
       "css/power-reviews": "./src/app/css/power-reviews.css",
       app: "./src/static.ma.js",
-      // "school-supplies-main": "./src/app/school-supplies/school-supplies.main.js",
       "font-awesome": "font-awesome-loader!./font-awesome.config.js",
     },
     output: {
@@ -156,130 +138,9 @@ module.exports = (env) => {
       ],
     },
     plugins: [
-      // index
-      new HtmlWebpackPlugin({
-        template: "./html/index.html",
-        title: "static ma",
-        filename: "index.html",
-        chunks: [],
-      }),
-
-      // home
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/home.html",
-        title: "static ma",
-        filename: "home",
-        chunks: ["css/app", "app"],
-      }),
-
-      // cart
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/cart.html",
-        title: "static ma",
-        filename: "cart",
-        chunks: ["css/app", "app"],
-      }),
-
-      // catalog
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/catalog.html",
-        title: "static ma",
-        filename: "catalog",
-        chunks: ["css/app", "app"],
-      }),
-
-      // pdp
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/pdp.html",
-        title: "static ma",
-        filename: "pdp",
-        chunks: ["css/app", "app"],
-      }),
-
-      // login
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/login.html",
-        title: "static ma",
-        filename: "login",
-        chunks: ["css/app", "app"],
-      }),
-
-      // rentals
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/rentals.html",
-        title: "static ma",
-        filename: "rentals",
-        chunks: ["css/app", "app"],
-      }),
-
-      // checkout
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/checkout.html",
-        title: "static ma",
-        filename: "checkout",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account account info
-      new HtmlWebpackPlugin({
-        template:
-          "html-loader?interpolate=require!./html/account/account-info.html",
-        title: "static ma",
-        filename: "account/account-info",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account address and payment
-      new HtmlWebpackPlugin({
-        template:
-          "html-loader?interpolate=require!./html/account/address-and-payment.html",
-        title: "static ma",
-        filename: "account/addresses-and-payment",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account orders
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/account/orders.html",
-        title: "static ma",
-        filename: "account/orders",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account shopping list
-      new HtmlWebpackPlugin({
-        template:
-          "html-loader?interpolate=require!./html/account/shopping-list.html",
-        title: "static ma",
-        filename: "account/shopping-lists",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account support
-      new HtmlWebpackPlugin({
-        template:
-          "html-loader?interpolate=require!./html/account/commercial-accounts.html",
-        title: "static ma",
-        filename: "account/commercial-accounts",
-        chunks: ["css/app", "app"],
-      }),
-
-      // account support
-      new HtmlWebpackPlugin({
-        template: "html-loader?interpolate=require!./html/account/support.html",
-        title: "static ma",
-        filename: "account/support",
-        chunks: ["css/app", "app"],
-      }),
-
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({ filename: "[name].css" }),
     ],
     target: "web",
-    devServer: {
-      host: "0.0.0.0",
-      contentBase: path.join(__dirname, "dist"),
-      port: 9000,
-      hot: true,
-    },
   };
 };

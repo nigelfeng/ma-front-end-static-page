@@ -1,0 +1,1942 @@
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <addresses-and-payment-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <header class="m-b-1" role="presentation">
+                <h2 class="highlight" id="view-title">Address &amp; Payment</h2>
+              </header>
+              <div aria-hidden="false">
+                <section>
+                  <h3 class="color-primary">Addresses</h3>
+                  <div aria-hidden="false">
+                    <ul class="addresses" role="presentation">
+                      <li class="ng-scope" role="presentation">
+                        <user-address-component
+                          address="address"
+                          class="ng-isolate-scope"
+                        >
+                          <div aria-hidden="false">
+                            <p class="address">
+                              <span class="ng-binding">nigel feng</span>
+                              <span class="ng-binding"></span>
+                              <span class="ng-binding">test</span>
+                              <span class="ng-binding"></span>
+                              <span class="ng-binding">cd, IN 11111</span>
+                              <span class="ng-binding"></span>
+                              <span class="ng-binding">(567) 533-3555</span>
+                              <span class="truncate ng-binding"
+                                >nigelfeng@aaxischina.com</span
+                              >
+                            </p>
+                          </div>
+                        </user-address-component>
+                        <ul class="inline-list no-margin" aria-hidden="false">
+                          <li>
+                            <button
+                              class="link no-margin ae-button"
+                              type="button"
+                              data-ae-blurbtype="button"
+                              data-ae-form-field="true"
+                            >
+                              Delete
+                            </button>
+                          </li>
+                          <li>
+                            <a
+                              class="button link"
+                              ui-sref="addEditAddress({id: address.addressId})"
+                              href="/account/addresses-and-payment/addresses/add-edit-address/7d74e39ab5464a708fd870bad182a473"
+                              >Edit</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <a
+                      ui-sref="addresses"
+                      class="button primary"
+                      href="/account/addresses-and-payment/addresses"
+                      >View All</a
+                    >
+                  </div>
+                </section>
+                <hr />
+                <section>
+                  <h3 class="color-primary">Payment Methods</h3>
+                  <div aria-hidden="false">
+                    <ul class="payment-methods" role="presentation">
+                      <li class="ng-scope" role="presentation">
+                        <div
+                          class="is-primary"
+                          role="heading"
+                          aria-hidden="false"
+                        >
+                          Primary
+                        </div>
+                        <dl class="inline-terms">
+                          <div>
+                            <dt>Card Type</dt>
+                            <dd class="ng-binding" role="presentation">
+                              Visa
+                            </dd>
+                          </div>
+                          <div>
+                            <dt>Ends In</dt>
+                            <dd class="ng-binding" role="presentation">
+                              1111
+                            </dd>
+                          </div>
+                          <div>
+                            <dt>Expiration</dt>
+                            <dd class="ng-binding" role="presentation">
+                              2/2022
+                            </dd>
+                          </div>
+                          <div>
+                            <dt>Cardholder Name</dt>
+                            <dd class="ng-binding" role="presentation">
+                              nigel feng
+                            </dd>
+                          </div>
+                        </dl>
+                        <ul class="inline-list no-margin">
+                          <li>
+                            <button
+                              class="link no-margin ae-button"
+                              type="button"
+                              data-ae-blurbtype="button"
+                              data-ae-form-field="true"
+                            >
+                              Delete
+                            </button>
+                          </li>
+                          <li>
+                            <a
+                              ui-sref="addEditPaymentMethod({id: paymentMethod.id})"
+                              href="/account/addresses-and-payment/payment-methods/add-edit/4ba293f1da2c4518bc9f78e256752456"
+                              >Edit</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <a
+                      ui-sref="paymentMethods"
+                      class="button primary"
+                      href="/account/addresses-and-payment/payment-methods"
+                      >View All</a
+                    >
+                  </div>
+                </section>
+              </div>
+            </addresses-and-payment-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <add-edit-address-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns m-b-1">
+                <div class="h3">
+                  <a
+                    ui-sref="addresses"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment/addresses"
+                    >Back to Addresses</a
+                  >
+                </div>
+              </div>
+              <header class="m-b-1" role="presentation">
+                <h2 class="highlight ng-binding">Edit Address</h2>
+              </header>
+              <form
+                name="addEditAddressForm"
+                aria-labelledby="view-title"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-valid ng-valid-required ng-valid-pattern ng-valid-maxlength ng-valid-email ae-form"
+              >
+                <div class="auto-format">
+                  <div class="end">
+                    <label for="firstName" class="req ae-label"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      name="firstName"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="nigel"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="lastName" class="req ae-label">Last Name</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="feng"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="company" class="ae-label">Company</label>
+                    <input
+                      type="text"
+                      name="company"
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      company="aaxis"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="line1" class="req ae-label"
+                      >Address Line 1</label
+                    >
+                    <input
+                      type="text"
+                      name="address1"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="test"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="line2" class="ae-label">Address Line 2</label>
+                    <input
+                      type="text"
+                      class="label-top ng-pristine ng-untouched ng-valid ng-empty"
+                      name="line2"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="city" class="req ae-label">City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="cd"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="half">
+                    <label for="state" class="req ae-label">State</label>
+                    <select
+                      name="state"
+                      id="state"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="">Select</option>
+                      <option value="AK" class="ng-binding ng-scope">AK</option>
+                      <option value="AL" class="ng-binding ng-scope">AL</option>
+                      <option value="AR" class="ng-binding ng-scope">AR</option>
+                      <option value="AZ" class="ng-binding ng-scope">AZ</option>
+                      <option value="CA" class="ng-binding ng-scope">CA</option>
+                      <option value="CO" class="ng-binding ng-scope">CO</option>
+                      <option value="CT" class="ng-binding ng-scope">CT</option>
+                      <option value="DC" class="ng-binding ng-scope">DC</option>
+                      <option value="DE" class="ng-binding ng-scope">DE</option>
+                      <option value="FL" class="ng-binding ng-scope">FL</option>
+                      <option value="GA" class="ng-binding ng-scope">GA</option>
+                      <option value="HI" class="ng-binding ng-scope">HI</option>
+                      <option value="IA" class="ng-binding ng-scope">IA</option>
+                      <option value="ID" class="ng-binding ng-scope">ID</option>
+                      <option value="IL" class="ng-binding ng-scope">IL</option>
+                      <option
+                        value="IN"
+                        class="ng-binding ng-scope"
+                        selected="selected"
+                        >IN
+                      </option>
+                      <option value="KS" class="ng-binding ng-scope">KS</option>
+                      <option value="KY" class="ng-binding ng-scope">KY</option>
+                      <option value="LA" class="ng-binding ng-scope">LA</option>
+                      <option value="MA" class="ng-binding ng-scope">MA</option>
+                      <option value="MD" class="ng-binding ng-scope">MD</option>
+                      <option value="ME" class="ng-binding ng-scope">ME</option>
+                      <option value="MI" class="ng-binding ng-scope">MI</option>
+                      <option value="MN" class="ng-binding ng-scope">MN</option>
+                      <option value="MO" class="ng-binding ng-scope">MO</option>
+                      <option value="MS" class="ng-binding ng-scope">MS</option>
+                      <option value="MT" class="ng-binding ng-scope">MT</option>
+                      <option value="NC" class="ng-binding ng-scope">NC</option>
+                      <option value="ND" class="ng-binding ng-scope">ND</option>
+                      <option value="NE" class="ng-binding ng-scope">NE</option>
+                      <option value="NH" class="ng-binding ng-scope">NH</option>
+                      <option value="NJ" class="ng-binding ng-scope">NJ</option>
+                      <option value="NM" class="ng-binding ng-scope">NM</option>
+                      <option value="NV" class="ng-binding ng-scope">NV</option>
+                      <option value="NY" class="ng-binding ng-scope">NY</option>
+                      <option value="OH" class="ng-binding ng-scope">OH</option>
+                      <option value="OK" class="ng-binding ng-scope">OK</option>
+                      <option value="OR" class="ng-binding ng-scope">OR</option>
+                      <option value="PA" class="ng-binding ng-scope">PA</option>
+                      <option value="RI" class="ng-binding ng-scope">RI</option>
+                      <option value="SC" class="ng-binding ng-scope">SC</option>
+                      <option value="SD" class="ng-binding ng-scope">SD</option>
+                      <option value="TN" class="ng-binding ng-scope">TN</option>
+                      <option value="TX" class="ng-binding ng-scope">TX</option>
+                      <option value="UT" class="ng-binding ng-scope">UT</option>
+                      <option value="VA" class="ng-binding ng-scope">VA</option>
+                      <option value="VI" class="ng-binding ng-scope">VI</option>
+                      <option value="VT" class="ng-binding ng-scope">VT</option>
+                      <option value="WA" class="ng-binding ng-scope">WA</option>
+                      <option value="WI" class="ng-binding ng-scope">WI</option>
+                      <option value="WV" class="ng-binding ng-scope">WV</option>
+                      <option value="WY" class="ng-binding ng-scope">WY</option>
+                    </select>
+                  </div>
+                  <div class="half end">
+                    <label for="zipCode" class="req ae-label">Zip Code</label>
+                    <input
+                      type="text"
+                      name="zipCode"
+                      aria-required="true"
+                      required="required"
+                      maxlength="10"
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-pattern ng-valid-maxlength"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="1111"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="phone" class="req ae-label">Phone</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      phone-input=""
+                      maxlength="14"
+                      aria-required="true"
+                      required="required"
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-pattern ng-valid-maxlength"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="(567) 533-3555"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="email" class="req ae-label">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      autocomplete="off"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-email ng-valid-required ng-valid-pattern"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="nigelfeng@aaxischina.com"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double m-b-1">
+                    <label class="checkbox ae-label">
+                      <input
+                        type="checkbox"
+                        name="isPrimary"
+                        class="ng-pristine ng-untouched ng-valid ng-empty"
+                        value="true"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Make primary address
+                    </label>
+                  </div>
+                  <div class="half">
+                    <a
+                      ui-sref="addresses"
+                      class="button"
+                      href="/account/addresses-and-payment/addresses"
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="half end text-right">
+                    <button
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </add-edit-address-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <add-edit-payment-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns m-b-1">
+                <div class="h3">
+                  <a
+                    ui-sref="paymentMethods"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment/payment-methods"
+                    >Back to Payment Methods</a
+                  >
+                </div>
+              </div>
+              <header class="m-b-1" role="presentation">
+                <h2 class="highlight ng-binding">Edit Payment Method: Visa</h2>
+              </header>
+              <form
+                name="addEditPaymentMethodForm"
+                aria-labelledby="view-title"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-valid ng-valid-required ng-valid-expired ae-form"
+              >
+                <div class="auto-format">
+                  <div class="end">
+                    <label for="cardHolder" class="req ae-label"
+                      >Name on Card</label
+                    >
+                    <input
+                      type="text"
+                      id="cardHolder"
+                      name="cardHolder"
+                      class="label-top ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+                      aria-required="true"
+                      required=""
+                      aria-invalid="false"
+                      value="nigel feng"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end ng-scope">
+                    <label for="lastFour" class="ae-label"
+                      >Card Number Ending In</label
+                    >
+                    <input
+                      type="text"
+                      id="lastFour"
+                      class="label-top ng-pristine ng-untouched ng-valid ng-not-empty"
+                      disabled=""
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      value="1111"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                </div>
+                <fieldset class="auto-format m-b-0">
+                  <legend class="double label req">Expiration Date</legend>
+                  <div class="half">
+                    <select
+                      name="bankCardMonth"
+                      aria-label="Expiration month"
+                      required="required"
+                      card-expired=""
+                      card-expired-month="true"
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-valid ng-valid-expired ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="">Month</option>
+                      <option value="1">01-January</option>
+                      <option value="2" selected="selected">02-February</option>
+                      <option value="3">03-March</option>
+                      <option value="4">04-April</option>
+                      <option value="5">05-May</option>
+                      <option value="6">06-June</option>
+                      <option value="7">07-July</option>
+                      <option value="8">08-August</option>
+                      <option value="9">09-September</option>
+                      <option value="10">10-October</option>
+                      <option value="11">11-November</option>
+                      <option value="12">12-December</option>
+                    </select>
+                  </div>
+                  <div class="half end">
+                    <select
+                      name="bankCardYear"
+                      aria-label="Expiration year"
+                      required="required"
+                      card-expired=""
+                      card-expired-year="true"
+                      class="ng-pristine ng-untouched ng-valid ng-valid-expired ng-not-empty ng-valid-required"
+                      aria-invalid="false"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="">Year</option>
+                      <option value="2020" class="ng-binding ng-scope"
+                        >2020</option
+                      >
+                      <option value="2021" class="ng-binding ng-scope"
+                        >2021</option
+                      >
+                      <option
+                        value="2022"
+                        class="ng-binding ng-scope"
+                        selected="selected"
+                        >2022
+                      </option>
+                      <option value="2023" class="ng-binding ng-scope"
+                        >2023</option
+                      >
+                      <option value="2024" class="ng-binding ng-scope"
+                        >2024</option
+                      >
+                      <option value="2025" class="ng-binding ng-scope"
+                        >2025</option
+                      >
+                      <option value="2026" class="ng-binding ng-scope"
+                        >2026</option
+                      >
+                      <option value="2027" class="ng-binding ng-scope"
+                        >2027</option
+                      >
+                      <option value="2028" class="ng-binding ng-scope"
+                        >2028</option
+                      >
+                      <option value="2029" class="ng-binding ng-scope"
+                        >2029</option
+                      >
+                    </select>
+                  </div>
+                </fieldset>
+                <div class="auto-format">
+                  <div class="double m-b-1">
+                    <label class="checkbox ae-label">
+                      <input
+                        type="checkbox"
+                        name="isPrimary"
+                        checked
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                        value="true"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Make primary payment method
+                    </label>
+                  </div>
+                  <div class="half">
+                    <a
+                      ui-sref="paymentMethods"
+                      class="button"
+                      href="/account/addresses-and-payment/payment-methods"
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="half end text-right">
+                    <button
+                      type="submit"
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </add-edit-payment-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <addresses-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns">
+                <div class="h3">
+                  <a
+                    ui-sref="addressesAndPayment"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment"
+                    >Back to Address and Payment</a
+                  >
+                </div>
+              </div>
+              <header class="m-t-1" role="presentation">
+                <span id="view-title" role="heading" class="h2 highlight"
+                  >Addresses</span
+                >
+                <div class="float-right">
+                  <a
+                    ui-sref="addEditAddress({id: null})"
+                    class="button"
+                    href="/account/addresses-and-payment/addresses/add-edit-address/"
+                    ><span class="icon fa-plus"></span> Add Address</a
+                  >
+                </div>
+              </header>
+              <hr />
+              <div aria-hidden="true" class="ng-hide">
+                <p>
+                  You have no addresses currently associated with your account.
+                </p>
+              </div>
+              <div aria-hidden="false">
+                <p>
+                  The following addresses are currently associated with your
+                  account. Changes made to an address will not affect orders you
+                  have already placed.
+                </p>
+                <ul class="addresses" role="presentation">
+                  <li class="ng-scope" role="presentation">
+                    <user-address-component
+                      address="address"
+                      class="ng-isolate-scope"
+                    >
+                      <div aria-hidden="false">
+                        <p class="address">
+                          <span class="ng-binding">nigel feng</span>
+                          <span class="ng-binding"></span>
+                          <span class="ng-binding">test</span>
+                          <span class="ng-binding"></span>
+                          <span class="ng-binding">cd, IN 11111</span>
+                          <span class="ng-binding"></span>
+                          <span class="ng-binding">(567) 533-3555</span>
+                          <span class="truncate ng-binding"
+                            >nigelfeng@aaxischina.com</span
+                          >
+                        </p>
+                      </div>
+                    </user-address-component>
+                    <ul class="inline-list no-margin">
+                      <li>
+                        <button
+                          class="link no-margin ae-button"
+                          type="button"
+                          data-ae-blurbtype="button"
+                          data-ae-form-field="true"
+                        >
+                          Delete
+                        </button>
+                      </li>
+                      <li>
+                        <a
+                          ui-sref="addEditAddress({id: address.addressId})"
+                          href="/account/addresses-and-payment/addresses/add-edit-address/7d74e39ab5464a708fd870bad182a473"
+                          >Edit</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </addresses-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <payments-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns">
+                <div class="h3">
+                  <a
+                    ui-sref="addressesAndPayment"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment"
+                    >Back to Address and Payment</a
+                  >
+                </div>
+              </div>
+              <header class="m-t-1" role="presentation">
+                <span id="view-title" role="heading" class="h2 highlight"
+                  >Payment Methods</span
+                >
+                <div class="float-right">
+                  <a
+                    ui-sref="addEditPaymentMethod({id: null})"
+                    class="button"
+                    href="/account/addresses-and-payment/payment-methods/add-edit/"
+                    ><span class="icon fa-plus"></span> Add Payment</a
+                  >
+                </div>
+              </header>
+              <hr />
+              <div aria-hidden="true" class="ng-hide">
+                <p>
+                  You have no payment methods currently associated with your
+                  account.
+                </p>
+              </div>
+              <div aria-hidden="false">
+                <p>
+                  The following credit cards are currently associated with your
+                  account. Changes made to your credit cards will not affect
+                  orders you have already placed.
+                </p>
+                <ul class="payment-methods" role="presentation">
+                  <li class="ng-scope" role="presentation">
+                    <div
+                      class="is-primary ng-scope"
+                      aria-label="This is your primary credit card"
+                    >
+                      Primary
+                    </div>
+                    <dl class="inline-terms">
+                      <div>
+                        <dt>Card Type</dt>
+                        <dd class="ng-binding" role="presentation">Visa</dd>
+                      </div>
+                      <div>
+                        <dt>Ends In</dt>
+                        <dd class="ng-binding" role="presentation">1111</dd>
+                      </div>
+                      <div>
+                        <dt>Expiration</dt>
+                        <dd class="ng-binding" role="presentation">2/2022</dd>
+                      </div>
+                      <div>
+                        <dt>Cardholder Name</dt>
+                        <dd class="ng-binding" role="presentation">
+                          nigel feng
+                        </dd>
+                      </div>
+                    </dl>
+                    <ul class="inline-list no-margin">
+                      <li>
+                        <button
+                          class="link no-margin ae-button"
+                          type="button"
+                          data-ae-blurbtype="button"
+                          data-ae-form-field="true"
+                        >
+                          Delete
+                        </button>
+                      </li>
+                      <li>
+                        <a
+                          ui-sref="addEditPaymentMethod({id: paymentMethod.id})"
+                          href="/account/addresses-and-payment/payment-methods/add-edit/4ba293f1da2c4518bc9f78e256752456"
+                          >Edit</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </payments-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <add-edit-address-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns m-b-1">
+                <div class="h3">
+                  <a
+                    ui-sref="addresses"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment/addresses"
+                    >Back to Addresses</a
+                  >
+                </div>
+              </div>
+              <header class="m-b-1" role="presentation">
+                <h2 class="highlight ng-binding">Add Address</h2>
+              </header>
+              <form
+                name="addEditAddressForm"
+                aria-labelledby="view-title"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-valid-email ae-form"
+              >
+                <div class="auto-format">
+                  <div class="end">
+                    <label for="firstName" class="req ae-label"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      name="firstName"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="lastName" class="req ae-label">Last Name</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="company" class="ae-label">Company</label>
+                    <input
+                      type="text"
+                      name="company"
+                      class="ng-pristine ng-untouched ng-valid ng-empty"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="line1" class="req ae-label"
+                      >Address Line 1</label
+                    >
+                    <input
+                      type="text"
+                      name="address1"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="line2" class="ae-label">Address Line 2</label>
+                    <input
+                      type="text"
+                      class="label-top ng-pristine ng-untouched ng-valid ng-empty"
+                      name="line2"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="city" class="req ae-label">City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="half">
+                    <label for="state" class="req ae-label">State</label>
+                    <select
+                      name="state"
+                      id="state"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="" selected="selected">Select</option>
+                      <option value="AK" class="ng-binding ng-scope">AK</option>
+                      <option value="AL" class="ng-binding ng-scope">AL</option>
+                      <option value="AR" class="ng-binding ng-scope">AR</option>
+                      <option value="AZ" class="ng-binding ng-scope">AZ</option>
+                      <option value="CA" class="ng-binding ng-scope">CA</option>
+                      <option value="CO" class="ng-binding ng-scope">CO</option>
+                      <option value="CT" class="ng-binding ng-scope">CT</option>
+                      <option value="DC" class="ng-binding ng-scope">DC</option>
+                      <option value="DE" class="ng-binding ng-scope">DE</option>
+                      <option value="FL" class="ng-binding ng-scope">FL</option>
+                      <option value="GA" class="ng-binding ng-scope">GA</option>
+                      <option value="HI" class="ng-binding ng-scope">HI</option>
+                      <option value="IA" class="ng-binding ng-scope">IA</option>
+                      <option value="ID" class="ng-binding ng-scope">ID</option>
+                      <option value="IL" class="ng-binding ng-scope">IL</option>
+                      <option value="IN" class="ng-binding ng-scope">IN</option>
+                      <option value="KS" class="ng-binding ng-scope">KS</option>
+                      <option value="KY" class="ng-binding ng-scope">KY</option>
+                      <option value="LA" class="ng-binding ng-scope">LA</option>
+                      <option value="MA" class="ng-binding ng-scope">MA</option>
+                      <option value="MD" class="ng-binding ng-scope">MD</option>
+                      <option value="ME" class="ng-binding ng-scope">ME</option>
+                      <option value="MI" class="ng-binding ng-scope">MI</option>
+                      <option value="MN" class="ng-binding ng-scope">MN</option>
+                      <option value="MO" class="ng-binding ng-scope">MO</option>
+                      <option value="MS" class="ng-binding ng-scope">MS</option>
+                      <option value="MT" class="ng-binding ng-scope">MT</option>
+                      <option value="NC" class="ng-binding ng-scope">NC</option>
+                      <option value="ND" class="ng-binding ng-scope">ND</option>
+                      <option value="NE" class="ng-binding ng-scope">NE</option>
+                      <option value="NH" class="ng-binding ng-scope">NH</option>
+                      <option value="NJ" class="ng-binding ng-scope">NJ</option>
+                      <option value="NM" class="ng-binding ng-scope">NM</option>
+                      <option value="NV" class="ng-binding ng-scope">NV</option>
+                      <option value="NY" class="ng-binding ng-scope">NY</option>
+                      <option value="OH" class="ng-binding ng-scope">OH</option>
+                      <option value="OK" class="ng-binding ng-scope">OK</option>
+                      <option value="OR" class="ng-binding ng-scope">OR</option>
+                      <option value="PA" class="ng-binding ng-scope">PA</option>
+                      <option value="RI" class="ng-binding ng-scope">RI</option>
+                      <option value="SC" class="ng-binding ng-scope">SC</option>
+                      <option value="SD" class="ng-binding ng-scope">SD</option>
+                      <option value="TN" class="ng-binding ng-scope">TN</option>
+                      <option value="TX" class="ng-binding ng-scope">TX</option>
+                      <option value="UT" class="ng-binding ng-scope">UT</option>
+                      <option value="VA" class="ng-binding ng-scope">VA</option>
+                      <option value="VI" class="ng-binding ng-scope">VI</option>
+                      <option value="VT" class="ng-binding ng-scope">VT</option>
+                      <option value="WA" class="ng-binding ng-scope">WA</option>
+                      <option value="WI" class="ng-binding ng-scope">WI</option>
+                      <option value="WV" class="ng-binding ng-scope">WV</option>
+                      <option value="WY" class="ng-binding ng-scope">WY</option>
+                    </select>
+                  </div>
+                  <div class="half end">
+                    <label for="zipCode" class="req ae-label">Zip Code</label>
+                    <input
+                      type="text"
+                      name="zipCode"
+                      aria-required="true"
+                      required="required"
+                      maxlength="10"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="phone" class="req ae-label">Phone</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      phone-input=""
+                      maxlength="14"
+                      aria-required="true"
+                      required="required"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="email" class="req ae-label">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      autocomplete="off"
+                      aria-required="true"
+                      required=""
+                      class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double m-b-1">
+                    <label class="checkbox ae-label">
+                      <input
+                        type="checkbox"
+                        name="isPrimary"
+                        class="ng-pristine ng-untouched ng-valid ng-empty"
+                        value="true"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Make primary address
+                    </label>
+                  </div>
+                  <div class="half">
+                    <a
+                      ui-sref="addresses"
+                      class="button"
+                      href="/account/addresses-and-payment/addresses"
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="half end text-right">
+                    <button
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </add-edit-address-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="main" class="main" role="main">
+  <div class="row">
+    <div class="content">
+      <nav role="navigation">
+        <ul class="breadcrumbs" aria-label="You are here:">
+          <li><a ui-sref="orders" href="/account/orders">Account</a></li>
+          <li class="ng-scope"><span class="current">Shopping Lists</span></li>
+        </ul>
+      </nav>
+      <div class="row" aria-labelledby="page-title">
+        <aside class="columns large-3">
+          <h1
+            id="page-title"
+            class="show-for-medium ae-label"
+            role="heading"
+            aria-level="2"
+          >
+            Account
+          </h1>
+          <nav role="navigation">
+            <ul
+              class="vertical menu accordion-menu account-menu"
+              data-accordion-menu=""
+              aria-multiselectable="true"
+              data-e="57g4iz-e"
+              role="presentation"
+            >
+              <li
+                class="is-accordion-submenu-parent ae-label"
+                role="presentation"
+                aria-controls="r5f68c-acc-menu"
+                aria-expanded="false"
+                id="97cr12-acc-menu-link"
+              >
+                <a
+                  role="button"
+                  tabindex="0"
+                  class="show-for-small-only bar arrow"
+                  id="account-menu"
+                  >Account</a
+                >
+                <ul
+                  class="menu vertical is-accordion-submenu submenu"
+                  data-submenu=""
+                  aria-labelledby="97cr12-acc-menu-link"
+                  aria-hidden="false"
+                  id="r5f68c-acc-menu"
+                  style="display: none;"
+                >
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="orders" href="/account/orders"
+                      >Orders &amp; Tracking</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="shoppingLists" href="/account/shopping-lists"
+                      >Shopping Lists</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope active"
+                  >
+                    <a
+                      ui-sref="addressesAndPayment"
+                      href="/account/addresses-and-payment"
+                      >Address &amp; Payment</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="accountInfo" href="/account/account-info"
+                      >Account Info</a
+                    >
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope ng-hide"
+                    aria-hidden="true"
+                  >
+                    <a
+                      ui-sref="commercialAccounts"
+                      href="/account/commercial-accounts"
+                    >
+                      Commercial Accounts
+                    </a>
+                  </li>
+                  <li
+                    class="is-submenu-item is-accordion-submenu-item ng-scope"
+                  >
+                    <a ui-sref="support" href="/account/support">Support</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <section class="columns large-9" aria-labelledby="view-title">
+          <ui-view
+            on-display-messaging="$ctrl.displayMessages(messages)"
+            class="ng-scope"
+          >
+            <add-edit-payment-component
+              on-display-messaging="$ctrl.displayMessages(messages)"
+              get-customer-results="::$resolve.getCustomerResults"
+              class="ng-scope ng-isolate-scope"
+            >
+              <div class="row columns m-b-1">
+                <div class="h3">
+                  <a
+                    ui-sref="paymentMethods"
+                    class="back-arrow"
+                    href="/account/addresses-and-payment/payment-methods"
+                    >Back to Payment Methods</a
+                  >
+                </div>
+              </div>
+              <header class="m-b-1" role="presentation">
+                <h2 class="highlight ng-binding">Add Payment Method</h2>
+              </header>
+              <form
+                name="addEditPaymentMethodForm"
+                aria-labelledby="view-title"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-invalid ng-invalid-required ng-valid-expired ng-valid-maxlength ae-form"
+              >
+                <div class="auto-format">
+                  <div class="end">
+                    <label for="cardHolder" class="req ae-label"
+                      >Name on Card</label
+                    >
+                    <input
+                      type="text"
+                      id="cardHolder"
+                      name="cardHolder"
+                      class="label-top ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-required="true"
+                      required=""
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end ng-scope">
+                    <label for="cardNumber" class="req ae-label"
+                      >Card Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="cardNumber"
+                      name="cardNumber"
+                      class="label-top ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                      aria-required="true"
+                      required=""
+                      luhn-check=""
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                </div>
+                <fieldset class="auto-format m-b-0">
+                  <legend class="double label req">Expiration Date</legend>
+                  <div class="half">
+                    <select
+                      name="bankCardMonth"
+                      aria-label="Expiration month"
+                      required="required"
+                      card-expired=""
+                      card-expired-month="true"
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-valid-expired ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="" selected="selected">Month</option>
+                      <option value="1">01-January</option>
+                      <option value="2">02-February</option>
+                      <option value="3">03-March</option>
+                      <option value="4">04-April</option>
+                      <option value="5">05-May</option>
+                      <option value="6">06-June</option>
+                      <option value="7">07-July</option>
+                      <option value="8">08-August</option>
+                      <option value="9">09-September</option>
+                      <option value="10">10-October</option>
+                      <option value="11">11-November</option>
+                      <option value="12">12-December</option>
+                    </select>
+                  </div>
+                  <div class="half end">
+                    <select
+                      name="bankCardYear"
+                      aria-label="Expiration year"
+                      required="required"
+                      card-expired=""
+                      card-expired-year="true"
+                      class="ng-pristine ng-untouched ng-valid-expired ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="" selected="selected">Year</option>
+                      <option value="2020" class="ng-binding ng-scope"
+                        >2020</option
+                      >
+                      <option value="2021" class="ng-binding ng-scope"
+                        >2021</option
+                      >
+                      <option value="2022" class="ng-binding ng-scope"
+                        >2022</option
+                      >
+                      <option value="2023" class="ng-binding ng-scope"
+                        >2023</option
+                      >
+                      <option value="2024" class="ng-binding ng-scope"
+                        >2024</option
+                      >
+                      <option value="2025" class="ng-binding ng-scope"
+                        >2025</option
+                      >
+                      <option value="2026" class="ng-binding ng-scope"
+                        >2026</option
+                      >
+                      <option value="2027" class="ng-binding ng-scope"
+                        >2027</option
+                      >
+                      <option value="2028" class="ng-binding ng-scope"
+                        >2028</option
+                      >
+                      <option value="2029" class="ng-binding ng-scope"
+                        >2029</option
+                      >
+                    </select>
+                  </div>
+                </fieldset>
+                <div class="auto-format">
+                  <div class="double m-b-1">
+                    <label class="checkbox ae-label">
+                      <input
+                        type="checkbox"
+                        name="isPrimary"
+                        class="ng-pristine ng-untouched ng-valid ng-empty"
+                        value="true"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Make primary payment method
+                    </label>
+                  </div>
+                  <div class="half">
+                    <a
+                      ui-sref="paymentMethods"
+                      class="button"
+                      href="/account/addresses-and-payment/payment-methods"
+                      >Cancel</a
+                    >
+                  </div>
+                  <div class="half end text-right">
+                    <button
+                      type="submit"
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </add-edit-payment-component>
+          </ui-view>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

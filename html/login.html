@@ -1,190 +1,279 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-touch-fullscreen" content="no" />
-    <title>Largest Retail Chain of Band &amp; Orchestral Instruments | Music & Arts</title>
-    <meta name="description"
-        content="Music &amp; Arts is an online music store that also offers instrument rentals, music lessons &amp; instrument repair at their locations nationwide." />
-    <base href="/" />
-    <link rel="canonical" href="https://www.musicarts.com" />
-    <link id="Favicon" rel="SHORTCUT ICON" href="https://www.musicarts.com/dist/img/favicon.ico" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" async>
-</head>
-<body>
-    <div class="off-canvas-wrapper">
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="skiplinks">
-                <a href="#main" tabindex="0">Skip to main content</a>
-                <a href="#footer" tabindex="0">Skip to footer</a>
-            </div>
-            ${require('html-loader!./components/header.html')}
-            <style>
-                .ng-hide {
-                    display: none !important;
-                }
-            </style>
-            <div id="main" class="main" role="main" tabindex="0">
-                <div class="row">
-                    <section class="content" aria-labelledby="page-title">
-                        <header role="presentation">
-                            <h1 id="page-title" class="ae-label" role="heading" aria-level="1">Login</h1>
-                        </header>
-                        <div class="copy-block">
-                            <login-component class="ng-isolate-scope">
-                                <div class="page-spinner" aria-busy="true">
-                                    <div class="spinner-content">
-                                        <object data="/dist/img/spinner.svg" type="image/svg+xml"
-                                            class="spinner ae-media" data-player-url="/dist/img/spinner.svg"><span
-                                                class="ae-compliance-indent" style="display:none;"> loading
-                                                spinner</span></object>
-                                        <div class="spinner-message">LOADING</div>
-                                    </div>
-                                </div>
-                                <div class="row columns-6-6 ng-scope">
-                                    <div class="content-primary">
-                                        <returning-login-component on-login-error="$ctrl.displayErrorMessage(errors)"
-                                            on-forgot-password="$ctrl.isForgotPassword = true" class="ng-isolate-scope">
-                                            <form name="returningLoginForm" method="post" novalidate=""
-                                                accessible-form=""
-                                                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form">
-                                                <fieldset class="auto-format">
-                                                    <div class="double">
-                                                        <h2 class="ng-scope">Returning Customer</h2>
-                                                    </div>
-                                                    <div class="double">
-                                                        <p>If you already have an account, login for faster checkout.
-                                                        </p>
-                                                    </div>
-                                                    <div class="double">
-                                                        <label for="EmailForLogin" class="req ae-label">Email</label>
-                                                        <input id="EmailForLogin" name="emailForLogin" type="email"
-                                                            required="" aria-required="true"
-                                                            class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
-                                                            aria-invalid="true" data-ae-blurbtype="input"
-                                                            data-ae-form-field="true">
-                                                    </div>
-                                                    <div class="double">
-                                                        <label for="PasswordForLogin"
-                                                            class="req ae-label">Password</label>
-                                                        <input id="PasswordForLogin" name="passwordForLogin"
-                                                            type="password" autocomplete="off" required=""
-                                                            aria-required="true"
-                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                            aria-invalid="true" data-ae-blurbtype="input"
-                                                            data-ae-form-field="true">
-                                                    </div>
-                                                    <div class="double">
-                                                        <p>
-                                                            <a id="forgotPassword">Forgot
-                                                                your password?</a>
-                                                        </p>
-                                                    </div>
-                                                    <recaptcha-component
-                                                        on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
-                                                        widget-id="returningLoginCtrl.widgetId"
-                                                        class="ng-isolate-scope">
-                                                        <div class="grecaptcha-badge" data-style="bottomright"
-                                                            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
-                                                            <div class="grecaptcha-logo"><iframe
-                                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=s0e5ubtxja3o"
-                                                                    width="256" height="60" role="presentation"
-                                                                    name="a-4l39sd1y8j7h" frameborder="0" scrolling="no"
-                                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                                                                    title="Google Recaptcha iframe"></iframe></div>
-                                                            <div class="grecaptcha-error"></div><textarea
-                                                                id="g-recaptcha-response" name="g-recaptcha-response"
-                                                                class="g-recaptcha-response"
-                                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
-                                                                data-ae-blurbtype="textarea" data-ae-form-field="true"
-                                                                aria-label="g recaptcha response"></textarea>
-                                                        </div>
-                                                    </recaptcha-component>
-                                                    <div class="double">
-                                                        <button type="submit" class="primary ae-button"
-                                                            data-ae-blurbtype="button"
-                                                            data-ae-form-field="true">Login</button>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </returning-login-component>
-                                    </div>
-                                    <div class="content-secondary border-left">
-                                        <new-login-component on-registration-error="$ctrl.displayErrorMessage(errors)"
-                                            class="ng-isolate-scope" aria-hidden="false">
-                                            <form name="newLoginForm" method="post" autocomplete="off" novalidate=""
-                                                accessible-form=""
-                                                class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-email ng-valid-pattern ng-valid-failed-password-complexity ng-valid-minlength ng-valid-confirm-password ae-form">
-                                                <fieldset class="auto-format">
-                                                    <div class="double">
-                                                        <div>
-                                                            <h2>Create Account</h2>
-                                                        </div>
-                                                        <div>
-                                                            <p>Enter your information below.</p>
-                                                        </div>
-                                                        <div>
-                                                            <label for="FirstNameForCreateAccount"
-                                                                class="req ae-label">First Name</label>
-                                                            <input id="FirstNameForCreateAccount"
-                                                                name="firstNameForCreateAccount" type="text"
-                                                                maxlength="25" aria-required="true" required=""
-                                                                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
-                                                                aria-invalid="true" data-ae-blurbtype="input"
-                                                                data-ae-form-field="true">
-                                                        </div>
-                                                        <div>
-                                                            <label for="LastNameForCreateAccount"
-                                                                class="req ae-label">Last Name</label>
-                                                            <input id="LastNameForCreateAccount"
-                                                                name="lastNameForCreateAccount" type="text"
-                                                                maxlength="25" aria-required="true" required=""
-                                                                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
-                                                                aria-invalid="true" data-ae-blurbtype="input"
-                                                                data-ae-form-field="true">
-                                                        </div>
-                                                        <div>
-                                                            <label for="EmailForCreateAccount"
-                                                                class="req ae-label">Email</label>
-                                                            <input id="EmailForCreateAccount"
-                                                                name="emailForCreateAccount" type="email"
-                                                                autocomplete="off" aria-required="true" required=""
-                                                                class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
-                                                                aria-invalid="true" data-ae-blurbtype="input"
-                                                                data-ae-form-field="true">
-                                                            <span role="status" aria-live="polite"
-                                                                class="cip-ui-helper-hidden-accessible"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label for="PasswordForCreateAccount" class="req ae-label">
-                                                                Password
-                                                                <span
-                                                                    class="field-validation-valid errortooltip errortooltip-password"
-                                                                    data-valmsg-for="PasswordForLogin"
-                                                                    data-valmsg-replace="true"></span>
-                                                            </label>
-                                                            <input id="PasswordForCreateAccount"
-                                                                name="passwordForCreateAccount" type="password"
-                                                                autocomplete="new-password" aria-required="true"
-                                                                required="" validate-password-complexity=""
-                                                                class="ng-pristine ng-untouched ng-empty ng-valid-failed-password-complexity ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
-                                                                aria-describedby="helperText_PasswordForCreateAccount"
-                                                                aria-invalid="true" data-ae-blurbtype="input"
-                                                                data-ae-form-field="true">
-                                                            <p class="help-text"
-                                                                id="helperText_PasswordForCreateAccount">Password is
-                                                                case sensitive, cannot match the email address, and must
-                                                                meet the <password-policy-component popup="true"
-                                                                    class="ng-isolate-scope">
-                                                                    <span data-tooltip="" aria-haspopup="true"
-                                                                        class="has-tip large ng-scope"
-                                                                        data-disable-hover="false"
-                                                                        data-allow-html="true" tabindex="0" title="
+<div class="row">
+  <section class="content" aria-labelledby="page-title">
+    <header role="presentation">
+      <h1 id="page-title" class="ae-label" role="heading" aria-level="1">
+        Login
+      </h1>
+    </header>
+    <div class="copy-block">
+      <login-component class="ng-isolate-scope">
+        <div class="page-spinner" aria-busy="true">
+          <div class="spinner-content">
+            <object
+              data="/dist/img/spinner.svg"
+              type="image/svg+xml"
+              class="spinner ae-media"
+              data-player-url="/dist/img/spinner.svg"
+              ><span class="ae-compliance-indent" style="display: none;">
+                loading spinner</span
+              ></object
+            >
+            <div class="spinner-message">LOADING</div>
+          </div>
+        </div>
+        <div class="row columns-6-6 ng-scope">
+          <div class="content-primary">
+            <returning-login-component
+              on-login-error="$ctrl.displayErrorMessage(errors)"
+              on-forgot-password="$ctrl.isForgotPassword = true"
+              class="ng-isolate-scope"
+            >
+              <form
+                name="returningLoginForm"
+                method="post"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form"
+              >
+                <fieldset class="auto-format">
+                  <div class="double">
+                    <h2 class="ng-scope">Returning Customer</h2>
+                  </div>
+                  <div class="double">
+                    <p>
+                      If you already have an account, login for faster checkout.
+                    </p>
+                  </div>
+                  <div class="double">
+                    <label for="EmailForLogin" class="req ae-label"
+                      >Email</label
+                    >
+                    <input
+                      id="EmailForLogin"
+                      name="emailForLogin"
+                      type="email"
+                      required=""
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double">
+                    <label for="PasswordForLogin" class="req ae-label"
+                      >Password</label
+                    >
+                    <input
+                      id="PasswordForLogin"
+                      name="passwordForLogin"
+                      type="password"
+                      autocomplete="off"
+                      required=""
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double">
+                    <p>
+                      <a id="forgotPassword">Forgot your password?</a>
+                    </p>
+                  </div>
+                  <recaptcha-component
+                    on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
+                    widget-id="returningLoginCtrl.widgetId"
+                    class="ng-isolate-scope"
+                  >
+                    <div
+                      class="grecaptcha-badge"
+                      data-style="bottomright"
+                      style="
+                        width: 256px;
+                        height: 60px;
+                        display: block;
+                        transition: right 0.3s ease 0s;
+                        position: fixed;
+                        bottom: 14px;
+                        right: -186px;
+                        box-shadow: gray 0px 0px 5px;
+                        border-radius: 2px;
+                        overflow: hidden;
+                      "
+                    >
+                      <div class="grecaptcha-logo">
+                        <iframe
+                          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=s0e5ubtxja3o"
+                          width="256"
+                          height="60"
+                          role="presentation"
+                          name="a-4l39sd1y8j7h"
+                          frameborder="0"
+                          scrolling="no"
+                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                          title="Google Recaptcha iframe"
+                        ></iframe>
+                      </div>
+                      <div class="grecaptcha-error"></div>
+                      <textarea
+                        id="g-recaptcha-response"
+                        name="g-recaptcha-response"
+                        class="g-recaptcha-response"
+                        style="
+                          width: 250px;
+                          height: 40px;
+                          border: 1px solid rgb(193, 193, 193);
+                          margin: 10px 25px;
+                          padding: 0px;
+                          resize: none;
+                          display: none;
+                        "
+                        data-ae-blurbtype="textarea"
+                        data-ae-form-field="true"
+                        aria-label="g recaptcha response"
+                      ></textarea>
+                    </div>
+                  </recaptcha-component>
+                  <div class="double">
+                    <button
+                      type="submit"
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+            </returning-login-component>
+          </div>
+          <div class="content-secondary border-left">
+            <new-login-component
+              on-registration-error="$ctrl.displayErrorMessage(errors)"
+              class="ng-isolate-scope"
+              aria-hidden="false"
+            >
+              <form
+                name="newLoginForm"
+                method="post"
+                autocomplete="off"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-email ng-valid-pattern ng-valid-failed-password-complexity ng-valid-minlength ng-valid-confirm-password ae-form"
+              >
+                <fieldset class="auto-format">
+                  <div class="double">
+                    <div>
+                      <h2>Create Account</h2>
+                    </div>
+                    <div>
+                      <p>Enter your information below.</p>
+                    </div>
+                    <div>
+                      <label
+                        for="FirstNameForCreateAccount"
+                        class="req ae-label"
+                        >First Name</label
+                      >
+                      <input
+                        id="FirstNameForCreateAccount"
+                        name="firstNameForCreateAccount"
+                        type="text"
+                        maxlength="25"
+                        aria-required="true"
+                        required=""
+                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                        aria-invalid="true"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                      />
+                    </div>
+                    <div>
+                      <label for="LastNameForCreateAccount" class="req ae-label"
+                        >Last Name</label
+                      >
+                      <input
+                        id="LastNameForCreateAccount"
+                        name="lastNameForCreateAccount"
+                        type="text"
+                        maxlength="25"
+                        aria-required="true"
+                        required=""
+                        class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                        aria-invalid="true"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                      />
+                    </div>
+                    <div>
+                      <label for="EmailForCreateAccount" class="req ae-label"
+                        >Email</label
+                      >
+                      <input
+                        id="EmailForCreateAccount"
+                        name="emailForCreateAccount"
+                        type="email"
+                        autocomplete="off"
+                        aria-required="true"
+                        required=""
+                        class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                        aria-invalid="true"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                      />
+                      <span
+                        role="status"
+                        aria-live="polite"
+                        class="cip-ui-helper-hidden-accessible"
+                      ></span>
+                    </div>
+                    <div>
+                      <label
+                        for="PasswordForCreateAccount"
+                        class="req ae-label"
+                      >
+                        Password
+                        <span
+                          class="field-validation-valid errortooltip errortooltip-password"
+                          data-valmsg-for="PasswordForLogin"
+                          data-valmsg-replace="true"
+                        ></span>
+                      </label>
+                      <input
+                        id="PasswordForCreateAccount"
+                        name="passwordForCreateAccount"
+                        type="password"
+                        autocomplete="new-password"
+                        aria-required="true"
+                        required=""
+                        validate-password-complexity=""
+                        class="ng-pristine ng-untouched ng-empty ng-valid-failed-password-complexity ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                        aria-describedby="helperText_PasswordForCreateAccount"
+                        aria-invalid="true"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                      />
+                      <p
+                        class="help-text"
+                        id="helperText_PasswordForCreateAccount"
+                      >
+                        Password is case sensitive, cannot match the email
+                        address, and must meet the
+                        <password-policy-component
+                          popup="true"
+                          class="ng-isolate-scope"
+                        >
+                          <span
+                            data-tooltip=""
+                            aria-haspopup="true"
+                            class="has-tip large ng-scope"
+                            data-disable-hover="false"
+                            data-allow-html="true"
+                            tabindex="0"
+                            title="
                                                                         <ol class='password-policy'>
                                                                             <li>Password must be between 8 and 50 characters in length</li>
                                                                             <li>Password must contain at least 3 of the following 4 character groups:
@@ -195,247 +284,394 @@
                                                                             <li>Non-alphabetic characters (such as !, @, #, $)</li>
                                                                             </ul>
                                                                             </li>
-                                                                        </ol>" aria-describedby="hftfn0-tooltip"
-                                                                        data-yeti-box="hftfn0-tooltip"
-                                                                        data-toggle="hftfn0-tooltip"
-                                                                        data-resize="hftfn0-tooltip"
-                                                                        data-e="l9p05j-e">password complexity
-                                                                        requirements</span>
-                                                                </password-policy-component>.</p>
-                                                        </div>
-                                                        <div>
-                                                            <label for="ConfirmPasswordForCreateAccount"
-                                                                class="req ae-label">Confirm Password</label>
-                                                            <input id="ConfirmPasswordForCreateAccount"
-                                                                name="confirmPasswordForCreateAccount" type="password"
-                                                                confirm-password="newLoginCtrl.newLogin.password"
-                                                                autocomplete="new-password" aria-required="true"
-                                                                required=""
-                                                                class="ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-confirm-password"
-                                                                aria-invalid="true" data-ae-blurbtype="input"
-                                                                data-ae-form-field="true">
-                                                        </div>
-                                                        <recaptcha-component
-                                                            on-recaptcha-callback="newLoginCtrl.registerCallback(token)"
-                                                            widget-id="newLoginCtrl.widgetId" class="ng-isolate-scope">
-                                                            <div class="grecaptcha-badge" data-style="none"
-                                                                style="width: 256px; height: 60px; position: fixed; visibility: hidden;">
-                                                                <div class="grecaptcha-logo"><iframe
-                                                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=kcpkb5ze8s4"
-                                                                        width="256" height="60" role="presentation"
-                                                                        name="a-wrje1hld93f6" frameborder="0"
-                                                                        scrolling="no"
-                                                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                                                                        title="Google Recaptcha iframe"></iframe></div>
-                                                                <div class="grecaptcha-error"></div><textarea
-                                                                    id="g-recaptcha-response-1"
-                                                                    name="g-recaptcha-response"
-                                                                    class="g-recaptcha-response"
-                                                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
-                                                                    data-ae-blurbtype="textarea"
-                                                                    data-ae-form-field="true"
-                                                                    aria-label="g recaptcha response"></textarea>
-                                                            </div><iframe style="display: none;"></iframe>
-                                                        </recaptcha-component>
-                                                        <div>
-                                                            <button type="submit" class="primary ae-button"
-                                                                value="Submit" data-ae-blurbtype="button"
-                                                                data-ae-form-field="true">Create Account</button>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </new-login-component>
-                                    </div>
-                                </div>
-                            </login-component>
-                            <div class="row">
-                                <div class="columns">
-                                    <div class="columns text-center">
-                                        <p id="my_account_terms" class="margin-top">I have read Music &amp; Arts' <a
-                                                href="/cms/privacy-policy" target="_blank" rel="noopener"
-                                                aria-describedby="audioeye_new_window_message">Privacy Policy</a></p>
-                                    </div>
-                                </div>
-                            </div>
+                                                                        </ol>"
+                            aria-describedby="hftfn0-tooltip"
+                            data-yeti-box="hftfn0-tooltip"
+                            data-toggle="hftfn0-tooltip"
+                            data-resize="hftfn0-tooltip"
+                            data-e="l9p05j-e"
+                            >password complexity requirements</span
+                          > </password-policy-component
+                        >.
+                      </p>
+                    </div>
+                    <div>
+                      <label
+                        for="ConfirmPasswordForCreateAccount"
+                        class="req ae-label"
+                        >Confirm Password</label
+                      >
+                      <input
+                        id="ConfirmPasswordForCreateAccount"
+                        name="confirmPasswordForCreateAccount"
+                        type="password"
+                        confirm-password="newLoginCtrl.newLogin.password"
+                        autocomplete="new-password"
+                        aria-required="true"
+                        required=""
+                        class="ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-confirm-password"
+                        aria-invalid="true"
+                        data-ae-blurbtype="input"
+                        data-ae-form-field="true"
+                      />
+                    </div>
+                    <recaptcha-component
+                      on-recaptcha-callback="newLoginCtrl.registerCallback(token)"
+                      widget-id="newLoginCtrl.widgetId"
+                      class="ng-isolate-scope"
+                    >
+                      <div
+                        class="grecaptcha-badge"
+                        data-style="none"
+                        style="
+                          width: 256px;
+                          height: 60px;
+                          position: fixed;
+                          visibility: hidden;
+                        "
+                      >
+                        <div class="grecaptcha-logo">
+                          <iframe
+                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=kcpkb5ze8s4"
+                            width="256"
+                            height="60"
+                            role="presentation"
+                            name="a-wrje1hld93f6"
+                            frameborder="0"
+                            scrolling="no"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                            title="Google Recaptcha iframe"
+                          ></iframe>
                         </div>
-                    </section>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div class="row">
-                    <section class="content" aria-labelledby="page-title">
-                        <header role="presentation">
-                            <h1 id="page-title" class="ae-label" role="heading" aria-level="1">Login</h1>
-                        </header>
-                        <div class="copy-block">
-                            <login-component class="ng-isolate-scope">
-                                <div class="page-spinner" style="display: none;" aria-busy="true">
-                                    <div class="spinner-content">
-                                        <object data="/dist/img/spinner.svg" type="image/svg+xml"
-                                            class="spinner ae-media" data-player-url="/dist/img/spinner.svg"><span
-                                                class="ae-compliance-indent" style="display:none;"> loading
-                                                spinner</span></object>
-                                        <div class="spinner-message">LOADING</div>
-                                    </div>
-                                </div>
-                                <div class="row columns-6-6 ng-scope">
-                                    <div class="content-primary">
-                                        <returning-login-component on-login-error="$ctrl.displayErrorMessage(errors)"
-                                            on-forgot-password="$ctrl.isForgotPassword = true" class="ng-isolate-scope">
-                                            <form name="returningLoginForm" method="post" novalidate=""
-                                                accessible-form=""
-                                                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form">
-                                                <fieldset class="auto-format">
-                                                    <div class="double">
-                                                        <h2 class="ng-scope">Registered Educator Login</h2>
-                                                    </div>
-                                                    <div class="double">
-                                                        <p>If you already have an account, login for faster checkout.
-                                                        </p>
-                                                    </div>
-                                                    <div class="double">
-                                                        <label for="EmailForLogin" class="req ae-label">Email</label>
-                                                        <input id="EmailForLogin" name="emailForLogin" type="email"
-                                                            required="" aria-required="true"
-                                                            class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
-                                                            aria-invalid="true" data-ae-blurbtype="input"
-                                                            data-ae-form-field="true">
-                                                    </div>
-                                                    <div class="double">
-                                                        <label for="PasswordForLogin"
-                                                            class="req ae-label">Password</label>
-                                                        <input id="PasswordForLogin" name="passwordForLogin"
-                                                            type="password" autocomplete="off" required=""
-                                                            aria-required="true"
-                                                            class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
-                                                            aria-invalid="true" data-ae-blurbtype="input"
-                                                            data-ae-form-field="true">
-                                                    </div>
-                                                    <div class="double">
-                                                        <p>
-                                                            <a id="forgotPassword">Forgot
-                                                                your password?</a>
-                                                        </p>
-                                                    </div>
-                                                    <recaptcha-component
-                                                        on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
-                                                        widget-id="returningLoginCtrl.widgetId"
-                                                        class="ng-isolate-scope">
-                                                        <div class="grecaptcha-badge" data-style="bottomright"
-                                                            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
-                                                            <div class="grecaptcha-logo"><iframe
-                                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=r9e97cwbgzjj"
-                                                                    width="256" height="60" role="presentation"
-                                                                    name="a-cspzdxgaipxg" frameborder="0" scrolling="no"
-                                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                                                                    title="Google Recaptcha iframe"></iframe></div>
-                                                            <div class="grecaptcha-error"></div><textarea
-                                                                id="g-recaptcha-response" name="g-recaptcha-response"
-                                                                class="g-recaptcha-response"
-                                                                aria-label="g recaptcha response"
-                                                                data-ae-blurbtype="textarea" data-ae-form-field="true"
-                                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                                        </div>
-                                                    </recaptcha-component>
-                                                    <div class="double">
-                                                        <button type="submit" class="primary ae-button"
-                                                            data-ae-blurbtype="button"
-                                                            data-ae-form-field="true">Login</button>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </returning-login-component>
-                                    </div>
-                                    <div class="content-secondary border-left">
-                                        <educator-registration-component
-                                            on-registration-error="$ctrl.displayErrorMessage(errors)"
-                                            class="ng-isolate-scope" aria-hidden="false">
-                                            <form name="educatorRegistrationForm" method="post" novalidate=""
-                                                class="ng-pristine ng-valid ae-form">
-                                                <fieldset class="auto-format">
-                                                    <div class="double">
-                                                        <div class="row">
-                                                            <div class="columns padding-left">
-                                                                <h2>New Educators Register Here!</h2>
-                                                            </div>
-                                                            <div class="columns padding-top">
-                                                                <p>To access everything that Music &amp; Arts has to
-                                                                    offer educators, register for your commercial
-                                                                    account today.</p>
-                                                                <ul class="arrow">
-                                                                    <li>Special discounts for educators</li>
-                                                                    <li>More than 50,000 products available online</li>
-                                                                    <li>Orders ship directly to your school</li>
-                                                                    <li>Convenient payment options available</li>
-                                                                </ul>
-                                                                <p>To set up a new school account with Music &amp; Arts
-                                                                    download, complete and return the application
-                                                                    available below. Once your application has been
-                                                                    processed, someone from our Commercial Accounts team
-                                                                    will contact you to finish setting up your account.
-                                                                </p>
-                                                            </div>
-                                                            <div class="columns padding-top">
-                                                                <div class="row">
-                                                                    <div class="columns">
-                                                                        <a href="/Content/MAC/PDF/CommercialApplication-Fillable.pdf"
-                                                                            class="button expanded" target="_blank"
-                                                                            rel="noopener"
-                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Personal
-                                                                            / Organization Application<span
-                                                                                class="ae-compliance-indent ae-reader-visible"
-                                                                                style="display:none;"> pdf</span></a>
-                                                                        <a href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
-                                                                            class="button expanded" target="_blank"
-                                                                            rel="noopener"
-                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Private
-                                                                            School Application<span
-                                                                                class="ae-compliance-indent ae-reader-visible"
-                                                                                style="display:none;"> pdf</span></a>
-                                                                        <a href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
-                                                                            class="button expanded" target="_blank"
-                                                                            rel="noopener"
-                                                                            aria-describedby="audioeye_pdf_message audioeye_new_window_message">Public
-                                                                            School Application<span
-                                                                                class="ae-compliance-indent ae-reader-visible"
-                                                                                style="display:none;"> pdf</span></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="columns padding-top">
-                                                                <p>If you have questions or would like immediate
-                                                                    assistance, contact your local Music &amp; Arts
-                                                                    Educational Representative directly or Customer
-                                                                    Service at <a href="tel:8887315396">(888)
-                                                                        731-5396</a>.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </educator-registration-component>
-                                    </div>
-                                </div>
-                            </login-component>
-                            <div class="row">
-                                <div class="columns">
-                                    <div class="columns text-center">
-                                        <p id="my_account_terms" class="margin-top">I have read Music &amp; Arts' <a
-                                                href="/cms/privacy-policy" target="_blank" rel="noopener"
-                                                aria-describedby="audioeye_new_window_message">Privacy Policy</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            ${require('html-loader!./components/footer.html')}
+                        <div class="grecaptcha-error"></div>
+                        <textarea
+                          id="g-recaptcha-response-1"
+                          name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="
+                            width: 250px;
+                            height: 40px;
+                            border: 1px solid rgb(193, 193, 193);
+                            margin: 10px 25px;
+                            padding: 0px;
+                            resize: none;
+                            display: none;
+                          "
+                          data-ae-blurbtype="textarea"
+                          data-ae-form-field="true"
+                          aria-label="g recaptcha response"
+                        ></textarea>
+                      </div>
+                      <iframe style="display: none;"></iframe>
+                    </recaptcha-component>
+                    <div>
+                      <button
+                        type="submit"
+                        class="primary ae-button"
+                        value="Submit"
+                        data-ae-blurbtype="button"
+                        data-ae-form-field="true"
+                      >
+                        Create Account
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </new-login-component>
+          </div>
         </div>
-        ${require('html-loader!./components/mini-cart.html')}
+      </login-component>
+      <div class="row">
+        <div class="columns">
+          <div class="columns text-center">
+            <p id="my_account_terms" class="margin-top">
+              I have read Music &amp; Arts'
+              <a
+                href="/cms/privacy-policy"
+                target="_blank"
+                rel="noopener"
+                aria-describedby="audioeye_new_window_message"
+                >Privacy Policy</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="small-visibility-check show-for-small-only"></div>
-</body>
-</html>
+  </section>
+</div>
+<div>
+  <hr />
+</div>
+<div class="row">
+  <section class="content" aria-labelledby="page-title">
+    <header role="presentation">
+      <h1 id="page-title" class="ae-label" role="heading" aria-level="1">
+        Login
+      </h1>
+    </header>
+    <div class="copy-block">
+      <login-component class="ng-isolate-scope">
+        <div class="page-spinner" style="display: none;" aria-busy="true">
+          <div class="spinner-content">
+            <object
+              data="/dist/img/spinner.svg"
+              type="image/svg+xml"
+              class="spinner ae-media"
+              data-player-url="/dist/img/spinner.svg"
+              ><span class="ae-compliance-indent" style="display: none;">
+                loading spinner</span
+              ></object
+            >
+            <div class="spinner-message">LOADING</div>
+          </div>
+        </div>
+        <div class="row columns-6-6 ng-scope">
+          <div class="content-primary">
+            <returning-login-component
+              on-login-error="$ctrl.displayErrorMessage(errors)"
+              on-forgot-password="$ctrl.isForgotPassword = true"
+              class="ng-isolate-scope"
+            >
+              <form
+                name="returningLoginForm"
+                method="post"
+                novalidate=""
+                accessible-form=""
+                class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ae-form"
+              >
+                <fieldset class="auto-format">
+                  <div class="double">
+                    <h2 class="ng-scope">Registered Educator Login</h2>
+                  </div>
+                  <div class="double">
+                    <p>
+                      If you already have an account, login for faster checkout.
+                    </p>
+                  </div>
+                  <div class="double">
+                    <label for="EmailForLogin" class="req ae-label"
+                      >Email</label
+                    >
+                    <input
+                      id="EmailForLogin"
+                      name="emailForLogin"
+                      type="email"
+                      required=""
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double">
+                    <label for="PasswordForLogin" class="req ae-label"
+                      >Password</label
+                    >
+                    <input
+                      id="PasswordForLogin"
+                      name="passwordForLogin"
+                      type="password"
+                      autocomplete="off"
+                      required=""
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="double">
+                    <p>
+                      <a id="forgotPassword">Forgot your password?</a>
+                    </p>
+                  </div>
+                  <recaptcha-component
+                    on-recaptcha-callback="returningLoginCtrl.loginCallback(token)"
+                    widget-id="returningLoginCtrl.widgetId"
+                    class="ng-isolate-scope"
+                  >
+                    <div
+                      class="grecaptcha-badge"
+                      data-style="bottomright"
+                      style="
+                        width: 256px;
+                        height: 60px;
+                        display: block;
+                        transition: right 0.3s ease 0s;
+                        position: fixed;
+                        bottom: 14px;
+                        right: -186px;
+                        box-shadow: gray 0px 0px 5px;
+                        border-radius: 2px;
+                        overflow: hidden;
+                      "
+                    >
+                      <div class="grecaptcha-logo">
+                        <iframe
+                          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=6uMSoEJtPugDt7Qm0Uu5iuSY&amp;size=invisible&amp;cb=r9e97cwbgzjj"
+                          width="256"
+                          height="60"
+                          role="presentation"
+                          name="a-cspzdxgaipxg"
+                          frameborder="0"
+                          scrolling="no"
+                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                          title="Google Recaptcha iframe"
+                        ></iframe>
+                      </div>
+                      <div class="grecaptcha-error"></div>
+                      <textarea
+                        id="g-recaptcha-response"
+                        name="g-recaptcha-response"
+                        class="g-recaptcha-response"
+                        aria-label="g recaptcha response"
+                        data-ae-blurbtype="textarea"
+                        data-ae-form-field="true"
+                        style="
+                          width: 250px;
+                          height: 40px;
+                          border: 1px solid rgb(193, 193, 193);
+                          margin: 10px 25px;
+                          padding: 0px;
+                          resize: none;
+                          display: none;
+                        "
+                      ></textarea>
+                    </div>
+                  </recaptcha-component>
+                  <div class="double">
+                    <button
+                      type="submit"
+                      class="primary ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+            </returning-login-component>
+          </div>
+          <div class="content-secondary border-left">
+            <educator-registration-component
+              on-registration-error="$ctrl.displayErrorMessage(errors)"
+              class="ng-isolate-scope"
+              aria-hidden="false"
+            >
+              <form
+                name="educatorRegistrationForm"
+                method="post"
+                novalidate=""
+                class="ng-pristine ng-valid ae-form"
+              >
+                <fieldset class="auto-format">
+                  <div class="double">
+                    <div class="row">
+                      <div class="columns padding-left">
+                        <h2>New Educators Register Here!</h2>
+                      </div>
+                      <div class="columns padding-top">
+                        <p>
+                          To access everything that Music &amp; Arts has to
+                          offer educators, register for your commercial account
+                          today.
+                        </p>
+                        <ul class="arrow">
+                          <li>Special discounts for educators</li>
+                          <li>More than 50,000 products available online</li>
+                          <li>Orders ship directly to your school</li>
+                          <li>Convenient payment options available</li>
+                        </ul>
+                        <p>
+                          To set up a new school account with Music &amp; Arts
+                          download, complete and return the application
+                          available below. Once your application has been
+                          processed, someone from our Commercial Accounts team
+                          will contact you to finish setting up your account.
+                        </p>
+                      </div>
+                      <div class="columns padding-top">
+                        <div class="row">
+                          <div class="columns">
+                            <a
+                              href="/Content/MAC/PDF/CommercialApplication-Fillable.pdf"
+                              class="button expanded"
+                              target="_blank"
+                              rel="noopener"
+                              aria-describedby="audioeye_pdf_message audioeye_new_window_message"
+                              >Personal / Organization Application<span
+                                class="ae-compliance-indent ae-reader-visible"
+                                style="display: none;"
+                              >
+                                pdf</span
+                              ></a
+                            >
+                            <a
+                              href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
+                              class="button expanded"
+                              target="_blank"
+                              rel="noopener"
+                              aria-describedby="audioeye_pdf_message audioeye_new_window_message"
+                              >Private School Application<span
+                                class="ae-compliance-indent ae-reader-visible"
+                                style="display: none;"
+                              >
+                                pdf</span
+                              ></a
+                            >
+                            <a
+                              href="/Content/MAC/PDF/SchoolApplication-Fillable.pdf"
+                              class="button expanded"
+                              target="_blank"
+                              rel="noopener"
+                              aria-describedby="audioeye_pdf_message audioeye_new_window_message"
+                              >Public School Application<span
+                                class="ae-compliance-indent ae-reader-visible"
+                                style="display: none;"
+                              >
+                                pdf</span
+                              ></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="columns padding-top">
+                        <p>
+                          If you have questions or would like immediate
+                          assistance, contact your local Music &amp; Arts
+                          Educational Representative directly or Customer
+                          Service at
+                          <a href="tel:8887315396">(888) 731-5396</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </educator-registration-component>
+          </div>
+        </div>
+      </login-component>
+      <div class="row">
+        <div class="columns">
+          <div class="columns text-center">
+            <p id="my_account_terms" class="margin-top">
+              I have read Music &amp; Arts'
+              <a
+                href="/cms/privacy-policy"
+                target="_blank"
+                rel="noopener"
+                aria-describedby="audioeye_new_window_message"
+                >Privacy Policy</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

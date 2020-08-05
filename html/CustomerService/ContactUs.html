@@ -1,0 +1,308 @@
+<div class="row">
+  <div class="content">
+    <section aria-labelledby="page-title">
+      <header role="presentation">
+        <h1 id="page-title" class="ae-label" role="heading" aria-level="1">
+          Support
+        </h1>
+      </header>
+      <div class="copy-block">
+        <contact-us is-logged-in="false" class="ng-isolate-scope">
+          <div class="page-spinner" style="display: none;" aria-busy="false">
+            <div class="spinner-content">
+              <object
+                data="/dist/img/spinner.svg"
+                type="image/svg+xml"
+                class="spinner ae-media"
+                data-player-url="/dist/img/spinner.svg"
+                title="Loading"
+                aria-label="Loading"
+                ><span class="ae-compliance-indent" style="display: none;">
+                  loading spinner</span
+                ></object
+              >
+              <div class="spinner-message">LOADING</div>
+            </div>
+          </div>
+
+          <div class="ng-scope">
+            <section id="email-us">
+              <h3
+                class="color-primary ae-label"
+                id="contactFormHeader"
+                role="heading"
+                aria-level="2"
+              >
+                Email Customer Service
+              </h3>
+
+              <form
+                name="contactUsForm"
+                aria-labelledby="contactFormHeader"
+                novalidate="novalidate"
+                accessible-form=""
+                class="ng-pristine ng-valid-maxlength ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern ae-form"
+              >
+                <div class="auto-format">
+                  <div class="end">
+                    <label for="orderNumber" class="ae-label"
+                      >Order # (if applicable)</label
+                    >
+                    <input
+                      type="text"
+                      name="orderNumber"
+                      id="orderNumber"
+                      maxlength="100"
+                      class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+                  <div class="end">
+                    <label for="department" class="req ae-label"
+                      >Department</label
+                    >
+                    <select
+                      name="department"
+                      id="department"
+                      required="required"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-describedby="{contactUsForm.department.$invalid &amp;&amp; (contactUsForm.department.$submitted || contactUsForm.department.$touched) ? 'errMsg_department' :undefined }}"
+                      aria-invalid="true"
+                      data-ae-blurbtype="select"
+                      data-ae-form-field="true"
+                    >
+                      <option value="" class="" selected="selected"
+                        >Select Department</option
+                      >
+                      <option label="Commercial Account" value="number:16">
+                        Commercial Account
+                      </option>
+                      <option label="Customer Service" value="number:12"
+                        >Customer Service
+                      </option>
+                      <option label="Feedback" value="number:18"
+                        >Feedback</option
+                      >
+                      <option label="Marketing" value="number:27"
+                        >Marketing
+                      </option>
+                      <option label="Music Lessons" value="number:19"
+                        >Music Lessons</option
+                      >
+                      <option label="Privacy Policy" value="number:32"
+                        >Privacy Policy</option
+                      >
+                      <option label="Rentals" value="number:20">Rentals</option>
+                      <option label="Repair" value="number:34">Repair</option>
+                      <option label="Sales" value="number:15">Sales</option>
+                      <option label="Technical Support" value="number:13">
+                        Technical Support
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="end">
+                    <label for="comments" class="req ae-label"
+                      >How can we help you?</label
+                    >
+                    <textarea
+                      name="comments"
+                      id="comments"
+                      rows="4"
+                      required="required"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                      aria-describedby="{contactUsForm.comments.$invalid &amp;&amp; (contactUsForm.comments.$submitted || contactUsForm.comments.$touched) ? 'errMsg_comments' :undefined }}"
+                      aria-invalid="true"
+                      data-ae-blurbtype="textarea"
+                      data-ae-form-field="true"
+                    >
+                    </textarea>
+                  </div>
+
+                  <div class="end ng-scope">
+                    <label for="firstName" class="req ae-label"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      required="required"
+                      maxlength="25"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                      aria-describedby="{contactUsForm.firstName.$invalid &amp;&amp; (contactUsForm.firstName.$submitted || contactUsForm.firstName.$touched) ? 'errMsg_firstName' :undefined }}"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+
+                  <div class="end ng-scope">
+                    <label for="lastName" class="req ae-label">Last Name</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      required="required"
+                      maxlength="25"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                      aria-describedby="{contactUsForm.lastName.$invalid &amp;&amp; (contactUsForm.lastName.$submitted || contactUsForm.lastName.$touched) ? 'errMsg_LastName' :undefined }}"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+
+                  <div class="end ng-scope">
+                    <label for="email" class="req ae-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required="required"
+                      maxlength="64"
+                      class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+
+                  <div class="end ng-scope">
+                    <label for="phone" class="ae-label">Phone</label>
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      phone-input=""
+                      maxlength="14"
+                      aria-required="true"
+                      class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern ng-valid-maxlength"
+                      aria-invalid="false"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </div>
+
+                  <div class="end ng-scope">
+                    <label for="contactUsFileUpload" class="ae-label">
+                      <input
+                        type="file"
+                        id="contactUsFileUpload"
+                        class="hide"
+                        onchange="angular.element(this).scope().fileNameChanged(this)"
+                        accept="doc,pdf,zip,png,xls,txt,bmp,gif,jpg"
+                        data-ae-blurbtype="file"
+                        data-ae-form-field="true"
+                      />
+                      <div class="button">
+                        <span class="icon fa-plus" aria-hidden="true"></span>
+                        Add file attachment
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="end">
+                    <recaptcha-component
+                      on-recaptcha-callback="$ctrl.registerCallback(token)"
+                      widget-id="$ctrl.widgetId"
+                      class="ng-isolate-scope"
+                    >
+                      <div
+                        class="grecaptcha-badge"
+                        data-style="bottomright"
+                        style="
+                          width: 256px;
+                          height: 60px;
+                          display: block;
+                          transition: right 0.3s ease 0s;
+                          position: fixed;
+                          bottom: 14px;
+                          right: -186px;
+                          box-shadow: gray 0px 0px 5px;
+                          border-radius: 2px;
+                          overflow: hidden;
+                        "
+                      >
+                        <div class="grecaptcha-logo">
+                          <iframe
+                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdUpnQUAAAAAG2O5QNZrh9zohyM7fPRfp6qSCy1&amp;co=aHR0cHM6Ly93d3cubXVzaWNhcnRzLmNvbTo0NDM.&amp;hl=zh-CN&amp;v=AFBwIe6h0oOL7MOVu88LHld-&amp;size=invisible&amp;cb=2cutwv717kd"
+                            width="256"
+                            height="60"
+                            role="presentation"
+                            name="a-hmszjdxoq5fu"
+                            frameborder="0"
+                            scrolling="no"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                            title="Google Recaptcha iframe"
+                          ></iframe>
+                        </div>
+                        <div class="grecaptcha-error"></div>
+                        <textarea
+                          id="g-recaptcha-response"
+                          name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="
+                            width: 250px;
+                            height: 40px;
+                            border: 1px solid rgb(193, 193, 193);
+                            margin: 10px 25px;
+                            padding: 0px;
+                            resize: none;
+                            display: none;
+                          "
+                          data-ae-blurbtype="textarea"
+                          data-ae-form-field="true"
+                          aria-label="g recaptcha response"
+                        ></textarea>
+                      </div>
+                      <iframe style="display: none;"></iframe>
+                    </recaptcha-component>
+                    <button
+                      type="submit"
+                      class="primary large ae-button"
+                      data-ae-blurbtype="button"
+                      data-ae-form-field="true"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </contact-us>
+      </div>
+    </section>
+    <hr />
+    <section>
+      <h3 class="color-primary" role="heading" aria-level="2">
+        Call Customer Service
+      </h3>
+      <p>
+        Call Sales &amp; Customer Service toll-free at
+        <a class="phone" href="tel:888-731-5396">888-731-5396</a>
+      </p>
+      <div class="row">
+        <div class="columns medium-6">
+          <div class="h3">Opening Hours</div>
+          <ul class="no-bullets v-list-spacing">
+            <li><strong>Mon–Fri</strong> 8:30am – 9:00pm EST</li>
+            <li><strong>Sat</strong> 10:00am – 8:00pm EST</li>
+            <li><strong>Sun</strong> 11:00am – 5:00pm EST</li>
+          </ul>
+        </div>
+        <div class="columns medium-6">
+          <div class="h3">Mailing Address</div>
+          <p>
+            Customer Service Dept.<br />Music &amp; Arts<br />5295 Westview Dr
+            Suite 300<br />Frederick MD, 21703-8517<br />
+            <a class="phone" href="tel:888-731-5396">888-731-5396</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
