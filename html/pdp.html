@@ -209,19 +209,7 @@
       >
         <section class="find-in-stores">
           <div class="row columns">
-            <svg
-              class="find-in-stores__icon ng-hide"
-              role="presentation"
-              viewBox="0 0 90 60"
-              aria-hidden="true"
-            >
-              <path
-                d="M56.23 41.3c-2.4 0-4.36 1.95-4.36 4.36 0 2.4 1.95 4.36 4.36 4.36 2.4 0 4.36-1.95 4.36-4.36 0-2.4-1.96-4.36-4.36-4.36zm0 6.85c-1.37 0-2.49-1.12-2.49-2.49s1.12-2.49 2.49-2.49 2.49 1.12 2.49 2.49a2.49 2.49 0 01-2.49 2.49zM29.14 50.02c2.4 0 4.36-1.95 4.36-4.36 0-2.4-1.95-4.36-4.36-4.36-2.4 0-4.36 1.95-4.36 4.36s1.95 4.36 4.36 4.36zm0-6.85c1.37 0 2.49 1.12 2.49 2.49s-1.12 2.49-2.49 2.49-2.49-1.12-2.49-2.49a2.49 2.49 0 012.49-2.49zM48.13 17.91h-12.6c-.97 0-2.38.89-2.79 1.77l-3.84 8.26c-.13.29-.11.63.06.9.17.27.47.43.79.43h36.14c.37 0 .71-.22.86-.56.15-.34.08-.74-.18-1.01l-7.48-7.95c-.89-.94-2.96-1.84-4.25-1.84h-2.96c-.52 0-.93.42-.93.93 0 .52.42.93.93.93h2.96c.77 0 2.37.69 2.89 1.25l6 6.37H49.06v-8.56c0-.5-.42-.92-.93-.92zm-.94 9.49H31.2l3.22-6.93c.13-.24.83-.68 1.1-.69h11.67v7.62z"
-              ></path>
-              <path
-                d="M75.36 5h-4.98c-.28 0-.55.1-.77.27l-11.38 9.31c-.08.07-.16.15-.22.23-1.08-.4-2.2-.64-3.19-.64h-19.3c-2.43 0-5.14 1.72-6.17 3.92l-3.84 8.16c-.33.69-1.29 1.55-2.02 1.79 0 0-4.37 1.45-4.37 1.46-3.15 1.05-5.7 4.6-5.7 7.91v4.51c0 2.57 1.88 4.67 4.19 4.67h2.23c.47 4.71 4.46 8.4 9.29 8.4 5.15 0 9.34-4.19 9.34-9.34 0-5.15-4.19-9.34-9.34-9.34-4.83 0-8.82 3.69-9.29 8.4h-2.23c-1.28 0-2.32-1.26-2.32-2.8v-3.65a6.277 6.277 0 005.25-7.28l3.55-1.18c1.23-.41 2.57-1.6 3.12-2.77l3.84-8.16c.73-1.54 2.78-2.84 4.48-2.84h19.3c1.81 0 4.38 1.11 5.61 2.43l8.61 9.15c.54.57 1.03 1.8 1.03 2.59v11.72c0 1.54-1.26 2.8-2.8 2.8h-1.75c-.47-4.71-4.46-8.4-9.29-8.4-4.83 0-8.82 3.69-9.29 8.4h-5.67c-.52 0-.93.42-.93.93 0 .52.42.93.93.93h5.67c.47 4.71 4.46 8.4 9.29 8.4 4.83 0 8.82-3.69 9.29-8.4h1.75c2.57 0 4.67-2.09 4.67-4.67v-11.7c0-1.25-.67-2.95-1.53-3.87l-8.61-9.15c-.4-.43-.9-.83-1.45-1.19l10.46-8.57h4.55c.67 0 1.22-.54 1.22-1.22-.02-.67-.56-1.21-1.23-1.21zM29.14 38.19c4.12 0 7.47 3.35 7.47 7.47 0 4.12-3.35 7.47-7.47 7.47-4.12 0-7.47-3.35-7.47-7.47 0-4.12 3.35-7.47 7.47-7.47zm-13.73-1.84c.38-1.85 1.71-3.69 3.34-4.64.01.12.01.24.01.36.01 2.07-1.43 3.81-3.35 4.28zm40.82 16.78c-4.12 0-7.47-3.35-7.47-7.47 0-4.12 3.35-7.47 7.47-7.47 4.12 0 7.47 3.35 7.47 7.47 0 4.12-3.35 7.47-7.47 7.47z"
-              ></path>
-            </svg>
+            
             <svg
               class="find-in-stores__icon"
               role="presentation"
@@ -898,7 +886,7 @@
 </div>
 
 <div
-  class="reveal-overlay ng-animate"
+  class="reveal-overlay ng-animate save-list"
   modal-backdrop=""
   role="button"
   tabindex="0"
@@ -1092,4 +1080,372 @@
       </div>
     </div>
   </div>
+</div>
+
+<div
+ng-animate-children="true"
+class="reveal-overlay ng-animate store-available"
+modal-backdrop=""
+role="button"
+tabindex="0"
+style="display: none;"
+>
+<div
+  tabindex="-1"
+  class="reveal modal-find-in-stores medium"
+  modal-window=""
+  window-class="modal-find-in-stores medium"
+  index="0"
+  style="visibility: visible; display: block;"
+>
+  <div>
+    <header class="modal-header ng-scope" role="presentation">
+      <h1 class="ng-binding" role="heading" aria-level="2">
+        Pick Up at Store
+      </h1>
+      <button
+        class="close-button ng-scope ae-button"
+        aria-label="Close modal"
+        type="button"
+        data-ae-blurbtype="button"
+        data-ae-form-field="true"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </header>
+    <div class="modal-content ng-scope">
+      <div class="row columns">
+        <form
+          name="findInStoreForm"
+          aria-label="Find a store near you"
+          novalidate=""
+          class="ng-pristine ng-valid ng-valid-required ae-form"
+        >
+          <select
+            aria-label="Search radius"
+            required=""
+            class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+            aria-invalid="false"
+            data-ae-blurbtype="select"
+            data-ae-form-field="true"
+          >
+            <option
+              label="Within 25 miles of"
+              value="number:25"
+              selected="selected"
+              >Within 25 miles of</option
+            >
+            <option label="Within 50 miles of" value="number:50"
+              >Within 50 miles of</option
+            >
+            <option label="Within 100 miles of" value="number:100"
+              >Within 100 miles of</option
+            >
+          </select>
+          <div class="input-button-overlay">
+            <input
+              type="text"
+              class="input-overlay ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
+              name="searchCriteria"
+              placeholder="Zip Code or City, State"
+              value="10001"
+              aria-label="Enter zip code or city and state to search for stores near you"
+              required="required"
+              ng-attr-aria-describedby="{{findInStoreForm.searchCriteria.$invalid &amp;&amp; (findInStoreForm.$submitted  || findInStoreForm.searchCriteria.$touched) ? 'errMsg_ZipCode' :undefined }}"
+              aria-invalid="false"
+              data-ae-blurbtype="input"
+              data-ae-form-field="true"
+            />
+            <button
+              type="submit"
+              class="button-overlay ae-button"
+              data-ae-blurbtype="button"
+              data-ae-form-field="true"
+            >
+              Find Stores
+            </button>
+          </div>
+        </form>
+      </div>
+      <div aria-hidden="false" class="">
+        <div
+          class="row store-results-container"
+          id="store-results-slider"
+        >
+          <div class="columns small-6 store-results">
+            <div class="y-scrollable">
+              <ul class="store-list" role="tablist">
+                <li class="ng-scope active" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="0"
+                    aria-selected="true"
+                    id="js_tab_ID0"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts South Paramus NJ, NJ</strong
+                        >
+                        (13.28 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID1"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Ridgewood, NJ</strong
+                        >
+                        (16.99 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID2"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Millburn, NJ</strong
+                        >
+                        (17.10 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID3"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Livingston NJ, NJ</strong
+                        >
+                        (17.15 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID4"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Wayne NJ, NJ</strong
+                        >
+                        (18.38 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID5"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Mamaroneck, NY</strong
+                        >
+                        (19.50 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID6"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Oceanside, NY</strong
+                        >
+                        (20.21 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID7"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Ramsey NJ, NJ</strong
+                        >
+                        (23.21 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="ng-scope" role="presentation">
+                  <a
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    id="js_tab_ID8"
+                  >
+                    <div class="store">
+                      <div class="ng-binding">
+                        <strong class="ng-binding"
+                          >Music &amp; Arts Levittown, NY</strong
+                        >
+                        (24.98 mi.)
+                      </div>
+                      <div class="ng-binding" aria-hidden="false">
+                        Available in 2-7 days (estimated)
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="columns small-6 store-details"
+            role="tabpanel"
+            tabindex="0"
+            aria-hidden="false"
+          >
+            <div aria-hidden="false" class="">
+              <button
+                class="cta-before show-for-small-only ae-button"
+                type="button"
+                data-ae-blurbtype="button"
+                data-ae-form-field="true"
+              >
+                See other stores
+              </button>
+              <store-quickview
+                store="fismCtrl.selectedStore"
+                class="ng-isolate-scope"
+              >
+                <div class="store-quickview">
+                  <section>
+                    <div class="h3 ng-binding">
+                      Music &amp; Arts South Paramus NJ
+                    </div>
+                    <div>
+                      <p class="address ng-scope">
+                        <span class="block ng-binding">240 Rt. 17 N</span>
+                        <span class="block ng-binding"
+                          >PARAMUS, NJ 07652</span
+                        >
+                      </p>
+                    </div>
+                    <p>
+                      <a
+                        class="phone ng-binding"
+                        href="tel:1-201-265-1860"
+                        >1-201-265-1860</a
+                      >
+                    </p>
+                    <ul class="no-bullets" role="presentation">
+                      <li class="ng-scope">
+                        <a
+                          class="cta-after"
+                          href="https://www.google.com/maps?daddr=240%2bRt.%2b17%2bN%2c%2bPARAMUS%2c%2bNJ%2c%2b07652"
+                          >Directions</a
+                        >
+                      </li>
+                      <li class="ng-scope">
+                        <a class="cta-after" role="button" tabindex="0"
+                          >Email Store Manager</a
+                        >
+                      </li>
+                    </ul>
+                    <h5 class="color-black ng-scope">
+                      <span class="icon fa-o-clock"></span> Store Hours
+                    </h5>
+                    <ul class="no-bullets ng-scope">
+                      <li class="ng-scope color-primary">
+                        <span class="day ng-binding">Mon - Fri:</span>
+                        <span class="hours ng-binding"
+                          >11:00AM - 8:00PM</span
+                        >
+                      </li>
+                      <li class="ng-scope">
+                        <span class="day ng-binding">Sat:</span>
+                        <span class="hours ng-binding"
+                          >10:00AM - 5:00PM</span
+                        >
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+              </store-quickview>
+              <button
+                class="primary expanded ae-button"
+                type="button"
+                aria-label="Select the Music &amp; Arts South Paramus NJ store"
+                id="fismSubmit"
+                data-ae-blurbtype="button"
+                data-ae-form-field="true"
+              >
+                Select
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

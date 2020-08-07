@@ -17,7 +17,7 @@
           <a class="button" href="/">Continue Shopping</a>
           <button
             type="button"
-            class="ng-scope ae-button"
+            class="ng-scope ae-button save-list-btn"
             data-ae-blurbtype="button"
             data-ae-form-field="true"
           >
@@ -239,175 +239,30 @@
           </p>
         </div>
       </li>
-      <li
-        ng-repeat="item in cartCtrl.cart.items"
-        class="ng-scope"
-        role="presentation"
-      >
+      <li class="ng-scope" role="presentation">
         <div class="product" aria-labelledby="items-header">
           <figure>
-            <a
-              ng-href=""
-              ng-show="item.productUrl"
-              aria-hidden="true"
-              class="ng-hide"
-            >
-              <img
-                ng-src="/dist/img/rentals/Trumpet &amp; Cornet.jpg"
-                alt="Trumpet &amp; Cornet Online Rental"
-                src="/images/Trumpet & Cornet.jpg"
-                class="ae-img"
-              />
-            </a>
+            <img
+              alt="Trumpet &amp; Cornet Online Rental"
+              src="/images/Trumpet & Cornet.jpg"
+              class="ae-img"
+            />
           </figure>
           <div class="product-info">
             <p class="name">
-              <a
-                ng-show="item.productUrl"
-                ng-href=""
-                class="ng-binding ng-hide"
-                aria-hidden="true"
-              >
-                Trumpet &amp; Cornet</a
-              >
-              <span
-                ng-hide="item.productUrl"
-                class="ng-binding"
-                aria-hidden="false"
-                >Online Rental</span
-              >
+              <span class="ng-binding" aria-hidden="false">Online Rental</span>
             </p>
-            <ul
-              class="product-numbers ng-hide"
-              ng-hide="item.isRental"
-              aria-hidden="true"
-            >
-              <li class="ng-binding">Item # Rental</li>
-              <li class="ng-binding">Model #</li>
-            </ul>
-            <ul
-              class="product-additional ng-hide"
-              ng-hide="item.isRental"
-              aria-hidden="true"
-            >
-              <li class="ng-binding"><strong>Condition:</strong> New</li>
-              <li class="ng-binding"><strong>Option:</strong> Online Rental</li>
-            </ul>
-            <p
-              class="availability ng-binding ng-hide"
-              ng-hide="item.isRental"
-              ng-class="{'urgent': item.isUnavailable }"
-              aria-label="Product availability"
-              aria-hidden="true"
-            ></p>
-
-            <!-- ngRepeat: rebate in item.rebates -->
-
-            <!-- ngIf: item.discounts && item.discounts.length > 0 -->
           </div>
         </div>
         <div class="cost-info">
           <div class="unit-price" aria-labelledby="unit-price-header">
-            <p
-              class="price ng-binding"
-              ng-bind-html="item.listPrice | fancyCurrency"
-            >
-              $28<sup>.00</sup>
-            </p>
-            <!-- <p class="list" ng-if="item.msrp > item.listPrice">List <span class="price strikethrough" ng-bind-html="item.msrp | fancyCurrency"></span></p> -->
+            <p class="price ng-binding">$28<sup>.00</sup></p>
           </div>
           <div class="quantity" aria-labelledby="quantity-header">
-            <item-quantity-selector
-              item="item"
-              allow-edit="!item.isUnavailable"
-              ng-hide="item.isRental"
-              quantity="item.quantity"
-              onchangeqty="cartCtrl.updateItemQuantity(item.id, item.quantity)"
-              ondelete="cartCtrl.removeItem(item.id)"
-              class="ng-isolate-scope ng-hide"
-              aria-hidden="true"
-            >
-              <!-- AddItemQuantitySelector -->
-              <select
-                id="qtySelectorSelect-ace632cdc9124132bfbf46d723642739"
-                ng-show="allowEdit"
-                ng-model="quantity"
-                ng-disabled="isDisabled"
-                ng-class="{ 'is-hidden' : ! (quantity < 10 &amp;&amp; !isHidden) }"
-                ng-change="selectChange('1')"
-                ng-debounce=""
-                class="ng-pristine ng-untouched ng-valid ng-not-empty"
-                aria-hidden="false"
-                aria-invalid="false"
-                data-ae-blurbtype="select"
-                data-ae-form-field="true"
-              >
-                <option value="1" selected="selected">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10+</option>
-              </select>
-              <input
-                id="qtySelectorInput-ace632cdc9124132bfbf46d723642739"
-                ng-show="allowEdit"
-                type="text"
-                ng-model="textQuantity"
-                ng-disabled="isDisabled"
-                ng-class="{ 'is-hidden' : ! (quantity > 9 || isHidden) }"
-                ng-change="inputChange('1')"
-                ng-blur="inputBlur(textQuantity)"
-                ng-focus="isDirty"
-                ng-trim="false"
-                ng-debounce=""
-                required=""
-                class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required is-hidden"
-                aria-hidden="false"
-                aria-invalid="false"
-                data-ae-blurbtype="input"
-                data-ae-form-field="true"
-              />
-              <p ng-hide="allowEdit" aria-hidden="true" class="ng-hide">
-                <b class="ng-binding">1</b>
-              </p>
-
-              <!-- ngIf: !isHidden -->
-              <p ng-if="!isHidden" class="ng-scope">
-                <button
-                  class="remove link ae-button"
-                  ng-click="ondelete()"
-                  ng-show="!isDirty &amp;&amp; allowDelete"
-                  aria-hidden="false"
-                  data-ae-blurbtype="button"
-                  data-ae-form-field="true"
-                  aria-label="Remove Promo Code"
-                >
-                  Remove
-                </button>
-                <button
-                  class="link ng-hide ae-button"
-                  ng-click="saveChange(textQuantity)"
-                  ng-show="allowEdit &amp;&amp; isDirty"
-                  aria-hidden="true"
-                  data-ae-blurbtype="button"
-                  data-ae-form-field="true"
-                >
-                  Update
-                </button>
-              </p>
-              <!-- end ngIf: !isHidden -->
-              <!-- /AddItemQuantitySelector -->
-            </item-quantity-selector>
-            <span ng-show="item.isRental" aria-hidden="false">
+            <span aria-hidden="false">
               <b class="ng-binding">1</b><br />
               <button
                 class="remove link ae-button"
-                ng-click="cartCtrl.removeItem(item.id)"
                 data-ae-blurbtype="button"
                 data-ae-form-field="true"
                 aria-label="Remove Promo Code"
@@ -416,179 +271,35 @@
               </button>
             </span>
           </div>
-          <p
-            class="total price ng-binding"
-            aria-labelledby="total-header"
-            ng-bind-html="item.subTotal | fancyCurrency"
-          >
+          <p class="total price ng-binding" aria-labelledby="total-header">
             $28<sup>.00</sup>
           </p>
         </div>
-        <div
-          class="product-components-container"
-          ng-show="item.isRental"
-          aria-hidden="false"
-        >
+        <div class="product-components-container" aria-hidden="false">
           <div class="product-components">
             <div class="h2 bar secondary">Items included:</div>
             <ul class="cart-items">
-              <!-- ngRepeat: component in item.rentalComponents -->
-              <li
-                ng-repeat="component in item.rentalComponents"
-                class="ng-scope"
-              >
+              <li class="ng-scope">
                 <div class="product">
                   <div class="product-info">
                     <p class="name ng-binding">
                       Trumpet &amp; Cornet
                     </p>
                   </div>
-                  <!-- ngIf: component.discounts && component.discounts.length > 0 -->
-                </div>
-                <div
-                  class="cost-info ng-hide"
-                  ng-hide="component.componentType === 'instrument'"
-                  aria-hidden="true"
-                >
-                  <div class="unit-price">
-                    <p
-                      class="price ng-binding"
-                      ng-bind-html="component.unitPrice | fancyCurrency"
-                    >
-                      $0<sup>.00</sup>
-                    </p>
-                  </div>
-                  <div class="quantity" aria-labelledby="quantity-header">
-                    <item-quantity-selector
-                      item="component"
-                      quantity="component.quantity"
-                      allow-edit="cartCtrl.canEditComponent(component)"
-                      allow-delete="cartCtrl.canDeleteComponent(component)"
-                      onchangeqty="cartCtrl.updateRentalComponentQuantity(component, component.quantity)"
-                      ondelete="cartCtrl.removeRentalComponent(component)"
-                      class="ng-isolate-scope"
-                    >
-                      <!-- AddItemQuantitySelector -->
-                      <select
-                        id="qtySelectorSelect-10ff44cd41fa4edba19784e068b66f0a"
-                        ng-show="allowEdit"
-                        ng-model="quantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity < 10 &amp;&amp; !isHidden) }"
-                        ng-change="selectChange('1')"
-                        ng-debounce=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-hide"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="select"
-                        data-ae-form-field="true"
-                      >
-                        <option value="1" selected="selected">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10+</option>
-                      </select>
-                      <input
-                        id="qtySelectorInput-10ff44cd41fa4edba19784e068b66f0a"
-                        ng-show="allowEdit"
-                        type="text"
-                        ng-model="textQuantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity > 9 || isHidden) }"
-                        ng-change="inputChange('1')"
-                        ng-blur="inputBlur(textQuantity)"
-                        ng-focus="isDirty"
-                        ng-trim="false"
-                        ng-debounce=""
-                        required=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide is-hidden"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="input"
-                        data-ae-form-field="true"
-                      />
-                      <p ng-hide="allowEdit" aria-hidden="false">
-                        <b class="ng-binding">1</b>
-                      </p>
-
-                      <!-- ngIf: !isHidden -->
-                      <p ng-if="!isHidden" class="ng-scope">
-                        <button
-                          class="remove link ng-hide ae-button"
-                          ng-click="ondelete()"
-                          ng-show="!isDirty &amp;&amp; allowDelete"
-                          aria-hidden="true"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                          aria-label="Remove Promo Code"
-                        >
-                          Remove
-                        </button>
-                        <button
-                          class="link ng-hide ae-button"
-                          ng-click="saveChange(textQuantity)"
-                          ng-show="allowEdit &amp;&amp; isDirty"
-                          aria-hidden="true"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                        >
-                          Update
-                        </button>
-                      </p>
-                      <!-- end ngIf: !isHidden -->
-                      <!-- /AddItemQuantitySelector -->
-                    </item-quantity-selector>
-                  </div>
-                  <div class="total price" aria-labelledby="total-header">
-                    <div
-                      ng-show="!component.unitPrice"
-                      class="allcaps"
-                      aria-hidden="false"
-                    >
-                      Free
-                    </div>
-                    <div
-                      ng-show="component.unitPrice"
-                      ng-bind-html="component.subTotal | fancyCurrency"
-                      class="ng-binding ng-hide"
-                      aria-hidden="true"
-                    >
-                      $0<sup>.00</sup>
-                    </div>
-                  </div>
                 </div>
               </li>
-              <!-- end ngRepeat: component in item.rentalComponents -->
-              <li
-                ng-repeat="component in item.rentalComponents"
-                class="ng-scope"
-              >
+
+              <li class="ng-scope">
                 <div class="product">
                   <div class="product-info">
                     <p class="name ng-binding">
                       1 Month Trial Period
                     </p>
                   </div>
-                  <!-- ngIf: component.discounts && component.discounts.length > 0 -->
                 </div>
-                <div
-                  class="cost-info"
-                  ng-hide="component.componentType === 'instrument'"
-                  aria-hidden="false"
-                >
+                <div class="cost-info" aria-hidden="false">
                   <div class="unit-price">
-                    <p
-                      class="price ng-binding"
-                      ng-bind-html="component.unitPrice | fancyCurrency"
-                    >
-                      $22<sup>.00</sup>
-                    </p>
+                    <p class="price ng-binding">$22<sup>.00</sup></p>
                   </div>
                   <div class="quantity" aria-labelledby="quantity-header">
                     <item-quantity-selector
@@ -600,235 +311,55 @@
                       ondelete="cartCtrl.removeRentalComponent(component)"
                       class="ng-isolate-scope"
                     >
-                      <!-- AddItemQuantitySelector -->
-                      <select
-                        id="qtySelectorSelect-14a1a7022326462faf0187d4d9cf6b01"
-                        ng-show="allowEdit"
-                        ng-model="quantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity < 10 &amp;&amp; !isHidden) }"
-                        ng-change="selectChange('1')"
-                        ng-debounce=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-hide"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="select"
-                        data-ae-form-field="true"
-                      >
-                        <option value="1" selected="selected">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10+</option>
-                      </select>
-                      <input
-                        id="qtySelectorInput-14a1a7022326462faf0187d4d9cf6b01"
-                        ng-show="allowEdit"
-                        type="text"
-                        ng-model="textQuantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity > 9 || isHidden) }"
-                        ng-change="inputChange('1')"
-                        ng-blur="inputBlur(textQuantity)"
-                        ng-focus="isDirty"
-                        ng-trim="false"
-                        ng-debounce=""
-                        required=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide is-hidden"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="input"
-                        data-ae-form-field="true"
-                      />
-                      <p ng-hide="allowEdit" aria-hidden="false">
+                      <p aria-hidden="false">
                         <b class="ng-binding">1</b>
                       </p>
-
-                      <!-- ngIf: !isHidden -->
-                      <p ng-if="!isHidden" class="ng-scope">
-                        <button
-                          class="remove link ng-hide ae-button"
-                          ng-click="ondelete()"
-                          ng-show="!isDirty &amp;&amp; allowDelete"
-                          aria-hidden="true"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                          aria-label="Remove Promo Code"
-                        >
-                          Remove
-                        </button>
-                        <button
-                          class="link ng-hide ae-button"
-                          ng-click="saveChange(textQuantity)"
-                          ng-show="allowEdit &amp;&amp; isDirty"
-                          aria-hidden="true"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                        >
-                          Update
-                        </button>
-                      </p>
-                      <!-- end ngIf: !isHidden -->
-                      <!-- /AddItemQuantitySelector -->
+                      <p class="ng-scope"></p>
                     </item-quantity-selector>
                   </div>
                   <div class="total price" aria-labelledby="total-header">
-                    <div
-                      ng-show="!component.unitPrice"
-                      class="allcaps ng-hide"
-                      aria-hidden="true"
-                    >
-                      Free
-                    </div>
-                    <div
-                      ng-show="component.unitPrice"
-                      ng-bind-html="component.subTotal | fancyCurrency"
-                      class="ng-binding"
-                      aria-hidden="false"
-                    >
+                    <div class="ng-binding" aria-hidden="false">
                       $22<sup>.00</sup>
                     </div>
                   </div>
                 </div>
               </li>
-              <!-- end ngRepeat: component in item.rentalComponents -->
-              <li
-                ng-repeat="component in item.rentalComponents"
-                class="ng-scope"
-              >
+              <li class="ng-scope">
                 <div class="product">
                   <div class="product-info">
                     <p class="name ng-binding">
                       Liability Damage Waiver (LDW)
                     </p>
                   </div>
-                  <!-- ngIf: component.discounts && component.discounts.length > 0 -->
                 </div>
-                <div
-                  class="cost-info"
-                  ng-hide="component.componentType === 'instrument'"
-                  aria-hidden="false"
-                >
+                <div class="cost-info" aria-hidden="false">
                   <div class="unit-price">
-                    <p
-                      class="price ng-binding"
-                      ng-bind-html="component.unitPrice | fancyCurrency"
-                    >
-                      $6<sup>.00</sup>
-                    </p>
+                    <p class="price ng-binding">$6<sup>.00</sup></p>
                   </div>
                   <div class="quantity" aria-labelledby="quantity-header">
-                    <item-quantity-selector
-                      item="component"
-                      quantity="component.quantity"
-                      allow-edit="cartCtrl.canEditComponent(component)"
-                      allow-delete="cartCtrl.canDeleteComponent(component)"
-                      onchangeqty="cartCtrl.updateRentalComponentQuantity(component, component.quantity)"
-                      ondelete="cartCtrl.removeRentalComponent(component)"
-                      class="ng-isolate-scope"
-                    >
-                      <!-- AddItemQuantitySelector -->
-                      <select
-                        id="qtySelectorSelect-8fbc53bc801f454590eb2e2ad3560609"
-                        ng-show="allowEdit"
-                        ng-model="quantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity < 10 &amp;&amp; !isHidden) }"
-                        ng-change="selectChange('1')"
-                        ng-debounce=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-hide"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="select"
-                        data-ae-form-field="true"
-                      >
-                        <option value="1" selected="selected">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10+</option>
-                      </select>
-                      <input
-                        id="qtySelectorInput-8fbc53bc801f454590eb2e2ad3560609"
-                        ng-show="allowEdit"
-                        type="text"
-                        ng-model="textQuantity"
-                        ng-disabled="isDisabled"
-                        ng-class="{ 'is-hidden' : ! (quantity > 9 || isHidden) }"
-                        ng-change="inputChange('1')"
-                        ng-blur="inputBlur(textQuantity)"
-                        ng-focus="isDirty"
-                        ng-trim="false"
-                        ng-debounce=""
-                        required=""
-                        class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-hide is-hidden"
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        data-ae-blurbtype="input"
-                        data-ae-form-field="true"
-                      />
-                      <p ng-hide="allowEdit" aria-hidden="false">
-                        <b class="ng-binding">1</b>
-                      </p>
+                    <p aria-hidden="false">
+                      <b class="ng-binding">1</b>
+                    </p>
 
-                      <!-- ngIf: !isHidden -->
-                      <p ng-if="!isHidden" class="ng-scope">
-                        <button
-                          class="remove link ae-button"
-                          ng-click="ondelete()"
-                          ng-show="!isDirty &amp;&amp; allowDelete"
-                          aria-hidden="false"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                          aria-label="Remove Promo Code"
-                        >
-                          Remove
-                        </button>
-                        <button
-                          class="link ng-hide ae-button"
-                          ng-click="saveChange(textQuantity)"
-                          ng-show="allowEdit &amp;&amp; isDirty"
-                          aria-hidden="true"
-                          data-ae-blurbtype="button"
-                          data-ae-form-field="true"
-                        >
-                          Update
-                        </button>
-                      </p>
-                      <!-- end ngIf: !isHidden -->
-                      <!-- /AddItemQuantitySelector -->
-                    </item-quantity-selector>
+                    <p class="ng-scope">
+                      <button
+                        class="remove link ae-button"
+                        aria-hidden="false"
+                        data-ae-blurbtype="button"
+                        data-ae-form-field="true"
+                        aria-label="Remove Promo Code"
+                      >
+                        Remove
+                      </button>
+                    </p>
                   </div>
                   <div class="total price" aria-labelledby="total-header">
-                    <div
-                      ng-show="!component.unitPrice"
-                      class="allcaps ng-hide"
-                      aria-hidden="true"
-                    >
-                      Free
-                    </div>
-                    <div
-                      ng-show="component.unitPrice"
-                      ng-bind-html="component.subTotal | fancyCurrency"
-                      class="ng-binding"
-                      aria-hidden="false"
-                    >
+                    <div class="ng-binding" aria-hidden="false">
                       $6<sup>.00</sup>
                     </div>
                   </div>
                 </div>
               </li>
-              <!-- end ngRepeat: component in item.rentalComponents -->
             </ul>
           </div>
         </div>
@@ -851,12 +382,12 @@
           <a class="button button-primary expanded" href="/cart/checkout"
             >Checkout</a
           >
-          <a class="button expanded show-for-small-only" href="/"
+          <a class="button expanded show-for-small-only" href="/home"
             >Continue Shopping</a
           >
           <button
             type="button"
-            class="expanded ng-scope ae-button"
+            class="expanded ng-scope ae-button save-list-btn"
             data-ae-blurbtype="button"
             data-ae-form-field="true"
           >
@@ -917,4 +448,201 @@
       </div>
     </div>
   </section>
+</div>
+
+<div
+  class="reveal-overlay ng-animate save-list"
+  modal-backdrop=""
+  role="button"
+  tabindex="0"
+  style="display: none;"
+>
+  <div
+    tabindex="-1"
+    class="reveal"
+    modal-window=""
+    window-class=""
+    index="0"
+    style="visibility: visible; display: block;"
+  >
+    <div>
+      <header class="modal-header ng-scope" role="presentation">
+        <h1 role="heading" aria-level="2">Add to Shopping List</h1>
+        <button
+          class="close-button ae-button"
+          aria-label="Close modal"
+          type="button"
+          data-ae-blurbtype="button"
+          data-ae-form-field="true"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </header>
+      <div class="modal-content ng-scope">
+        <form
+          class="form ae-form ng-dirty ng-valid-parse ng-invalid ng-invalid-required ng-valid-maxlength"
+          name="listForm"
+          novalidate=""
+          accessible-form=""
+        >
+          <div class="ng-scope">
+            <div class="row">
+              <div class="columns">
+                <fieldset>
+                  <legend id="shopping-list-options" class="sr-only ae-label">
+                    Shopping List Options
+                  </legend>
+                  <label class="radio ae-label">
+                    <input
+                      type="radio"
+                      name="action"
+                      value="C"
+                      checked
+                      aria-labelledby="shopping-list-options"
+                      class="ng-valid ng-not-empty ng-dirty ng-touched ng-valid-parse"
+                      aria-invalid="false"
+                      data-ae-form-field="true"
+                    />
+                    Create New Shopping List
+                  </label>
+                  <label class="radio ng-scope ae-label">
+                    <input
+                      type="radio"
+                      name="action"
+                      value="0"
+                      aria-labelledby="shopping-list-options"
+                      class="ng-valid ng-not-empty ng-dirty ng-touched"
+                      aria-invalid="false"
+                      data-ae-form-field="true"
+                    />
+                    Add to existing shopping list
+                  </label>
+                  <label class="radio ng-scope ae-label">
+                    <input
+                      type="radio"
+                      name="action"
+                      value="1"
+                      aria-labelledby="shopping-list-options"
+                      class="ng-valid ng-not-empty ng-dirty ng-touched"
+                      aria-invalid="false"
+                      data-ae-form-field="true"
+                    />
+                    Replace existing shopping list
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+
+            <div id="savelist-existing" class="ng-scope" style="display: none;">
+              <div class="row">
+                <div class="columns">
+                  <label for="shoppinglist-select" class="ae-label"
+                    >Select Shopping List</label
+                  >
+                  <select
+                    id="shoppinglist-select"
+                    class="label-top ng-pristine ng-untouched ng-valid ng-not-empty"
+                    aria-invalid="false"
+                    data-ae-blurbtype="select"
+                    data-ae-form-field="true"
+                  >
+                    <option
+                      label="test"
+                      value="string:d901e777d5704c0489afb95dc325419c"
+                      selected="selected"
+                      >test</option
+                    >
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div id="savelist-new" class="ng-scope">
+              <div class="row">
+                <div class="columns">
+                  <label class="ae-label">
+                    <input
+                      id="newname"
+                      name="newname"
+                      type="text"
+                      maxlength="64"
+                      placeholder="Name of shopping list"
+                      required=""
+                      aria-required="true"
+                      aria-label="Name of shopping list"
+                      class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                      aria-invalid="true"
+                      data-ae-blurbtype="input"
+                      data-ae-form-field="true"
+                    />
+                  </label>
+                </div>
+              </div>
+              <fieldset>
+                <legend id="public-list-options" class="sr-only ae-label">
+                  Is this shopping list public?
+                </legend>
+                <div class="row">
+                  <div class="columns small-6">
+                    <label class="radio ae-label">
+                      <input
+                        type="radio"
+                        name="is-public"
+                        value="0"
+                        aria-labelledby="public-list-options"
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Keep this list private
+                    </label>
+                  </div>
+                  <div class="columns small-6">
+                    <label class="radio ae-label">
+                      <input
+                        type="radio"
+                        name="is-public"
+                        value="1"
+                        aria-labelledby="public-list-options"
+                        class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                        aria-invalid="false"
+                        data-ae-form-field="true"
+                      />
+                      Make this list public
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="row addtolist-buttons" id="addtolist-buttons">
+              <div class="columns medium-6 large-4">
+                <div class="spinner hidden allcaps">Saving…</div>
+                <button
+                  type="button"
+                  class="expanded ae-button"
+                  id="addtolist-cancel"
+                  data-ae-blurbtype="button"
+                  data-ae-form-field="true"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div class="columns medium-6 large-4">
+                <button
+                  type="submit"
+                  class="primary expanded ae-button"
+                  id="addtolist-save"
+                  data-ae-blurbtype="button"
+                  data-ae-form-field="true"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
