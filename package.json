@@ -15,7 +15,7 @@
         "server": "node server.js"
     },
     "dependencies": {
-        "acorn": "^7.1.0",
+        "acorn": "^7.1.1",
         "autoprefixer": "^9.7.2",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.2.0",
