@@ -90,3 +90,16 @@
     @import 'cms/themes/themes';
 }
 @import 'cms/forms/forms';
+
+
+// brand page 
+.brand-list-content:not(.show-all){
+    ul > li {
+        &:nth-child(10) ~ li {
+            display: none;
+        }
+    }
+}
+label.input-validation-error:empty {
+	display: none!important;
+}

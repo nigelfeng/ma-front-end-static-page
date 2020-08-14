@@ -369,22 +369,7 @@
                           </div>
                         </fieldset>
                       </checkout-address>
-                      <fieldset class="auto-format ng-scope">
-                        <div class="double">
-                          <label class="checkbox margin-top ae-label">
-                            <input
-                              id="billingSameAsShipping"
-                              name="billingSameAsShipping"
-                              type="checkbox"
-                              class="ng-pristine ng-untouched ng-valid ng-empty"
-                              aria-invalid="false"
-                              data-ae-form-field="true"
-                            />
-                            My billing address is the same as my shipping
-                            address
-                          </label>
-                        </div>
-                      </fieldset>
+                      
                       <fieldset id="BillingAddressForm" class="ng-scope">
                         <address-component
                           addr="coaCtrl.address"
@@ -757,6 +742,22 @@
                           />
                           Make this my primary address
                         </label>
+                      </fieldset>
+                      <fieldset class="auto-format ng-scope">
+                        <div class="double">
+                          <label class="checkbox margin-top ae-label">
+                            <input
+                              id="billingSameAsShipping"
+                              name="billingSameAsShipping"
+                              type="checkbox"
+                              class="ng-pristine ng-untouched ng-valid ng-empty"
+                              aria-invalid="false"
+                              data-ae-form-field="true"
+                            />
+                            My billing address is the same as my shipping
+                            address
+                          </label>
+                        </div>
                       </fieldset>
                       <fieldset class="m-t-1 ng-scope">
                         <legend class="h3" id="ShippingMethod">

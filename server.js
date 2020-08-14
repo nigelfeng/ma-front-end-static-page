@@ -14,6 +14,7 @@ app.set("views", "./html");
 app.use("/images", express.static("./images"));
 app.use("/img", express.static("./src/app/img"));
 app.use("/dist", express.static("./dist"));
+app.use("/public", express.static("./public"));
 
 app.get(["/", "/index"], (req, res, next) => {
   res.render("index.html");

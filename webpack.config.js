@@ -1,37 +1,6 @@
 const path = require("path");
 const autoprefixer = require("autoprefixer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const getPlugins = (env) => {
-//     let plugins = [new webpack.DefinePlugin({ "process.env.NODE_ENV": JSON.stringify(env) })];
-
-//     plugins.push(new MiniCssExtractPlugin({ filename: "[name].css" }));
-
-//     let filesToCopy = [
-//         { "from": "node_modules/jquery/dist/jquery.min.js", "to": "./" },
-//         { "from": "node_modules/foundation-sites/dist/js/foundation.min.js", "to": "./" },
-//         { "from": "node_modules/what-input/dist/what-input.min.js", "to": "./" },
-//         {
-//             "from": "src/app/img/**/*",
-//             "to": "./",
-//             test: /\.(gif|png|jpe?g|svg|ico)$/,
-//             transformPath(targetPath, absolutePath) { return targetPath.replace(/^src[\\\/]+app/i, "") }
-//         },
-//     ];
-
-//     if (env === "development") {
-//         filesToCopy.push({ "from": "node_modules/foundation-sites/dist/js/foundation.min.js.map", "to": "./" });
-//         filesToCopy.push({ "from": "node_modules/what-input/dist/maps/what-input.min.js.map", "to": "./maps/" });
-//     }
-
-//     plugins.push(new CopyWebpackPlugin(filesToCopy));
-
-//     if (env === "production") {
-//         plugins.push(new CleanWebpackPlugin());
-//     }
-
-//     return plugins;
-// };
 
 const scssBuildOptions = (env) => {
   return {
@@ -45,56 +14,24 @@ module.exports = (env) => {
 
   return {
     entry: {
-      "css/app": "./src/app/scss/app.scss",
-      "css/climb-rentals": "./src/app/scss/climb-rentals.scss",
-      "css/power-reviews": "./src/app/css/power-reviews.css",
-      app: "./src/static.ma.js",
-      "font-awesome": "font-awesome-loader!./font-awesome.config.js",
+      "app": "./src/app/scss/app.scss",
+      "climb-rentals": "./src/app/scss/climb-rentals.scss",
+      "power-reviews": "./src/app/css/power-reviews.css",
     },
     output: {
       filename: "[name].bundle.js",
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "public/css"),
     },
-    // externals: {
-    //   "foundation-sites": "Foundation",
-    //   jquery: "jQuery",
-    //   "what-input": "whatInput",
-    // },
+    externals: {
+      jquery: "jQuery",
+    },
     devtool: env == "development" ? "sourcemap" : false,
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          vendor: {
-            name: "vendor",
-            test: /node_modules/,
-            chunks: "all",
-            enforce: true,
-            // priority: -9
-          },
-        },
-      },
-    },
     mode: env,
     watchOptions: {
       ignored: /node_modules/,
     },
     module: {
       rules: [
-        // {
-        //     test: /\.html$/,
-        //     use: [
-        //         { loader: "ngtemplate-loader?relativeTo=" + (path.resolve(__dirname, './src/app')) + '/' },
-        //         { loader: 'html-loader' }
-        //     ]
-        // },
-        {
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: "babel-loader",
-            options: { presets: ["@babel/preset-env"] },
-          },
-        },
         {
           test: /\.s?css$/,
           use: [
@@ -138,7 +75,6 @@ module.exports = (env) => {
       ],
     },
     plugins: [
-      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({ filename: "[name].css" }),
     ],
     target: "web",

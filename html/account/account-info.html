@@ -134,9 +134,9 @@
                     name="firstName"
                     maxlength="25"
                     aria-required="true"
-                    required=""
-                    value="nigel"
-                    class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength"
+                    data-rule="required"
+                    value=""
+                    class=""
                     aria-invalid="false"
                     data-ae-blurbtype="input"
                     data-ae-form-field="true"
@@ -150,9 +150,9 @@
                     name="lastName"
                     maxlength="25"
                     aria-required="true"
-                    required=""
+                    data-rule="required"
                     value="feng"
-                    class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength"
+                    class=""
                     aria-invalid="false"
                     data-ae-blurbtype="input"
                     data-ae-form-field="true"
@@ -165,6 +165,7 @@
                     phone-input=""
                     type="text"
                     name="phoneNumber"
+                    data-rule="phoneNumber"
                     maxlength="14"
                     class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern ng-valid-maxlength"
                     aria-invalid="false"
@@ -184,6 +185,7 @@
                     <input
                       id="currentEmail"
                       type="email"
+                      data-rule="email"
                       name="emailAddress"
                       value="nigelfeng@aaxischina.com"
                       focus-when="accountInfoCtrl.isEditingEmail"
@@ -246,6 +248,7 @@
                         data-allow-html="true"
                         tabindex="0"
                         title=""
+                        data-rule="password"
                         aria-describedby="rqd6zl-tooltip"
                         data-yeti-box="rqd6zl-tooltip"
                         data-toggle="rqd6zl-tooltip"
@@ -264,6 +267,7 @@
                     id="newPassword"
                     type="password"
                     name="newPassword"
+                    data-rule="password"
                     autocomplete="new-password"
                     aria-required="false"
                     validate-password-complexity=""
@@ -312,6 +316,7 @@
                     aria-invalid="false"
                     data-ae-blurbtype="input"
                     data-ae-form-field="true"
+                    data-rule="equalTo(#newPassword)"
                   />
                 </div>
               </fieldset>
@@ -319,7 +324,6 @@
               <button
                 type="submit"
                 class="primary large ae-button"
-                disabled="disabled"
                 data-ae-blurbtype="button"
                 data-ae-form-field="true"
               >

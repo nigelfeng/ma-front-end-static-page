@@ -3,3 +3,7 @@ dist/
 src/**/*.js
 src/**/*.html
 .npmrc
+test*
+tsconfig.json
+/public/css/*.js.map
+/public/css/*.js

@@ -16,9 +16,10 @@ legend {
 	}
 }
 .is-invalid-input,
-.input-validation-error {
+.input-validation-error:not(.field-validation-error) {
 	border: 1px solid $color-error;
 	background-color: $color-error-background;
+
 	&:focus,
 	&:active,
 	&:hover {

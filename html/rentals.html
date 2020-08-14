@@ -112,6 +112,7 @@
                   class="ng-pristine ng-untouched ng-valid ng-not-empty"
                   aria-invalid="false"
                   data-ae-form-field="true"
+                  checked
                 />
                 <div class="radio-control" role="presentation"></div>
                 Find Your School
@@ -154,6 +155,7 @@
                         name="SchoolType"
                         value="Traditional"
                         required=""
+                        checked
                         class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
                         aria-invalid="false"
                         data-ae-form-field="true"
@@ -288,6 +290,7 @@
             novalidate=""
             class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-hide ae-form"
             aria-hidden="true"
+            style="display: none;"
           >
             <div id="useQuickCode">
               <label for="quickCode" class="h3 req ae-label">Quick Code</label>
@@ -1067,13 +1070,6 @@
                 </label>
               </li>
             </ul>
-            <div
-              class="field-validation-error ng-hide"
-              role="alert"
-              aria-hidden="true"
-            >
-              Select an option to continue
-            </div>
           </fieldset>
 
           <div class="buttons">
@@ -1923,12 +1919,7 @@
                         data-ae-blurbtype="number"
                         data-ae-form-field="true"
                       />
-                      <span
-                        class="input-tiny qty ng-binding ng-hide"
-                        aria-label="Quantity of supply"
-                        aria-hidden="true"
-                        >1</span
-                      >
+                       
                     </span>
                   </div>
                 </div>
@@ -2490,6 +2481,8 @@
               />
               I accept the Rental Terms and Conditions
             </label>
+            <div id="errMsg_termsAndConditions" ng-messages="renterDetailsForm.termsAndConditions.$error" ng-if="renterDetailsForm.termsAndConditions.$invalid &amp;&amp; (renterDetailsForm.$submitted || renterDetailsForm.termsAndConditions.$touched)" role="alert" class="ng-scope" aria-live="assertive">
+            </div>
           </div>
         </div>
 
